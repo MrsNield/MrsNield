@@ -282,6 +282,7 @@ const SITE_DATA = {
     // and which of these are exact-title matches vs. closest-available substitutes. ----
     videos: {
       "1-1": [
+        { title: "Parent Functions", url: "https://youtu.be/NrmmR3-VxA8" },
         { title: "Function Introduction (flippedmath 2.1)", url: "https://precalculus.flippedmath.com/21-function-introduction.html" }
       ],
       "1-2": [
