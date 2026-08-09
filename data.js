@@ -276,9 +276,34 @@ const SITE_DATA = {
       ],
     },
 
-    // ---- Video links per objective. Empty until Mrs. Nield sends links. ----
+    // ---- Video links per objective. Pulled from flippedmath.com's traditional
+    // Precalculus course (https://precalculus.flippedmath.com/precalc-traditional.html)
+    // on 2026-08-09 — see class-website-reference.md for the full matching notes
+    // and which of these are exact-title matches vs. closest-available substitutes. ----
     videos: {
-      "1-1": [], "1-2": [], "1-3": [], "1-4": [], "1-5": [], "1-6": [], "1-7": []
+      "1-1": [
+        { title: "Function Introduction (flippedmath 2.1)", url: "https://precalculus.flippedmath.com/21-function-introduction.html" }
+      ],
+      "1-2": [
+        { title: "Domain & Range Graphically (flippedmath 2.2)", url: "https://precalculus.flippedmath.com/22-domain--range-graphically.html" },
+        { title: "Extrema and Function Analysis (flippedmath 3.2)", url: "https://precalculus.flippedmath.com/32-extrema.html" }
+      ],
+      "1-3": [
+        { title: "Extrema and Function Analysis (flippedmath 3.2)", url: "https://precalculus.flippedmath.com/32-extrema.html" }
+      ],
+      "1-4": [
+        { title: "Limits to Infinity / End Behavior (flippedmath 2.4)", url: "https://precalculus.flippedmath.com/24-limits-to-infinity.html" }
+      ],
+      "1-5": [
+        { title: "Even and Odd Functions (flippedmath 4.2)", url: "https://precalculus.flippedmath.com/42-even-and-odd-functions.html" }
+      ],
+      "1-6": [
+        { title: "Discontinuity and Domain: An Algebraic Approach (flippedmath 3.1)", url: "https://precalculus.flippedmath.com/31-discontinuity-and-domain-analytically.html" },
+        { title: "Limits Graphically (flippedmath 2.3)", url: "https://precalculus.flippedmath.com/23-limits-graphically.html" }
+      ],
+      "1-7": [
+        { title: "Transformations (flippedmath 4.1)", url: "https://precalculus.flippedmath.com/41-transformations.html" }
+      ]
     }
   },
 
