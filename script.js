@@ -5,6 +5,7 @@
 
 let currentCourse = "honors";
 let currentHonorsTab = "progress";
+let currentPrecalcTab = "calendar";
 
 function statusLabel(s) {
   if (s === "covered") return "Covered";
@@ -28,9 +29,35 @@ function renderCourseTabs() {
 
 function renderMain() {
   const main = document.getElementById("mainContent");
-  if (currentCourse !== "honors") {
-    const msg = SITE_DATA[currentCourse]?.message || "This course hasn't been planned yet — check back soon!";
+  if (currentCourse === "apcalc") {
+    const msg = SITE_DATA.apcalc?.message || "This course hasn't been planned yet — check back soon!";
     main.innerHTML = `<div class="placeholder-card">${msg}</div>`;
+    return;
+  }
+  if (currentCourse === "precalc") {
+    const msg = SITE_DATA.precalc?.message || "This course hasn't been planned yet — check back soon!";
+    main.innerHTML = `
+      <div class="placeholder-card" style="margin-bottom:14px;">${msg}</div>
+      <div class="sub-tabs" id="precalcSubTabs"></div>
+      <div id="precalcPanels"></div>
+    `;
+    const pTabs = [
+      { id: "calendar", label: "Course Calendar" },
+      { id: "bellringers", label: "Bellringers" }
+    ];
+    const pSubTabsEl = document.getElementById("precalcSubTabs");
+    pSubTabsEl.innerHTML = pTabs.map(t =>
+      `<button class="sub-tab ${t.id === currentPrecalcTab ? "active" : ""}" data-tab="${t.id}">${t.label}</button>`
+    ).join("");
+    pSubTabsEl.querySelectorAll(".sub-tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentPrecalcTab = btn.dataset.tab;
+        renderMain();
+      });
+    });
+    const pPanels = document.getElementById("precalcPanels");
+    if (currentPrecalcTab === "calendar") pPanels.innerHTML = renderCourseCalendar(SITE_DATA.precalc?.units || []);
+    else if (currentPrecalcTab === "bellringers") pPanels.innerHTML = renderBellringers(SITE_DATA.precalc?.bellringers || []);
     return;
   }
   main.innerHTML = `
@@ -39,6 +66,7 @@ function renderMain() {
   `;
   const tabs = [
     { id: "progress", label: "Progress" },
+    { id: "whatdidimiss", label: "What Did I Miss?" },
     { id: "rubric", label: "Standards Rubric" },
     { id: "board", label: "Board Work" },
     { id: "practice", label: "Practice & Videos" },
@@ -57,10 +85,11 @@ function renderMain() {
 
   const panels = document.getElementById("honorsPanels");
   if (currentHonorsTab === "progress") panels.innerHTML = renderProgress();
+  else if (currentHonorsTab === "whatdidimiss") panels.innerHTML = renderWhatDidIMiss();
   else if (currentHonorsTab === "rubric") panels.innerHTML = renderRubric();
   else if (currentHonorsTab === "board") panels.innerHTML = renderBoardWork();
   else if (currentHonorsTab === "practice") panels.innerHTML = renderPractice();
-  else if (currentHonorsTab === "bellringers") panels.innerHTML = renderBellringers();
+  else if (currentHonorsTab === "bellringers") panels.innerHTML = renderBellringers(SITE_DATA.honors.bellringers);
 
   if (currentHonorsTab === "practice") wirePracticeInteractivity();
 }
@@ -95,6 +124,78 @@ function renderProgress() {
   return html;
 }
 
+function getObjectiveById(id) {
+  const objectives = SITE_DATA.honors.units.flatMap(u => u.objectives);
+  return objectives.find(o => o.id === id);
+}
+
+// Combines that day's covered objective (dailyLog), its bellringer, and its
+// board work photos into one card per day — everything an absent student
+// needs, in one place, instead of three separate tabs.
+function renderWhatDidIMiss() {
+  const dailyLog = SITE_DATA.honors.dailyLog || [];
+  const boardWork = SITE_DATA.honors.boardWork || [];
+  const bellringers = SITE_DATA.honors.bellringers || [];
+
+  const dateSet = new Set();
+  dailyLog.forEach(e => dateSet.add(e.date));
+  boardWork.forEach(e => dateSet.add(e.date));
+  bellringers.filter(isBellringerRevealed).forEach(b => dateSet.add(b.date));
+
+  const dates = Array.from(dateSet).sort((a, b) => String(b).localeCompare(String(a)));
+
+  let html = `<div class="card"><h2 class="section-title">What Did I Miss?</h2>
+    <p class="rubric-note">Everything from a missed day — what we covered, that day's function of the day, and the board work — all in one place.</p>`;
+
+  if (!dates.length) {
+    html += `<div class="empty-state">Nothing to catch up on yet — check back once we start covering material!</div>`;
+  } else {
+    dates.forEach(date => {
+      const covered = dailyLog.filter(e => e.date === date);
+      const bell = bellringers.find(b => b.date === date && isBellringerRevealed(b));
+      const boards = boardWork.filter(b => b.date === date);
+
+      html += `<div class="miss-day">`;
+      html += `<h3 class="day-heading">${formatDateLabel(date)}</h3>`;
+
+      if (covered.length) {
+        const coveredText = covered.map(e => {
+          const obj = getObjectiveById(e.objective);
+          return obj ? `${obj.id} — ${obj.target}` : e.objective;
+        }).join(", ");
+        html += `<div class="miss-section"><strong>Covered:</strong> ${coveredText}</div>`;
+      }
+
+      if (bell) {
+        html += `<div class="miss-section"><strong>Function of the Day:</strong> ${bell.prompt}</div>`;
+      }
+
+      if (boards.length) {
+        html += `<div class="miss-section"><strong>Board Work:</strong>
+          <div class="board-grid" style="margin-top:8px;">`;
+        boards.forEach(b => {
+          html += `
+            <div class="board-item">
+              <img src="${b.image}" alt="Board work from ${b.date}" loading="lazy">
+              ${b.caption ? `<div class="cap">${b.caption}</div>` : ""}
+            </div>
+          `;
+        });
+        html += `</div></div>`;
+      }
+
+      if (!covered.length && !bell && !boards.length) {
+        html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
+      }
+
+      html += `</div>`;
+    });
+  }
+
+  html += `</div>`;
+  return html;
+}
+
 function renderRubric() {
   const units = SITE_DATA.honors.units;
   let html = `
@@ -124,22 +225,97 @@ function renderRubric() {
   return html;
 }
 
+// ---- Precalculus: pre-planned course calendar. Unlike Honors' day-to-day
+// logging, this is built once per unit ahead of time (lessons, homework days,
+// quizzes, review, test days already scheduled against real class dates), so
+// an absent student can just look up the date they missed with zero ongoing
+// effort from Mrs. Nield. ----
+const CALENDAR_TYPE_LABELS = {
+  lesson: "Lesson",
+  homework: "Homework",
+  quiz: "Quiz",
+  review: "Review",
+  test: "Test",
+  final: "Final"
+};
+
+function renderCourseCalendar(units) {
+  units = units || [];
+  let html = `<div class="card"><h2 class="section-title">Course Calendar</h2>
+    <p class="rubric-note">Missed a day? Find the date below to see what we covered.</p>`;
+
+  if (!units.length) {
+    html += `<div class="empty-state">The calendar hasn't been built yet — check back soon!</div>`;
+  } else {
+    units.forEach(unit => {
+      html += `<h3 style="color:var(--navy);">${unit.name}</h3>`;
+      html += `<table class="rubric"><thead><tr><th style="width:110px;">Date</th><th>Day</th></tr></thead><tbody>`;
+      unit.schedule.forEach(day => {
+        const typeLabel = CALENDAR_TYPE_LABELS[day.type] || day.type;
+        html += `<tr>
+          <td style="white-space:nowrap;">${formatDateLabel(day.date)}</td>
+          <td><span class="cal-badge cal-${day.type}">${typeLabel}</span> ${day.label}</td>
+        </tr>`;
+      });
+      html += `</tbody></table>`;
+    });
+  }
+  html += `</div>`;
+  return html;
+}
+
+function formatDateLabel(dateStr) {
+  const parts = String(dateStr).split("-").map(Number);
+  if (parts.length !== 3 || parts.some(isNaN)) return dateStr;
+  const [y, m, d] = parts;
+  const dt = new Date(y, m - 1, d);
+  return dt.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+}
+
+// Groups a flat array of {date, objective, ...} entries into
+// [{ date, topics: [ [objectiveLabel, [items...]], ... ] }, ...]
+// sorted newest date first, regardless of the order items were added in data.js.
+function groupByDayAndTopic(items) {
+  const byDate = {};
+  items.forEach(item => {
+    (byDate[item.date] = byDate[item.date] || []).push(item);
+  });
+  const dates = Object.keys(byDate).sort((a, b) => b.localeCompare(a));
+  return dates.map(date => {
+    const byTopic = {};
+    byDate[date].forEach(item => {
+      const topic = item.objective || "General";
+      (byTopic[topic] = byTopic[topic] || []).push(item);
+    });
+    const topicOrder = Object.keys(byTopic).sort((a, b) => a.localeCompare(b));
+    return { date, topics: topicOrder.map(t => [t, byTopic[t]]) };
+  });
+}
+
 function renderBoardWork() {
   const items = SITE_DATA.honors.boardWork;
   let html = `<div class="card"><h2 class="section-title">Board Work</h2>`;
   if (!items.length) {
     html += `<div class="empty-state">No board work has been posted yet — check back after class!</div>`;
   } else {
-    html += `<div class="board-grid">`;
-    items.forEach(item => {
-      html += `
-        <div class="board-item">
-          <img src="${item.image}" alt="Board work from ${item.date}" loading="lazy">
-          <div class="cap"><strong>${item.date}</strong>${item.objective ? " · " + item.objective : ""}${item.caption ? " — " + item.caption : ""}</div>
-        </div>
-      `;
+    const grouped = groupByDayAndTopic(items);
+    grouped.forEach(dayGroup => {
+      html += `<h3 class="day-heading">${formatDateLabel(dayGroup.date)}</h3>`;
+      dayGroup.topics.forEach(([topic, topicItems]) => {
+        html += `<div class="topic-block">`;
+        html += `<div class="topic-label">${topic}</div>`;
+        html += `<div class="board-grid">`;
+        topicItems.forEach(item => {
+          html += `
+            <div class="board-item">
+              <img src="${item.image}" alt="Board work from ${item.date}" loading="lazy">
+              ${item.caption ? `<div class="cap">${item.caption}</div>` : ""}
+            </div>
+          `;
+        });
+        html += `</div></div>`;
+      });
     });
-    html += `</div>`;
   }
   html += `</div>`;
   return html;
@@ -198,17 +374,57 @@ function wirePracticeInteractivity() {
   render();
 }
 
-function renderBellringers() {
-  const items = SITE_DATA.honors.bellringers;
+// Each day's "function of the day" bellringer stays hidden from students until
+// this local hour on its date, then stays visible forever afterward (it becomes
+// part of the archive for anyone who was absent). Relies on visitors' devices
+// having the correct local time — fine for a school setting.
+const BELLRINGER_REVEAL_HOUR = 16; // 4:00 PM
+
+function bellringerRevealTime(dateStr) {
+  const parts = String(dateStr).split("-").map(Number);
+  if (parts.length !== 3 || parts.some(isNaN)) return null;
+  const [y, m, d] = parts;
+  return new Date(y, m - 1, d, BELLRINGER_REVEAL_HOUR, 0, 0);
+}
+
+function isBellringerRevealed(item) {
+  const revealTime = bellringerRevealTime(item.date);
+  if (!revealTime) return true; // fail-open on a malformed date rather than hiding it forever
+  return new Date() >= revealTime;
+}
+
+function isSameLocalDate(dateStr, compareTo) {
+  const parts = String(dateStr).split("-").map(Number);
+  if (parts.length !== 3 || parts.some(isNaN)) return false;
+  const [y, m, d] = parts;
+  return y === compareTo.getFullYear() && (m - 1) === compareTo.getMonth() && d === compareTo.getDate();
+}
+
+function renderBellringers(items) {
+  items = items || [];
+  const now = new Date();
+  const revealed = items
+    .filter(isBellringerRevealed)
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  // Only flag "posting at 4pm" for an entry dated TODAY — a whole schedule of
+  // future dates loaded in advance should stay completely invisible until
+  // its own day arrives, not show a note for every day still to come.
+  const pendingToday = items.some(b => !isBellringerRevealed(b) && isSameLocalDate(b.date, now));
+
   let html = `<div class="card"><h2 class="section-title">Bellringer Archive</h2>
-    <p class="rubric-note">Were you gone? Find the day you missed below.</p>`;
-  if (!items.length) {
-    html += `<div class="empty-state">No bellringers posted yet.</div>`;
+    <p class="rubric-note">Were you gone? Find the day you missed below. Each day's function of the day posts at 4:00 PM.</p>`;
+
+  if (pendingToday) {
+    html += `<div class="empty-state">Today's function of the day will post at 4:00 PM — check back after class!</div>`;
+  }
+
+  if (!revealed.length) {
+    if (!pendingToday) html += `<div class="empty-state">No bellringers posted yet.</div>`;
   } else {
-    items.forEach(b => {
+    revealed.forEach(b => {
       html += `
         <div class="bell-item">
-          <div class="bell-date">${b.date}</div>
+          <div class="bell-date">${formatDateLabel(b.date)}</div>
           <div>
             ${b.objective ? `<div class="obj-teks" style="display:inline-block;margin-bottom:6px;">${b.objective}</div><br>` : ""}
             <div>${b.prompt || ""}</div>
