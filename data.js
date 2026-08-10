@@ -37,14 +37,14 @@ const SITE_DATA = {
           {
             id: "1-3", target: "Identify increasing / decreasing intervals", teks: "P.2.I",
             status: "not-started", dates: "",
-            basic: "Given a graph, state where the function is increasing or decreasing using informal, verbal language (e.g., “goes up,” “goes down”).",
+            basic: "Given a graph, state where the function is increasing or decreasing using informal, verbal language (e.g., \"goes up,\" \"goes down\").",
             intermediate: "Given a graph or equation, determine and state the intervals where the function is increasing or decreasing.",
             advanced: "State increasing/decreasing intervals using proper interval notation (e.g., (–1, 3]) and set notation (e.g., {x | x ∈ ℜ, –1 < x ≤ 3}) directly from the equation, without graphing technology."
           },
           {
             id: "1-4", target: "Describe end behavior", teks: "P.2.J",
             status: "not-started", dates: "",
-            basic: "Using a table or graph, describe the end behavior of a function in words (e.g., “as x gets larger, y gets larger”).",
+            basic: "Using a table or graph, describe the end behavior of a function in words (e.g., \"as x gets larger, y gets larger\").",
             intermediate: "Describe the end behavior of exponential, logarithmic, rational, polynomial, and power functions from a graph or table using infinity notation (x → ∞, f(x) → ∞).",
             advanced: ""
           },
@@ -53,7 +53,7 @@ const SITE_DATA = {
             status: "not-started", dates: "",
             basic: "Visually identify the symmetry of a graph (y-axis, origin, or neither).",
             intermediate: "Classify a function as even, odd, or neither from its graph, and explain the classification using the definitions f(–x) = f(x) (even) or f(–x) = –f(x) (odd).",
-            advanced: "Algebraically test f(–x) to prove whether a function given in equation form is even, odd, or neither, and connect the algebraic result to the graph’s symmetry."
+            advanced: "Algebraically test f(–x) to prove whether a function given in equation form is even, odd, or neither, and connect the algebraic result to the graph's symmetry."
           },
           {
             id: "1-6", target: "Analyze discontinuities", teks: "P.2.L, P.2.M",
@@ -223,6 +223,23 @@ const SITE_DATA = {
       { date: "2027-05-04", prompt: "f(x) = -8(1/2)<sup>x</sup>" },
       { date: "2027-05-05", prompt: "f(x) = 8(1/2)<sup>-x</sup>" },
     ],
+
+    // ---- DeltaMath assignment links per objective. Each is DeltaMath's
+    // "smart" assignment link (/app/assignment/<id>) — it routes automatically
+    // based on who's logged in, so it's safe to post publicly: a logged-in
+    // student goes straight to that assignment, and anyone not logged in is
+    // sent to log in first. Grabbed directly from Mrs. Nield's DeltaMath
+    // account on 2026-08-10 after she built the 7 Unit 1 assignments there
+    // (see unit1-deltamath-assignment-mapping.md for the skills in each). ----
+    deltamath: {
+      "1-1": "https://www.deltamath.com/app/assignment/33378241",
+      "1-2": "https://www.deltamath.com/app/assignment/33378261",
+      "1-3": "https://www.deltamath.com/app/assignment/33378265",
+      "1-4": "https://www.deltamath.com/app/assignment/33378269",
+      "1-5": "https://www.deltamath.com/app/assignment/33378275",
+      "1-6": "https://www.deltamath.com/app/assignment/33378594",
+      "1-7": "https://www.deltamath.com/app/assignment/33378609"
+    },
 
     // ---- Practice problems per objective (with answers, for self-checking) ----
     practice: {
@@ -394,7 +411,7 @@ const SITE_DATA = {
         schedule: [
           { date: "2026-11-04", type: "lesson", label: "3.1 — Exponential Functions" },
           { date: "2026-11-05", type: "lesson", label: "3.2 — Graphs of Exponential Functions" },
-          { date: "2026-11-06", type: "lesson", label: "3.3 — Compound Interest and an Introduction to “e”" },
+          { date: "2026-11-06", type: "lesson", label: "3.3 — Compound Interest and an Introduction to \"e\"" },
           { date: "2026-11-09", type: "homework", label: "" },
           { date: "2026-11-10", type: "quiz", label: "3.1–3.3" },
           { date: "2026-11-11", type: "lesson", label: "3.4 — Logarithmic Functions" },

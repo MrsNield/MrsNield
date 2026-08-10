@@ -343,12 +343,23 @@ function wirePracticeInteractivity() {
     const objId = picker.value;
     const items = SITE_DATA.honors.practice[objId] || [];
     const vids = SITE_DATA.honors.videos[objId] || [];
+    const dmLink = (SITE_DATA.honors.deltamath || {})[objId];
+
     let html = `<h3 style="color:var(--navy);">Videos</h3>`;
     if (!vids.length) {
       html += `<div class="empty-state">No videos posted yet for this objective.</div>`;
     } else {
       html += `<ul class="video-list">` + vids.map(v => `<li><a href="${v.url}" target="_blank" rel="noopener">${v.title}</a></li>`).join("") + `</ul>`;
     }
+
+    html += `<h3 style="color:var(--navy);margin-top:20px;">DeltaMath Practice</h3>`;
+    if (dmLink) {
+      html += `<p class="rubric-note" style="margin-bottom:10px;">Log into your own DeltaMath account and this will take you straight to the assigned practice for ${objId}.</p>`;
+      html += `<a class="download-btn" href="${dmLink}" target="_blank" rel="noopener">Go to DeltaMath Practice for ${objId}</a>`;
+    } else {
+      html += `<div class="empty-state">No DeltaMath assignment posted yet for this objective.</div>`;
+    }
+
     html += `<h3 style="color:var(--navy);margin-top:20px;">Practice Problems</h3>`;
     if (!items.length) {
       html += `<div class="empty-state">No practice problems posted yet for this objective.</div>`;
