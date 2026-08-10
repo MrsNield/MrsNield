@@ -70,6 +70,40 @@ const SITE_DATA = {
             advanced: "Identify all 4 transformation parameters using proper function notation and graph combined transformations of a parent function without technology."
           }
         ]
+      },
+      {
+        id: "unit2",
+        name: "Unit 2: Composition of Functions",
+        objectives: [
+          {
+            id: "2-1", target: "Compose functions to model and solve problems", teks: "P.2.A",
+            status: "not-started", dates: "",
+            basic: "Given two functions, substitute one into the other using proper composition notation: g(f(x)) or (g ∘ f)(x).",
+            intermediate: "Represent the composition of two functions numerically, tabularly, graphically, and algebraically.",
+            advanced: "Solve composition of functions and check for extraneous solutions."
+          },
+          {
+            id: "2-2", target: "Determine whether function composition is commutative", teks: "P.2.B",
+            status: "not-started", dates: "",
+            basic: "Show that g(f(x)) ≠ f(g(x)) for a given pair of functions to demonstrate composition is not commutative.",
+            intermediate: "",
+            advanced: ""
+          },
+          {
+            id: "2-3", target: "Determine and represent inverse functions", teks: "P.2.E",
+            status: "not-started", dates: "",
+            basic: "Determine the inverse of a linear function. For f(x) = ½x + 3, the inverse is f⁻¹(x) = 2x – 6.",
+            intermediate: "Determine inverse functions for given trigonometric or exponential functions.",
+            advanced: "Solve for an inverse function using proper notation and check for extraneous solutions."
+          },
+          {
+            id: "2-4", target: "Decompose functions into component functions", teks: "P.2.C",
+            status: "not-started", dates: "",
+            basic: "Given a composite function, identify two functions f(x) and g(x) whose composition creates it (e.g., decompose h(x) = (x + 3)² into f(x) = x² and g(x) = x + 3).",
+            intermediate: "Decompose a function in more than one valid way, including recognizing it as a sequence of transformations of a parent function, not just a sequence of arithmetic operations.",
+            advanced: "Decompose a function algebraically and verify the decomposition by composing the pieces back together to confirm they produce the original function."
+          }
+        ]
       }
     ],
 
@@ -281,6 +315,21 @@ const SITE_DATA = {
         { term: "Vertical shift", definition: "Moving a graph up or down, from f(x) + d." },
         { term: "Horizontal shift", definition: "Moving a graph left or right, from f(x – c)." },
         { term: "Reflection", definition: "Flipping a graph over an axis, from a negative sign like –f(x) (over the x-axis) or f(–x) (over the y-axis)." }
+      ],
+      "2-1": [
+        { term: "Composition of functions", definition: "The process of substituting one function into another to create a new function, so the range of one function becomes the domain of the other." },
+        { term: "Composition notation", definition: "Written as g(f(x)) or (g ∘ f)(x) — read as \"g of f of x.\"" }
+      ],
+      "2-2": [
+        { term: "Commutative property", definition: "A property where switching the order of an operation's operands doesn't change the result — function composition does not have this property." }
+      ],
+      "2-3": [
+        { term: "Inverse function", definition: "A function that undoes the original function; when composed, f(f⁻¹(x)) = x and f⁻¹(f(x)) = x." },
+        { term: "Inverse function notation", definition: "Written as f⁻¹(x) — the inverse of f(x)." },
+        { term: "Restricted domain", definition: "Limiting a function's domain so it passes the horizontal line test and has an inverse that is also a function." }
+      ],
+      "2-4": [
+        { term: "Decomposition of a function", definition: "Breaking a function into two or more simpler functions that, when composed together, produce the original function." }
       ]
     },
 
@@ -386,6 +435,18 @@ const SITE_DATA = {
       ],
       "1-7": [
         { title: "Transformations (flippedmath 4.1)", url: "https://precalculus.flippedmath.com/41-transformations.html" }
+      ],
+      "2-1": [
+        { title: "Operations with Functions (flippedmath 4.3)", url: "https://precalculus.flippedmath.com/43-operations-with-functions.html" }
+      ],
+      "2-2": [
+        { title: "Operations with Functions (flippedmath 4.3)", url: "https://precalculus.flippedmath.com/43-operations-with-functions.html" }
+      ],
+      "2-3": [
+        { title: "Inverse Functions (flippedmath 4.4)", url: "https://precalculus.flippedmath.com/44-inverse-functions.html" }
+      ],
+      "2-4": [
+        { title: "Operations with Functions (flippedmath 4.3)", url: "https://precalculus.flippedmath.com/43-operations-with-functions.html" }
       ]
     }
   },
