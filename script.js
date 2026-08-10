@@ -344,6 +344,8 @@ function wirePracticeInteractivity() {
     const items = SITE_DATA.honors.practice[objId] || [];
     const vids = SITE_DATA.honors.videos[objId] || [];
     const dmLink = (SITE_DATA.honors.deltamath || {})[objId];
+    const vocabItems = (SITE_DATA.honors.vocab || {})[objId] || [];
+    const graphItems = (SITE_DATA.honors.graphPractice || {})[objId] || [];
 
     let html = `<h3 style="color:var(--navy);">Videos</h3>`;
     if (!vids.length) {
@@ -360,6 +362,33 @@ function wirePracticeInteractivity() {
       html += `<div class="empty-state">No DeltaMath assignment posted yet for this objective.</div>`;
     }
 
+    html += `<h3 style="color:var(--navy);margin-top:20px;">Vocabulary Practice</h3>`;
+    if (!vocabItems.length) {
+      html += `<div class="empty-state">No vocabulary terms posted yet for this objective.</div>`;
+    } else {
+      html += `<div class="vocab-grid">` + vocabItems.map((v, i) => `
+        <div class="flash-card">
+          <div class="flash-term">${v.term}</div>
+          <button class="reveal-btn" data-target="vocab-ans-${i}">Show definition</button>
+          <div class="qa-answer" id="vocab-ans-${i}">${v.definition}</div>
+        </div>
+      `).join("") + `</div>`;
+    }
+
+    html += `<h3 style="color:var(--navy);margin-top:20px;">Graph Identification Practice</h3>`;
+    if (!graphItems.length) {
+      html += `<div class="empty-state">No graph identification practice posted yet for this objective.</div>`;
+    } else {
+      html += `<div class="graph-grid">` + graphItems.map((g, i) => `
+        <div class="graph-card">
+          <img src="${g.image}" alt="Graph to identify">
+          <div class="qa-prompt">${g.prompt || "Identify this graph."}</div>
+          <button class="reveal-btn" data-target="graph-ans-${i}">Show answer</button>
+          <div class="qa-answer" id="graph-ans-${i}">${g.answer}</div>
+        </div>
+      `).join("") + `</div>`;
+    }
+
     html += `<h3 style="color:var(--navy);margin-top:20px;">Practice Problems</h3>`;
     if (!items.length) {
       html += `<div class="empty-state">No practice problems posted yet for this objective.</div>`;
@@ -367,17 +396,19 @@ function wirePracticeInteractivity() {
       html += items.map((qa, i) => `
         <div class="qa-item">
           <div class="qa-prompt">${i + 1}. ${qa.prompt}</div>
-          <button class="reveal-btn" data-idx="${i}">Show answer</button>
+          <button class="reveal-btn" data-target="ans-${i}">Show answer</button>
           <div class="qa-answer" id="ans-${i}">${qa.answer}</div>
         </div>
       `).join("");
     }
     document.getElementById("practiceContent").innerHTML = html;
     document.querySelectorAll(".reveal-btn").forEach(btn => {
+      const showLabel = btn.textContent;
+      const hideLabel = "Hide" + showLabel.replace(/^Show/, "");
       btn.addEventListener("click", () => {
-        const ans = document.getElementById("ans-" + btn.dataset.idx);
+        const ans = document.getElementById(btn.dataset.target);
         ans.classList.toggle("shown");
-        btn.textContent = ans.classList.contains("shown") ? "Hide answer" : "Show answer";
+        btn.textContent = ans.classList.contains("shown") ? hideLabel : showLabel;
       });
     });
   };

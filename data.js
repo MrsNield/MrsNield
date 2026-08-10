@@ -241,6 +241,71 @@ const SITE_DATA = {
       "1-7": "https://www.deltamath.com/app/assignment/33378609"
     },
 
+    // ---- Vocabulary flashcards per objective (term + definition, for
+    // self-checking). Shown in the "Practice & Videos" tab. ----
+    vocab: {
+      "1-1": [
+        { term: "Parent function", definition: "The simplest, most basic form of a family of functions (e.g., f(x) = x² is the parent of every quadratic)." },
+        { term: "Piecewise-defined function", definition: "A function built from two or more sub-functions, each applying to a different part of the domain." },
+        { term: "Step function", definition: "A piecewise function made of constant horizontal segments that jump to a new value at each break (e.g., the greatest integer/floor function)." }
+      ],
+      "1-2": [
+        { term: "Domain", definition: "The set of all possible input (x) values of a function." },
+        { term: "Range", definition: "The set of all possible output (y) values of a function." },
+        { term: "Zero (of a function)", definition: "An x-value where f(x) = 0 — where the graph crosses or touches the x-axis. Also called a root, answer, or x-intercept." },
+        { term: "Relative maximum", definition: "A point higher than all nearby points on the graph (a 'peak'), though not necessarily the highest point overall." },
+        { term: "Relative minimum", definition: "A point lower than all nearby points on the graph (a 'valley'), though not necessarily the lowest point overall." },
+        { term: "Asymptote", definition: "A line that a graph gets closer and closer to but never touches or crosses." },
+        { term: "Symmetry", definition: "A graph's mirror-image balance — about the y-axis, about the origin, or neither." }
+      ],
+      "1-3": [
+        { term: "Increasing interval", definition: "An interval of x-values over which the y-values go up as x increases (left to right)." },
+        { term: "Decreasing interval", definition: "An interval of x-values over which the y-values go down as x increases (left to right)." }
+      ],
+      "1-4": [
+        { term: "End behavior", definition: "What happens to f(x) as x approaches positive infinity or negative infinity." },
+        { term: "Infinity notation", definition: "Shorthand for end behavior, e.g. \"as x → ∞, f(x) → ∞\" means as x grows without bound, so does f(x)." }
+      ],
+      "1-5": [
+        { term: "Even function", definition: "A function symmetric about the y-axis; algebraically, f(–x) = f(x) for all x." },
+        { term: "Odd function", definition: "A function symmetric about the origin; algebraically, f(–x) = –f(x) for all x." }
+      ],
+      "1-6": [
+        { term: "Discontinuity", definition: "A point where a graph is not continuous — there's a break, hole, or jump." },
+        { term: "Removable discontinuity", definition: "A single-point hole in a graph that could be 'fixed' by filling in one missing point." },
+        { term: "Jump discontinuity", definition: "A break where the graph 'jumps' from one y-value to another at a given x-value." },
+        { term: "Infinite discontinuity", definition: "A break caused by a vertical asymptote, where the graph shoots toward +∞ or –∞." }
+      ],
+      "1-7": [
+        { term: "Transformation", definition: "A change applied to a parent function's graph — a stretch, compression, reflection, or shift." },
+        { term: "Vertical shift", definition: "Moving a graph up or down, from f(x) + d." },
+        { term: "Horizontal shift", definition: "Moving a graph left or right, from f(x – c)." },
+        { term: "Reflection", definition: "Flipping a graph over an axis, from a negative sign like –f(x) (over the x-axis) or f(–x) (over the y-axis)." }
+      ]
+    },
+
+    // ---- Graph identification practice per objective. Each entry shows an
+    // image and asks students to identify something about it before revealing
+    // the answer. "image" paths point to images/graphs/ (generated parent-
+    // function graphs, unlabeled on purpose). Add more by dropping a new
+    // image in that folder and adding an entry here. ----
+    graphPractice: {
+      "1-1": [
+        { image: "images/graphs/linear.png", prompt: "Which parent function is this?", answer: "Linear parent function: f(x) = x" },
+        { image: "images/graphs/quadratic.png", prompt: "Which parent function is this?", answer: "Quadratic parent function: f(x) = x²" },
+        { image: "images/graphs/cubic.png", prompt: "Which parent function is this?", answer: "Cubic parent function: f(x) = x³" },
+        { image: "images/graphs/absolute_value.png", prompt: "Which parent function is this?", answer: "Absolute value parent function: f(x) = |x|" },
+        { image: "images/graphs/square_root.png", prompt: "Which parent function is this?", answer: "Square root parent function: f(x) = √x" },
+        { image: "images/graphs/cube_root.png", prompt: "Which parent function is this?", answer: "Cube root parent function: f(x) = ∛x" },
+        { image: "images/graphs/reciprocal.png", prompt: "Which parent function is this?", answer: "Reciprocal parent function: f(x) = 1/x" },
+        { image: "images/graphs/exponential.png", prompt: "Which parent function is this?", answer: "Exponential parent function: f(x) = 2ˣ" },
+        { image: "images/graphs/logarithmic.png", prompt: "Which parent function is this?", answer: "Logarithmic parent function: f(x) = log(x)" },
+        { image: "images/graphs/sine.png", prompt: "Which parent function is this?", answer: "Sine parent function: f(x) = sin(x)" },
+        { image: "images/graphs/cosine.png", prompt: "Which parent function is this?", answer: "Cosine parent function: f(x) = cos(x)" },
+        { image: "images/graphs/step_function.png", prompt: "Which parent function is this?", answer: "Step (greatest integer) parent function: f(x) = ⌊x⌋" }
+      ]
+    },
+
     // ---- Practice problems per objective (with answers, for self-checking) ----
     practice: {
       "1-1": [

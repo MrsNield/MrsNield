@@ -212,6 +212,33 @@
   .bell-item:last-child { border: none; }
   .bell-date { font-weight: 700; color: var(--navy); min-width: 100px; }
   .bell-item img { max-width: 220px; border-radius: 8px; margin-top: 6px; }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+  .flash-card {
+    background: var(--light);
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .flash-term { font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .graph-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 4px;
+  }
+  .graph-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+  }
+  .graph-card img { width: 100%; max-width: 260px; border-radius: 6px; margin-bottom: 8px; }
+  .graph-card .qa-prompt { font-size: 0.88rem; }
   .video-list { list-style: none; padding: 0; }
   .video-list li { margin-bottom: 8px; }
   .video-list a { color: var(--navy); font-weight: 600; }
