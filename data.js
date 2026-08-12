@@ -110,6 +110,51 @@ const SITE_DATA = {
     // Downloadable rubric file (see files/ folder)
     rubricFile: "files/Unit1_Parent_Functions_Rubric.pdf",
 
+    // ---- Rough year-at-a-glance outline, pulled from the district's TEKS RS
+    // pacing guide. One placeholder row per unit for now — each will be broken
+    // out into day-by-day lessons (like the Precalc calendar) as the year goes on. ----
+    courseCalendar: [
+      { id: "cal-unit1", name: "Unit 1: Graphs, Attributes, and Applications of Functions", schedule: [
+        { date: "2026-08-14", type: "lesson", label: "Graphs, Attributes, and Applications of Functions — runs through Sep 3" }
+      ]},
+      { id: "cal-unit2", name: "Unit 2: Composition and Inverses of Functions", schedule: [
+        { date: "2026-09-08", type: "lesson", label: "Composition and Inverses of Functions — runs through Sep 28" }
+      ]},
+      { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
+        { date: "2026-09-29", type: "lesson", label: "Polynomial and Power Functions, Equations, and Inequalities — runs through Oct 30" }
+      ]},
+      { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
+        { date: "2026-11-02", type: "lesson", label: "Rational Functions, Equations, and Inequalities — runs through Nov 6 (start date approximate — TEKS RS doc didn't print it clearly, double check)" }
+      ]},
+      { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
+        { date: "2026-11-11", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — runs through Dec 3" }
+      ]},
+      { id: "cal-unit6", name: "Unit 6: Sequences, Series, and Binomial Expansion", schedule: [
+        { date: "2026-12-07", type: "lesson", label: "Sequences, Series, and Binomial Expansion — runs through Dec 18" }
+      ]},
+      { id: "cal-unit7", name: "Unit 7: Problem Solving with Trigonometric Ratios", schedule: [
+        { date: "2027-01-06", type: "lesson", label: "Problem Solving with Trigonometric Ratios — runs through Jan 21" }
+      ]},
+      { id: "cal-unit8", name: "Unit 8: Trigonometric Functions", schedule: [
+        { date: "2027-01-25", type: "lesson", label: "Trigonometric Functions — runs through Feb 17" }
+      ]},
+      { id: "cal-unit9", name: "Unit 9: Trigonometric Equations and Identities", schedule: [
+        { date: "2027-02-22", type: "lesson", label: "Trigonometric Equations and Identities — runs through Mar 8" }
+      ]},
+      { id: "cal-unit10", name: "Unit 10: Vectors", schedule: [
+        { date: "2027-03-10", type: "lesson", label: "Vectors — runs through Mar 30" }
+      ]},
+      { id: "cal-unit11", name: "Unit 11: Parametric Equations", schedule: [
+        { date: "2027-04-01", type: "lesson", label: "Parametric Equations — runs through Apr 13" }
+      ]},
+      { id: "cal-unit12", name: "Unit 12: Polar Equations", schedule: [
+        { date: "2027-04-15", type: "lesson", label: "Polar Equations — runs through Apr 22" }
+      ]},
+      { id: "cal-unit13", name: "Unit 13: Conics", schedule: [
+        { date: "2027-04-26", type: "lesson", label: "Conics — runs through May 19" }
+      ]}
+    ],
+
     // ---- Daily log: just tag each class day with the objective you covered.
     // Powers the "What Did I Miss?" tab (combined with that day's bellringer
     // and board work photos below). Add entries in any order. ----

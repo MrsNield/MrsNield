@@ -66,6 +66,7 @@ function renderMain() {
   `;
   const tabs = [
     { id: "progress", label: "Progress" },
+    { id: "calendar", label: "Course Calendar" },
     { id: "whatdidimiss", label: "What Did I Miss?" },
     { id: "rubric", label: "Standards Rubric" },
     { id: "board", label: "Board Work" },
@@ -85,6 +86,7 @@ function renderMain() {
 
   const panels = document.getElementById("honorsPanels");
   if (currentHonorsTab === "progress") panels.innerHTML = renderProgress();
+  else if (currentHonorsTab === "calendar") panels.innerHTML = renderCourseCalendar(SITE_DATA.honors.courseCalendar || [], false);
   else if (currentHonorsTab === "whatdidimiss") panels.innerHTML = renderWhatDidIMiss();
   else if (currentHonorsTab === "rubric") panels.innerHTML = renderRubric();
   else if (currentHonorsTab === "board") panels.innerHTML = renderBoardWork();
@@ -239,10 +241,11 @@ const CALENDAR_TYPE_LABELS = {
   final: "Final"
 };
 
-function renderCourseCalendar(units) {
+function renderCourseCalendar(units, showMissedDayNote) {
   units = units || [];
+  showMissedDayNote = showMissedDayNote !== false;
   let html = `<div class="card"><h2 class="section-title">Course Calendar</h2>
-    <p class="rubric-note">Missed a day? Find the date below to see what we covered.</p>`;
+    ${showMissedDayNote ? `<p class="rubric-note">Missed a day? Find the date below to see what we covered.</p>` : ""}`;
 
   if (!units.length) {
     html += `<div class="empty-state">The calendar hasn't been built yet — check back soon!</div>`;
