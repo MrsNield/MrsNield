@@ -164,7 +164,9 @@ const SITE_DATA = {
     // ---- Board work photos. Add entries in any order — the site groups them
     // automatically by day (newest first), then by objective within each day. ----
     // { date: "2026-08-12", objective: "1-1", caption: "Round 1 boards", image: "images/board/filename.jpg" }
-    boardWork: [],
+    boardWork: [
+      { date: "2026-08-14", caption: "Tax Collector — group work expectations (4th period)", image: "images/board/2026-08-14_tax-collector_4th.jpg" }
+    ],
 
     // ---- Daily "function of the day" bellringers. Add entries in any order —
     // the site sorts them and auto-hides each one until 4:00 PM on its date
