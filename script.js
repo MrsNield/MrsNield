@@ -6,6 +6,7 @@
 let currentCourse = "honors";
 let currentHonorsTab = "progress";
 let currentPrecalcTab = "calendar";
+let currentApCalcTab = "resources";
 
 function statusLabel(s) {
   if (s === "covered") return "Covered";
@@ -33,14 +34,36 @@ function renderMain() {
     const msg = SITE_DATA.apcalc?.message || "This course hasn't been planned yet — check back soon!";
     main.innerHTML = `
       <div class="placeholder-card" style="margin-bottom:14px;">${msg}</div>
+      <div class="sub-tabs" id="apcalcSubTabs"></div>
       <div id="apcalcPanels"></div>
-      <div id="apcalcPrereqPanel" style="margin-top:14px;"></div>
-      <div id="apcalcParentFuncPanel" style="margin-top:14px;"></div>
     `;
-    document.getElementById("apcalcPanels").innerHTML = renderApCalcUnits(SITE_DATA.apcalc?.units || []);
-    document.getElementById("apcalcPrereqPanel").innerHTML = renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []);
-    document.getElementById("apcalcParentFuncPanel").innerHTML = renderParentFunctionPractice(SITE_DATA.apcalc?.parentFunctionPractice || []);
-    wirePrereqSkillsInteractivity();
+    const acTabs = [
+      { id: "resources", label: "Resources & Practice" },
+      { id: "calendar", label: "Course Calendar" },
+      { id: "whatdidimiss", label: "What Did I Miss?" }
+    ];
+    const acSubTabsEl = document.getElementById("apcalcSubTabs");
+    acSubTabsEl.innerHTML = acTabs.map(t =>
+      `<button class="sub-tab ${t.id === currentApCalcTab ? "active" : ""}" data-tab="${t.id}">${t.label}</button>`
+    ).join("");
+    acSubTabsEl.querySelectorAll(".sub-tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentApCalcTab = btn.dataset.tab;
+        renderMain();
+      });
+    });
+    const acPanels = document.getElementById("apcalcPanels");
+    if (currentApCalcTab === "calendar") {
+      acPanels.innerHTML = renderCourseCalendar(SITE_DATA.apcalc?.courseCalendar || []);
+    } else if (currentApCalcTab === "whatdidimiss") {
+      acPanels.innerHTML = renderApCalcWhatDidIMiss();
+    } else {
+      acPanels.innerHTML =
+        renderApCalcUnits(SITE_DATA.apcalc?.units || []) +
+        renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []) +
+        renderParentFunctionPractice(SITE_DATA.apcalc?.parentFunctionPractice || []);
+      wirePrereqSkillsInteractivity();
+    }
     return;
   }
   if (currentCourse === "precalc") {
@@ -196,6 +219,62 @@ function renderWhatDidIMiss() {
       }
 
       if (!covered.length && !bell && !boards.length) {
+        html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
+      }
+
+      html += `</div>`;
+    });
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+// AP Calc has no bellringers and no objective catalog to look up against —
+// dailyLog entries just carry their own label text directly.
+function renderApCalcWhatDidIMiss() {
+  const dailyLog = SITE_DATA.apcalc?.dailyLog || [];
+  const boardWork = SITE_DATA.apcalc?.boardWork || [];
+
+  const dateSet = new Set();
+  dailyLog.forEach(e => dateSet.add(e.date));
+  boardWork.forEach(e => dateSet.add(e.date));
+
+  const dates = Array.from(dateSet).sort((a, b) => String(b).localeCompare(String(a)));
+
+  let html = `<div class="card"><h2 class="section-title">What Did I Miss?</h2>
+    <p class="rubric-note">Everything from a missed day — what we covered and any board work — all in one place.</p>`;
+
+  if (!dates.length) {
+    html += `<div class="empty-state">Nothing to catch up on yet — check back once we start covering material!</div>`;
+  } else {
+    dates.forEach(date => {
+      const covered = dailyLog.filter(e => e.date === date);
+      const boards = boardWork.filter(b => b.date === date);
+
+      html += `<div class="miss-day">`;
+      html += `<h3 class="day-heading">${formatDateLabel(date)}</h3>`;
+
+      if (covered.length) {
+        const coveredText = covered.map(e => e.label).join(", ");
+        html += `<div class="miss-section"><strong>Covered:</strong> ${coveredText}</div>`;
+      }
+
+      if (boards.length) {
+        html += `<div class="miss-section"><strong>Board Work:</strong>
+          <div class="board-grid" style="margin-top:8px;">`;
+        boards.forEach(b => {
+          html += `
+            <div class="board-item">
+              <img src="${b.image}" alt="Board work from ${b.date}">
+              ${b.caption ? `<div class="cap">${b.caption}</div>` : ""}
+            </div>
+          `;
+        });
+        html += `</div></div>`;
+      }
+
+      if (!covered.length && !boards.length) {
         html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
       }
 
@@ -516,7 +595,7 @@ function renderParentFunctionPractice(items) {
 }
 
 function wirePrereqSkillsInteractivity() {
-  document.querySelectorAll("#apcalcPrereqPanel .reveal-btn, #apcalcParentFuncPanel .reveal-btn").forEach(btn => {
+  document.querySelectorAll("#apcalcPanels .reveal-btn").forEach(btn => {
     const showLabel = btn.textContent;
     const hideLabel = "Hide" + showLabel.replace(/^Show/, "");
     btn.addEventListener("click", () => {

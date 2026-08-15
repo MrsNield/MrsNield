@@ -760,6 +760,36 @@ const SITE_DATA = {
 
   apcalc: {
     message: "Unit resources are posted below as they're ready — more units coming as the year progresses.",
+
+    // ---- Day-by-day course calendar, same idea as the Precalc tab: add a new
+    // { date, type, label } entry as you go. AP Calc has no bellringers, so
+    // "What Did I Miss?" below only combines dailyLog + boardWork. ----
+    courseCalendar: [
+      {
+        id: "unit1", name: "Unit 1: Limits and Continuity",
+        schedule: [
+          { date: "2026-08-14", type: "lesson", label: "1.1 — Rates of Change (HW: Lesson 1.1)" },
+          { date: "2026-08-17", type: "lesson", label: "1.2–1.4 — Limits, Notation, Graphs & Tables (HW: Lesson 1.2)" },
+          { date: "2026-08-18", type: "lesson", label: "1.5–1.7 — Algebraic Limits & Indeterminate Forms (HW: Lesson 1.5)" },
+          { date: "2026-08-19", type: "lesson", label: "1.8–1.9 — Squeeze Theorem & Special Trig Limits (HW: Lesson 1.6)" },
+          { date: "2026-08-20", type: "lesson", label: "1.10–1.13, 1.16 — Discontinuity, Continuity & IVT, Day 1 (HW: Lessons 1.7 & 1.8)" },
+          { date: "2026-08-21", type: "lesson", label: "1.10–1.13, 1.16 — Discontinuity, Continuity & IVT, Day 2 (HW: Lesson 1.9)" },
+          { date: "2026-08-24", type: "lesson", label: "1.14–1.15 — Infinite Limits & Asymptotes (HW: Lessons 1.3 & 1.4)" }
+        ]
+      }
+    ],
+
+    // ---- Daily log: tag each class day with a short description of what was
+    // covered. Powers "What Did I Miss?" below (combined with board work). ----
+    // { date: "2026-08-14", label: "1.1 — Rates of Change" }
+    dailyLog: [
+      { date: "2026-08-14", label: "1.1 — Rates of Change" }
+    ],
+
+    // ---- Board work photos, same format as the other courses. ----
+    // { date: "2026-08-14", caption: "...", image: "images/board/filename.jpg" }
+    boardWork: [],
+
     units: [
       {
         id: "unit1",
