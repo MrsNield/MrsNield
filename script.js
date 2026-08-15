@@ -31,7 +31,11 @@ function renderMain() {
   const main = document.getElementById("mainContent");
   if (currentCourse === "apcalc") {
     const msg = SITE_DATA.apcalc?.message || "This course hasn't been planned yet — check back soon!";
-    main.innerHTML = `<div class="placeholder-card">${msg}</div>`;
+    main.innerHTML = `
+      <div class="placeholder-card" style="margin-bottom:14px;">${msg}</div>
+      <div id="apcalcPanels"></div>
+    `;
+    document.getElementById("apcalcPanels").innerHTML = renderApCalcUnits(SITE_DATA.apcalc?.units || []);
     return;
   }
   if (currentCourse === "precalc") {
@@ -443,6 +447,23 @@ function isSameLocalDate(dateStr, compareTo) {
   if (parts.length !== 3 || parts.some(isNaN)) return false;
   const [y, m, d] = parts;
   return y === compareTo.getFullYear() && (m - 1) === compareTo.getMonth() && d === compareTo.getDate();
+}
+
+function renderApCalcUnits(units) {
+  units = units || [];
+  let html = `<div class="card"><h2 class="section-title">Unit Resources</h2>`;
+  if (!units.length) {
+    html += `<div class="empty-state">No units posted yet — check back soon!</div>`;
+  } else {
+    units.forEach(unit => {
+      html += `<h3 style="color:var(--navy);">${unit.name}</h3>`;
+      (unit.resources || []).forEach(r => {
+        html += `<a class="download-btn" href="${r.file}" target="_blank" rel="noopener" style="margin-right:10px;">⬇ ${r.label}</a>`;
+      });
+    });
+  }
+  html += `</div>`;
+  return html;
 }
 
 function renderBellringers(items) {

@@ -759,6 +759,16 @@ const SITE_DATA = {
   },
 
   apcalc: {
-    message: "This course hasn't been planned yet — check back soon!"
+    message: "Unit resources are posted below as they're ready — more units coming as the year progresses.",
+    units: [
+      {
+        id: "unit1",
+        name: "Unit 1: Limits and Continuity",
+        resources: [
+          { label: "Homework Answer Key (Lessons 1.1–1.9)", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf" },
+          { label: "Guided Notes — Filled In (Lessons 1.1–1.16)", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf" }
+        ]
+      }
+    ]
   }
 };
