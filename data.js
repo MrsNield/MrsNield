@@ -790,6 +790,207 @@ const SITE_DATA = {
     // { date: "2026-08-14", caption: "...", image: "images/board/filename.jpg" }
     boardWork: [],
 
+    // ---- Unit 1 videos, from calculus.flippedmath.com (Version 1), grouped
+    // to match the same day-by-day pacing as the Course Calendar above. ----
+    unitVideos: [
+      {
+        unit: "Unit 1: Limits and Continuity",
+        days: [
+          {
+            day: "Day 1 — Rates of Change (1.1)",
+            videos: [
+              { title: "1.1 — Can Change Occur at an Instant?", url: "https://calculus.flippedmath.com/11-can-change-occur-at-an-instant.html" }
+            ]
+          },
+          {
+            day: "Day 2 — Limits, Notation, Graphs & Tables (1.2–1.4)",
+            videos: [
+              { title: "1.2 — Defining Limits and Using Limit Notation", url: "https://calculus.flippedmath.com/12-defining-limits-and-using-limit-notation.html" },
+              { title: "1.3 — Limit Values from Graphs", url: "https://calculus.flippedmath.com/13-limit-values-from-graphs.html" },
+              { title: "1.4 — Limit Values from Tables", url: "https://calculus.flippedmath.com/14-limit-values-from-tables.html" }
+            ]
+          },
+          {
+            day: "Day 3 — Algebraic Limits & Indeterminate Forms (1.5–1.7)",
+            videos: [
+              { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
+              { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
+              { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" }
+            ]
+          },
+          {
+            day: "Day 4 — Squeeze Theorem & Special Trig Limits (1.8–1.9)",
+            videos: [
+              { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
+              { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" }
+            ]
+          },
+          {
+            day: "Days 5–6 — Discontinuity, Continuity & IVT (1.10–1.13, 1.16)",
+            videos: [
+              { title: "1.10 — Exploring Types of Discontinuities", url: "https://calculus.flippedmath.com/110-exploring-types-of-discontinuities.html" },
+              { title: "1.11 — Defining Continuity at a Point", url: "https://calculus.flippedmath.com/111-defining-continuity-at-a-point.html" },
+              { title: "1.12 — Confirming Continuity Over an Interval", url: "https://calculus.flippedmath.com/112-confirming-continuity-over-an-interval.html" },
+              { title: "1.13 — Removing Discontinuities", url: "https://calculus.flippedmath.com/113-removing-discontinuities.html" },
+              { title: "1.16 — Intermediate Value Theorem", url: "https://calculus.flippedmath.com/116-intermediate-value-theorem.html" }
+            ]
+          },
+          {
+            day: "Day 7 — Infinite Limits & Asymptotes (1.14–1.15)",
+            videos: [
+              { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
+              { title: "1.15 — Limits at Infinity and Horizontal Asymptotes", url: "https://calculus.flippedmath.com/115-limits-at-infinity-and-horizontal-asymptotes.html" }
+            ]
+          }
+        ]
+      }
+    ],
+
+    // ---- Per-day detail shown when a student clicks a date on "What Did I
+    // Miss?" — notes/homework/answers link into specific pages of the combined
+    // PDFs above (#page=N), so there's no need to keep separate per-day files.
+    // deltamath is intentionally blank per day; fill in a URL once you have one
+    // and it'll show a button instead of the "not posted yet" placeholder. ----
+    dayDetails: {
+      "2026-08-14": {
+        notes: { label: "Guided Notes: 1.1", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=1" },
+        homework: [
+          { label: "Lesson 1.1 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=1" }
+        ],
+        homeworkAnswers: [
+          { label: "Lesson 1.1 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=1" }
+        ],
+        videos: [
+          { title: "1.1 — Can Change Occur at an Instant?", url: "https://calculus.flippedmath.com/11-can-change-occur-at-an-instant.html" }
+        ],
+        practice: [
+          { prompt: "A car's position is s(t) = t² + 2t (meters), t in seconds. Find its average velocity on [1, 4].", answer: "Average velocity = [s(4) - s(1)] / (4 - 1) = [(16+8) - (1+2)] / 3 = 21/3 = 7 m/s" },
+          { prompt: "Using the same s(t), estimate the instantaneous velocity at t = 1 using the average rate of change over [1, 1.01].", answer: "[s(1.01) - s(1)] / 0.01 = [3.0401 - 3] / 0.01 ≈ 4.01 — close to the exact instantaneous velocity of 4." }
+        ],
+        deltamath: ""
+      },
+      "2026-08-17": {
+        notes: { label: "Guided Notes: 1.2–1.4", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=3" },
+        homework: [
+          { label: "Lesson 1.2 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=7" }
+        ],
+        homeworkAnswers: [
+          { label: "Lesson 1.2 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=3" }
+        ],
+        videos: [
+          { title: "1.2 — Defining Limits and Using Limit Notation", url: "https://calculus.flippedmath.com/12-defining-limits-and-using-limit-notation.html" },
+          { title: "1.3 — Limit Values from Graphs", url: "https://calculus.flippedmath.com/13-limit-values-from-graphs.html" },
+          { title: "1.4 — Limit Values from Tables", url: "https://calculus.flippedmath.com/14-limit-values-from-tables.html" }
+        ],
+        practice: [
+          { prompt: "Use correct limit notation to express: as x approaches 3, f(x) approaches 7.", answer: "lim(x→3) f(x) = 7" },
+          { prompt: "A table shows f(1.9)=3.8, f(1.99)=3.98, f(1.999)=3.998, f(2.001)=4.002, f(2.01)=4.02, f(2.1)=4.2. What does this suggest about lim(x→2) f(x)?", answer: "4 — the values approach 4 from both sides as x gets closer to 2." }
+        ],
+        deltamath: ""
+      },
+      "2026-08-18": {
+        notes: { label: "Guided Notes: 1.5–1.7", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=8" },
+        homework: [
+          { label: "Lesson 1.5 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=19" }
+        ],
+        homeworkAnswers: [
+          { label: "Lesson 1.5 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=7" }
+        ],
+        videos: [
+          { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
+          { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
+          { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" }
+        ],
+        practice: [
+          { prompt: "Evaluate: lim(x→2) (x² - 4)/(x - 2)", answer: "Factor: (x-2)(x+2)/(x-2) = x + 2 for x ≠ 2. Limit = 2 + 2 = 4." },
+          { prompt: "Evaluate: lim(x→0) (√(x+4) - 2)/x", answer: "Rationalize by multiplying by (√(x+4)+2)/(√(x+4)+2): the numerator becomes x, giving 1/(√(x+4)+2). As x→0: 1/(2+2) = 1/4." }
+        ],
+        deltamath: ""
+      },
+      "2026-08-19": {
+        notes: { label: "Guided Notes: 1.8–1.9", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=12" },
+        homework: [
+          { label: "Lesson 1.6 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=22" }
+        ],
+        homeworkAnswers: [
+          { label: "Lesson 1.6 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=8" }
+        ],
+        videos: [
+          { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
+          { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" }
+        ],
+        practice: [
+          { prompt: "State the two special trig limits used alongside the Squeeze Theorem.", answer: "lim(x→0) sin(x)/x = 1, and lim(x→0) (1 - cos(x))/x = 0" },
+          { prompt: "Evaluate: lim(x→0) sin(3x)/x", answer: "Rewrite as 3 · sin(3x)/(3x). As x→0, 3x→0 too, so sin(3x)/(3x) → 1. Limit = 3 · 1 = 3." }
+        ],
+        deltamath: ""
+      },
+      "2026-08-20": {
+        notes: { label: "Guided Notes: 1.10–1.13, 1.16", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
+        homework: [
+          { label: "Lesson 1.7 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=25" },
+          { label: "Lesson 1.8 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=29" }
+        ],
+        homeworkAnswers: [
+          { label: "Lesson 1.7 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=9" },
+          { label: "Lesson 1.8 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=11" }
+        ],
+        videos: [
+          { title: "1.10 — Exploring Types of Discontinuities", url: "https://calculus.flippedmath.com/110-exploring-types-of-discontinuities.html" },
+          { title: "1.11 — Defining Continuity at a Point", url: "https://calculus.flippedmath.com/111-defining-continuity-at-a-point.html" },
+          { title: "1.12 — Confirming Continuity Over an Interval", url: "https://calculus.flippedmath.com/112-confirming-continuity-over-an-interval.html" },
+          { title: "1.13 — Removing Discontinuities", url: "https://calculus.flippedmath.com/113-removing-discontinuities.html" },
+          { title: "1.16 — Intermediate Value Theorem", url: "https://calculus.flippedmath.com/116-intermediate-value-theorem.html" }
+        ],
+        practice: [
+          { prompt: "Classify the discontinuity of f(x) = (x² - 1)/(x - 1) at x = 1.", answer: "Factors to (x-1)(x+1)/(x-1) = x+1 for x≠1, so the limit exists (=2) but f(1) is undefined — a removable discontinuity (hole)." },
+          { prompt: "f is continuous on [1, 4], with f(1) = -3 and f(4) = 5. Does f have a zero in (1, 4)? Why?", answer: "Yes, by the Intermediate Value Theorem — since f is continuous and 0 is between f(1) = -3 and f(4) = 5, there must be some c in (1, 4) with f(c) = 0." }
+        ],
+        deltamath: ""
+      },
+      "2026-08-21": {
+        notes: { label: "Guided Notes: 1.10–1.13, 1.16", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
+        homework: [
+          { label: "Lesson 1.9 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=33" }
+        ],
+        homeworkAnswers: [
+          { label: "Lesson 1.9 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=12" }
+        ],
+        videos: [
+          { title: "1.10 — Exploring Types of Discontinuities", url: "https://calculus.flippedmath.com/110-exploring-types-of-discontinuities.html" },
+          { title: "1.11 — Defining Continuity at a Point", url: "https://calculus.flippedmath.com/111-defining-continuity-at-a-point.html" },
+          { title: "1.12 — Confirming Continuity Over an Interval", url: "https://calculus.flippedmath.com/112-confirming-continuity-over-an-interval.html" },
+          { title: "1.13 — Removing Discontinuities", url: "https://calculus.flippedmath.com/113-removing-discontinuities.html" },
+          { title: "1.16 — Intermediate Value Theorem", url: "https://calculus.flippedmath.com/116-intermediate-value-theorem.html" }
+        ],
+        practice: [
+          { prompt: "Is f(x) = (x² - 9)/(x + 3) continuous at x = -3? If not, can the discontinuity be removed?", answer: "f(-3) is undefined (0/0 form), so f is not continuous there. But (x²-9)/(x+3) = x - 3 for x ≠ -3, so the limit exists (= -6) — it's a removable discontinuity. Redefining f(-3) = -6 would make it continuous." },
+          { prompt: "State the three conditions required for f to be continuous at x = c.", answer: "1) f(c) is defined, 2) lim(x→c) f(x) exists, and 3) lim(x→c) f(x) = f(c)." }
+        ],
+        deltamath: ""
+      },
+      "2026-08-24": {
+        notes: { label: "Guided Notes: 1.14–1.15", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=19" },
+        homework: [
+          { label: "Lesson 1.3 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=13" },
+          { label: "Lesson 1.4 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=15" }
+        ],
+        homeworkAnswers: [
+          { label: "Lesson 1.3 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=5" },
+          { label: "Lesson 1.4 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=6" }
+        ],
+        videos: [
+          { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
+          { title: "1.15 — Limits at Infinity and Horizontal Asymptotes", url: "https://calculus.flippedmath.com/115-limits-at-infinity-and-horizontal-asymptotes.html" }
+        ],
+        practice: [
+          { prompt: "Find the vertical asymptote of f(x) = 1/(x - 3) and describe the behavior of f(x) as x→3⁻ and x→3⁺.", answer: "Vertical asymptote at x = 3. As x→3⁻, f(x)→-∞. As x→3⁺, f(x)→+∞." },
+          { prompt: "Find the horizontal asymptote of f(x) = (2x² + 1)/(x² - 4) as x→∞.", answer: "The numerator and denominator have the same degree, so the horizontal asymptote is the ratio of leading coefficients: y = 2/1 = 2." }
+        ],
+        deltamath: ""
+      }
+    },
+
     units: [
       {
         id: "unit1",

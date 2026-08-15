@@ -57,9 +57,12 @@ function renderMain() {
       acPanels.innerHTML = renderCourseCalendar(SITE_DATA.apcalc?.courseCalendar || []);
     } else if (currentApCalcTab === "whatdidimiss") {
       acPanels.innerHTML = renderApCalcWhatDidIMiss();
+      wireApCalcWhatDidIMissInteractivity();
+      wirePrereqSkillsInteractivity();
     } else {
       acPanels.innerHTML =
         renderApCalcUnits(SITE_DATA.apcalc?.units || []) +
+        renderApCalcUnitVideos(SITE_DATA.apcalc?.unitVideos || []) +
         renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []) +
         renderParentFunctionPractice(SITE_DATA.apcalc?.parentFunctionPractice || []);
       wirePrereqSkillsInteractivity();
@@ -251,9 +254,10 @@ function renderApCalcWhatDidIMiss() {
     dates.forEach(date => {
       const covered = dailyLog.filter(e => e.date === date);
       const boards = boardWork.filter(b => b.date === date);
+      const detailId = "apcalc-detail-" + date;
 
       html += `<div class="miss-day">`;
-      html += `<h3 class="day-heading">${formatDateLabel(date)}</h3>`;
+      html += `<h3 class="day-heading" style="cursor:pointer;" data-toggle="${detailId}">${formatDateLabel(date)} <span style="font-size:0.7rem;font-weight:400;color:var(--gray);">(click for notes, homework, videos & practice)</span></h3>`;
 
       if (covered.length) {
         const coveredText = covered.map(e => e.label).join(", ");
@@ -278,12 +282,78 @@ function renderApCalcWhatDidIMiss() {
         html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
       }
 
+      html += `<div class="qa-answer" id="${detailId}" style="margin-top:10px;">${renderApCalcDayDetail(date)}</div>`;
+
       html += `</div>`;
     });
   }
 
   html += `</div>`;
   return html;
+}
+
+function renderApCalcDayDetail(date) {
+  const d = (SITE_DATA.apcalc?.dayDetails || {})[date];
+  if (!d) {
+    return `<div class="miss-section" style="color:var(--gray);font-style:italic;">No detail posted for this day yet.</div>`;
+  }
+
+  let html = "";
+
+  if (d.notes) {
+    html += `<div class="miss-section"><strong>Notes:</strong><br>
+      <a class="download-btn" href="${d.notes.file}" target="_blank" rel="noopener" style="margin-top:6px;">⬇ ${d.notes.label}</a>
+    </div>`;
+  }
+
+  if (d.homework && d.homework.length) {
+    html += `<div class="miss-section"><strong>Homework:</strong><br>` +
+      d.homework.map(h => `<a class="download-btn" href="${h.file}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">⬇ ${h.label}</a>`).join("") +
+      `</div>`;
+  }
+
+  if (d.homeworkAnswers && d.homeworkAnswers.length) {
+    html += `<div class="miss-section"><strong>Homework Answers:</strong><br>` +
+      d.homeworkAnswers.map(h => `<a class="download-btn" href="${h.file}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">⬇ ${h.label}</a>`).join("") +
+      `</div>`;
+  }
+
+  if (d.videos && d.videos.length) {
+    html += `<div class="miss-section"><strong>Videos:</strong>
+      <ul class="video-list">` + d.videos.map(v => `<li><a href="${v.url}" target="_blank" rel="noopener">${v.title}</a></li>`).join("") + `</ul>
+    </div>`;
+  }
+
+  if (d.practice && d.practice.length) {
+    html += `<div class="miss-section"><strong>Practice:</strong>` +
+      d.practice.map((qa, i) => `
+        <div class="qa-item">
+          <div class="qa-prompt">${i + 1}. ${qa.prompt}</div>
+          <button class="reveal-btn" data-target="miss-${date}-ans-${i}">Show answer</button>
+          <div class="qa-answer" id="miss-${date}-ans-${i}">${qa.answer}</div>
+        </div>
+      `).join("") +
+      `</div>`;
+  }
+
+  if (d.deltamath) {
+    html += `<div class="miss-section"><strong>DeltaMath:</strong><br>
+      <a class="download-btn" href="${d.deltamath}" target="_blank" rel="noopener" style="margin-top:6px;">Go to DeltaMath Practice</a>
+    </div>`;
+  } else {
+    html += `<div class="miss-section"><strong>DeltaMath:</strong> <span style="color:var(--gray);font-style:italic;">No DeltaMath assignment posted yet.</span></div>`;
+  }
+
+  return html;
+}
+
+function wireApCalcWhatDidIMissInteractivity() {
+  document.querySelectorAll("#apcalcPanels [data-toggle]").forEach(el => {
+    el.addEventListener("click", () => {
+      const target = document.getElementById(el.dataset.toggle);
+      if (target) target.classList.toggle("shown");
+    });
+  });
 }
 
 function renderRubric() {
@@ -543,6 +613,26 @@ function renderApCalcUnits(units) {
       html += `<h3 style="color:var(--navy);">${unit.name}</h3>`;
       (unit.resources || []).forEach(r => {
         html += `<a class="download-btn" href="${r.file}" target="_blank" rel="noopener" style="margin-right:10px;">⬇ ${r.label}</a>`;
+      });
+    });
+  }
+  html += `</div>`;
+  return html;
+}
+
+function renderApCalcUnitVideos(unitVideos) {
+  unitVideos = unitVideos || [];
+  let html = `<div class="card"><h2 class="section-title">Unit Videos</h2>`;
+  if (!unitVideos.length) {
+    html += `<div class="empty-state">No videos posted yet — check back soon!</div>`;
+  } else {
+    unitVideos.forEach(unit => {
+      html += `<h3 style="color:var(--navy);">${unit.unit}</h3>`;
+      (unit.days || []).forEach(d => {
+        html += `<div class="topic-label">${d.day}</div>`;
+        html += `<ul class="video-list">` + (d.videos || []).map(v =>
+          `<li><a href="${v.url}" target="_blank" rel="noopener">${v.title}</a></li>`
+        ).join("") + `</ul>`;
       });
     });
   }
