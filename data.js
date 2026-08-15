@@ -769,6 +769,123 @@ const SITE_DATA = {
           { label: "Guided Notes — Filled In (Lessons 1.1–1.16)", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf" }
         ]
       }
+    ],
+
+    // ---- Prerequisite skills review — not tied to a specific unit. Add more
+    // skill categories or problems any time; each renders as its own
+    // reveal-answer section on the AP Calc tab. ----
+    prereqSkills: [
+      {
+        name: "Factoring",
+        problems: [
+          { prompt: "Factor completely: x² - 5x - 14", answer: "(x - 7)(x + 2)" },
+          { prompt: "Factor completely: 4x² - 25", answer: "(2x - 5)(2x + 5) — difference of squares." },
+          { prompt: "Factor completely: 2x³ - 16", answer: "2(x³ - 8) = 2(x - 2)(x² + 2x + 4) — factor out the GCF first, then use the difference of cubes." },
+          { prompt: "Factor by grouping: x³ + 3x² - 4x - 12", answer: "x²(x + 3) - 4(x + 3) = (x + 3)(x² - 4) = (x + 3)(x - 2)(x + 2)" },
+          { prompt: "Factor completely: 6x² + 7x - 3", answer: "(2x + 3)(3x - 1)" }
+        ]
+      },
+      {
+        name: "Unit Circle",
+        problems: [
+          { prompt: "Evaluate exactly: sin(π/3)", answer: "√3/2" },
+          { prompt: "Evaluate exactly: cos(5π/6)", answer: "-√3/2" },
+          { prompt: "Evaluate exactly: tan(π/4)", answer: "1" },
+          { prompt: "Evaluate exactly: sin(3π/2)", answer: "-1" },
+          { prompt: "Evaluate exactly: cos(7π/4)", answer: "√2/2" },
+          { prompt: "Find all θ in [0, 2π) where sin(θ) = -1/2", answer: "θ = 7π/6 and θ = 11π/6" }
+        ]
+      },
+      {
+        name: "Log and Exponent Rules",
+        problems: [
+          { prompt: "Simplify: log₂(8) + log₂(4)", answer: "log₂(8) = 3 and log₂(4) = 2, so the sum is 5. (Equivalently, log₂(8·4) = log₂(32) = 5.)" },
+          { prompt: "Simplify: 2³ · 2⁻⁵", answer: "2^(3 + (-5)) = 2⁻² = 1/4" },
+          { prompt: "Solve for x: 3^(x+1) = 27", answer: "27 = 3³, so x + 1 = 3 → x = 2" },
+          { prompt: "Simplify: ln(e⁴) - ln(e²)", answer: "4 - 2 = 2 (using ln(eᵏ) = k)" },
+          { prompt: "Solve for x: log(x) + log(x - 3) = 1", answer: "log(x(x-3)) = 1 → x(x-3) = 10 → x² - 3x - 10 = 0 → (x-5)(x+2) = 0 → x = 5 or x = -2. Reject x = -2 (log of a negative number is undefined), so x = 5." },
+          { prompt: "Simplify using exponent rules: (x³y⁻²)² / (x⁻¹y⁴)", answer: "x⁶y⁻⁴ / (x⁻¹y⁴) = x^(6-(-1)) · y^(-4-4) = x⁷y⁻⁸ = x⁷/y⁸" }
+        ]
+      },
+      {
+        name: "Rationalizing Radical Expressions",
+        problems: [
+          { prompt: "Rationalize the denominator: 5 / (√7 - 2)", answer: "Multiply by (√7 + 2)/(√7 + 2): 5(√7 + 2) / (7 - 4) = 5(√7 + 2)/3" },
+          { prompt: "Rationalize the numerator and simplify: (√x - 3) / (x - 9)", answer: "x - 9 = (√x - 3)(√x + 3), so the expression simplifies to 1/(√x + 3), for x ≠ 9." },
+          { prompt: "Rationalize the numerator and simplify: (√(x + 9) - 3) / x", answer: "Multiply by (√(x+9) + 3)/(√(x+9) + 3): numerator becomes (x+9) - 9 = x, giving x / [x(√(x+9) + 3)] = 1/(√(x+9) + 3)." },
+          { prompt: "Rationalize the numerator and simplify: (√(x + h) - √x) / h — this is exactly the setup you'll use to find the derivative of √x.", answer: "Multiply by (√(x+h) + √x)/(√(x+h) + √x): numerator becomes (x+h) - x = h, giving h / [h(√(x+h) + √x)] = 1/(√(x+h) + √x)." }
+        ]
+      },
+      {
+        name: "Difference Quotients & Simplifying Rational Expressions",
+        problems: [
+          { prompt: "Simplify the difference quotient [f(x+h) - f(x)] / h for f(x) = x²", answer: "[(x+h)² - x²]/h = [2xh + h²]/h = 2x + h" },
+          { prompt: "Simplify the difference quotient [f(x+h) - f(x)] / h for f(x) = 3x + 5", answer: "[3(x+h)+5 - (3x+5)]/h = 3h/h = 3" },
+          { prompt: "Simplify the difference quotient [f(x+h) - f(x)] / h for f(x) = 1/x", answer: "[1/(x+h) - 1/x]/h = [(x - (x+h)) / (x(x+h))]/h = [-h / (x(x+h))]/h = -1 / (x(x+h))" },
+          { prompt: "Simplify: (x² - 9) / (x² + x - 12)", answer: "(x-3)(x+3) / [(x+4)(x-3)] = (x+3)/(x+4), for x ≠ 3" }
+        ]
+      },
+      {
+        name: "Point-Slope Form & Equations of Lines",
+        problems: [
+          { prompt: "Write the equation of the line through (2, 5) with slope 3.", answer: "y - 5 = 3(x - 2), or y = 3x - 1" },
+          { prompt: "A curve passes through (1, 4) with slope -2 at that point. Write the equation of the tangent line there.", answer: "y - 4 = -2(x - 1), or y = -2x + 6" },
+          { prompt: "Find the slope of the line through (-1, 3) and (4, -7).", answer: "m = (-7 - 3)/(4 - (-1)) = -10/5 = -2" },
+          { prompt: "Write the equation of the line through (0, -3) parallel to y = ½x + 7.", answer: "Parallel lines share a slope: y = ½x - 3" },
+          { prompt: "Write the equation of the line through (3, 2) perpendicular to y = -¼x + 1.", answer: "Perpendicular slope is the negative reciprocal: 4. y - 2 = 4(x - 3), or y = 4x - 10" }
+        ]
+      },
+      {
+        name: "Piecewise Functions",
+        problems: [
+          { prompt: "For f(x) = { x² if x < 1 ; 2x + 1 if x ≥ 1 }, find f(1), f(-2), and f(3).", answer: "f(1) = 2(1)+1 = 3 (use the x ≥ 1 piece). f(-2) = (-2)² = 4. f(3) = 2(3)+1 = 7." },
+          { prompt: "Is the function from the previous problem continuous at x = 1?", answer: "As x → 1⁻, x² → 1. But f(1) = 3 from the other piece. Since 1 ≠ 3, there's a jump discontinuity — not continuous at x = 1." },
+          { prompt: "Describe f(x) = { -x if x < 0 ; x² if x ≥ 0 } at x = 0. Is it continuous there?", answer: "Both pieces approach 0 as x → 0, and f(0) = 0, so yes — continuous at x = 0. (The left piece is a line with negative slope; the right piece is the right half of an upward parabola.)" },
+          { prompt: "Find the value of k that makes f(x) = { kx + 1 if x ≤ 2 ; x² - 3 if x > 2 } continuous at x = 2.", answer: "Left side: 2k + 1. Right side: (2)² - 3 = 1. Set them equal: 2k + 1 = 1 → k = 0." }
+        ]
+      },
+      {
+        name: "Solving Polynomial & Rational Inequalities",
+        problems: [
+          { prompt: "Solve: x² - x - 6 > 0", answer: "Factor: (x - 3)(x + 2) > 0. Critical points x = -2, 3. Testing intervals: x < -2 or x > 3." },
+          { prompt: "Solve: (x - 1) / (x + 2) ≤ 0", answer: "Critical points: x = 1 (zero), x = -2 (undefined, excluded). Testing intervals: -2 < x ≤ 1." },
+          { prompt: "Solve: x³ - 4x ≤ 0", answer: "Factor: x(x - 2)(x + 2) ≤ 0. Critical points -2, 0, 2. Testing intervals: x ≤ -2 or 0 ≤ x ≤ 2." },
+          { prompt: "Solve: (x² - 9) / (x - 1) > 0", answer: "Critical points: x = -3, 1, 3. Testing intervals: -3 < x < 1 or x > 3." }
+        ]
+      },
+      {
+        name: "Trig Identities",
+        problems: [
+          { prompt: "Simplify using a Pythagorean identity: 1 - sin²(x)", answer: "cos²(x)" },
+          { prompt: "Simplify: sin(x)/cos(x) + cos(x)/sin(x)", answer: "Combine over a common denominator: (sin²x + cos²x) / (sinx · cosx) = 1 / (sinx · cosx), using the Pythagorean identity in the numerator." },
+          { prompt: "Use a double-angle identity to rewrite sin(2x).", answer: "2 sin(x) cos(x)" },
+          { prompt: "Use a double-angle identity to rewrite cos(2x) in terms of cos(x) only.", answer: "2cos²(x) - 1" },
+          { prompt: "Verify the identity: (1 - cos(2x)) / 2 = sin²(x)", answer: "Substitute cos(2x) = 1 - 2sin²(x): (1 - (1 - 2sin²x)) / 2 = (2sin²x)/2 = sin²(x). ✓" }
+        ]
+      }
+    ],
+
+    // ---- Parent function recognition — reuses the same reference graph images
+    // as Honors Unit 1 (images/graphs/), just as a standalone quick-recall drill. ----
+    parentFunctionPractice: [
+      { image: "images/graphs/linear.png", prompt: "Which parent function is this?", answer: "Linear parent function: f(x) = x" },
+      { image: "images/graphs/quadratic.png", prompt: "Which parent function is this?", answer: "Quadratic parent function: f(x) = x²" },
+      { image: "images/graphs/cubic.png", prompt: "Which parent function is this?", answer: "Cubic parent function: f(x) = x³" },
+      { image: "images/graphs/absolute_value.png", prompt: "Which parent function is this?", answer: "Absolute value parent function: f(x) = |x|" },
+      { image: "images/graphs/square_root.png", prompt: "Which parent function is this?", answer: "Square root parent function: f(x) = √x" },
+      { image: "images/graphs/cube_root.png", prompt: "Which parent function is this?", answer: "Cube root parent function: f(x) = ∛x" },
+      { image: "images/graphs/reciprocal.png", prompt: "Which parent function is this?", answer: "Reciprocal parent function: f(x) = 1/x" },
+      { image: "images/graphs/exponential.png", prompt: "Which parent function is this?", answer: "Exponential parent function: f(x) = 2ˣ" },
+      { image: "images/graphs/logarithmic.png", prompt: "Which parent function is this?", answer: "Logarithmic parent function: f(x) = log(x)" },
+      { image: "images/graphs/sine.png", prompt: "Which parent function is this?", answer: "Sine parent function: f(x) = sin(x)" },
+      { image: "images/graphs/cosine.png", prompt: "Which parent function is this?", answer: "Cosine parent function: f(x) = cos(x)" },
+      { image: "images/graphs/step_function.png", prompt: "Which parent function is this?", answer: "Step (greatest integer) parent function: f(x) = ⌊x⌋" },
+      { image: "images/graphs/constant.svg", prompt: "Which parent function is this?", answer: "Constant function: f(x) = c (a horizontal line)" },
+      { image: "images/graphs/reciprocal_squared.svg", prompt: "Which parent function is this?", answer: "Reciprocal of a square: f(x) = 1/x²" },
+      { image: "images/graphs/semicircle.svg", prompt: "Which parent function is this?", answer: "Semicircle: f(x) = √(r² - x²)" },
+      { image: "images/graphs/exponential_decay.svg", prompt: "Which parent function is this?", answer: "Exponential decay: f(x) = (1/2)ˣ" },
+      { image: "images/graphs/arctan.svg", prompt: "Which parent function is this?", answer: "Arctangent: f(x) = arctan(x)" },
+      { image: "images/graphs/abs_x_over_x.svg", prompt: "Which parent function is this?", answer: "Absolute value of x over x: f(x) = |x|/x (equals 1 for x > 0, -1 for x < 0, undefined at x = 0)" }
     ]
   }
 };

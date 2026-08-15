@@ -34,8 +34,13 @@ function renderMain() {
     main.innerHTML = `
       <div class="placeholder-card" style="margin-bottom:14px;">${msg}</div>
       <div id="apcalcPanels"></div>
+      <div id="apcalcPrereqPanel" style="margin-top:14px;"></div>
+      <div id="apcalcParentFuncPanel" style="margin-top:14px;"></div>
     `;
     document.getElementById("apcalcPanels").innerHTML = renderApCalcUnits(SITE_DATA.apcalc?.units || []);
+    document.getElementById("apcalcPrereqPanel").innerHTML = renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []);
+    document.getElementById("apcalcParentFuncPanel").innerHTML = renderParentFunctionPractice(SITE_DATA.apcalc?.parentFunctionPractice || []);
+    wirePrereqSkillsInteractivity();
     return;
   }
   if (currentCourse === "precalc") {
@@ -464,6 +469,62 @@ function renderApCalcUnits(units) {
   }
   html += `</div>`;
   return html;
+}
+
+function renderPrereqSkills(skills) {
+  skills = skills || [];
+  let html = `<div class="card"><h2 class="section-title">Prerequisite Skills Practice</h2>
+    <p class="rubric-note">Rusty on these from Precalc or Algebra II? Work through a few, then check your answer.</p>`;
+  if (!skills.length) {
+    html += `<div class="empty-state">No prerequisite skills posted yet — check back soon!</div>`;
+  } else {
+    skills.forEach((skill, si) => {
+      html += `<h3 style="color:var(--navy);margin-top:${si === 0 ? 0 : 20}px;">${skill.name}</h3>`;
+      (skill.problems || []).forEach((qa, qi) => {
+        html += `
+          <div class="qa-item">
+            <div class="qa-prompt">${qi + 1}. ${qa.prompt}</div>
+            <button class="reveal-btn" data-target="prereq-ans-${si}-${qi}">Show answer</button>
+            <div class="qa-answer" id="prereq-ans-${si}-${qi}">${qa.answer}</div>
+          </div>
+        `;
+      });
+    });
+  }
+  html += `</div>`;
+  return html;
+}
+
+function renderParentFunctionPractice(items) {
+  items = items || [];
+  let html = `<div class="card"><h2 class="section-title">Recognize Parent Functions</h2>
+    <p class="rubric-note">Quick recall check — name the parent function shown, then reveal to check.</p>`;
+  if (!items.length) {
+    html += `<div class="empty-state">No parent function practice posted yet.</div>`;
+  } else {
+    html += `<div class="graph-grid">` + items.map((g, i) => `
+      <div class="graph-card">
+        <img src="${g.image}" alt="Parent function to identify">
+        <div class="qa-prompt">${g.prompt || "Which parent function is this?"}</div>
+        <button class="reveal-btn" data-target="pf-ans-${i}">Show answer</button>
+        <div class="qa-answer" id="pf-ans-${i}">${g.answer}</div>
+      </div>
+    `).join("") + `</div>`;
+  }
+  html += `</div>`;
+  return html;
+}
+
+function wirePrereqSkillsInteractivity() {
+  document.querySelectorAll("#apcalcPrereqPanel .reveal-btn, #apcalcParentFuncPanel .reveal-btn").forEach(btn => {
+    const showLabel = btn.textContent;
+    const hideLabel = "Hide" + showLabel.replace(/^Show/, "");
+    btn.addEventListener("click", () => {
+      const ans = document.getElementById(btn.dataset.target);
+      ans.classList.toggle("shown");
+      btn.textContent = ans.classList.contains("shown") ? hideLabel : showLabel;
+    });
+  });
 }
 
 function renderBellringers(items) {
