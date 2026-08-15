@@ -61,13 +61,14 @@ function renderMain() {
       wireApCalcWhatDidIMissInteractivity();
       wirePrereqSkillsInteractivity();
     } else if (currentApCalcTab === "prereq") {
-      acPanels.innerHTML = renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []);
+      acPanels.innerHTML =
+        renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []) +
+        renderParentFunctionPractice(SITE_DATA.apcalc?.parentFunctionPractice || []);
       wirePrereqSkillsInteractivity();
     } else {
       acPanels.innerHTML =
         renderApCalcUnits(SITE_DATA.apcalc?.units || []) +
-        renderApCalcUnitVideos(SITE_DATA.apcalc?.unitVideos || []) +
-        renderParentFunctionPractice(SITE_DATA.apcalc?.parentFunctionPractice || []);
+        renderApCalcUnitVideos(SITE_DATA.apcalc?.unitVideos || []);
       wirePrereqSkillsInteractivity();
     }
     return;
