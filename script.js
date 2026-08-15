@@ -39,6 +39,7 @@ function renderMain() {
     `;
     const acTabs = [
       { id: "resources", label: "Resources & Practice" },
+      { id: "prereq", label: "Prerequisite Skills" },
       { id: "calendar", label: "Course Calendar" },
       { id: "whatdidimiss", label: "What Did I Miss?" }
     ];
@@ -59,11 +60,13 @@ function renderMain() {
       acPanels.innerHTML = renderApCalcWhatDidIMiss();
       wireApCalcWhatDidIMissInteractivity();
       wirePrereqSkillsInteractivity();
+    } else if (currentApCalcTab === "prereq") {
+      acPanels.innerHTML = renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []);
+      wirePrereqSkillsInteractivity();
     } else {
       acPanels.innerHTML =
         renderApCalcUnits(SITE_DATA.apcalc?.units || []) +
         renderApCalcUnitVideos(SITE_DATA.apcalc?.unitVideos || []) +
-        renderPrereqSkills(SITE_DATA.apcalc?.prereqSkills || []) +
         renderParentFunctionPractice(SITE_DATA.apcalc?.parentFunctionPractice || []);
       wirePrereqSkillsInteractivity();
     }
