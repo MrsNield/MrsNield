@@ -336,10 +336,10 @@ function renderApCalcDayDetail(date) {
       `</div>`;
   }
 
-  if (d.deltamath) {
-    html += `<div class="miss-section"><strong>DeltaMath:</strong><br>
-      <a class="download-btn" href="${d.deltamath}" target="_blank" rel="noopener" style="margin-top:6px;">Go to DeltaMath Practice</a>
-    </div>`;
+  if (d.deltamath && d.deltamath.length) {
+    html += `<div class="miss-section"><strong>DeltaMath:</strong><br>` +
+      d.deltamath.map(dm => `<a class="download-btn" href="${dm.url}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">${dm.label}</a>`).join("") +
+      `</div>`;
   } else {
     html += `<div class="miss-section"><strong>DeltaMath:</strong> <span style="color:var(--gray);font-style:italic;">No DeltaMath assignment posted yet.</span></div>`;
   }

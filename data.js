@@ -867,7 +867,9 @@ const SITE_DATA = {
           { prompt: "A car's position is s(t) = t² + 2t (meters), t in seconds. Find its average velocity on [1, 4].", answer: "Average velocity = [s(4) - s(1)] / (4 - 1) = [(16+8) - (1+2)] / 3 = 21/3 = 7 m/s" },
           { prompt: "Using the same s(t), estimate the instantaneous velocity at t = 1 using the average rate of change over [1, 1.01].", answer: "[s(1.01) - s(1)] / 0.01 = [3.0401 - 3] / 0.01 ≈ 4.01 — close to the exact instantaneous velocity of 4." }
         ],
-        deltamath: ""
+        deltamath: [
+          { label: "1.1 Change at an Instant", url: "https://www.deltamath.com/app/assignment/33425146" }
+        ]
       },
       "2026-08-17": {
         notes: { label: "Guided Notes: 1.2–1.4", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=3" },
@@ -886,7 +888,9 @@ const SITE_DATA = {
           { prompt: "Use correct limit notation to express: as x approaches 3, f(x) approaches 7.", answer: "lim(x→3) f(x) = 7" },
           { prompt: "A table shows f(1.9)=3.8, f(1.99)=3.98, f(1.999)=3.998, f(2.001)=4.002, f(2.01)=4.02, f(2.1)=4.2. What does this suggest about lim(x→2) f(x)?", answer: "4 — the values approach 4 from both sides as x gets closer to 2." }
         ],
-        deltamath: ""
+        deltamath: [
+          { label: "1.2 Defining Limits", url: "https://www.deltamath.com/app/assignment/33425147" }
+        ]
       },
       "2026-08-18": {
         notes: { label: "Guided Notes: 1.5–1.7", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=8" },
@@ -905,7 +909,9 @@ const SITE_DATA = {
           { prompt: "Evaluate: lim(x→2) (x² - 4)/(x - 2)", answer: "Factor: (x-2)(x+2)/(x-2) = x + 2 for x ≠ 2. Limit = 2 + 2 = 4." },
           { prompt: "Evaluate: lim(x→0) (√(x+4) - 2)/x", answer: "Rationalize by multiplying by (√(x+4)+2)/(√(x+4)+2): the numerator becomes x, giving 1/(√(x+4)+2). As x→0: 1/(2+2) = 1/4." }
         ],
-        deltamath: ""
+        deltamath: [
+          { label: "1.5 Tools for Evaluating Limits Analytically", url: "https://www.deltamath.com/app/assignment/33425152" }
+        ]
       },
       "2026-08-19": {
         notes: { label: "Guided Notes: 1.8–1.9", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=12" },
@@ -923,7 +929,9 @@ const SITE_DATA = {
           { prompt: "State the two special trig limits used alongside the Squeeze Theorem.", answer: "lim(x→0) sin(x)/x = 1, and lim(x→0) (1 - cos(x))/x = 0" },
           { prompt: "Evaluate: lim(x→0) sin(3x)/x", answer: "Rewrite as 3 · sin(3x)/(3x). As x→0, 3x→0 too, so sin(3x)/(3x) → 1. Limit = 3 · 1 = 3." }
         ],
-        deltamath: ""
+        deltamath: [
+          { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
+        ]
       },
       "2026-08-20": {
         notes: { label: "Guided Notes: 1.10–1.13, 1.16", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
@@ -946,7 +954,10 @@ const SITE_DATA = {
           { prompt: "Classify the discontinuity of f(x) = (x² - 1)/(x - 1) at x = 1.", answer: "Factors to (x-1)(x+1)/(x-1) = x+1 for x≠1, so the limit exists (=2) but f(1) is undefined — a removable discontinuity (hole)." },
           { prompt: "f is continuous on [1, 4], with f(1) = -3 and f(4) = 5. Does f have a zero in (1, 4)? Why?", answer: "Yes, by the Intermediate Value Theorem — since f is continuous and 0 is between f(1) = -3 and f(4) = 5, there must be some c in (1, 4) with f(c) = 0." }
         ],
-        deltamath: ""
+        deltamath: [
+          { label: "1.7 Continuity and Discontinuity", url: "https://www.deltamath.com/app/assignment/33425154" },
+          { label: "1.8 Removing Discontinuities", url: "https://www.deltamath.com/app/assignment/33425155" }
+        ]
       },
       "2026-08-21": {
         notes: { label: "Guided Notes: 1.10–1.13, 1.16", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
@@ -967,7 +978,9 @@ const SITE_DATA = {
           { prompt: "Is f(x) = (x² - 9)/(x + 3) continuous at x = -3? If not, can the discontinuity be removed?", answer: "f(-3) is undefined (0/0 form), so f is not continuous there. But (x²-9)/(x+3) = x - 3 for x ≠ -3, so the limit exists (= -6) — it's a removable discontinuity. Redefining f(-3) = -6 would make it continuous." },
           { prompt: "State the three conditions required for f to be continuous at x = c.", answer: "1) f(c) is defined, 2) lim(x→c) f(x) exists, and 3) lim(x→c) f(x) = f(c)." }
         ],
-        deltamath: ""
+        deltamath: [
+          { label: "1.9 the Intermediate Value Theorem", url: "https://www.deltamath.com/app/assignment/33425156" }
+        ]
       },
       "2026-08-24": {
         notes: { label: "Guided Notes: 1.14–1.15", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=19" },
@@ -987,7 +1000,9 @@ const SITE_DATA = {
           { prompt: "Find the vertical asymptote of f(x) = 1/(x - 3) and describe the behavior of f(x) as x→3⁻ and x→3⁺.", answer: "Vertical asymptote at x = 3. As x→3⁻, f(x)→-∞. As x→3⁺, f(x)→+∞." },
           { prompt: "Find the horizontal asymptote of f(x) = (2x² + 1)/(x² - 4) as x→∞.", answer: "The numerator and denominator have the same degree, so the horizontal asymptote is the ratio of leading coefficients: y = 2/1 = 2." }
         ],
-        deltamath: ""
+        deltamath: [
+          { label: "1.4 Limits at Infinity", url: "https://www.deltamath.com/app/assignment/33425151" }
+        ]
       }
     },
 
