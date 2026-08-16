@@ -782,11 +782,16 @@ const SITE_DATA = {
     // ---- Daily log: tag each class day with a short description of what was
     // covered. Powers "What Did I Miss?" below (combined with board work). ----
     // { date: "2026-08-14", label: "1.1 — Rates of Change" }
+    // Add "period: '3rd'" or "period: '5th'" only on a day the two sections
+    // diverge — omit it (as below) when both periods do the same thing.
     dailyLog: [
-      { date: "2026-08-14", label: "1.1 — Rates of Change" }
+      { date: "2026-08-14", period: "5th", label: "1.1 — Rates of Change" },
+      { date: "2026-08-14", period: "3rd", label: "Review — senior meeting ran long, had to pick up computers" }
     ],
 
-    // ---- Board work photos, same format as the other courses. ----
+    // ---- Board work photos, same format as the other courses. Add
+    // "period: '3rd'" or "period: '5th'" the same way as dailyLog above when
+    // needed. ----
     // { date: "2026-08-14", caption: "...", image: "images/board/filename.jpg" }
     boardWork: [],
 
@@ -852,24 +857,28 @@ const SITE_DATA = {
     // deltamath is intentionally blank per day; fill in a URL once you have one
     // and it'll show a button instead of the "not posted yet" placeholder. ----
     dayDetails: {
+      // 3rd period has no "3rd" key here at all — a review day has no unit
+      // content to show, so it correctly falls back to "nothing posted yet."
       "2026-08-14": {
-        notes: { label: "Guided Notes: 1.1", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=1" },
-        homework: [
-          { label: "Lesson 1.1 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=1" }
-        ],
-        homeworkAnswers: [
-          { label: "Lesson 1.1 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=1" }
-        ],
-        videos: [
-          { title: "1.1 — Can Change Occur at an Instant?", url: "https://calculus.flippedmath.com/11-can-change-occur-at-an-instant.html" }
-        ],
-        practice: [
-          { prompt: "A car's position is s(t) = t² + 2t (meters), t in seconds. Find its average velocity on [1, 4].", answer: "Average velocity = [s(4) - s(1)] / (4 - 1) = [(16+8) - (1+2)] / 3 = 21/3 = 7 m/s" },
-          { prompt: "Using the same s(t), estimate the instantaneous velocity at t = 1 using the average rate of change over [1, 1.01].", answer: "[s(1.01) - s(1)] / 0.01 = [3.0401 - 3] / 0.01 ≈ 4.01 — close to the exact instantaneous velocity of 4." }
-        ],
-        deltamath: [
-          { label: "1.1 Change at an Instant", url: "https://www.deltamath.com/app/assignment/33425146" }
-        ]
+        "5th": {
+          notes: { label: "Guided Notes: 1.1", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=1" },
+          homework: [
+            { label: "Lesson 1.1 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=1" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.1 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=1" }
+          ],
+          videos: [
+            { title: "1.1 — Can Change Occur at an Instant?", url: "https://calculus.flippedmath.com/11-can-change-occur-at-an-instant.html" }
+          ],
+          practice: [
+            { prompt: "A car's position is s(t) = t² + 2t (meters), t in seconds. Find its average velocity on [1, 4].", answer: "Average velocity = [s(4) - s(1)] / (4 - 1) = [(16+8) - (1+2)] / 3 = 21/3 = 7 m/s" },
+            { prompt: "Using the same s(t), estimate the instantaneous velocity at t = 1 using the average rate of change over [1, 1.01].", answer: "[s(1.01) - s(1)] / 0.01 = [3.0401 - 3] / 0.01 ≈ 4.01 — close to the exact instantaneous velocity of 4." }
+          ],
+          deltamath: [
+            { label: "1.1 Change at an Instant", url: "https://www.deltamath.com/app/assignment/33425146" }
+          ]
+        }
       },
       "2026-08-17": {
         notes: { label: "Guided Notes: 1.2–1.4", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=3" },

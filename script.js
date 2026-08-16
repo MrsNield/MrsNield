@@ -238,7 +238,13 @@ function renderWhatDidIMiss() {
 }
 
 // AP Calc has no bellringers and no objective catalog to look up against —
-// dailyLog entries just carry their own label text directly.
+// dailyLog entries just carry their own label text directly. A dailyLog or
+// boardWork entry with no "period" field applies to both periods (the normal
+// case, since most days 3rd and 5th do the same thing). Give an entry a
+// "period" of "3rd" or "5th" only on days the two sections actually diverge —
+// that day then renders as two labeled sub-blocks instead of one.
+const APCALC_PERIODS = ["3rd", "5th"];
+
 function renderApCalcWhatDidIMiss() {
   const dailyLog = SITE_DATA.apcalc?.dailyLog || [];
   const boardWork = SITE_DATA.apcalc?.boardWork || [];
@@ -250,43 +256,37 @@ function renderApCalcWhatDidIMiss() {
   const dates = Array.from(dateSet).sort((a, b) => String(b).localeCompare(String(a)));
 
   let html = `<div class="card"><h2 class="section-title">What Did I Miss?</h2>
-    <p class="rubric-note">Everything from a missed day — what we covered and any board work — all in one place.</p>`;
+    <p class="rubric-note">Everything from a missed day — what we covered and any board work — all in one place. Most days 3rd and 5th period do the same thing; if they didn't, you'll see both listed separately.</p>`;
 
   if (!dates.length) {
     html += `<div class="empty-state">Nothing to catch up on yet — check back once we start covering material!</div>`;
   } else {
     dates.forEach(date => {
-      const covered = dailyLog.filter(e => e.date === date);
-      const boards = boardWork.filter(b => b.date === date);
-      const detailId = "apcalc-detail-" + date;
+      const logForDate = dailyLog.filter(e => e.date === date);
+      const boardsForDate = boardWork.filter(b => b.date === date);
+
+      const periodsUsed = new Set();
+      logForDate.forEach(e => periodsUsed.add(e.period || "both"));
+      boardsForDate.forEach(b => periodsUsed.add(b.period || "both"));
+      const diverges = periodsUsed.size > 1;
 
       html += `<div class="miss-day">`;
-      html += `<h3 class="day-heading" style="cursor:pointer;" data-toggle="${detailId}">${formatDateLabel(date)} <span style="font-size:0.7rem;font-weight:400;color:var(--gray);">(click for notes, homework, videos & practice)</span></h3>`;
+      html += `<h3 class="day-heading" style="margin-bottom:10px;">${formatDateLabel(date)}</h3>`;
 
-      if (covered.length) {
-        const coveredText = covered.map(e => e.label).join(", ");
-        html += `<div class="miss-section"><strong>Covered:</strong> ${coveredText}</div>`;
-      }
-
-      if (boards.length) {
-        html += `<div class="miss-section"><strong>Board Work:</strong>
-          <div class="board-grid" style="margin-top:8px;">`;
-        boards.forEach(b => {
-          html += `
-            <div class="board-item">
-              <img src="${b.image}" alt="Board work from ${b.date}">
-              ${b.caption ? `<div class="cap">${b.caption}</div>` : ""}
-            </div>
-          `;
+      if (!diverges) {
+        html += renderApCalcMissGroup(date, null, logForDate, boardsForDate);
+      } else {
+        const groupOrder = ["both", ...APCALC_PERIODS];
+        groupOrder.filter(g => periodsUsed.has(g)).forEach(group => {
+          const groupPeriod = group === "both" ? null : group;
+          const groupLog = logForDate.filter(e => (e.period || "both") === group);
+          const groupBoards = boardsForDate.filter(b => (b.period || "both") === group);
+          html += `<div style="margin-bottom:14px;padding-left:12px;border-left:3px solid var(--light);">
+            <div style="font-weight:700;color:var(--navy);margin-bottom:6px;">${group === "both" ? "Both Periods" : group + " Period"}</div>
+            ${renderApCalcMissGroup(date, groupPeriod, groupLog, groupBoards)}
+          </div>`;
         });
-        html += `</div></div>`;
       }
-
-      if (!covered.length && !boards.length) {
-        html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
-      }
-
-      html += `<div class="qa-answer" id="${detailId}" style="margin-top:10px;">${renderApCalcDayDetail(date)}</div>`;
 
       html += `</div>`;
     });
@@ -296,12 +296,61 @@ function renderApCalcWhatDidIMiss() {
   return html;
 }
 
-function renderApCalcDayDetail(date) {
-  const d = (SITE_DATA.apcalc?.dayDetails || {})[date];
-  if (!d) {
+function renderApCalcMissGroup(date, period, covered, boards) {
+  const detailId = "apcalc-detail-" + date + (period ? "-" + period : "");
+  let html = "";
+
+  html += `<div class="miss-section" style="cursor:pointer;color:var(--navy);font-weight:600;" data-toggle="${detailId}">Click for notes, homework, videos & practice ▾</div>`;
+
+  if (covered.length) {
+    const coveredText = covered.map(e => e.label).join(", ");
+    html += `<div class="miss-section"><strong>Covered:</strong> ${coveredText}</div>`;
+  }
+
+  if (boards.length) {
+    html += `<div class="miss-section"><strong>Board Work:</strong>
+      <div class="board-grid" style="margin-top:8px;">`;
+    boards.forEach(b => {
+      html += `
+        <div class="board-item">
+          <img src="${b.image}" alt="Board work from ${b.date}">
+          ${b.caption ? `<div class="cap">${b.caption}</div>` : ""}
+        </div>
+      `;
+    });
+    html += `</div></div>`;
+  }
+
+  if (!covered.length && !boards.length) {
+    html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
+  }
+
+  html += `<div class="qa-answer" id="${detailId}" style="margin-top:10px;">${renderApCalcDayDetail(date, period)}</div>`;
+
+  return html;
+}
+
+function renderApCalcDayDetail(date, period) {
+  const raw = (SITE_DATA.apcalc?.dayDetails || {})[date];
+  if (!raw) {
     return `<div class="miss-section" style="color:var(--gray);font-style:italic;">No detail posted for this day yet.</div>`;
   }
 
+  // dayDetails[date] is either a single shared detail object (the normal
+  // case), or — on a day that diverges — an object keyed by period ("3rd" /
+  // "5th") each holding their own detail object.
+  const isPerPeriod = APCALC_PERIODS.some(p => p in raw);
+  let d;
+  if (isPerPeriod) {
+    d = period ? raw[period] : null;
+    if (!d) {
+      return `<div class="miss-section" style="color:var(--gray);font-style:italic;">No detail posted for this day yet.</div>`;
+    }
+  } else {
+    d = raw;
+  }
+
+  const idSuffix = date + (period ? "-" + period : "");
   let html = "";
 
   if (d.notes) {
@@ -333,8 +382,8 @@ function renderApCalcDayDetail(date) {
       d.practice.map((qa, i) => `
         <div class="qa-item">
           <div class="qa-prompt">${i + 1}. ${qa.prompt}</div>
-          <button class="reveal-btn" data-target="miss-${date}-ans-${i}">Show answer</button>
-          <div class="qa-answer" id="miss-${date}-ans-${i}">${qa.answer}</div>
+          <button class="reveal-btn" data-target="miss-${idSuffix}-ans-${i}">Show answer</button>
+          <div class="qa-answer" id="miss-${idSuffix}-ans-${i}">${qa.answer}</div>
         </div>
       `).join("") +
       `</div>`;
