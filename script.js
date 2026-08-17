@@ -449,7 +449,10 @@ const CALENDAR_TYPE_LABELS = {
   quiz: "Quiz",
   review: "Review",
   test: "Test",
-  final: "Final"
+  final: "Final",
+  frq: "FRQ",
+  "no-school": "No School",
+  note: "Note"
 };
 
 function renderCourseCalendar(units, showMissedDayNote) {
