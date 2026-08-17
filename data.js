@@ -165,7 +165,9 @@ const SITE_DATA = {
     // automatically by day (newest first), then by objective within each day. ----
     // { date: "2026-08-12", objective: "1-1", caption: "Round 1 boards", image: "images/board/filename.jpg" }
     boardWork: [
-      { date: "2026-08-14", caption: "Tax Collector — group work expectations (4th period)", image: "images/board/2026-08-14_tax-collector_4th.jpg" }
+      { date: "2026-08-14", caption: "Tax Collector — group work expectations (4th period)", image: "images/board/2026-08-14_tax-collector_4th.jpg" },
+      { date: "2026-08-17", caption: "Painted Cube — group results (2nd period)", image: "images/board/2026-08-17_painted-cube-counts_2nd.jpg" },
+      { date: "2026-08-17", caption: "Painted Cube — diagram (2nd period)", image: "images/board/2026-08-17_painted-cube-diagram_2nd.jpg" }
     ],
 
     // ---- Daily "function of the day" bellringers. Add entries in any order —
@@ -942,7 +944,9 @@ const SITE_DATA = {
     // diverge — omit it (as below) when both periods do the same thing.
     dailyLog: [
       { date: "2026-08-14", period: "5th", label: "1.1 — Rates of Change" },
-      { date: "2026-08-14", period: "3rd", label: "Review — senior meeting ran long, had to pick up computers" }
+      { date: "2026-08-14", period: "3rd", label: "Review — senior meeting ran long, had to pick up computers" },
+      { date: "2026-08-17", period: "3rd", label: "1.1" },
+      { date: "2026-08-17", period: "5th", label: "1.2 — up to Example 3" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
