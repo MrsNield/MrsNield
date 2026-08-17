@@ -167,7 +167,11 @@ const SITE_DATA = {
     boardWork: [
       { date: "2026-08-14", caption: "Tax Collector — group work expectations (4th period)", image: "images/board/2026-08-14_tax-collector_4th.jpg" },
       { date: "2026-08-17", caption: "Painted Cube — group results (2nd period)", image: "images/board/2026-08-17_painted-cube-counts_2nd.jpg" },
-      { date: "2026-08-17", caption: "Painted Cube — diagram (2nd period)", image: "images/board/2026-08-17_painted-cube-diagram_2nd.jpg" }
+      { date: "2026-08-17", caption: "Painted Cube — diagram (2nd period)", image: "images/board/2026-08-17_painted-cube-diagram_2nd.jpg" },
+      { date: "2026-08-17", caption: "Painted Cube — 4x4x4 totals (4th period)", image: "images/board/2026-08-17_painted-cube-64total_4th.jpg" },
+      { date: "2026-08-17", caption: "Painted Cube — group work (4th period)", image: "images/board/2026-08-17_painted-cube-portable-board_4th.jpg" },
+      { date: "2026-08-17", caption: "Painted Cube — net diagram (4th period)", image: "images/board/2026-08-17_painted-cube-net_4th.jpg" },
+      { date: "2026-08-17", caption: "Painted Cube — group work (4th period)", image: "images/board/2026-08-17_painted-cube-madeline-zach_4th.jpg" }
     ],
 
     // ---- Daily "function of the day" bellringers. Add entries in any order —
