@@ -159,7 +159,9 @@ const SITE_DATA = {
     // Powers the "What Did I Miss?" tab (combined with that day's bellringer
     // and board work photos below). Add entries in any order. ----
     // { date: "2026-08-13", objective: "1-1" }
-    dailyLog: [],
+    dailyLog: [
+      { date: "2026-08-18", objective: "Renaissance Testing (both periods)" }
+    ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
     // automatically by day (newest first), then by objective within each day. ----
@@ -982,7 +984,9 @@ const SITE_DATA = {
       { date: "2026-08-14", period: "5th", label: "1.1 — Rates of Change" },
       { date: "2026-08-14", period: "3rd", label: "Review — senior meeting ran long, had to pick up computers" },
       { date: "2026-08-17", period: "3rd", label: "1.1" },
-      { date: "2026-08-17", period: "5th", label: "1.2 — up to Example 3" }
+      { date: "2026-08-17", period: "5th", label: "1.2 — up to Example 3" },
+      { date: "2026-08-18", period: "3rd", label: "1.2 — first section of notes" },
+      { date: "2026-08-18", period: "5th", label: "1.2 — notes finished" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
