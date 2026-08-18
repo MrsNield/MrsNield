@@ -680,7 +680,7 @@ function renderApCalcUnits(units) {
 
 function renderApCalcUnitVideos(unitVideos) {
   unitVideos = unitVideos || [];
-  let html = `<div class="card"><h2 class="section-title">Unit Videos</h2>`;
+  let html = `<div class="card"><h2 class="section-title">Unit Videos & DeltaMath</h2>`;
   if (!unitVideos.length) {
     html += `<div class="empty-state">No videos posted yet — check back soon!</div>`;
   } else {
@@ -691,6 +691,11 @@ function renderApCalcUnitVideos(unitVideos) {
         html += `<ul class="video-list">` + (d.videos || []).map(v =>
           `<li><a href="${v.url}" target="_blank" rel="noopener">${v.title}</a></li>`
         ).join("") + `</ul>`;
+        if ((d.deltamath || []).length) {
+          html += `<ul class="video-list">` + d.deltamath.map(dm =>
+            `<li>📐 <a href="${dm.url}" target="_blank" rel="noopener">DeltaMath — ${dm.label}</a></li>`
+          ).join("") + `</ul>`;
+        }
       });
     });
   }

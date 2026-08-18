@@ -1001,6 +1001,9 @@ const SITE_DATA = {
             day: "Day 1 — Rates of Change (1.1)",
             videos: [
               { title: "1.1 — Can Change Occur at an Instant?", url: "https://calculus.flippedmath.com/11-can-change-occur-at-an-instant.html" }
+            ],
+            deltamath: [
+              { label: "1.1 Change at an Instant", url: "https://www.deltamath.com/app/assignment/33425146" }
             ]
           },
           {
@@ -1009,6 +1012,9 @@ const SITE_DATA = {
               { title: "1.2 — Defining Limits and Using Limit Notation", url: "https://calculus.flippedmath.com/12-defining-limits-and-using-limit-notation.html" },
               { title: "1.3 — Limit Values from Graphs", url: "https://calculus.flippedmath.com/13-limit-values-from-graphs.html" },
               { title: "1.4 — Limit Values from Tables", url: "https://calculus.flippedmath.com/14-limit-values-from-tables.html" }
+            ],
+            deltamath: [
+              { label: "1.2 Defining Limits", url: "https://www.deltamath.com/app/assignment/33425147" }
             ]
           },
           {
@@ -1017,6 +1023,9 @@ const SITE_DATA = {
               { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
               { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
               { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" }
+            ],
+            deltamath: [
+              { label: "1.5 Tools for Evaluating Limits Analytically", url: "https://www.deltamath.com/app/assignment/33425152" }
             ]
           },
           {
@@ -1024,6 +1033,9 @@ const SITE_DATA = {
             videos: [
               { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
               { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" }
+            ],
+            deltamath: [
+              { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
             ]
           },
           {
@@ -1034,6 +1046,11 @@ const SITE_DATA = {
               { title: "1.12 — Confirming Continuity Over an Interval", url: "https://calculus.flippedmath.com/112-confirming-continuity-over-an-interval.html" },
               { title: "1.13 — Removing Discontinuities", url: "https://calculus.flippedmath.com/113-removing-discontinuities.html" },
               { title: "1.16 — Intermediate Value Theorem", url: "https://calculus.flippedmath.com/116-intermediate-value-theorem.html" }
+            ],
+            deltamath: [
+              { label: "1.7 Continuity and Discontinuity", url: "https://www.deltamath.com/app/assignment/33425154" },
+              { label: "1.8 Removing Discontinuities", url: "https://www.deltamath.com/app/assignment/33425155" },
+              { label: "1.9 the Intermediate Value Theorem", url: "https://www.deltamath.com/app/assignment/33425156" }
             ]
           },
           {
@@ -1041,6 +1058,9 @@ const SITE_DATA = {
             videos: [
               { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
               { title: "1.15 — Limits at Infinity and Horizontal Asymptotes", url: "https://calculus.flippedmath.com/115-limits-at-infinity-and-horizontal-asymptotes.html" }
+            ],
+            deltamath: [
+              { label: "1.4 Limits at Infinity", url: "https://www.deltamath.com/app/assignment/33425151" }
             ]
           }
         ]
