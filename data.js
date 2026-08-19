@@ -160,7 +160,9 @@ const SITE_DATA = {
     // and board work photos below). Add entries in any order. ----
     // { date: "2026-08-13", objective: "1-1" }
     dailyLog: [
-      { date: "2026-08-18", objective: "Renaissance Testing (both periods)" }
+      { date: "2026-08-18", objective: "Renaissance Testing (both periods)" },
+      { date: "2026-08-20", objective: "Finished Renaissance Testing, then the Tissue Project — drug testing pulled a lot of students today (2nd period)" },
+      { date: "2026-08-20", objective: "Finished Renaissance Testing, then graphing practice (4th period)" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
