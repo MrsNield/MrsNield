@@ -986,7 +986,9 @@ const SITE_DATA = {
       { date: "2026-08-17", period: "3rd", label: "1.1" },
       { date: "2026-08-17", period: "5th", label: "1.2 — up to Example 3" },
       { date: "2026-08-18", period: "3rd", label: "1.2 — first section of notes" },
-      { date: "2026-08-18", period: "5th", label: "1.2 — notes finished" }
+      { date: "2026-08-18", period: "5th", label: "1.2 — notes finished" },
+      { date: "2026-08-19", period: "3rd", label: "1.2 — through Example 4 (Example 5 will be tomorrow's bellringer)" },
+      { date: "2026-08-19", period: "5th", label: "Practice with limits (1.2–1.4)" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
@@ -1122,44 +1124,45 @@ const SITE_DATA = {
         ]
       },
       "2026-08-18": {
-        notes: { label: "Guided Notes: 1.5–1.7", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=8" },
+        notes: { label: "Guided Notes: 1.2–1.4", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=3" },
         homework: [
-          { label: "Lesson 1.5 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=19" }
+          { label: "Lesson 1.2 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=7" }
         ],
         homeworkAnswers: [
-          { label: "Lesson 1.5 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=7" }
+          { label: "Lesson 1.2 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=3" }
         ],
         videos: [
-          { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
-          { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
-          { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" }
+          { title: "1.2 — Defining Limits and Using Limit Notation", url: "https://calculus.flippedmath.com/12-defining-limits-and-using-limit-notation.html" },
+          { title: "1.3 — Limit Values from Graphs", url: "https://calculus.flippedmath.com/13-limit-values-from-graphs.html" },
+          { title: "1.4 — Limit Values from Tables", url: "https://calculus.flippedmath.com/14-limit-values-from-tables.html" }
         ],
         practice: [
-          { prompt: "Evaluate: lim(x→2) (x² - 4)/(x - 2)", answer: "Factor: (x-2)(x+2)/(x-2) = x + 2 for x ≠ 2. Limit = 2 + 2 = 4." },
-          { prompt: "Evaluate: lim(x→0) (√(x+4) - 2)/x", answer: "Rationalize by multiplying by (√(x+4)+2)/(√(x+4)+2): the numerator becomes x, giving 1/(√(x+4)+2). As x→0: 1/(2+2) = 1/4." }
+          { prompt: "Use correct limit notation to express: as x approaches 3, f(x) approaches 7.", answer: "lim(x→3) f(x) = 7" },
+          { prompt: "A table shows f(1.9)=3.8, f(1.99)=3.98, f(1.999)=3.998, f(2.001)=4.002, f(2.01)=4.02, f(2.1)=4.2. What does this suggest about lim(x→2) f(x)?", answer: "4 — the values approach 4 from both sides as x gets closer to 2." }
         ],
         deltamath: [
-          { label: "1.5 Tools for Evaluating Limits Analytically", url: "https://www.deltamath.com/app/assignment/33425152" }
+          { label: "1.2 Defining Limits", url: "https://www.deltamath.com/app/assignment/33425147" }
         ]
       },
       "2026-08-19": {
-        notes: { label: "Guided Notes: 1.8–1.9", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=12" },
+        notes: { label: "Guided Notes: 1.2–1.4", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=3" },
         homework: [
-          { label: "Lesson 1.6 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=22" }
+          { label: "Lesson 1.2 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=7" }
         ],
         homeworkAnswers: [
-          { label: "Lesson 1.6 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=8" }
+          { label: "Lesson 1.2 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=3" }
         ],
         videos: [
-          { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
-          { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" }
+          { title: "1.2 — Defining Limits and Using Limit Notation", url: "https://calculus.flippedmath.com/12-defining-limits-and-using-limit-notation.html" },
+          { title: "1.3 — Limit Values from Graphs", url: "https://calculus.flippedmath.com/13-limit-values-from-graphs.html" },
+          { title: "1.4 — Limit Values from Tables", url: "https://calculus.flippedmath.com/14-limit-values-from-tables.html" }
         ],
         practice: [
-          { prompt: "State the two special trig limits used alongside the Squeeze Theorem.", answer: "lim(x→0) sin(x)/x = 1, and lim(x→0) (1 - cos(x))/x = 0" },
-          { prompt: "Evaluate: lim(x→0) sin(3x)/x", answer: "Rewrite as 3 · sin(3x)/(3x). As x→0, 3x→0 too, so sin(3x)/(3x) → 1. Limit = 3 · 1 = 3." }
+          { prompt: "Use correct limit notation to express: as x approaches 3, f(x) approaches 7.", answer: "lim(x→3) f(x) = 7" },
+          { prompt: "A table shows f(1.9)=3.8, f(1.99)=3.98, f(1.999)=3.998, f(2.001)=4.002, f(2.01)=4.02, f(2.1)=4.2. What does this suggest about lim(x→2) f(x)?", answer: "4 — the values approach 4 from both sides as x gets closer to 2." }
         ],
         deltamath: [
-          { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
+          { label: "1.2 Defining Limits", url: "https://www.deltamath.com/app/assignment/33425147" }
         ]
       },
       "2026-08-20": {
