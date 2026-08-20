@@ -1006,7 +1006,7 @@ const SITE_DATA = {
         unit: "Unit 1: Limits and Continuity",
         days: [
           {
-            day: "Day 1 — Rates of Change (1.1)",
+            day: "1.1",
             videos: [
               { title: "1.1 — Can Change Occur at an Instant?", url: "https://calculus.flippedmath.com/11-can-change-occur-at-an-instant.html" }
             ],
@@ -1015,7 +1015,7 @@ const SITE_DATA = {
             ]
           },
           {
-            day: "Day 2 — Limits, Notation, Graphs & Tables (1.2–1.4)",
+            day: "1.2–1.4",
             videos: [
               { title: "1.2 — Defining Limits and Using Limit Notation", url: "https://calculus.flippedmath.com/12-defining-limits-and-using-limit-notation.html" },
               { title: "1.3 — Limit Values from Graphs", url: "https://calculus.flippedmath.com/13-limit-values-from-graphs.html" },
@@ -1027,7 +1027,7 @@ const SITE_DATA = {
             ]
           },
           {
-            day: "Day 3 — Algebraic Limits & Indeterminate Forms (1.5–1.7)",
+            day: "1.5–1.7",
             videos: [
               { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
               { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
@@ -1039,7 +1039,7 @@ const SITE_DATA = {
             ]
           },
           {
-            day: "Day 4 — Squeeze Theorem & Special Trig Limits (1.8–1.9)",
+            day: "1.8–1.9",
             videos: [
               { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
               { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" },
@@ -1050,7 +1050,7 @@ const SITE_DATA = {
             ]
           },
           {
-            day: "Days 5–6 — Discontinuity, Continuity & IVT (1.10–1.13, 1.16)",
+            day: "1.10–1.13, 1.16",
             videos: [
               { title: "1.10 — Exploring Types of Discontinuities", url: "https://calculus.flippedmath.com/110-exploring-types-of-discontinuities.html" },
               { title: "1.11 — Defining Continuity at a Point", url: "https://calculus.flippedmath.com/111-defining-continuity-at-a-point.html" },
@@ -1065,7 +1065,7 @@ const SITE_DATA = {
             ]
           },
           {
-            day: "Day 7 — Infinite Limits & Asymptotes (1.14–1.15)",
+            day: "1.14–1.15",
             videos: [
               { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
               { title: "1.15 — Limits at Infinity and Horizontal Asymptotes", url: "https://calculus.flippedmath.com/115-limits-at-infinity-and-horizontal-asymptotes.html" }
