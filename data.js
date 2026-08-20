@@ -1030,7 +1030,8 @@ const SITE_DATA = {
             videos: [
               { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
               { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
-              { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" }
+              { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" },
+              { title: "2nd Half of Class Notes", url: "https://youtu.be/jMqEb4mA5yc" }
             ],
             deltamath: [
               { label: "1.5 Tools for Evaluating Limits Analytically", url: "https://www.deltamath.com/app/assignment/33425152" }
@@ -1040,7 +1041,8 @@ const SITE_DATA = {
             day: "Day 4 — Squeeze Theorem & Special Trig Limits (1.8–1.9)",
             videos: [
               { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
-              { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" }
+              { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" },
+              { title: "Class Notes", url: "https://youtu.be/_lcAf6He04I" }
             ],
             deltamath: [
               { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
