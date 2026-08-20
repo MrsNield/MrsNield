@@ -1019,7 +1019,8 @@ const SITE_DATA = {
             videos: [
               { title: "1.2 — Defining Limits and Using Limit Notation", url: "https://calculus.flippedmath.com/12-defining-limits-and-using-limit-notation.html" },
               { title: "1.3 — Limit Values from Graphs", url: "https://calculus.flippedmath.com/13-limit-values-from-graphs.html" },
-              { title: "1.4 — Limit Values from Tables", url: "https://calculus.flippedmath.com/14-limit-values-from-tables.html" }
+              { title: "1.4 — Limit Values from Tables", url: "https://calculus.flippedmath.com/14-limit-values-from-tables.html" },
+              { title: "2nd Half of Notes", url: "https://youtu.be/_kY2KezX7nQ" }
             ],
             deltamath: [
               { label: "1.2 Defining Limits", url: "https://www.deltamath.com/app/assignment/33425147" }
