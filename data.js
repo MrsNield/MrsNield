@@ -1036,6 +1036,7 @@ const SITE_DATA = {
               { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
               { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
               { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" },
+              { title: "1st Half of Class Notes", url: "https://youtu.be/kDjTMBciNAQ" },
               { title: "2nd Half of Class Notes", url: "https://youtu.be/jMqEb4mA5yc" }
             ],
             deltamath: [
@@ -1212,6 +1213,7 @@ const SITE_DATA = {
             { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
             { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
             { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" },
+            { title: "1st Half of Class Notes", url: "https://youtu.be/kDjTMBciNAQ" },
             { title: "2nd Half of Class Notes", url: "https://youtu.be/jMqEb4mA5yc" }
           ],
           practice: [
@@ -1235,6 +1237,7 @@ const SITE_DATA = {
           { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
           { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
           { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" },
+          { title: "1st Half of Class Notes", url: "https://youtu.be/kDjTMBciNAQ" },
           { title: "2nd Half of Class Notes", url: "https://youtu.be/jMqEb4mA5yc" }
         ],
         practice: [
