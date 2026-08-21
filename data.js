@@ -162,7 +162,8 @@ const SITE_DATA = {
     dailyLog: [
       { date: "2026-08-18", objective: "Renaissance Testing (both periods)" },
       { date: "2026-08-19", objective: "Finished Renaissance Testing, then the Tissue Project — drug testing pulled a lot of students today (2nd period)" },
-      { date: "2026-08-19", objective: "Finished Renaissance Testing, then graphing practice (4th period)" }
+      { date: "2026-08-19", objective: "Finished Renaissance Testing, then graphing practice (4th period)" },
+      { date: "2026-08-21", objective: "Domain and Range, Set Notation, and Interval Notation" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -175,7 +176,19 @@ const SITE_DATA = {
       { date: "2026-08-17", caption: "Painted Cube — 4x4x4 totals (4th period)", image: "images/board/2026-08-17_painted-cube-64total_4th.jpg" },
       { date: "2026-08-17", caption: "Painted Cube — group work (4th period)", image: "images/board/2026-08-17_painted-cube-portable-board_4th.jpg" },
       { date: "2026-08-17", caption: "Painted Cube — net diagram (4th period)", image: "images/board/2026-08-17_painted-cube-net_4th.jpg" },
-      { date: "2026-08-17", caption: "Painted Cube — group work (4th period)", image: "images/board/2026-08-17_painted-cube-madeline-zach_4th.jpg" }
+      { date: "2026-08-17", caption: "Painted Cube — group work (4th period)", image: "images/board/2026-08-17_painted-cube-madeline-zach_4th.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — worksheet (2nd period)", image: "images/board/2026-08-21_domain-range-worksheet1_2nd.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — worksheet (2nd period)", image: "images/board/2026-08-21_domain-range-worksheet2_2nd.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (2nd period)", image: "images/board/2026-08-21_domain-range-groupwork1_2nd.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (2nd period)", image: "images/board/2026-08-21_domain-range-groupwork2_2nd.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (2nd period)", image: "images/board/2026-08-21_domain-range-groupwork3_2nd.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork1_4th.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork2_4th.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork3_4th.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork4_4th.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork5_4th.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork6_4th.jpg" },
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork7_4th.jpg" }
     ],
 
     // ---- Daily "function of the day" bellringers. Add entries in any order —
