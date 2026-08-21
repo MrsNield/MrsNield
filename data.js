@@ -1006,6 +1006,8 @@ const SITE_DATA = {
       { date: "2026-08-19", period: "5th", label: "Practice with limits (1.2–1.4)" },
       { date: "2026-08-20", period: "3rd", label: "Finished 1.2 — homework due, did 2 limit activities in class" },
       { date: "2026-08-20", period: "5th", label: "Started 1.5" },
+      { date: "2026-08-21", period: "3rd", label: "Limit labs" },
+      { date: "2026-08-21", period: "5th", label: "Finished the 1.5–1.7 notes — homework assigned, skip #6 and #8" },
       { date: "2026-08-24", period: "3rd", label: "Watched the 1.5–1.7 video over the weekend, then did the 1.5–1.7 homework in class" },
       { date: "2026-08-25", period: "3rd", label: "Watched the 1.8–1.9 video Monday night, then did the 1.8–1.9 homework in class" }
     ],
@@ -1218,6 +1220,31 @@ const SITE_DATA = {
           notes: { label: "Guided Notes: 1.5–1.7", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=8" },
           homework: [
             { label: "Lesson 1.5 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=19" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.5 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=7" }
+          ],
+          videos: [
+            { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
+            { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
+            { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" },
+            { title: "1st Half of Class Notes", url: "https://youtu.be/kDjTMBciNAQ" },
+            { title: "2nd Half of Class Notes", url: "https://youtu.be/jMqEb4mA5yc" }
+          ],
+          practice: [
+            { prompt: "Evaluate: lim(x→2) (x² - 4)/(x - 2)", answer: "Factor: (x-2)(x+2)/(x-2) = x + 2 for x ≠ 2. Limit = 2 + 2 = 4." },
+            { prompt: "Evaluate: lim(x→0) (√(x+4) - 2)/x", answer: "Rationalize by multiplying by (√(x+4)+2)/(√(x+4)+2): the numerator becomes x, giving 1/(√(x+4)+2). As x→0: 1/(2+2) = 1/4." }
+          ],
+          deltamath: [
+            { label: "1.5 Tools for Evaluating Limits Analytically", url: "https://www.deltamath.com/app/assignment/33425152" }
+          ]
+        }
+      },
+      "2026-08-21": {
+        "5th": {
+          notes: { label: "Guided Notes: 1.5–1.7", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=8" },
+          homework: [
+            { label: "Lesson 1.5 Homework (blank) — skip #6 and #8", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=19" }
           ],
           homeworkAnswers: [
             { label: "Lesson 1.5 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=7" }
