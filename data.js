@@ -1095,6 +1095,67 @@ const SITE_DATA = {
             ]
           }
         ]
+      },
+      {
+        unit: "Unit 2: Differentiation (Definition and Basic Rules)",
+        days: [
+          {
+            day: "2.1–2.2",
+            videos: [
+              { title: "2.1 — Defining Average and Instantaneous Rate of Change at a Point", url: "https://calculus.flippedmath.com/21-defining-average-and-instantaneous-rate-of-change-at-a-point.html" },
+              { title: "2.2 — Defining the Derivative of a Function and Using Derivative Notation", url: "https://calculus.flippedmath.com/22-defining-the-derivative-of-a-function-and-using-derivative-notation.html" },
+              { title: "Class Notes", url: "https://youtu.be/lTx1vapl5D4" }
+            ]
+          },
+          {
+            day: "2.3",
+            videos: [
+              { title: "2.3 — Estimating Derivatives of a Function at a Point", url: "https://calculus.flippedmath.com/23-estimating-derivatives-of-a-function-at-a-point.html" },
+              { title: "Class Notes", url: "https://youtu.be/mRuXtB2LTVY" }
+            ]
+          },
+          {
+            day: "2.4",
+            videos: [
+              { title: "2.4 — Connecting Differentiability and Continuity", url: "https://calculus.flippedmath.com/24-connecting-differentiability-and-continuity.html" },
+              { title: "Class Notes", url: "https://youtu.be/5Ujpv5Tt56s" }
+            ]
+          },
+          {
+            day: "2.5–2.6",
+            videos: [
+              { title: "2.5 — Applying the Power Rule", url: "https://calculus.flippedmath.com/25-applying-the-power-rule.html" },
+              { title: "2.6 — Derivative Rules: Constant, Sum, Difference, and Constant Multiple", url: "https://calculus.flippedmath.com/26-derivative-rules-constant-sum-difference-and-constant-multiple.html" }
+            ]
+          },
+          {
+            day: "2.7–2.8",
+            videos: [
+              { title: "2.7 — Derivatives of cos(x), sin(x), e^x, and ln(x)", url: "https://calculus.flippedmath.com/27-derivatives-of-cosx-sinx-ex-and-lnx.html" },
+              { title: "2.8 — The Product Rule", url: "https://calculus.flippedmath.com/28-the-product-rule.html" }
+            ]
+          },
+          {
+            day: "2.9–2.10",
+            videos: [
+              { title: "2.9 — The Quotient Rule", url: "https://calculus.flippedmath.com/29-the-quotient-rule.html" },
+              { title: "2.10 — Derivatives of tan(x), cot(x), sec(x), and csc(x)", url: "https://calculus.flippedmath.com/210-derivatives-of-tanx-cotx-secx-cscx.html" }
+            ]
+          },
+          {
+            day: "Review — 2.1–2.4",
+            videos: [
+              { title: "2.1–2.4 Review", url: "https://youtu.be/P3HjvWpJiZw" },
+              { title: "2.1–2.4 Review (2)", url: "https://youtu.be/BV7g_6qGVTc" }
+            ]
+          },
+          {
+            day: "Unit 2 Review",
+            videos: [
+              { title: "Unit 2 Review", url: "https://youtu.be/5RW5BHcRfpA" }
+            ]
+          }
+        ]
       }
     ],
 
@@ -1340,6 +1401,37 @@ const SITE_DATA = {
         resources: [
           { label: "Homework Answer Key (Lessons 1.1–1.9)", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf" },
           { label: "Guided Notes — Filled In (Lessons 1.1–1.16)", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf" }
+        ]
+      },
+      {
+        id: "unit2",
+        name: "Unit 2: Differentiation (Definition and Basic Rules)",
+        resources: [
+          { label: "Derivative Rules Reference Sheet", file: "files/AP_Calc_Unit2_Derivative_Rules_Reference.pdf" },
+          { label: "Note Packet (blank)", file: "files/AP_Calc_Unit2_Note_Packet_Blank.pdf" },
+          { label: "Notes Filled In — 2.1–2.2", file: "files/AP_Calc_Unit2_Notes_2.1-2.2_Filled_In.pdf" },
+          { label: "Notes Filled In — 2.3–2.4", file: "files/AP_Calc_Unit2_Notes_2.3-2.4_Filled_In.pdf" },
+          { label: "Notes Filled In — 2.5–2.6", file: "files/AP_Calc_Unit2_Notes_2.5-2.6_Filled_In.pdf" },
+          { label: "Notes Filled In — 2.7–2.8", file: "files/AP_Calc_Unit2_Notes_2.7-2.8_Filled_In.pdf" },
+          { label: "Notes Filled In — 2.9–2.10", file: "files/AP_Calc_Unit2_Notes_2.9-2.10_Filled_In.pdf" },
+          { label: "Homework 2.1 (blank)", file: "files/AP_Calc_Unit2_Homework_2.1.pdf" },
+          { label: "Homework 2.1 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.1_Answer_Key.pdf" },
+          { label: "Homework 2.2 (blank)", file: "files/AP_Calc_Unit2_Homework_2.2.pdf" },
+          { label: "Homework 2.2 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.2_Answer_Key.pdf" },
+          { label: "Homework 2.3 (blank)", file: "files/AP_Calc_Unit2_Homework_2.3.pdf" },
+          { label: "Homework 2.3 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.3_Answer_Key.pdf" },
+          { label: "Homework 2.4 (blank)", file: "files/AP_Calc_Unit2_Homework_2.4.pdf" },
+          { label: "Homework 2.4 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.4_Answer_Key.pdf" },
+          { label: "Homework 2.5 (blank)", file: "files/AP_Calc_Unit2_Homework_2.5.pdf" },
+          { label: "Homework 2.5 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.5_Answer_Key.pdf" },
+          { label: "Homework 2.6 (blank)", file: "files/AP_Calc_Unit2_Homework_2.6.pdf" },
+          { label: "Homework 2.6 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.6_Answer_Key.pdf" },
+          { label: "Homework 2.7 (blank)", file: "files/AP_Calc_Unit2_Homework_2.7.pdf" },
+          { label: "Homework 2.7 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.7_Answer_Key.pdf" },
+          { label: "Homework 2.8 (blank)", file: "files/AP_Calc_Unit2_Homework_2.8.pdf" },
+          { label: "Homework 2.8 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.8_Answer_Key.pdf" },
+          { label: "Homework 2.9 (blank)", file: "files/AP_Calc_Unit2_Homework_2.9.pdf" },
+          { label: "Homework 2.9 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.9_Answer_Key.pdf" }
         ]
       }
     ],
