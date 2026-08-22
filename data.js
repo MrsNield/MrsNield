@@ -844,8 +844,8 @@ const SITE_DATA = {
           { date: "2026-08-27", type: "lesson", label: "1.3" },
           { date: "2026-08-28", type: "lesson", label: "1.4" },
           { date: "2026-08-31", type: "review", label: "Review + turn in homework" },
-          { date: "2026-09-01", type: "frq", label: "FRQ" },
-          { date: "2026-09-02", type: "test", label: "Test" },
+          { date: "2026-09-01", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-09-02", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2026-09-03", type: "review", label: "Review" },
           { date: "2026-09-04", type: "lesson", label: "2.1" },
           { date: "2026-09-07", type: "no-school", label: "No school" },
@@ -864,8 +864,8 @@ const SITE_DATA = {
         schedule: [
           { date: "2026-09-21", type: "lesson", label: "2.9 — Start of 2nd six weeks" },
           { date: "2026-09-22", type: "review", label: "Review + turn in homework" },
-          { date: "2026-09-23", type: "frq", label: "FRQ" },
-          { date: "2026-09-24", type: "test", label: "Test" },
+          { date: "2026-09-23", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-09-24", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2026-09-25", type: "no-school", label: "No students" },
           { date: "2026-09-28", type: "review", label: "Test review" },
           { date: "2026-09-29", type: "lesson", label: "3.1" },
@@ -879,8 +879,8 @@ const SITE_DATA = {
           { date: "2026-10-09", type: "lesson", label: "3.5" },
           { date: "2026-10-12", type: "no-school", label: "No school" },
           { date: "2026-10-13", type: "review", label: "Review + turn in homework" },
-          { date: "2026-10-14", type: "frq", label: "FRQ" },
-          { date: "2026-10-15", type: "test", label: "Test" },
+          { date: "2026-10-14", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-10-15", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2026-10-16", type: "review", label: "Review" },
           { date: "2026-10-19", type: "lesson", label: "4.1" },
           { date: "2026-10-20", type: "lesson", label: "4.2" },
@@ -898,8 +898,8 @@ const SITE_DATA = {
         schedule: [
           { date: "2026-11-02", type: "lesson", label: "4.7 — Start of 3rd six weeks" },
           { date: "2026-11-03", type: "review", label: "Review + turn in homework" },
-          { date: "2026-11-04", type: "frq", label: "FRQ" },
-          { date: "2026-11-05", type: "test", label: "Test" },
+          { date: "2026-11-04", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-11-05", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2026-11-06", type: "review", label: "Review" },
           { date: "2026-11-09", type: "lesson", label: "5.1" },
           { date: "2026-11-10", type: "lesson", label: "5.2" },
@@ -918,8 +918,8 @@ const SITE_DATA = {
           { date: "2026-12-03", type: "lesson", label: "5.9" },
           { date: "2026-12-04", type: "no-school", label: "No school" },
           { date: "2026-12-07", type: "review", label: "Review + turn in homework" },
-          { date: "2026-12-08", type: "frq", label: "FRQ" },
-          { date: "2026-12-09", type: "test", label: "Test" },
+          { date: "2026-12-08", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-12-09", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2026-12-10", type: "review", label: "Review" },
           { date: "2026-12-11", type: "lesson", label: "6.1" },
           { date: "2026-12-14", type: "lesson", label: "6.2" },
@@ -949,8 +949,8 @@ const SITE_DATA = {
           { date: "2027-01-22", type: "lesson", label: "6.11" },
           { date: "2027-01-25", type: "lesson", label: "6.12" },
           { date: "2027-01-26", type: "review", label: "Review + turn in homework" },
-          { date: "2027-01-27", type: "frq", label: "FRQ" },
-          { date: "2027-01-28", type: "test", label: "Test" },
+          { date: "2027-01-27", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2027-01-28", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2027-01-29", type: "no-school", label: "No students" },
           { date: "2027-02-01", type: "review", label: "Test review" },
           { date: "2027-02-02", type: "lesson", label: "8.1" },
@@ -970,8 +970,8 @@ const SITE_DATA = {
           { date: "2027-02-17", type: "lesson", label: "8.7" },
           { date: "2027-02-18", type: "lesson", label: "8.8" },
           { date: "2027-02-19", type: "review", label: "Review + homework due" },
-          { date: "2027-02-22", type: "frq", label: "FRQ" },
-          { date: "2027-02-23", type: "test", label: "Test" },
+          { date: "2027-02-22", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2027-02-23", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2027-02-24", type: "review", label: "Test review" },
           { date: "2027-02-25", type: "lesson", label: "7.1" },
           { date: "2027-02-26", type: "no-school", label: "No students" },
@@ -981,8 +981,8 @@ const SITE_DATA = {
           { date: "2027-03-04", type: "lesson", label: "7.4" },
           { date: "2027-03-05", type: "lesson", label: "7.5" },
           { date: "2027-03-08", type: "review", label: "Review + turn in homework" },
-          { date: "2027-03-09", type: "frq", label: "FRQ" },
-          { date: "2027-03-10", type: "test", label: "Test" },
+          { date: "2027-03-09", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2027-03-10", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2027-03-11", type: "review", label: "Test review" },
           { date: "2027-03-12", type: "no-school", label: "No school" },
           { date: "2027-03-15", type: "no-school", label: "Spring break begins (Mar 15–19)" }
@@ -1307,6 +1307,17 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
+        ]
+      },
+      "2026-09-02": {
+        videos: [
+          { title: "Unit 1 Review", url: "https://youtu.be/d7jI8OXhSVw" }
+        ],
+        homework: [
+          { label: "Unit 1 Test Practice (printable)", file: "files/AP_Calc_Unit1_Test_Practice.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Unit 1 Test Practice — Answer Key", file: "files/AP_Calc_Unit1_Test_Practice_Answers.pdf" }
         ]
       }
     },

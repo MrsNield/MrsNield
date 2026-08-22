@@ -349,6 +349,17 @@ function renderApCalcCalDetail(dateStr, planned) {
 
   let html = `<h3 class="day-heading" style="margin-top:0;">${formatDateLabel(dateStr)}</h3>`;
 
+  // Show the test/FRQ day-of reminder even on a day that also has real
+  // logged content (e.g. review video/files added for a test day) — it
+  // shouldn't disappear just because other content got added. Skipped for
+  // lesson-type plans, since those go stale as pacing shifts and would just
+  // contradict whatever was actually logged.
+  const planForDate = planned[dateStr];
+  if (planForDate && isLogged && (planForDate.type === "test" || planForDate.type === "frq")) {
+    const typeLabel = CALENDAR_TYPE_LABELS[planForDate.type] || planForDate.type;
+    html += `<div class="miss-section"><strong>Scheduled:</strong> <span class="cal-badge cal-${planForDate.type}">${typeLabel}</span> ${planForDate.label || ""}</div>`;
+  }
+
   if (isLogged) {
     const periodsUsed = new Set();
     logForDate.forEach(e => periodsUsed.add(e.period || "both"));
