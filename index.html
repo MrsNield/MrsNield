@@ -246,6 +246,56 @@
   .video-list li { margin-bottom: 8px; }
   .video-list a { color: var(--navy); font-weight: 600; }
   h2.section-title { color: var(--navy); margin-top: 0; }
+  .cal-month-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .cal-month-nav button {
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .cal-month-label { font-weight: 700; color: var(--navy); font-size: 1.1rem; }
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .cal-weekday {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray);
+    padding-bottom: 4px;
+  }
+  .cal-day {
+    min-height: 78px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    padding: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    background: white;
+    overflow: hidden;
+  }
+  .cal-day:hover { border-color: var(--navy); }
+  .cal-day.empty { background: transparent; border: none; cursor: default; }
+  .cal-day.today { border: 2px solid var(--gold); }
+  .cal-day.selected { background: var(--light); border-color: var(--navy); }
+  .cal-day-num { font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .cal-day-label { font-size: 0.68rem; color: #444; line-height: 1.25; word-break: break-word; }
+  .cal-day .cal-badge { margin: 0 0 3px 0; padding: 1px 6px; font-size: 0.62rem; }
+  @media (max-width: 640px) {
+    .cal-day { min-height: 58px; font-size: 0.65rem; padding: 4px; }
+  }
 </style>
 </head>
 <body>

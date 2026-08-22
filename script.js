@@ -40,8 +40,7 @@ function renderMain() {
     const acTabs = [
       { id: "resources", label: "Resources & Practice" },
       { id: "prereq", label: "Prerequisite Skills" },
-      { id: "calendar", label: "Course Calendar" },
-      { id: "whatdidimiss", label: "What Did I Miss?" }
+      { id: "calendar", label: "Calendar" }
     ];
     const acSubTabsEl = document.getElementById("apcalcSubTabs");
     acSubTabsEl.innerHTML = acTabs.map(t =>
@@ -55,10 +54,8 @@ function renderMain() {
     });
     const acPanels = document.getElementById("apcalcPanels");
     if (currentApCalcTab === "calendar") {
-      acPanels.innerHTML = renderCourseCalendar(SITE_DATA.apcalc?.courseCalendar || []);
-    } else if (currentApCalcTab === "whatdidimiss") {
-      acPanels.innerHTML = renderApCalcWhatDidIMiss();
-      wireApCalcWhatDidIMissInteractivity();
+      acPanels.innerHTML = renderApCalcCalendarTab();
+      wireApCalcCalendarInteractivity();
       wirePrereqSkillsInteractivity();
     } else if (currentApCalcTab === "prereq") {
       acPanels.innerHTML =
@@ -247,62 +244,147 @@ function renderWhatDidIMiss() {
 // that day then renders as two labeled sub-blocks instead of one.
 const APCALC_PERIODS = ["3rd", "5th"];
 
-function renderApCalcWhatDidIMiss() {
+// ---- AP Calc: merged Calendar tab. One month-grid calendar that replaces
+// the separate Course Calendar and What Did I Miss? tabs — click a day to
+// see either what actually happened (once it's been logged) or, for a day
+// that hasn't happened yet, the current plan from the pacing calendar. A
+// logged day always wins over the plan, since the plan can go stale as
+// pacing shifts. ----
+let apCalcCalMonth = null; // { year, month(0-11) } — the month currently shown
+let apCalcCalSelectedDate = null;
+
+function getApCalcPlannedByDate() {
+  const map = {};
+  (SITE_DATA.apcalc?.courseCalendar || []).forEach(unit => {
+    (unit.schedule || []).forEach(day => { map[day.date] = day; });
+  });
+  return map;
+}
+
+function isApCalcDateLogged(dateStr) {
   const dailyLog = SITE_DATA.apcalc?.dailyLog || [];
   const boardWork = SITE_DATA.apcalc?.boardWork || [];
+  const dayDetails = SITE_DATA.apcalc?.dayDetails || {};
+  return dailyLog.some(e => e.date === dateStr) ||
+    boardWork.some(b => b.date === dateStr) ||
+    (dateStr in dayDetails);
+}
 
-  const dateSet = new Set();
-  dailyLog.forEach(e => dateSet.add(e.date));
-  boardWork.forEach(e => dateSet.add(e.date));
+function dateToStr(dt) {
+  return dt.getFullYear() + "-" + String(dt.getMonth() + 1).padStart(2, "0") + "-" + String(dt.getDate()).padStart(2, "0");
+}
 
-  const dates = Array.from(dateSet).sort((a, b) => String(b).localeCompare(String(a)));
+function renderApCalcCalendarTab() {
+  const planned = getApCalcPlannedByDate();
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-  let html = `<div class="card"><h2 class="section-title">What Did I Miss?</h2>
-    <p class="rubric-note">Everything from a missed day — what we covered and any board work — all in one place. Most days 3rd and 5th period do the same thing; if they didn't, you'll see both listed separately.</p>`;
+  if (!apCalcCalMonth) apCalcCalMonth = { year: today.getFullYear(), month: today.getMonth() };
+  if (!apCalcCalSelectedDate) apCalcCalSelectedDate = dateToStr(today);
 
-  if (!dates.length) {
-    html += `<div class="empty-state">Nothing to catch up on yet — check back once we start covering material!</div>`;
-  } else {
-    dates.forEach(date => {
-      const logForDate = dailyLog.filter(e => e.date === date);
-      const boardsForDate = boardWork.filter(b => b.date === date);
+  let html = `<div class="card"><h2 class="section-title">Calendar</h2>
+    <p class="rubric-note">Click any day — past days show what we covered, future days show the current plan (subject to change as pacing shifts).</p>`;
+  html += renderApCalcCalMonthGrid(planned, today);
+  html += `<div id="apcalcCalDetail">${renderApCalcCalDetail(apCalcCalSelectedDate, planned)}</div>`;
+  html += `</div>`;
+  return html;
+}
 
-      const periodsUsed = new Set();
-      logForDate.forEach(e => periodsUsed.add(e.period || "both"));
-      boardsForDate.forEach(b => periodsUsed.add(b.period || "both"));
-      const diverges = periodsUsed.size > 1;
+function renderApCalcCalMonthGrid(planned, today) {
+  const { year, month } = apCalcCalMonth;
+  const firstOfMonth = new Date(year, month, 1);
+  const startWeekday = firstOfMonth.getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const monthLabel = firstOfMonth.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+  const todayStr = dateToStr(today);
+  const dailyLog = SITE_DATA.apcalc?.dailyLog || [];
 
-      html += `<div class="miss-day">`;
-      html += `<h3 class="day-heading" style="margin-bottom:10px;">${formatDateLabel(date)}</h3>`;
+  let html = `<div class="cal-month-nav">
+    <button data-cal-nav="prev">‹ Prev</button>
+    <span class="cal-month-label">${monthLabel}</span>
+    <button data-cal-nav="next">Next ›</button>
+  </div>`;
 
-      if (!diverges) {
-        html += renderApCalcMissGroup(date, null, logForDate, boardsForDate);
-      } else {
-        const groupOrder = ["both", ...APCALC_PERIODS];
-        groupOrder.filter(g => periodsUsed.has(g)).forEach(group => {
-          const groupPeriod = group === "both" ? null : group;
-          const groupLog = logForDate.filter(e => (e.period || "both") === group);
-          const groupBoards = boardsForDate.filter(b => (b.period || "both") === group);
-          html += `<div style="margin-bottom:14px;padding-left:12px;border-left:3px solid var(--light);">
-            <div style="font-weight:700;color:var(--navy);margin-bottom:6px;">${group === "both" ? "Both Periods" : group + " Period"}</div>
-            ${renderApCalcMissGroup(date, groupPeriod, groupLog, groupBoards)}
-          </div>`;
-        });
-      }
+  html += `<div class="cal-grid">`;
+  ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].forEach(d => {
+    html += `<div class="cal-weekday">${d}</div>`;
+  });
+  for (let i = 0; i < startWeekday; i++) html += `<div class="cal-day empty"></div>`;
 
-      html += `</div>`;
-    });
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateStr = dateToStr(new Date(year, month, day));
+    const plan = planned[dateStr];
+    const logForDate = dailyLog.filter(e => e.date === dateStr);
+    const classes = ["cal-day"];
+    if (dateStr === todayStr) classes.push("today");
+    if (dateStr === apCalcCalSelectedDate) classes.push("selected");
+
+    let inner = `<div class="cal-day-num">${day}</div>`;
+    if (logForDate.length) {
+      const label = logForDate.map(e => (e.period ? e.period + ": " : "") + e.label).join(" / ");
+      inner += `<div class="cal-day-label" style="color:var(--green);font-weight:700;">${label}</div>`;
+    } else if (plan) {
+      const typeLabel = CALENDAR_TYPE_LABELS[plan.type] || plan.type;
+      inner += `<span class="cal-badge cal-${plan.type}">${typeLabel}</span>`;
+      if (plan.label) inner += `<div class="cal-day-label">${plan.label}</div>`;
+    }
+
+    html += `<div class="${classes.join(" ")}" data-cal-date="${dateStr}">${inner}</div>`;
   }
 
   html += `</div>`;
   return html;
 }
 
-function renderApCalcMissGroup(date, period, covered, boards) {
-  const detailId = "apcalc-detail-" + date + (period ? "-" + period : "");
-  let html = "";
+function renderApCalcCalDetail(dateStr, planned) {
+  if (!dateStr) {
+    return `<div class="empty-state">Click a day on the calendar above to see what we covered or what's planned.</div>`;
+  }
 
-  html += `<div class="miss-section" style="cursor:pointer;color:var(--navy);font-weight:600;" data-toggle="${detailId}">Click for notes, homework, videos & practice ▾</div>`;
+  const dailyLog = SITE_DATA.apcalc?.dailyLog || [];
+  const boardWork = SITE_DATA.apcalc?.boardWork || [];
+  const logForDate = dailyLog.filter(e => e.date === dateStr);
+  const boardsForDate = boardWork.filter(b => b.date === dateStr);
+  const isLogged = isApCalcDateLogged(dateStr);
+
+  let html = `<h3 class="day-heading" style="margin-top:0;">${formatDateLabel(dateStr)}</h3>`;
+
+  if (isLogged) {
+    const periodsUsed = new Set();
+    logForDate.forEach(e => periodsUsed.add(e.period || "both"));
+    boardsForDate.forEach(b => periodsUsed.add(b.period || "both"));
+    const diverges = periodsUsed.size > 1;
+
+    if (!diverges) {
+      html += renderApCalcDayDetailBlock(dateStr, null, logForDate, boardsForDate);
+    } else {
+      const groupOrder = ["both", ...APCALC_PERIODS];
+      groupOrder.filter(g => periodsUsed.has(g)).forEach(group => {
+        const groupPeriod = group === "both" ? null : group;
+        const groupLog = logForDate.filter(e => (e.period || "both") === group);
+        const groupBoards = boardsForDate.filter(b => (b.period || "both") === group);
+        html += `<div style="margin-bottom:14px;padding-left:12px;border-left:3px solid var(--light);">
+          <div style="font-weight:700;color:var(--navy);margin-bottom:6px;">${group === "both" ? "Both Periods" : group + " Period"}</div>
+          ${renderApCalcDayDetailBlock(dateStr, groupPeriod, groupLog, groupBoards)}
+        </div>`;
+      });
+    }
+  } else {
+    const plan = planned[dateStr];
+    if (plan) {
+      const typeLabel = CALENDAR_TYPE_LABELS[plan.type] || plan.type;
+      html += `<div class="miss-section"><strong>Planned:</strong> <span class="cal-badge cal-${plan.type}">${typeLabel}</span> ${plan.label || ""}</div>
+        <p class="rubric-note">This is the plan as of right now — it may shift if pacing changes.</p>`;
+    } else {
+      html += `<div class="empty-state">Nothing scheduled for this day.</div>`;
+    }
+  }
+
+  return html;
+}
+
+function renderApCalcDayDetailBlock(date, period, covered, boards) {
+  let html = "";
 
   if (covered.length) {
     const coveredText = covered.map(e => e.label).join(", ");
@@ -323,13 +405,28 @@ function renderApCalcMissGroup(date, period, covered, boards) {
     html += `</div></div>`;
   }
 
-  if (!covered.length && !boards.length) {
-    html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
-  }
-
-  html += `<div class="qa-answer" id="${detailId}" style="margin-top:10px;">${renderApCalcDayDetail(date, period)}</div>`;
+  html += renderApCalcDayDetail(date, period);
 
   return html;
+}
+
+function wireApCalcCalendarInteractivity() {
+  document.querySelectorAll("#apcalcPanels [data-cal-nav]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      let { year, month } = apCalcCalMonth;
+      month += btn.dataset.calNav === "next" ? 1 : -1;
+      if (month < 0) { month = 11; year -= 1; }
+      if (month > 11) { month = 0; year += 1; }
+      apCalcCalMonth = { year, month };
+      renderMain();
+    });
+  });
+  document.querySelectorAll("#apcalcPanels [data-cal-date]").forEach(cell => {
+    cell.addEventListener("click", () => {
+      apCalcCalSelectedDate = cell.dataset.calDate;
+      renderMain();
+    });
+  });
 }
 
 function renderApCalcDayDetail(date, period) {
@@ -402,14 +499,6 @@ function renderApCalcDayDetail(date, period) {
   return html;
 }
 
-function wireApCalcWhatDidIMissInteractivity() {
-  document.querySelectorAll("#apcalcPanels [data-toggle]").forEach(el => {
-    el.addEventListener("click", () => {
-      const target = document.getElementById(el.dataset.toggle);
-      if (target) target.classList.toggle("shown");
-    });
-  });
-}
 
 function renderRubric() {
   const units = SITE_DATA.honors.units;
