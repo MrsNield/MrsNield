@@ -1309,6 +1309,17 @@ const SITE_DATA = {
           { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
         ]
       },
+      "2026-08-31": {
+        videos: [
+          { title: "Unit 1 Review", url: "https://youtu.be/d7jI8OXhSVw" }
+        ],
+        homework: [
+          { label: "Unit 1 Test Practice (printable)", file: "files/AP_Calc_Unit1_Test_Practice.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Unit 1 Test Practice — Answer Key", file: "files/AP_Calc_Unit1_Test_Practice_Answers.pdf" }
+        ]
+      },
       "2026-09-02": {
         videos: [
           { title: "Unit 1 Review", url: "https://youtu.be/d7jI8OXhSVw" }
