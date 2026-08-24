@@ -163,7 +163,8 @@ const SITE_DATA = {
       { date: "2026-08-18", objective: "Renaissance Testing (both periods)" },
       { date: "2026-08-19", objective: "Finished Renaissance Testing, then the Tissue Project — drug testing pulled a lot of students today (2nd period)" },
       { date: "2026-08-19", objective: "Finished Renaissance Testing, then graphing practice (4th period)" },
-      { date: "2026-08-21", objective: "Domain and Range, Set Notation, and Interval Notation" }
+      { date: "2026-08-21", objective: "Domain and Range, Set Notation, and Interval Notation" },
+      { date: "2026-08-24", objective: "Domain and Range" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -188,7 +189,12 @@ const SITE_DATA = {
       { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork4_4th.jpg" },
       { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork5_4th.jpg" },
       { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork6_4th.jpg" },
-      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork7_4th.jpg" }
+      { date: "2026-08-21", caption: "Domain & Range / Interval Notation — group work (4th period)", image: "images/board/2026-08-21_domain-range-groupwork7_4th.jpg" },
+      { date: "2026-08-24", caption: "Domain & Range — group work (2nd period)", image: "images/board/2026-08-24_domain-range-groupwork1_2nd.jpg" },
+      { date: "2026-08-24", caption: "Domain & Range — group work (4th period)", image: "images/board/2026-08-24_domain-range-groupwork1_4th.jpg" },
+      { date: "2026-08-24", caption: "Domain & Range — group work (4th period)", image: "images/board/2026-08-24_domain-range-groupwork2_4th.jpg" },
+      { date: "2026-08-24", caption: "Domain & Range — group work (4th period)", image: "images/board/2026-08-24_domain-range-groupwork3_4th.jpg" },
+      { date: "2026-08-24", caption: "Domain & Range — group work (2nd period)", image: "images/board/2026-08-24_domain-range-groupwork2_2nd.jpg" }
     ],
 
     // ---- Daily "function of the day" bellringers. Add entries in any order —
@@ -1008,7 +1014,8 @@ const SITE_DATA = {
       { date: "2026-08-20", period: "5th", label: "Started 1.5" },
       { date: "2026-08-21", period: "3rd", label: "Limit labs" },
       { date: "2026-08-21", period: "5th", label: "Finished the 1.5–1.7 notes — homework assigned, skip #6 and #8" },
-      { date: "2026-08-24", period: "3rd", label: "Watched the 1.5–1.7 video over the weekend, then did the 1.5–1.7 homework in class" },
+      { date: "2026-08-24", period: "3rd", label: "Did 1.5 homework in class — tonight: finish 1.5 homework, fill in the notes packet" },
+      { date: "2026-08-24", period: "5th", label: "Notes for 1.8 and 1.9 — tonight: homework 1.6" },
       { date: "2026-08-25", period: "3rd", label: "Watched the 1.8–1.9 video Monday night, then did the 1.8–1.9 homework in class" }
     ],
 
@@ -1327,27 +1334,50 @@ const SITE_DATA = {
         }
       },
       "2026-08-24": {
-        notes: { label: "Guided Notes: 1.5–1.7", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=8" },
-        homework: [
-          { label: "Lesson 1.5 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=19" }
-        ],
-        homeworkAnswers: [
-          { label: "Lesson 1.5 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=7" }
-        ],
-        videos: [
-          { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
-          { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
-          { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" },
-          { title: "1st Half of Class Notes", url: "https://youtu.be/kDjTMBciNAQ" },
-          { title: "2nd Half of Class Notes", url: "https://youtu.be/jMqEb4mA5yc" }
-        ],
-        practice: [
-          { prompt: "Evaluate: lim(x→2) (x² - 4)/(x - 2)", answer: "Factor: (x-2)(x+2)/(x-2) = x + 2 for x ≠ 2. Limit = 2 + 2 = 4." },
-          { prompt: "Evaluate: lim(x→0) (√(x+4) - 2)/x", answer: "Rationalize by multiplying by (√(x+4)+2)/(√(x+4)+2): the numerator becomes x, giving 1/(√(x+4)+2). As x→0: 1/(2+2) = 1/4." }
-        ],
-        deltamath: [
-          { label: "1.5 Tools for Evaluating Limits Analytically", url: "https://www.deltamath.com/app/assignment/33425152" }
-        ]
+        "3rd": {
+          notes: { label: "Guided Notes: 1.5–1.7", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=8" },
+          homework: [
+            { label: "Lesson 1.5 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=19" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.5 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=7" }
+          ],
+          videos: [
+            { title: "1.5 — Determining Limits Using Algebraic Properties", url: "https://calculus.flippedmath.com/15-determining-limits-using-algebraic-properties.html" },
+            { title: "1.6 — Determining Limits Using Algebraic Manipulation", url: "https://calculus.flippedmath.com/16-determining-limits-using-algebraic-manipulation.html" },
+            { title: "1.7 — Selecting Procedures for Determining Limits", url: "https://calculus.flippedmath.com/17-selecting-procedures-for-determining-limits.html" },
+            { title: "1st Half of Class Notes", url: "https://youtu.be/kDjTMBciNAQ" },
+            { title: "2nd Half of Class Notes", url: "https://youtu.be/jMqEb4mA5yc" }
+          ],
+          practice: [
+            { prompt: "Evaluate: lim(x→2) (x² - 4)/(x - 2)", answer: "Factor: (x-2)(x+2)/(x-2) = x + 2 for x ≠ 2. Limit = 2 + 2 = 4." },
+            { prompt: "Evaluate: lim(x→0) (√(x+4) - 2)/x", answer: "Rationalize by multiplying by (√(x+4)+2)/(√(x+4)+2): the numerator becomes x, giving 1/(√(x+4)+2). As x→0: 1/(2+2) = 1/4." }
+          ],
+          deltamath: [
+            { label: "1.5 Tools for Evaluating Limits Analytically", url: "https://www.deltamath.com/app/assignment/33425152" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Guided Notes: 1.8–1.9", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=12" },
+          homework: [
+            { label: "Lesson 1.6 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=22" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.6 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=8" }
+          ],
+          videos: [
+            { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
+            { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" },
+            { title: "Class Notes", url: "https://youtu.be/_lcAf6He04I" }
+          ],
+          practice: [
+            { prompt: "State the two special trig limits used alongside the Squeeze Theorem.", answer: "lim(x→0) sin(x)/x = 1, and lim(x→0) (1 - cos(x))/x = 0" },
+            { prompt: "Evaluate: lim(x→0) sin(3x)/x", answer: "Rewrite as 3 · sin(3x)/(3x). As x→0, 3x→0 too, so sin(3x)/(3x) → 1. Limit = 3 · 1 = 3." }
+          ],
+          deltamath: [
+            { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
+          ]
+        }
       },
       "2026-08-25": {
         notes: { label: "Guided Notes: 1.8–1.9", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=12" },
