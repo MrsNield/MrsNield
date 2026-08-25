@@ -164,7 +164,8 @@ const SITE_DATA = {
       { date: "2026-08-19", objective: "Finished Renaissance Testing, then the Tissue Project — drug testing pulled a lot of students today (2nd period)" },
       { date: "2026-08-19", objective: "Finished Renaissance Testing, then graphing practice (4th period)" },
       { date: "2026-08-21", objective: "Domain and Range, Set Notation, and Interval Notation" },
-      { date: "2026-08-24", objective: "Domain and Range" }
+      { date: "2026-08-24", objective: "Domain and Range" },
+      { date: "2026-08-25", objective: "Notes over Domain and Range" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -194,7 +195,17 @@ const SITE_DATA = {
       { date: "2026-08-24", caption: "Domain & Range — group work (4th period)", image: "images/board/2026-08-24_domain-range-groupwork1_4th.jpg" },
       { date: "2026-08-24", caption: "Domain & Range — group work (4th period)", image: "images/board/2026-08-24_domain-range-groupwork2_4th.jpg" },
       { date: "2026-08-24", caption: "Domain & Range — group work (4th period)", image: "images/board/2026-08-24_domain-range-groupwork3_4th.jpg" },
-      { date: "2026-08-24", caption: "Domain & Range — group work (2nd period)", image: "images/board/2026-08-24_domain-range-groupwork2_2nd.jpg" }
+      { date: "2026-08-24", caption: "Domain & Range — group work (2nd period)", image: "images/board/2026-08-24_domain-range-groupwork2_2nd.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (2nd period)", image: "images/board/2026-08-25_domain-range-notes1_2nd.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (2nd period)", image: "images/board/2026-08-25_domain-range-notes2_2nd.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (2nd period)", image: "images/board/2026-08-25_domain-range-notes3_2nd.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (2nd period)", image: "images/board/2026-08-25_domain-range-notes4_2nd.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes1_4th.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes2_4th.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes3_4th.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes4_4th.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes5_4th.jpg" },
+      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes6_4th.jpg" }
     ],
 
     // ---- Daily "function of the day" bellringers. Add entries in any order —
