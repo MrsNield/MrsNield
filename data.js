@@ -22,7 +22,7 @@ const SITE_DATA = {
         objectives: [
           {
             id: "1-1", target: "Identify parent functions", teks: "P.2.F",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Aug 26",
             basic: "Identify the parent function family (match equation to graph) for the Algebra II functions: exponential, logarithmic, rational, polynomial, and power.",
             intermediate: "Identify and sketch, from its equation, every parent function required in Precalculus, including trigonometric, inverse trigonometric, and piecewise-defined functions (including step functions).",
             advanced: ""
@@ -165,7 +165,9 @@ const SITE_DATA = {
       { date: "2026-08-19", objective: "Finished Renaissance Testing, then graphing practice (4th period)" },
       { date: "2026-08-21", objective: "Domain and Range, Set Notation, and Interval Notation" },
       { date: "2026-08-24", objective: "Domain and Range" },
-      { date: "2026-08-25", objective: "Notes over Domain and Range" }
+      { date: "2026-08-25", objective: "Notes over Domain and Range" },
+      { date: "2026-08-26", objective: "1-1" },
+      { date: "2026-08-26", objective: "Blooket practice game (both periods)" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -205,7 +207,11 @@ const SITE_DATA = {
       { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes3_4th.jpg" },
       { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes4_4th.jpg" },
       { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes5_4th.jpg" },
-      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes6_4th.jpg" }
+      { date: "2026-08-25", caption: "Domain & Range — notes (4th period)", image: "images/board/2026-08-25_domain-range-notes6_4th.jpg" },
+      { date: "2026-08-26", caption: "Parent Functions notes (2nd & 4th period)", image: "images/board/2026-08-26_parent-functions-notes1.jpg" },
+      { date: "2026-08-26", caption: "Parent Functions notes (2nd & 4th period)", image: "images/board/2026-08-26_parent-functions-notes2.jpg" },
+      { date: "2026-08-26", caption: "Parent Functions notes (2nd & 4th period)", image: "images/board/2026-08-26_parent-functions-notes3.jpg" },
+      { date: "2026-08-26", caption: "Parent Functions notes (2nd & 4th period)", image: "images/board/2026-08-26_parent-functions-notes4.jpg" }
     ],
 
     // ---- Daily "function of the day" bellringers. Add entries in any order —
