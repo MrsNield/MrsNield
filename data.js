@@ -1028,7 +1028,9 @@ const SITE_DATA = {
       { date: "2026-08-24", period: "3rd", label: "Did 1.5 homework in class — tonight: finish 1.5 homework, fill in the notes packet" },
       { date: "2026-08-24", period: "5th", label: "Notes for 1.8 and 1.9 — tonight: homework 1.6" },
       { date: "2026-08-25", period: "3rd", label: "Went over notes 1.8 and 1.9 — working on homework 1.6, skipping #6 and #8" },
-      { date: "2026-08-25", period: "5th", label: "Went over notes 1.10 — working on homework 1.7" }
+      { date: "2026-08-25", period: "5th", label: "Went over notes 1.10 — working on homework 1.7" },
+      { date: "2026-08-26", period: "3rd", label: "Went over notes 1.10–1.13 — homework: 1.7 (#1,2,5,9,10) and 1.8 (#1,2,3,5,10)" },
+      { date: "2026-08-26", period: "5th", label: "Finished Continuity, did notes 1.16 — homework: 1.8 (#1,2,3,5,10) and 1.9 (#1,3,6,7,9,10)" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
@@ -1426,6 +1428,54 @@ const SITE_DATA = {
           ],
           deltamath: [
             { label: "1.7 Continuity and Discontinuity", url: "https://www.deltamath.com/app/assignment/33425154" }
+          ]
+        }
+      },
+      "2026-08-26": {
+        "3rd": {
+          notes: { label: "Guided Notes: 1.10–1.13", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
+          homework: [
+            { label: "Lesson 1.7 Homework (blank) — #1, 2, 5, 9, 10", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=25" },
+            { label: "Lesson 1.8 Homework (blank) — #1, 2, 3, 5, 10", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=29" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.7 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=9" },
+            { label: "Lesson 1.8 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=11" }
+          ],
+          videos: [
+            { title: "1.10 — Exploring Types of Discontinuities", url: "https://calculus.flippedmath.com/110-exploring-types-of-discontinuities.html" },
+            { title: "1.11 — Defining Continuity at a Point", url: "https://calculus.flippedmath.com/111-defining-continuity-at-a-point.html" },
+            { title: "1.12 — Confirming Continuity Over an Interval", url: "https://calculus.flippedmath.com/112-confirming-continuity-over-an-interval.html" },
+            { title: "1.13 — Removing Discontinuities", url: "https://calculus.flippedmath.com/113-removing-discontinuities.html" }
+          ],
+          deltamath: [
+            { label: "1.7 Continuity and Discontinuity", url: "https://www.deltamath.com/app/assignment/33425154" },
+            { label: "1.8 Removing Discontinuities", url: "https://www.deltamath.com/app/assignment/33425155" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Guided Notes: 1.10–1.13, 1.16", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
+          homework: [
+            { label: "Lesson 1.8 Homework (blank) — #1, 2, 3, 5, 10", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=29" },
+            { label: "Lesson 1.9 Homework (blank) — #1, 3, 6, 7, 9, 10", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=33" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.8 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=11" },
+            { label: "Lesson 1.9 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=12" }
+          ],
+          videos: [
+            { title: "1.10 — Exploring Types of Discontinuities", url: "https://calculus.flippedmath.com/110-exploring-types-of-discontinuities.html" },
+            { title: "1.11 — Defining Continuity at a Point", url: "https://calculus.flippedmath.com/111-defining-continuity-at-a-point.html" },
+            { title: "1.12 — Confirming Continuity Over an Interval", url: "https://calculus.flippedmath.com/112-confirming-continuity-over-an-interval.html" },
+            { title: "1.13 — Removing Discontinuities", url: "https://calculus.flippedmath.com/113-removing-discontinuities.html" },
+            { title: "1.16 — Intermediate Value Theorem", url: "https://calculus.flippedmath.com/116-intermediate-value-theorem.html" }
+          ],
+          practice: [
+            { prompt: "f is continuous on [1, 4], with f(1) = -3 and f(4) = 5. Does f have a zero in (1, 4)? Why?", answer: "Yes, by the Intermediate Value Theorem — since f is continuous and 0 is between f(1) = -3 and f(4) = 5, there must be some c in (1, 4) with f(c) = 0." }
+          ],
+          deltamath: [
+            { label: "1.8 Removing Discontinuities", url: "https://www.deltamath.com/app/assignment/33425155" },
+            { label: "1.9 the Intermediate Value Theorem", url: "https://www.deltamath.com/app/assignment/33425156" }
           ]
         }
       },
