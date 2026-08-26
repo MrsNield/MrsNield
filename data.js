@@ -1027,7 +1027,8 @@ const SITE_DATA = {
       { date: "2026-08-21", period: "5th", label: "Finished the 1.5–1.7 notes — homework assigned, skip #6 and #8" },
       { date: "2026-08-24", period: "3rd", label: "Did 1.5 homework in class — tonight: finish 1.5 homework, fill in the notes packet" },
       { date: "2026-08-24", period: "5th", label: "Notes for 1.8 and 1.9 — tonight: homework 1.6" },
-      { date: "2026-08-25", period: "3rd", label: "Watched the 1.8–1.9 video Monday night, then did the 1.8–1.9 homework in class" }
+      { date: "2026-08-25", period: "3rd", label: "Went over notes 1.8 and 1.9 — working on homework 1.6, skipping #6 and #8" },
+      { date: "2026-08-25", period: "5th", label: "Went over notes 1.10 — working on homework 1.7" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
@@ -1391,25 +1392,42 @@ const SITE_DATA = {
         }
       },
       "2026-08-25": {
-        notes: { label: "Guided Notes: 1.8–1.9", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=12" },
-        homework: [
-          { label: "Lesson 1.6 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=22" }
-        ],
-        homeworkAnswers: [
-          { label: "Lesson 1.6 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=8" }
-        ],
-        videos: [
-          { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
-          { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" },
-          { title: "Class Notes", url: "https://youtu.be/_lcAf6He04I" }
-        ],
-        practice: [
-          { prompt: "State the two special trig limits used alongside the Squeeze Theorem.", answer: "lim(x→0) sin(x)/x = 1, and lim(x→0) (1 - cos(x))/x = 0" },
-          { prompt: "Evaluate: lim(x→0) sin(3x)/x", answer: "Rewrite as 3 · sin(3x)/(3x). As x→0, 3x→0 too, so sin(3x)/(3x) → 1. Limit = 3 · 1 = 3." }
-        ],
-        deltamath: [
-          { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
-        ]
+        "3rd": {
+          notes: { label: "Guided Notes: 1.8–1.9", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=12" },
+          homework: [
+            { label: "Lesson 1.6 Homework (blank) — skip #6 and #8", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=22" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.6 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=8" }
+          ],
+          videos: [
+            { title: "1.8 — Determining Limits Using the Squeeze Theorem", url: "https://calculus.flippedmath.com/18-determining-limits-using-the-squeeze-theorem.html" },
+            { title: "1.9 — Connecting Multiple Representations of Limits", url: "https://calculus.flippedmath.com/19-connecting-multiple-representations-of-limits.html" },
+            { title: "Class Notes", url: "https://youtu.be/_lcAf6He04I" }
+          ],
+          practice: [
+            { prompt: "State the two special trig limits used alongside the Squeeze Theorem.", answer: "lim(x→0) sin(x)/x = 1, and lim(x→0) (1 - cos(x))/x = 0" },
+            { prompt: "Evaluate: lim(x→0) sin(3x)/x", answer: "Rewrite as 3 · sin(3x)/(3x). As x→0, 3x→0 too, so sin(3x)/(3x) → 1. Limit = 3 · 1 = 3." }
+          ],
+          deltamath: [
+            { label: "1.6 The Squeeze Theorem", url: "https://www.deltamath.com/app/assignment/33425153" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Guided Notes: 1.10", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
+          homework: [
+            { label: "Lesson 1.7 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=25" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.7 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=9" }
+          ],
+          videos: [
+            { title: "1.10 — Exploring Types of Discontinuities", url: "https://calculus.flippedmath.com/110-exploring-types-of-discontinuities.html" }
+          ],
+          deltamath: [
+            { label: "1.7 Continuity and Discontinuity", url: "https://www.deltamath.com/app/assignment/33425154" }
+          ]
+        }
       },
       "2026-08-31": {
         videos: [
