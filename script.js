@@ -176,11 +176,13 @@ function renderWhatDidIMiss() {
   const dailyLog = SITE_DATA.honors.dailyLog || [];
   const boardWork = SITE_DATA.honors.boardWork || [];
   const bellringers = SITE_DATA.honors.bellringers || [];
+  const dayNotes = SITE_DATA.honors.dayNotes || [];
 
   const dateSet = new Set();
   dailyLog.forEach(e => dateSet.add(e.date));
   boardWork.forEach(e => dateSet.add(e.date));
   bellringers.filter(isBellringerRevealed).forEach(b => dateSet.add(b.date));
+  dayNotes.forEach(n => dateSet.add(n.date));
 
   const dates = Array.from(dateSet).sort((a, b) => String(b).localeCompare(String(a)));
 
@@ -224,7 +226,24 @@ function renderWhatDidIMiss() {
         html += `</div></div>`;
       }
 
-      if (!covered.length && !bell && !boards.length) {
+      const notesForDate = (SITE_DATA.honors.dayNotes || []).filter(n => n.date === date);
+      notesForDate.forEach(n => {
+        if (n.notes) {
+          html += `<div class="miss-section"><strong>Notes:</strong><br>
+            <a class="download-btn" href="${n.notes.file}" target="_blank" rel="noopener" style="margin-top:6px;">⬇ ${n.notes.label}</a>
+          </div>`;
+        }
+        if (n.deltamath) {
+          html += `<div class="miss-section"><strong>DeltaMath:</strong><br>
+            <a class="download-btn" href="${n.deltamath.url}" target="_blank" rel="noopener" style="margin-top:6px;">${n.deltamath.label}</a>
+          </div>`;
+        }
+        if (n.instructions) {
+          html += `<div class="miss-section"><strong>Instructions:</strong> ${n.instructions}</div>`;
+        }
+      });
+
+      if (!covered.length && !bell && !boards.length && !notesForDate.length) {
         html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
       }
 

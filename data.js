@@ -214,6 +214,18 @@ const SITE_DATA = {
       { date: "2026-08-26", caption: "Parent Functions notes (2nd & 4th period)", image: "images/board/2026-08-26_parent-functions-notes4.jpg" }
     ],
 
+    // ---- Downloadable notes/DeltaMath attached to a specific day (separate
+    // from the per-objective Practice & Videos tab, for when a whole day's
+    // notes packet should show up directly on "What Did I Miss?"). ----
+    dayNotes: [
+      {
+        date: "2026-08-27",
+        notes: { label: "Symmetry & Even/Odd Functions — Guided Notes", file: "files/Honors_Symmetry_and_Even_Odd_Functions_Notes.pdf" },
+        deltamath: { label: "1-5 Classify Even and Odd Functions", url: "https://www.deltamath.com/app/assignment/33378275" },
+        instructions: "Homework: complete the Amplify lesson \"Even and Odd Symmetry\" and the DeltaMath assignment above, then email Mrs. Nield when you're finished with both."
+      }
+    ],
+
     // ---- Daily "function of the day" bellringers. Add entries in any order —
     // the site sorts them and auto-hides each one until 4:00 PM on its date
     // (see BELLRINGER_REVEAL_HOUR in script.js). Once that day's 4pm has passed,
