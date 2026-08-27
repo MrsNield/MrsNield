@@ -233,10 +233,10 @@ function renderWhatDidIMiss() {
             <a class="download-btn" href="${n.notes.file}" target="_blank" rel="noopener" style="margin-top:6px;">⬇ ${n.notes.label}</a>
           </div>`;
         }
-        if (n.deltamath) {
-          html += `<div class="miss-section"><strong>DeltaMath:</strong><br>
-            <a class="download-btn" href="${n.deltamath.url}" target="_blank" rel="noopener" style="margin-top:6px;">${n.deltamath.label}</a>
-          </div>`;
+        if (n.deltamath && n.deltamath.length) {
+          html += `<div class="miss-section"><strong>DeltaMath:</strong><br>` +
+            n.deltamath.map(dm => `<a class="download-btn" href="${dm.url}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">${dm.label}</a>`).join("") +
+            `</div>`;
         }
         if (n.instructions) {
           html += `<div class="miss-section"><strong>Instructions:</strong> ${n.instructions}</div>`;

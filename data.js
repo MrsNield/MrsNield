@@ -221,7 +221,10 @@ const SITE_DATA = {
       {
         date: "2026-08-27",
         notes: { label: "Symmetry & Even/Odd Functions — Guided Notes", file: "files/Honors_Symmetry_and_Even_Odd_Functions_Notes.pdf" },
-        deltamath: { label: "1-5 Classify Even and Odd Functions", url: "https://www.deltamath.com/app/assignment/33378275" },
+        deltamath: [
+          { label: "1-5 Classify Even and Odd Functions", url: "https://www.deltamath.com/app/assignment/33378275" },
+          { label: "1-5 Even, Odd, or Neither", url: "https://www.deltamath.com/app/assignment/33566527" }
+        ],
         instructions: "Homework: complete the Amplify lesson \"Even and Odd Symmetry\" and the DeltaMath assignment above, then email Mrs. Nield when you're finished with both."
       }
     ],
@@ -1048,7 +1051,9 @@ const SITE_DATA = {
       { date: "2026-08-25", period: "3rd", label: "Went over notes 1.8 and 1.9 — working on homework 1.6, skipping #6 and #8" },
       { date: "2026-08-25", period: "5th", label: "Went over notes 1.10 — working on homework 1.7" },
       { date: "2026-08-26", period: "3rd", label: "Went over notes 1.10–1.13 — homework: 1.7 (#1,2,5,9,10) and 1.8 (#1,2,3,5,10)" },
-      { date: "2026-08-26", period: "5th", label: "Finished Continuity, did notes 1.16 — homework: 1.8 (#1,2,3,5,10) and 1.9 (#1,3,6,7,9,10)" }
+      { date: "2026-08-26", period: "5th", label: "Finished Continuity, did notes 1.16 — homework: 1.8 (#1,2,3,5,10) and 1.9 (#1,3,6,7,9,10)" },
+      { date: "2026-08-27", period: "3rd", label: "Went over notes 1.16 (Intermediate Value Theorem) — working on homework 1.9" },
+      { date: "2026-08-27", period: "5th", label: "Went over notes 1.14 and 1.15 — working on homework 1.3 tonight" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
@@ -1494,6 +1499,46 @@ const SITE_DATA = {
           deltamath: [
             { label: "1.8 Removing Discontinuities", url: "https://www.deltamath.com/app/assignment/33425155" },
             { label: "1.9 the Intermediate Value Theorem", url: "https://www.deltamath.com/app/assignment/33425156" }
+          ]
+        }
+      },
+      "2026-08-27": {
+        "3rd": {
+          notes: { label: "Guided Notes: 1.16", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=15" },
+          homework: [
+            { label: "Lesson 1.9 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=33" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.9 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=12" }
+          ],
+          videos: [
+            { title: "1.16 — Intermediate Value Theorem", url: "https://calculus.flippedmath.com/116-intermediate-value-theorem.html" }
+          ],
+          practice: [
+            { prompt: "f is continuous on [1, 4], with f(1) = -3 and f(4) = 5. Does f have a zero in (1, 4)? Why?", answer: "Yes, by the Intermediate Value Theorem — since f is continuous and 0 is between f(1) = -3 and f(4) = 5, there must be some c in (1, 4) with f(c) = 0." }
+          ],
+          deltamath: [
+            { label: "1.9 the Intermediate Value Theorem", url: "https://www.deltamath.com/app/assignment/33425156" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Guided Notes: 1.14–1.15", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=19" },
+          homework: [
+            { label: "Lesson 1.3 Homework (blank)", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=13" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.3 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=5" }
+          ],
+          videos: [
+            { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
+            { title: "1.15 — Limits at Infinity and Horizontal Asymptotes", url: "https://calculus.flippedmath.com/115-limits-at-infinity-and-horizontal-asymptotes.html" }
+          ],
+          practice: [
+            { prompt: "Find the vertical asymptote of f(x) = 1/(x - 3) and describe the behavior of f(x) as x→3⁻ and x→3⁺.", answer: "Vertical asymptote at x = 3. As x→3⁻, f(x)→-∞. As x→3⁺, f(x)→+∞." },
+            { prompt: "Find the horizontal asymptote of f(x) = (2x² + 1)/(x² - 4) as x→∞.", answer: "The numerator and denominator have the same degree, so the horizontal asymptote is the ratio of leading coefficients: y = 2/1 = 2." }
+          ],
+          deltamath: [
+            { label: "1.4 Limits at Infinity", url: "https://www.deltamath.com/app/assignment/33425151" }
           ]
         }
       },
