@@ -376,7 +376,9 @@ function renderApCalcCalDetail(dateStr, planned) {
   const planForDate = planned[dateStr];
   if (planForDate && isLogged && (planForDate.type === "test" || planForDate.type === "frq")) {
     const typeLabel = CALENDAR_TYPE_LABELS[planForDate.type] || planForDate.type;
-    html += `<div class="miss-section"><strong>Scheduled:</strong> <span class="cal-badge cal-${planForDate.type}">${typeLabel}</span> ${planForDate.label || ""}</div>`;
+    html += `<div class="miss-section"><strong>Scheduled:</strong> <span class="cal-badge cal-${planForDate.type}">${typeLabel}</span> ${planForDate.label || ""}
+      <br><a class="download-btn" href="files/AP_Calc_Test_Cycle_Guide.docx" target="_blank" rel="noopener" style="margin-top:6px;">⬇ Test Cycle Guide</a>
+    </div>`;
   }
 
   if (isLogged) {
@@ -405,6 +407,9 @@ function renderApCalcCalDetail(dateStr, planned) {
       const typeLabel = CALENDAR_TYPE_LABELS[plan.type] || plan.type;
       html += `<div class="miss-section"><strong>Planned:</strong> <span class="cal-badge cal-${plan.type}">${typeLabel}</span> ${plan.label || ""}</div>
         <p class="rubric-note">This is the plan as of right now — it may shift if pacing changes.</p>`;
+      if (plan.type === "test" || plan.type === "frq") {
+        html += `<a class="download-btn" href="files/AP_Calc_Test_Cycle_Guide.docx" target="_blank" rel="noopener">⬇ Test Cycle Guide</a>`;
+      }
     } else {
       html += `<div class="empty-state">Nothing scheduled for this day.</div>`;
     }

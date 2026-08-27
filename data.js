@@ -1523,6 +1523,13 @@ const SITE_DATA = {
 
     units: [
       {
+        id: "course-wide",
+        name: "Course-Wide Resources",
+        resources: [
+          { label: "AP Calculus Test Cycle Guide — read this first!", file: "files/AP_Calc_Test_Cycle_Guide.docx" }
+        ]
+      },
+      {
         id: "unit1",
         name: "Unit 1: Limits and Continuity",
         resources: [
