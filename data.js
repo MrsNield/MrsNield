@@ -882,16 +882,16 @@ const SITE_DATA = {
           { date: "2026-08-26", type: "lesson", label: "1.9" },
           { date: "2026-08-27", type: "lesson", label: "1.3" },
           { date: "2026-08-28", type: "lesson", label: "1.4" },
-          { date: "2026-08-31", type: "review", label: "Review + turn in homework" },
-          { date: "2026-09-01", type: "frq", label: "FRQ — due at the start of the period" },
-          { date: "2026-09-02", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
-          { date: "2026-09-03", type: "review", label: "Review" },
-          { date: "2026-09-04", type: "lesson", label: "2.1" },
+          { date: "2026-08-31", type: "review", label: "Review" },
+          { date: "2026-09-01", type: "review", label: "Review + turn in homework" },
+          { date: "2026-09-02", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-09-03", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
+          { date: "2026-09-04", type: "review", label: "Review" },
           { date: "2026-09-07", type: "no-school", label: "No school" },
-          { date: "2026-09-08", type: "lesson", label: "2.2" },
-          { date: "2026-09-09", type: "review", label: "Review" },
-          { date: "2026-09-10", type: "lesson", label: "2.3" },
-          { date: "2026-09-14", type: "review", label: "Review (moved here from 2.4 review — please double-check this date)" },
+          { date: "2026-09-08", type: "lesson", label: "2.1" },
+          { date: "2026-09-09", type: "lesson", label: "2.2" },
+          { date: "2026-09-10", type: "review", label: "Review" },
+          { date: "2026-09-14", type: "lesson", label: "2.3" },
           { date: "2026-09-15", type: "lesson", label: "2.5" },
           { date: "2026-09-16", type: "lesson", label: "2.6" },
           { date: "2026-09-17", type: "lesson", label: "2.7" },
@@ -1589,7 +1589,7 @@ const SITE_DATA = {
           ]
         }
       },
-      "2026-08-31": {
+      "2026-09-01": {
         videos: [
           { title: "Unit 1 Review", url: "https://youtu.be/d7jI8OXhSVw" }
         ],
@@ -1600,7 +1600,7 @@ const SITE_DATA = {
           { label: "Unit 1 Test Practice — Answer Key", file: "files/AP_Calc_Unit1_Test_Practice_Answers.pdf" }
         ]
       },
-      "2026-09-02": {
+      "2026-09-03": {
         videos: [
           { title: "Unit 1 Review", url: "https://youtu.be/d7jI8OXhSVw" }
         ],
