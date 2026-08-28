@@ -50,7 +50,7 @@ const SITE_DATA = {
           },
           {
             id: "1-5", target: "Classify even and odd functions", teks: "P.2.D",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Aug 27–28",
             basic: "Visually identify the symmetry of a graph (y-axis, origin, or neither).",
             intermediate: "Classify a function as even, odd, or neither from its graph, and explain the classification using the definitions f(–x) = f(x) (even) or f(–x) = –f(x) (odd).",
             advanced: "Algebraically test f(–x) to prove whether a function given in equation form is even, odd, or neither, and connect the algebraic result to the graph's symmetry."
@@ -167,7 +167,8 @@ const SITE_DATA = {
       { date: "2026-08-24", objective: "Domain and Range" },
       { date: "2026-08-25", objective: "Notes over Domain and Range" },
       { date: "2026-08-26", objective: "1-1" },
-      { date: "2026-08-26", objective: "Blooket practice game (both periods)" }
+      { date: "2026-08-26", objective: "Blooket practice game (both periods)" },
+      { date: "2026-08-28", objective: "1-5" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1053,7 +1054,9 @@ const SITE_DATA = {
       { date: "2026-08-26", period: "3rd", label: "Went over notes 1.10–1.13 — homework: 1.7 (#1,2,5,9,10) and 1.8 (#1,2,3,5,10)" },
       { date: "2026-08-26", period: "5th", label: "Finished Continuity, did notes 1.16 — homework: 1.8 (#1,2,3,5,10) and 1.9 (#1,3,6,7,9,10)" },
       { date: "2026-08-27", period: "3rd", label: "Went over notes 1.16 (Intermediate Value Theorem) — working on homework 1.9" },
-      { date: "2026-08-27", period: "5th", label: "Went over notes 1.14 and 1.15 — working on homework 1.3 tonight" }
+      { date: "2026-08-27", period: "5th", label: "Went over notes 1.14 and 1.15 — working on homework 1.3 tonight" },
+      { date: "2026-08-28", period: "3rd", label: "Finished 1.14–1.15 — homework: 1.3 (#1,3,4,9,10) and 1.4 (#1,3,7,9,10)" },
+      { date: "2026-08-28", period: "5th", label: "Finished 1.14–1.15 — homework: 1.4 (#1,3,7,9,10)" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
@@ -1528,6 +1531,50 @@ const SITE_DATA = {
           ],
           homeworkAnswers: [
             { label: "Lesson 1.3 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=5" }
+          ],
+          videos: [
+            { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
+            { title: "1.15 — Limits at Infinity and Horizontal Asymptotes", url: "https://calculus.flippedmath.com/115-limits-at-infinity-and-horizontal-asymptotes.html" }
+          ],
+          practice: [
+            { prompt: "Find the vertical asymptote of f(x) = 1/(x - 3) and describe the behavior of f(x) as x→3⁻ and x→3⁺.", answer: "Vertical asymptote at x = 3. As x→3⁻, f(x)→-∞. As x→3⁺, f(x)→+∞." },
+            { prompt: "Find the horizontal asymptote of f(x) = (2x² + 1)/(x² - 4) as x→∞.", answer: "The numerator and denominator have the same degree, so the horizontal asymptote is the ratio of leading coefficients: y = 2/1 = 2." }
+          ],
+          deltamath: [
+            { label: "1.4 Limits at Infinity", url: "https://www.deltamath.com/app/assignment/33425151" }
+          ]
+        }
+      },
+      "2026-08-28": {
+        "3rd": {
+          notes: { label: "Guided Notes: 1.14–1.15", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=19" },
+          homework: [
+            { label: "Lesson 1.3 Homework (blank) — #1, 3, 4, 9, 10", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=13" },
+            { label: "Lesson 1.4 Homework (blank) — #1, 3, 7, 9, 10", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=15" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.3 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=5" },
+            { label: "Lesson 1.4 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=6" }
+          ],
+          videos: [
+            { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
+            { title: "1.15 — Limits at Infinity and Horizontal Asymptotes", url: "https://calculus.flippedmath.com/115-limits-at-infinity-and-horizontal-asymptotes.html" }
+          ],
+          practice: [
+            { prompt: "Find the vertical asymptote of f(x) = 1/(x - 3) and describe the behavior of f(x) as x→3⁻ and x→3⁺.", answer: "Vertical asymptote at x = 3. As x→3⁻, f(x)→-∞. As x→3⁺, f(x)→+∞." },
+            { prompt: "Find the horizontal asymptote of f(x) = (2x² + 1)/(x² - 4) as x→∞.", answer: "The numerator and denominator have the same degree, so the horizontal asymptote is the ratio of leading coefficients: y = 2/1 = 2." }
+          ],
+          deltamath: [
+            { label: "1.4 Limits at Infinity", url: "https://www.deltamath.com/app/assignment/33425151" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Guided Notes: 1.14–1.15", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf#page=19" },
+          homework: [
+            { label: "Lesson 1.4 Homework (blank) — #1, 3, 7, 9, 10", file: "files/AP_Calc_Unit1_Homework_Packet.pdf#page=15" }
+          ],
+          homeworkAnswers: [
+            { label: "Lesson 1.4 Homework — Answer Key", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf#page=6" }
           ],
           videos: [
             { title: "1.14 — Infinite Limits and Vertical Asymptotes", url: "https://calculus.flippedmath.com/114-infinite-limits-and-vertical-asymptotes.html" },
