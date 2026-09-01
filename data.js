@@ -169,7 +169,8 @@ const SITE_DATA = {
       { date: "2026-08-26", objective: "1-1" },
       { date: "2026-08-26", objective: "Blooket practice game (both periods)" },
       { date: "2026-08-28", objective: "1-5" },
-      { date: "2026-08-31", objective: "Review — Parent Functions and Even/Odd Behavior" }
+      { date: "2026-08-31", objective: "Review — Parent Functions and Even/Odd Behavior" },
+      { date: "2026-09-01", objective: "Parent Functions Graphic Organizer" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -228,6 +229,10 @@ const SITE_DATA = {
           { label: "1-5 Even, Odd, or Neither", url: "https://www.deltamath.com/app/assignment/33566527" }
         ],
         instructions: "Homework: complete the Amplify lesson \"Even and Odd Symmetry\" and the DeltaMath assignment above, then email Mrs. Nield when you're finished with both."
+      },
+      {
+        date: "2026-09-01",
+        notes: { label: "Parent Functions Graphic Organizer", file: "files/Honors_Parent_Functions_Graphic_Organizer.pdf" }
       }
     ],
 
