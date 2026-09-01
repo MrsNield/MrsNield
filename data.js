@@ -168,7 +168,8 @@ const SITE_DATA = {
       { date: "2026-08-25", objective: "Notes over Domain and Range" },
       { date: "2026-08-26", objective: "1-1" },
       { date: "2026-08-26", objective: "Blooket practice game (both periods)" },
-      { date: "2026-08-28", objective: "1-5" }
+      { date: "2026-08-28", objective: "1-5" },
+      { date: "2026-08-31", objective: "Review — Parent Functions and Even/Odd Behavior" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1056,7 +1057,9 @@ const SITE_DATA = {
       { date: "2026-08-27", period: "3rd", label: "Went over notes 1.16 (Intermediate Value Theorem) — working on homework 1.9" },
       { date: "2026-08-27", period: "5th", label: "Went over notes 1.14 and 1.15 — working on homework 1.3 tonight" },
       { date: "2026-08-28", period: "3rd", label: "Finished 1.14–1.15 — homework: 1.3 (#1,3,4,9,10) and 1.4 (#1,3,7,9,10)" },
-      { date: "2026-08-28", period: "5th", label: "Finished 1.14–1.15 — homework: 1.4 (#1,3,7,9,10)" }
+      { date: "2026-08-28", period: "5th", label: "Finished 1.14–1.15 — homework: 1.4 (#1,3,7,9,10)" },
+      { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
+      { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
 
     // ---- Board work photos, same format as the other courses. Add
