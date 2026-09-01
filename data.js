@@ -1063,6 +1063,8 @@ const SITE_DATA = {
       { date: "2026-08-27", period: "5th", label: "Went over notes 1.14 and 1.15 — working on homework 1.3 tonight" },
       { date: "2026-08-28", period: "3rd", label: "Finished 1.14–1.15 — homework: 1.3 (#1,3,4,9,10) and 1.4 (#1,3,7,9,10)" },
       { date: "2026-08-28", period: "5th", label: "Finished 1.14–1.15 — homework: 1.4 (#1,3,7,9,10)" },
+      { date: "2026-09-01", period: "3rd", label: "Unit 1 review — tonight: complete the 3 released FRQs from College Board, due when they walk into class tomorrow" },
+      { date: "2026-09-01", period: "5th", label: "Unit 1 review — tonight: complete the 3 released FRQs from College Board, due when they walk into class tomorrow" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1071,7 +1073,17 @@ const SITE_DATA = {
     // "period: '3rd'" or "period: '5th'" the same way as dailyLog above when
     // needed. ----
     // { date: "2026-08-14", caption: "...", image: "images/board/filename.jpg" }
-    boardWork: [],
+    boardWork: [
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph1.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph2.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph3.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph4.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph5.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph6.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph7.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph8.jpg" },
+      { date: "2026-09-01", caption: "Unit 1 review — sketch-a-function limit graphs", image: "images/board/2026-09-01_limit-sketch-graph9.jpg" }
+    ],
 
     // ---- Unit 1 videos, from calculus.flippedmath.com (Version 1), grouped
     // to match the same day-by-day pacing as the Course Calendar above. ----
