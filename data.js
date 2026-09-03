@@ -29,21 +29,21 @@ const SITE_DATA = {
           },
           {
             id: "1-2", target: "Determine and analyze key features", teks: "P.2.I",
-            status: "covered", dates: "Sep 2",
+            status: "covered", dates: "Sep 2–3",
             basic: "Identify at least 5 of the 7 key features (domain, range, symmetry, relative maximum, relative minimum, zeros, asymptotes) from a graph.",
             intermediate: "Identify all 7 key features from a graph, table, or equation for exponential, logarithmic, rational, polynomial, power, trigonometric, inverse trigonometric, and piecewise-defined functions.",
             advanced: "Identify all 7 key features and express domain, range, and other features using proper interval, set, and inequality notation; justify zeros and asymptotes algebraically from the equation."
           },
           {
             id: "1-3", target: "Identify increasing / decreasing intervals", teks: "P.2.I",
-            status: "covered", dates: "Sep 2",
+            status: "covered", dates: "Sep 2–3",
             basic: "Given a graph, state where the function is increasing or decreasing using informal, verbal language (e.g., \"goes up,\" \"goes down\").",
             intermediate: "Given a graph or equation, determine and state the intervals where the function is increasing or decreasing.",
             advanced: "State increasing/decreasing intervals using proper interval notation (e.g., (–1, 3]) and set notation (e.g., {x | x ∈ ℜ, –1 < x ≤ 3}) directly from the equation, without graphing technology."
           },
           {
             id: "1-4", target: "Describe end behavior", teks: "P.2.J",
-            status: "covered", dates: "Sep 2",
+            status: "covered", dates: "Sep 2–3",
             basic: "Using a table or graph, describe the end behavior of a function in words (e.g., \"as x gets larger, y gets larger\").",
             intermediate: "Describe the end behavior of exponential, logarithmic, rational, polynomial, and power functions from a graph or table using infinity notation (x → ∞, f(x) → ∞).",
             advanced: ""
@@ -57,7 +57,7 @@ const SITE_DATA = {
           },
           {
             id: "1-6", target: "Analyze discontinuities", teks: "P.2.L, P.2.M",
-            status: "covered", dates: "Sep 2",
+            status: "covered", dates: "Sep 2–3",
             basic: "Determine whether a graph is continuous or discontinuous and identify the x-value(s) where a discontinuity occurs.",
             intermediate: "Classify each discontinuity as removable (hole), jump, or infinite (vertical asymptote) from a graph or table.",
             advanced: "Describe the left-sided and right-sided behavior of a function around a discontinuity using proper notation (x → c⁻, x → c⁺) and determine the type of discontinuity algebraically from a rational or piecewise equation."
@@ -174,7 +174,8 @@ const SITE_DATA = {
       { date: "2026-09-02", objective: "1-2" },
       { date: "2026-09-02", objective: "1-3" },
       { date: "2026-09-02", objective: "1-4" },
-      { date: "2026-09-02", objective: "1-6" }
+      { date: "2026-09-02", objective: "1-6" },
+      { date: "2026-09-03", objective: "Continued 1-2, 1-3, 1-4, and 1-6 — Key Features, Increasing/Decreasing, End Behavior, and Discontinuities" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -222,7 +223,14 @@ const SITE_DATA = {
       { date: "2026-09-02", caption: "Continuity & End Behavior homework (2nd period)", image: "images/board/2026-09-02_continuity-endbehavior1_2nd.jpg" },
       { date: "2026-09-02", caption: "Continuity & End Behavior homework (2nd period)", image: "images/board/2026-09-02_continuity-endbehavior2_2nd.jpg" },
       { date: "2026-09-02", caption: "Continuity & End Behavior homework (2nd period)", image: "images/board/2026-09-02_continuity-endbehavior3_2nd.jpg" },
-      { date: "2026-09-02", caption: "Continuity & End Behavior homework (2nd period)", image: "images/board/2026-09-02_continuity-endbehavior4_2nd.jpg" }
+      { date: "2026-09-02", caption: "Continuity & End Behavior homework (2nd period)", image: "images/board/2026-09-02_continuity-endbehavior4_2nd.jpg" },
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (2nd period)", image: "images/board/2026-09-03_continuity-endbehavior1_2nd.jpg" },
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (2nd period)", image: "images/board/2026-09-03_continuity-endbehavior2_2nd.jpg" },
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (2nd period)", image: "images/board/2026-09-03_continuity-endbehavior3_2nd.jpg" },
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (2nd period)", image: "images/board/2026-09-03_continuity-endbehavior4_2nd.jpg" },
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (4th period)", image: "images/board/2026-09-03_continuity-endbehavior1_4th.jpg" },
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (4th period)", image: "images/board/2026-09-03_continuity-endbehavior2_4th.jpg" },
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (4th period)", image: "images/board/2026-09-03_continuity-endbehavior3_4th.jpg" }
     ],
 
     // ---- Downloadable notes/DeltaMath attached to a specific day (separate
@@ -1075,6 +1083,8 @@ const SITE_DATA = {
       { date: "2026-09-01", period: "5th", label: "Unit 1 review — tonight: complete the 3 released FRQs from College Board, due when they walk into class tomorrow" },
       { date: "2026-09-02", period: "3rd", label: "Turned in the 3 released FRQs from College Board" },
       { date: "2026-09-02", period: "5th", label: "Turned in the 3 released FRQs from College Board" },
+      { date: "2026-09-03", period: "3rd", label: "Unit 1 Test" },
+      { date: "2026-09-03", period: "5th", label: "Unit 1 Test" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1656,7 +1666,8 @@ const SITE_DATA = {
         name: "Unit 1: Limits and Continuity",
         resources: [
           { label: "Homework Answer Key (Lessons 1.1–1.9)", file: "files/AP_Calc_Unit1_Homework_Answer_Key.pdf" },
-          { label: "Guided Notes — Filled In (Lessons 1.1–1.16)", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf" }
+          { label: "Guided Notes — Filled In (Lessons 1.1–1.16)", file: "files/AP_Calc_Unit1_Guided_Notes_Filled_In.pdf" },
+          { label: "Unit 1 Review (video)", file: "https://youtu.be/d7jI8OXhSVw" }
         ]
       },
       {
