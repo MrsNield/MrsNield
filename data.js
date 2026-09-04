@@ -175,7 +175,8 @@ const SITE_DATA = {
       { date: "2026-09-02", objective: "1-3" },
       { date: "2026-09-02", objective: "1-4" },
       { date: "2026-09-02", objective: "1-6" },
-      { date: "2026-09-03", objective: "Continued 1-2, 1-3, 1-4, and 1-6 — Key Features, Increasing/Decreasing, End Behavior, and Discontinuities" }
+      { date: "2026-09-03", objective: "Continued 1-2, 1-3, 1-4, and 1-6 — Key Features, Increasing/Decreasing, End Behavior, and Discontinuities" },
+      { date: "2026-09-04", objective: "Solving for x- and y-intercepts algebraically" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -505,6 +506,10 @@ const SITE_DATA = {
         { prompt: "Without graphing, state the domain and the horizontal asymptote of f(x) = 5(0.3)ˣ – 4.", answer: "Domain: all real numbers. Horizontal asymptote: y = –4 (since 5(0.3)ˣ approaches 0 as x → ∞)." },
         { prompt: "Determine the domain of f(x) = 1/(x² – 9) algebraically, then write it in interval notation.", answer: "Domain: all reals except x = 3 and x = –3, i.e., (–∞,–3) ∪ (–3,3) ∪ (3,∞)." },
         { prompt: "Determine the zeros of f(x) = x³ – 4x algebraically.", answer: "Zeros: x = 0, x = 2, x = –2." },
+        { prompt: "Find the x- and y-intercepts of f(x) = 2x – 6 algebraically.", answer: "x-intercept: set f(x) = 0 → 2x – 6 = 0 → x = 3, so (3, 0). y-intercept: plug in x = 0 → f(0) = –6, so (0, –6)." },
+        { prompt: "Find the x- and y-intercepts of f(x) = x² – 5x + 6 algebraically.", answer: "x-intercepts: set f(x) = 0 → (x – 2)(x – 3) = 0 → x = 2 and x = 3, so (2, 0) and (3, 0). y-intercept: f(0) = 6, so (0, 6)." },
+        { prompt: "Find the x- and y-intercepts of f(x) = (x + 4)/(x – 1) algebraically.", answer: "x-intercept: set the numerator equal to 0 → x + 4 = 0 → x = –4, so (–4, 0). y-intercept: plug in x = 0 → f(0) = 4/(–1) = –4, so (0, –4)." },
+        { prompt: "Find the x- and y-intercepts of f(x) = x³ – x algebraically.", answer: "x-intercepts: set f(x) = 0 → x(x – 1)(x + 1) = 0 → x = 0, 1, –1, so (0, 0), (1, 0), and (–1, 0). y-intercept: f(0) = 0, so (0, 0) (same point as one of the x-intercepts)." },
       ],
       "1-3": [
         { prompt: "A ball is thrown in the air; its height is modeled by h(t) = –16t² + 64t. Without graphing, do you expect the height to be increasing or decreasing right after t = 0? What about right before it lands?", answer: "Increasing right after t = 0 (the ball is rising); decreasing right before it lands (the ball is falling)." },
@@ -1085,6 +1090,8 @@ const SITE_DATA = {
       { date: "2026-09-02", period: "5th", label: "Turned in the 3 released FRQs from College Board" },
       { date: "2026-09-03", period: "3rd", label: "Unit 1 Test" },
       { date: "2026-09-03", period: "5th", label: "Unit 1 Test" },
+      { date: "2026-09-04", period: "3rd", label: "Review" },
+      { date: "2026-09-04", period: "5th", label: "Review" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
