@@ -118,7 +118,13 @@ const SITE_DATA = {
         { date: "2026-08-14", type: "lesson", label: "Graphs, Attributes, and Applications of Functions — runs through Sep 3" }
       ]},
       { id: "cal-unit2", name: "Unit 2: Composition and Inverses of Functions", schedule: [
-        { date: "2026-09-08", type: "lesson", label: "Composition and Inverses of Functions — runs through Sep 28" }
+        { date: "2026-09-08", type: "homework", label: "Finish worksheet: Increasing/Decreasing, Extrema, Points of Inflection, x- and y-intercepts (homework if not finished in class)" },
+        { date: "2026-09-10", type: "lesson", label: "Amplify Activity — \"Turtle Crossing\" (function transformations)" },
+        { date: "2026-09-11", type: "lesson", label: "Amplify Activity — \"What's My Transformation?\" (function transformations)" },
+        { date: "2026-09-14", type: "review", label: "Unit Review" },
+        { date: "2026-09-15", type: "quiz", label: "Quiz — to see where they need work" },
+        { date: "2026-09-16", type: "project", label: "Parent Function Picture Project assigned — rough sketch due today" },
+        { date: "2026-09-23", type: "project", label: "Parent Function Picture Project — final project due" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
         { date: "2026-09-29", type: "lesson", label: "Polynomial and Power Functions, Equations, and Inequalities — runs through Oct 30" }
@@ -252,6 +258,15 @@ const SITE_DATA = {
       {
         date: "2026-09-01",
         notes: { label: "Parent Functions Graphic Organizer", file: "files/Honors_Parent_Functions_Graphic_Organizer.pdf" }
+      },
+      {
+        date: "2026-09-16",
+        notes: { label: "Parent Function Picture Project — Rubric", file: "files/Honors_Parent_Function_Project_Rubric.docx" },
+        instructions: "Assigned today — final project due Wednesday, Sep 23. Rough sketch due today, end of class."
+      },
+      {
+        date: "2026-09-16",
+        notes: { label: "Parent Function Picture Project — Rough Sketch template", file: "files/Honors_Parent_Function_Rough_Sketch.docx" }
       }
     ],
 

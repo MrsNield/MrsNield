@@ -104,8 +104,7 @@ function renderMain() {
   `;
   const tabs = [
     { id: "progress", label: "Progress" },
-    { id: "calendar", label: "Course Calendar" },
-    { id: "whatdidimiss", label: "What Did I Miss?" },
+    { id: "calendar", label: "Calendar" },
     { id: "rubric", label: "Standards Rubric" },
     { id: "board", label: "Board Work" },
     { id: "practice", label: "Practice & Videos" },
@@ -124,13 +123,13 @@ function renderMain() {
 
   const panels = document.getElementById("honorsPanels");
   if (currentHonorsTab === "progress") panels.innerHTML = renderProgress();
-  else if (currentHonorsTab === "calendar") panels.innerHTML = renderCourseCalendar(SITE_DATA.honors.courseCalendar || [], false);
-  else if (currentHonorsTab === "whatdidimiss") panels.innerHTML = renderWhatDidIMiss();
+  else if (currentHonorsTab === "calendar") panels.innerHTML = renderHonorsCalendarTab();
   else if (currentHonorsTab === "rubric") panels.innerHTML = renderRubric();
   else if (currentHonorsTab === "board") panels.innerHTML = renderBoardWork();
   else if (currentHonorsTab === "practice") panels.innerHTML = renderPractice();
   else if (currentHonorsTab === "bellringers") panels.innerHTML = renderBellringers(SITE_DATA.honors.bellringers);
 
+  if (currentHonorsTab === "calendar") wireHonorsCalendarInteractivity();
   if (currentHonorsTab === "practice") wirePracticeInteractivity();
 }
 
@@ -169,90 +168,206 @@ function getObjectiveById(id) {
   return objectives.find(o => o.id === id);
 }
 
-// Combines that day's covered objective (dailyLog), its bellringer, and its
-// board work photos into one card per day — everything an absent student
-// needs, in one place, instead of three separate tabs.
-function renderWhatDidIMiss() {
+// Combines that day's covered objective (dailyLog), its bellringer, its
+// board work photos, and any attached notes/DeltaMath into one block —
+// everything an absent student needs for that date, in one place. Shared by
+// the Honors Calendar tab (for logged/past days).
+function renderHonorsDayLogContent(date) {
   const dailyLog = SITE_DATA.honors.dailyLog || [];
   const boardWork = SITE_DATA.honors.boardWork || [];
   const bellringers = SITE_DATA.honors.bellringers || [];
   const dayNotes = SITE_DATA.honors.dayNotes || [];
 
-  const dateSet = new Set();
-  dailyLog.forEach(e => dateSet.add(e.date));
-  boardWork.forEach(e => dateSet.add(e.date));
-  bellringers.filter(isBellringerRevealed).forEach(b => dateSet.add(b.date));
-  dayNotes.forEach(n => dateSet.add(n.date));
+  const covered = dailyLog.filter(e => e.date === date);
+  const bell = bellringers.find(b => b.date === date && isBellringerRevealed(b));
+  const boards = boardWork.filter(b => b.date === date);
+  const notesForDate = dayNotes.filter(n => n.date === date);
 
-  const dates = Array.from(dateSet).sort((a, b) => String(b).localeCompare(String(a)));
+  let html = "";
 
-  let html = `<div class="card"><h2 class="section-title">What Did I Miss?</h2>
-    <p class="rubric-note">Everything from a missed day — what we covered, that day's function of the day, and the board work — all in one place.</p>`;
+  if (covered.length) {
+    const coveredText = covered.map(e => {
+      const obj = getObjectiveById(e.objective);
+      return obj ? `${obj.id} — ${obj.target}` : e.objective;
+    }).join(", ");
+    html += `<div class="miss-section"><strong>Covered:</strong> ${coveredText}</div>`;
+  }
 
-  if (!dates.length) {
-    html += `<div class="empty-state">Nothing to catch up on yet — check back once we start covering material!</div>`;
-  } else {
-    dates.forEach(date => {
-      const covered = dailyLog.filter(e => e.date === date);
-      const bell = bellringers.find(b => b.date === date && isBellringerRevealed(b));
-      const boards = boardWork.filter(b => b.date === date);
+  if (bell) {
+    html += `<div class="miss-section"><strong>Function of the Day:</strong> ${bell.prompt}</div>`;
+  }
 
-      html += `<div class="miss-day">`;
-      html += `<h3 class="day-heading">${formatDateLabel(date)}</h3>`;
-
-      if (covered.length) {
-        const coveredText = covered.map(e => {
-          const obj = getObjectiveById(e.objective);
-          return obj ? `${obj.id} — ${obj.target}` : e.objective;
-        }).join(", ");
-        html += `<div class="miss-section"><strong>Covered:</strong> ${coveredText}</div>`;
-      }
-
-      if (bell) {
-        html += `<div class="miss-section"><strong>Function of the Day:</strong> ${bell.prompt}</div>`;
-      }
-
-      if (boards.length) {
-        html += `<div class="miss-section"><strong>Board Work:</strong>
-          <div class="board-grid" style="margin-top:8px;">`;
-        boards.forEach(b => {
-          html += `
-            <div class="board-item">
-              <img src="${b.image}" alt="Board work from ${b.date}" loading="lazy">
-              ${b.caption ? `<div class="cap">${b.caption}</div>` : ""}
-            </div>
-          `;
-        });
-        html += `</div></div>`;
-      }
-
-      const notesForDate = (SITE_DATA.honors.dayNotes || []).filter(n => n.date === date);
-      notesForDate.forEach(n => {
-        if (n.notes) {
-          html += `<div class="miss-section"><strong>Notes:</strong><br>
-            <a class="download-btn" href="${n.notes.file}" target="_blank" rel="noopener" style="margin-top:6px;">⬇ ${n.notes.label}</a>
-          </div>`;
-        }
-        if (n.deltamath && n.deltamath.length) {
-          html += `<div class="miss-section"><strong>DeltaMath:</strong><br>` +
-            n.deltamath.map(dm => `<a class="download-btn" href="${dm.url}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">${dm.label}</a>`).join("") +
-            `</div>`;
-        }
-        if (n.instructions) {
-          html += `<div class="miss-section"><strong>Instructions:</strong> ${n.instructions}</div>`;
-        }
-      });
-
-      if (!covered.length && !bell && !boards.length && !notesForDate.length) {
-        html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
-      }
-
-      html += `</div>`;
+  if (boards.length) {
+    html += `<div class="miss-section"><strong>Board Work:</strong>
+      <div class="board-grid" style="margin-top:8px;">`;
+    boards.forEach(b => {
+      html += `
+        <div class="board-item">
+          <img src="${b.image}" alt="Board work from ${b.date}" loading="lazy">
+          ${b.caption ? `<div class="cap">${b.caption}</div>` : ""}
+        </div>
+      `;
     });
+    html += `</div></div>`;
+  }
+
+  notesForDate.forEach(n => {
+    if (n.notes) {
+      html += `<div class="miss-section"><strong>Notes:</strong><br>
+        <a class="download-btn" href="${n.notes.file}" target="_blank" rel="noopener" style="margin-top:6px;">⬇ ${n.notes.label}</a>
+      </div>`;
+    }
+    if (n.deltamath && n.deltamath.length) {
+      html += `<div class="miss-section"><strong>DeltaMath:</strong><br>` +
+        n.deltamath.map(dm => `<a class="download-btn" href="${dm.url}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">${dm.label}</a>`).join("") +
+        `</div>`;
+    }
+    if (n.instructions) {
+      html += `<div class="miss-section"><strong>Instructions:</strong> ${n.instructions}</div>`;
+    }
+  });
+
+  if (!covered.length && !bell && !boards.length && !notesForDate.length) {
+    html += `<div class="miss-section" style="color:var(--gray);font-style:italic;">Nothing posted for this day yet.</div>`;
+  }
+
+  return html;
+}
+
+function isHonorsDateLogged(dateStr) {
+  const dailyLog = SITE_DATA.honors.dailyLog || [];
+  const boardWork = SITE_DATA.honors.boardWork || [];
+  const bellringers = SITE_DATA.honors.bellringers || [];
+  const dayNotes = SITE_DATA.honors.dayNotes || [];
+  return dailyLog.some(e => e.date === dateStr) ||
+    boardWork.some(b => b.date === dateStr) ||
+    bellringers.some(b => b.date === dateStr && isBellringerRevealed(b)) ||
+    dayNotes.some(n => n.date === dateStr);
+}
+
+function getHonorsPlannedByDate() {
+  const map = {};
+  (SITE_DATA.honors.courseCalendar || []).forEach(unit => {
+    (unit.schedule || []).forEach(day => { map[day.date] = day; });
+  });
+  return map;
+}
+
+// ---- Honors: merged Calendar tab. Same month-grid pattern as AP Calc's —
+// replaces the separate Course Calendar and What Did I Miss? tabs. Past/
+// logged days show what actually happened; future days show the plan from
+// honors.courseCalendar (kept as a rolling ~2-week window, updated as Mrs.
+// Nield gives day-by-day plans) with a "this may shift" disclaimer. A unit
+// with no day-by-day plan yet still shows its broad one-line placeholder. ----
+let honorsCalMonth = null;
+let honorsCalSelectedDate = null;
+
+function renderHonorsCalendarTab() {
+  const planned = getHonorsPlannedByDate();
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  if (!honorsCalMonth) honorsCalMonth = { year: today.getFullYear(), month: today.getMonth() };
+  if (!honorsCalSelectedDate) honorsCalSelectedDate = dateToStr(today);
+
+  let html = `<div class="card"><h2 class="section-title">Calendar</h2>
+    <p class="rubric-note">Click any day — past days show what we covered, future days show the current plan (subject to change as pacing shifts).</p>`;
+  html += renderHonorsCalMonthGrid(planned, today);
+  html += `<div id="honorsCalDetail">${renderHonorsCalDetail(honorsCalSelectedDate, planned)}</div>`;
+  html += `</div>`;
+  return html;
+}
+
+function renderHonorsCalMonthGrid(planned, today) {
+  const { year, month } = honorsCalMonth;
+  const firstOfMonth = new Date(year, month, 1);
+  const startWeekday = firstOfMonth.getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const monthLabel = firstOfMonth.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+  const todayStr = dateToStr(today);
+  const dailyLog = SITE_DATA.honors.dailyLog || [];
+
+  let html = `<div class="cal-month-nav">
+    <button data-cal-nav="prev">‹ Prev</button>
+    <span class="cal-month-label">${monthLabel}</span>
+    <button data-cal-nav="next">Next ›</button>
+  </div>`;
+
+  html += `<div class="cal-grid">`;
+  ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].forEach(d => {
+    html += `<div class="cal-weekday">${d}</div>`;
+  });
+  for (let i = 0; i < startWeekday; i++) html += `<div class="cal-day empty"></div>`;
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateStr = dateToStr(new Date(year, month, day));
+    const plan = planned[dateStr];
+    const logForDate = dailyLog.filter(e => e.date === dateStr);
+    const classes = ["cal-day"];
+    if (dateStr === todayStr) classes.push("today");
+    if (dateStr === honorsCalSelectedDate) classes.push("selected");
+
+    let inner = `<div class="cal-day-num">${day}</div>`;
+    if (logForDate.length) {
+      const label = logForDate.map(e => {
+        const obj = getObjectiveById(e.objective);
+        return obj ? obj.id : e.objective;
+      }).join(", ");
+      inner += `<div class="cal-day-label" style="color:var(--green);font-weight:700;">${label}</div>`;
+    } else if (plan) {
+      const typeLabel = CALENDAR_TYPE_LABELS[plan.type] || plan.type;
+      inner += `<span class="cal-badge cal-${plan.type}">${typeLabel}</span>`;
+      if (plan.label) inner += `<div class="cal-day-label">${plan.label}</div>`;
+    }
+
+    html += `<div class="${classes.join(" ")}" data-cal-date="${dateStr}">${inner}</div>`;
   }
 
   html += `</div>`;
   return html;
+}
+
+function renderHonorsCalDetail(dateStr, planned) {
+  if (!dateStr) {
+    return `<div class="empty-state">Click a day on the calendar above to see what we covered or what's planned.</div>`;
+  }
+
+  const isLogged = isHonorsDateLogged(dateStr);
+  let html = `<h3 class="day-heading" style="margin-top:0;">${formatDateLabel(dateStr)}</h3>`;
+
+  if (isLogged) {
+    html += renderHonorsDayLogContent(dateStr);
+  } else {
+    const plan = planned[dateStr];
+    if (plan) {
+      const typeLabel = CALENDAR_TYPE_LABELS[plan.type] || plan.type;
+      html += `<div class="miss-section"><strong>Planned:</strong> <span class="cal-badge cal-${plan.type}">${typeLabel}</span> ${plan.label || ""}</div>
+        <p class="rubric-note">This is the plan as of right now — it may shift if pacing changes.</p>`;
+    } else {
+      html += `<div class="empty-state">Nothing scheduled for this day.</div>`;
+    }
+  }
+
+  return html;
+}
+
+function wireHonorsCalendarInteractivity() {
+  document.querySelectorAll("#honorsPanels [data-cal-nav]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      let { year, month } = honorsCalMonth;
+      month += btn.dataset.calNav === "next" ? 1 : -1;
+      if (month < 0) { month = 11; year -= 1; }
+      if (month > 11) { month = 0; year += 1; }
+      honorsCalMonth = { year, month };
+      renderMain();
+    });
+  });
+  document.querySelectorAll("#honorsPanels [data-cal-date]").forEach(cell => {
+    cell.addEventListener("click", () => {
+      honorsCalSelectedDate = cell.dataset.calDate;
+      renderMain();
+    });
+  });
 }
 
 // AP Calc has no bellringers and no objective catalog to look up against —
@@ -578,7 +693,8 @@ const CALENDAR_TYPE_LABELS = {
   final: "Final",
   frq: "FRQ",
   "no-school": "No School",
-  note: "Note"
+  note: "Note",
+  project: "Project"
 };
 
 function renderCourseCalendar(units, showMissedDayNote) {
