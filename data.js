@@ -176,7 +176,9 @@ const SITE_DATA = {
       { date: "2026-09-02", objective: "1-4" },
       { date: "2026-09-02", objective: "1-6" },
       { date: "2026-09-03", objective: "Continued 1-2, 1-3, 1-4, and 1-6 — Key Features, Increasing/Decreasing, End Behavior, and Discontinuities" },
-      { date: "2026-09-04", objective: "Solving for x- and y-intercepts algebraically" }
+      { date: "2026-09-04", objective: "Solving for x- and y-intercepts algebraically" },
+      { date: "2026-09-08", objective: "Continued solving for x- and y-intercepts algebraically" },
+      { date: "2026-09-08", objective: "Extrema, Points of Inflection, and Increasing/Decreasing — worksheet" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1092,6 +1094,8 @@ const SITE_DATA = {
       { date: "2026-09-03", period: "5th", label: "Unit 1 Test" },
       { date: "2026-09-04", period: "3rd", label: "Review" },
       { date: "2026-09-04", period: "5th", label: "Review" },
+      { date: "2026-09-08", period: "3rd", label: "Notes 2.1 — Defining Average and Instantaneous Rate of Change at a Point" },
+      { date: "2026-09-08", period: "5th", label: "Notes 2.1 — Defining Average and Instantaneous Rate of Change at a Point" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1656,6 +1660,19 @@ const SITE_DATA = {
         ],
         homeworkAnswers: [
           { label: "Unit 1 Test Practice — Answer Key", file: "files/AP_Calc_Unit1_Test_Practice_Answers.pdf" }
+        ]
+      },
+      "2026-09-08": {
+        notes: { label: "Guided Notes: 2.1–2.2", file: "files/AP_Calc_Unit2_Notes_2.1-2.2_Filled_In.pdf" },
+        homework: [
+          { label: "Homework 2.1 (blank)", file: "files/AP_Calc_Unit2_Homework_2.1.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 2.1 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.1_Answer_Key.pdf" }
+        ],
+        videos: [
+          { title: "2.1 — Defining Average and Instantaneous Rate of Change at a Point", url: "https://calculus.flippedmath.com/21-defining-average-and-instantaneous-rate-of-change-at-a-point.html" },
+          { title: "Class Notes", url: "https://youtu.be/lTx1vapl5D4" }
         ]
       }
     },
