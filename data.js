@@ -913,7 +913,7 @@ const SITE_DATA = {
     // on its own once "showUntil" passes, so no need to remember to remove it.
     announcement: {
       text: "No homework tonight! Instead, watch the videos for <a href=\"https://calculus.flippedmath.com/21-defining-average-and-instantaneous-rate-of-change-at-a-point.html\" target=\"_blank\" rel=\"noopener\">2.1</a> and <a href=\"https://calculus.flippedmath.com/22-defining-the-derivative-of-a-function-and-using-derivative-notation.html\" target=\"_blank\" rel=\"noopener\">2.2</a> — and watch the <a href=\"https://youtu.be/lTx1vapl5D4\" target=\"_blank\" rel=\"noopener\">Class Notes video</a> if you needed help with the algebra parts.",
-      showUntil: "2026-09-09"
+      showUntil: "2026-09-10"
     },
 
     // ---- Day-by-day course calendar, same idea as the Precalc tab: add a new
