@@ -909,6 +909,13 @@ const SITE_DATA = {
   apcalc: {
     message: "Unit resources are posted below as they're ready — more units coming as the year progresses.",
 
+    // Short-lived notice shown at the top of the AP Calc page — disappears
+    // on its own once "showUntil" passes, so no need to remember to remove it.
+    announcement: {
+      text: "No homework tonight! Instead, watch the videos for <a href=\"https://calculus.flippedmath.com/21-defining-average-and-instantaneous-rate-of-change-at-a-point.html\" target=\"_blank\" rel=\"noopener\">2.1</a> and <a href=\"https://calculus.flippedmath.com/22-defining-the-derivative-of-a-function-and-using-derivative-notation.html\" target=\"_blank\" rel=\"noopener\">2.2</a> (plus the <a href=\"https://youtu.be/lTx1vapl5D4\" target=\"_blank\" rel=\"noopener\">Class Notes video</a>).",
+      showUntil: "2026-09-09"
+    },
+
     // ---- Day-by-day course calendar, same idea as the Precalc tab: add a new
     // { date, type, label } entry as you go. AP Calc has no bellringers, so
     // "What Did I Miss?" below only combines dailyLog + boardWork. ----

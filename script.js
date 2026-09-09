@@ -28,11 +28,27 @@ function renderCourseTabs() {
   });
 }
 
+// A short-lived, hard-to-miss banner for one-off notices (e.g. "no homework
+// tonight, just watch the videos"). "showUntil" is an inclusive date string
+// (YYYY-MM-DD, compared against the viewer's local date) — the banner just
+// stops rendering after that day passes, no manual cleanup needed.
+function renderAnnouncementBanner(announcement) {
+  if (!announcement || !announcement.text) return "";
+  if (announcement.showUntil) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const until = new Date(announcement.showUntil + "T23:59:59");
+    if (today > until) return "";
+  }
+  return `<div class="announcement-banner">📣 ${announcement.text}</div>`;
+}
+
 function renderMain() {
   const main = document.getElementById("mainContent");
   if (currentCourse === "apcalc") {
     const msg = SITE_DATA.apcalc?.message || "This course hasn't been planned yet — check back soon!";
     main.innerHTML = `
+      ${renderAnnouncementBanner(SITE_DATA.apcalc?.announcement)}
       <div class="placeholder-card" style="margin-bottom:14px;">${msg}</div>
       <div class="sub-tabs" id="apcalcSubTabs"></div>
       <div id="apcalcPanels"></div>
