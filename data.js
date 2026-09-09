@@ -260,6 +260,19 @@ const SITE_DATA = {
         notes: { label: "Parent Functions Graphic Organizer", file: "files/Honors_Parent_Functions_Graphic_Organizer.pdf" }
       },
       {
+        date: "2026-09-14",
+        notes: { label: "Unit 1 Study Guide", file: "files/Honors_Unit1_Study_Guide.docx" },
+        instructions: "Going over the practice quiz and study guide in class today ahead of tomorrow's quiz."
+      },
+      {
+        date: "2026-09-14",
+        notes: { label: "Unit 1 Practice Quiz", file: "files/Honors_Unit1_Practice_Quiz.docx" }
+      },
+      {
+        date: "2026-09-14",
+        notes: { label: "Unit 1 Practice Quiz — Answer Key", file: "files/Honors_Unit1_Practice_Quiz_AnswerKey.docx" }
+      },
+      {
         date: "2026-09-16",
         notes: { label: "Parent Function Picture Project — Rubric", file: "files/Honors_Parent_Function_Project_Rubric.docx" },
         instructions: "Assigned today — final project due Wednesday, Sep 23. Rough sketch due today, end of class."
