@@ -930,12 +930,12 @@ const SITE_DATA = {
           { date: "2026-09-07", type: "no-school", label: "No school" },
           { date: "2026-09-08", type: "lesson", label: "2.1" },
           { date: "2026-09-09", type: "lesson", label: "2.2" },
-          { date: "2026-09-10", type: "review", label: "Review" },
-          { date: "2026-09-14", type: "lesson", label: "2.3" },
-          { date: "2026-09-15", type: "lesson", label: "2.5" },
-          { date: "2026-09-16", type: "lesson", label: "2.6" },
-          { date: "2026-09-17", type: "lesson", label: "2.7" },
-          { date: "2026-09-18", type: "lesson", label: "2.8 — End of 1st six weeks" }
+          { date: "2026-09-10", type: "lesson", label: "2.3" },
+          { date: "2026-09-11", type: "lesson", label: "2.4" },
+          { date: "2026-09-14", type: "lesson", label: "2.5" },
+          { date: "2026-09-15", type: "lesson", label: "2.6" },
+          { date: "2026-09-16", type: "lesson", label: "2.7" },
+          { date: "2026-09-17", type: "lesson", label: "2.8 — End of 1st six weeks" }
         ]
       },
       {

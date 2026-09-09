@@ -470,6 +470,39 @@ function renderApCalcCalMonthGrid(planned, today) {
   return html;
 }
 
+// Parses a lesson number like "2.5" (or the leading part of "2.8 — End of
+// 1st six weeks") into a comparable {major, minor} pair — a plain float
+// would wrongly treat "2.10" as less than "2.2".
+function parseLessonNum(s) {
+  const m = String(s).trim().match(/^(\d+)\.(\d+)/);
+  if (!m) return null;
+  return { major: parseInt(m[1], 10), minor: parseInt(m[2], 10) };
+}
+
+function lessonNumInRange(num, rangeStr) {
+  const parts = rangeStr.split("–").map(s => s.trim());
+  const start = parseLessonNum(parts[0]);
+  const end = parts[1] ? parseLessonNum(parts[1]) : start;
+  if (!start || !end) return false;
+  const cmp = (a, b) => a.major !== b.major ? a.major - b.major : a.minor - b.minor;
+  return cmp(num, start) >= 0 && cmp(num, end) <= 0;
+}
+
+// Looks up the Unit Videos entry covering a given lesson number, so a future
+// (not-yet-logged) calendar day can show its video link(s) instead of just
+// the bare "Lesson 2.5" plan text.
+function findApCalcVideosForLessonLabel(label) {
+  const num = parseLessonNum(label);
+  if (!num) return null;
+  for (const unit of (SITE_DATA.apcalc?.unitVideos || [])) {
+    for (const dayEntry of (unit.days || [])) {
+      const segments = dayEntry.day.split(",").map(s => s.trim());
+      if (segments.some(seg => lessonNumInRange(num, seg))) return dayEntry.videos;
+    }
+  }
+  return null;
+}
+
 function renderApCalcCalDetail(dateStr, planned) {
   if (!dateStr) {
     return `<div class="empty-state">Click a day on the calendar above to see what we covered or what's planned.</div>`;
@@ -524,6 +557,14 @@ function renderApCalcCalDetail(dateStr, planned) {
         <p class="rubric-note">This is the plan as of right now — it may shift if pacing changes.</p>`;
       if (plan.type === "test" || plan.type === "frq") {
         html += `<a class="download-btn" href="files/AP_Calc_Test_Cycle_Guide.docx" target="_blank" rel="noopener">⬇ Test Cycle Guide</a>`;
+      }
+      if (plan.type === "lesson") {
+        const videos = findApCalcVideosForLessonLabel(plan.label);
+        if (videos && videos.length) {
+          html += `<div class="miss-section"><strong>Videos:</strong>
+            <ul class="video-list">${videos.map(v => `<li><a href="${v.url}" target="_blank" rel="noopener">${v.title}</a></li>`).join("")}</ul>
+          </div>`;
+        }
       }
     } else {
       html += `<div class="empty-state">Nothing scheduled for this day.</div>`;
