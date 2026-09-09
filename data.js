@@ -184,7 +184,8 @@ const SITE_DATA = {
       { date: "2026-09-03", objective: "Continued 1-2, 1-3, 1-4, and 1-6 — Key Features, Increasing/Decreasing, End Behavior, and Discontinuities" },
       { date: "2026-09-04", objective: "Solving for x- and y-intercepts algebraically" },
       { date: "2026-09-08", objective: "Continued solving for x- and y-intercepts algebraically" },
-      { date: "2026-09-08", objective: "Extrema, Points of Inflection, and Increasing/Decreasing — worksheet" }
+      { date: "2026-09-08", objective: "Extrema, Points of Inflection, and Increasing/Decreasing — worksheet" },
+      { date: "2026-09-09", objective: "Finished the worksheet from 9/8 — Increasing/Decreasing, Extrema, Points of Inflection, and x- and y-intercepts" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1120,6 +1121,8 @@ const SITE_DATA = {
       { date: "2026-09-04", period: "5th", label: "Review" },
       { date: "2026-09-08", period: "3rd", label: "Notes 2.1 — Defining Average and Instantaneous Rate of Change at a Point" },
       { date: "2026-09-08", period: "5th", label: "Notes 2.1 — Defining Average and Instantaneous Rate of Change at a Point" },
+      { date: "2026-09-09", period: "3rd", label: "Notes 2.2 — Defining the Derivative of a Function and Using Derivative Notation" },
+      { date: "2026-09-09", period: "5th", label: "Notes 2.2 — Defining the Derivative of a Function and Using Derivative Notation" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
