@@ -1227,6 +1227,10 @@ const SITE_DATA = {
               { title: "2.1 — Defining Average and Instantaneous Rate of Change at a Point", url: "https://calculus.flippedmath.com/21-defining-average-and-instantaneous-rate-of-change-at-a-point.html" },
               { title: "2.2 — Defining the Derivative of a Function and Using Derivative Notation", url: "https://calculus.flippedmath.com/22-defining-the-derivative-of-a-function-and-using-derivative-notation.html" },
               { title: "Class Notes", url: "https://youtu.be/lTx1vapl5D4" }
+            ],
+            deltamath: [
+              { label: "2.1", url: "https://www.deltamath.com/app/assignment/33766210" },
+              { label: "2.2", url: "https://www.deltamath.com/app/assignment/33766221" }
             ]
           },
           {
@@ -1234,6 +1238,9 @@ const SITE_DATA = {
             videos: [
               { title: "2.3 — Estimating Derivatives of a Function at a Point", url: "https://calculus.flippedmath.com/23-estimating-derivatives-of-a-function-at-a-point.html" },
               { title: "Class Notes", url: "https://youtu.be/mRuXtB2LTVY" }
+            ],
+            deltamath: [
+              { label: "2.3", url: "https://www.deltamath.com/app/assignment/33766197" }
             ]
           },
           {
@@ -1241,6 +1248,9 @@ const SITE_DATA = {
             videos: [
               { title: "2.4 — Connecting Differentiability and Continuity", url: "https://calculus.flippedmath.com/24-connecting-differentiability-and-continuity.html" },
               { title: "Class Notes", url: "https://youtu.be/5Ujpv5Tt56s" }
+            ],
+            deltamath: [
+              { label: "2.4", url: "https://www.deltamath.com/app/assignment/33766175" }
             ]
           },
           {
@@ -1248,6 +1258,9 @@ const SITE_DATA = {
             videos: [
               { title: "2.5 — Applying the Power Rule", url: "https://calculus.flippedmath.com/25-applying-the-power-rule.html" },
               { title: "2.6 — Derivative Rules: Constant, Sum, Difference, and Constant Multiple", url: "https://calculus.flippedmath.com/26-derivative-rules-constant-sum-difference-and-constant-multiple.html" }
+            ],
+            deltamath: [
+              { label: "2.5", url: "https://www.deltamath.com/app/assignment/33766164" }
             ]
           },
           {
@@ -1255,6 +1268,10 @@ const SITE_DATA = {
             videos: [
               { title: "2.7 — Derivatives of cos(x), sin(x), e^x, and ln(x)", url: "https://calculus.flippedmath.com/27-derivatives-of-cosx-sinx-ex-and-lnx.html" },
               { title: "2.8 — The Product Rule", url: "https://calculus.flippedmath.com/28-the-product-rule.html" }
+            ],
+            deltamath: [
+              { label: "2.7", url: "https://www.deltamath.com/app/assignment/33766155" },
+              { label: "2.8", url: "https://www.deltamath.com/app/assignment/33766137" }
             ]
           },
           {
@@ -1262,6 +1279,9 @@ const SITE_DATA = {
             videos: [
               { title: "2.9 — The Quotient Rule", url: "https://calculus.flippedmath.com/29-the-quotient-rule.html" },
               { title: "2.10 — Derivatives of tan(x), cot(x), sec(x), and csc(x)", url: "https://calculus.flippedmath.com/210-derivatives-of-tanx-cotx-secx-cscx.html" }
+            ],
+            deltamath: [
+              { label: "2.9", url: "https://www.deltamath.com/app/assignment/33766131" }
             ]
           },
           {
