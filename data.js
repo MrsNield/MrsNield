@@ -185,7 +185,9 @@ const SITE_DATA = {
       { date: "2026-09-04", objective: "Solving for x- and y-intercepts algebraically" },
       { date: "2026-09-08", objective: "Continued solving for x- and y-intercepts algebraically" },
       { date: "2026-09-08", objective: "Extrema, Points of Inflection, and Increasing/Decreasing — worksheet" },
-      { date: "2026-09-09", objective: "Finished the worksheet from 9/8 — Increasing/Decreasing, Extrema, Points of Inflection, and x- and y-intercepts" }
+      { date: "2026-09-09", objective: "Finished the worksheet from 9/8 — Increasing/Decreasing, Extrema, Points of Inflection, and x- and y-intercepts" },
+      { date: "2026-09-10", objective: "Function Notation (both periods)" },
+      { date: "2026-09-10", objective: "Amplify Activity — \"Turtle Crossing\" (function transformations) (4th period)" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -913,7 +915,7 @@ const SITE_DATA = {
     // on its own once "showUntil" passes, so no need to remember to remove it.
     announcement: {
       text: "No homework tonight! Instead, watch the videos for <a href=\"https://calculus.flippedmath.com/21-defining-average-and-instantaneous-rate-of-change-at-a-point.html\" target=\"_blank\" rel=\"noopener\">2.1</a> and <a href=\"https://calculus.flippedmath.com/22-defining-the-derivative-of-a-function-and-using-derivative-notation.html\" target=\"_blank\" rel=\"noopener\">2.2</a> — and watch the <a href=\"https://youtu.be/lTx1vapl5D4\" target=\"_blank\" rel=\"noopener\">Class Notes video</a> if you needed help with the algebra parts.",
-      showUntil: "2026-09-10"
+      showUntil: "2026-09-09"
     },
 
     // ---- Day-by-day course calendar, same idea as the Precalc tab: add a new
@@ -951,12 +953,13 @@ const SITE_DATA = {
           { date: "2026-09-07", type: "no-school", label: "No school" },
           { date: "2026-09-08", type: "lesson", label: "2.1" },
           { date: "2026-09-09", type: "lesson", label: "2.2" },
-          { date: "2026-09-10", type: "lesson", label: "2.3" },
-          { date: "2026-09-11", type: "lesson", label: "2.4" },
-          { date: "2026-09-14", type: "lesson", label: "2.5" },
-          { date: "2026-09-15", type: "lesson", label: "2.6" },
-          { date: "2026-09-16", type: "lesson", label: "2.7" },
-          { date: "2026-09-17", type: "lesson", label: "2.8 — End of 1st six weeks" }
+          { date: "2026-09-10", type: "lesson", label: "2.2" },
+          { date: "2026-09-11", type: "lesson", label: "2.3" },
+          { date: "2026-09-14", type: "lesson", label: "2.4" },
+          { date: "2026-09-15", type: "lesson", label: "2.5" },
+          { date: "2026-09-16", type: "lesson", label: "2.6" },
+          { date: "2026-09-17", type: "lesson", label: "2.7" },
+          { date: "2026-09-18", type: "lesson", label: "2.8 — End of 1st six weeks" }
         ]
       },
       {
@@ -1130,6 +1133,8 @@ const SITE_DATA = {
       { date: "2026-09-08", period: "5th", label: "Notes 2.1 — Defining Average and Instantaneous Rate of Change at a Point" },
       { date: "2026-09-09", period: "3rd", label: "Notes 2.2 — Defining the Derivative of a Function and Using Derivative Notation" },
       { date: "2026-09-09", period: "5th", label: "Notes 2.2 — Defining the Derivative of a Function and Using Derivative Notation" },
+      { date: "2026-09-10", period: "3rd", label: "Finished notes 2.2 — doing homework 2.2 tonight" },
+      { date: "2026-09-10", period: "5th", label: "Finished notes 2.2 — doing homework 2.2 tonight" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1749,6 +1754,22 @@ const SITE_DATA = {
         ]
       },
       "2026-09-10": {
+        notes: { label: "Guided Notes: 2.1–2.2", file: "files/AP_Calc_Unit2_Notes_2.1-2.2_Filled_In.pdf" },
+        homework: [
+          { label: "Homework 2.2 (blank)", file: "files/AP_Calc_Unit2_Homework_2.2.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 2.2 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.2_Answer_Key.pdf" }
+        ],
+        videos: [
+          { title: "2.2 — Defining the Derivative of a Function and Using Derivative Notation", url: "https://calculus.flippedmath.com/22-defining-the-derivative-of-a-function-and-using-derivative-notation.html" },
+          { title: "Class Notes", url: "https://youtu.be/lTx1vapl5D4" }
+        ],
+        deltamath: [
+          { label: "2.2", url: "https://www.deltamath.com/app/assignment/33766221" }
+        ]
+      },
+      "2026-09-11": {
         notes: { label: "Guided Notes: 2.3–2.4", file: "files/AP_Calc_Unit2_Notes_2.3-2.4_Filled_In.pdf" },
         homework: [
           { label: "Homework 2.3 (blank)", file: "files/AP_Calc_Unit2_Homework_2.3.pdf" }
@@ -1764,7 +1785,7 @@ const SITE_DATA = {
           { label: "2.3", url: "https://www.deltamath.com/app/assignment/33766197" }
         ]
       },
-      "2026-09-11": {
+      "2026-09-14": {
         notes: { label: "Guided Notes: 2.3–2.4", file: "files/AP_Calc_Unit2_Notes_2.3-2.4_Filled_In.pdf" },
         homework: [
           { label: "Homework 2.4 (blank)", file: "files/AP_Calc_Unit2_Homework_2.4.pdf" }
@@ -1780,7 +1801,7 @@ const SITE_DATA = {
           { label: "2.4", url: "https://www.deltamath.com/app/assignment/33766175" }
         ]
       },
-      "2026-09-14": {
+      "2026-09-15": {
         notes: { label: "Guided Notes: 2.5–2.6", file: "files/AP_Calc_Unit2_Notes_2.5-2.6_Filled_In.pdf" },
         homework: [
           { label: "Homework 2.5 (blank)", file: "files/AP_Calc_Unit2_Homework_2.5.pdf" }
@@ -1795,7 +1816,7 @@ const SITE_DATA = {
           { label: "2.5", url: "https://www.deltamath.com/app/assignment/33766164" }
         ]
       },
-      "2026-09-16": {
+      "2026-09-17": {
         notes: { label: "Guided Notes: 2.7–2.8", file: "files/AP_Calc_Unit2_Notes_2.7-2.8_Filled_In.pdf" },
         homework: [
           { label: "Homework 2.7 (blank)", file: "files/AP_Calc_Unit2_Homework_2.7.pdf" }
@@ -1810,7 +1831,7 @@ const SITE_DATA = {
           { label: "2.7", url: "https://www.deltamath.com/app/assignment/33766155" }
         ]
       },
-      "2026-09-17": {
+      "2026-09-18": {
         notes: { label: "Guided Notes: 2.7–2.8", file: "files/AP_Calc_Unit2_Notes_2.7-2.8_Filled_In.pdf" },
         homework: [
           { label: "Homework 2.8 (blank)", file: "files/AP_Calc_Unit2_Homework_2.8.pdf" }
