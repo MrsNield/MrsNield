@@ -64,7 +64,7 @@ const SITE_DATA = {
           },
           {
             id: "1-7", target: "Graph function transformations", teks: "P.2.G",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Sep 11",
             basic: "Identify 2 of the 4 transformation parameters (a, b, c, or d) applied to a parent function — af(x), f(x) + d, f(x – c), f(bx) — from its equation or graph.",
             intermediate: "Identify all 4 transformation parameters and describe their effect on the graph (vertical/horizontal stretch, compression, reflection, or shift).",
             advanced: "Identify all 4 transformation parameters using proper function notation and graph combined transformations of a parent function without technology."
@@ -187,7 +187,9 @@ const SITE_DATA = {
       { date: "2026-09-08", objective: "Extrema, Points of Inflection, and Increasing/Decreasing — worksheet" },
       { date: "2026-09-09", objective: "Finished the worksheet from 9/8 — Increasing/Decreasing, Extrema, Points of Inflection, and x- and y-intercepts" },
       { date: "2026-09-10", objective: "Function Notation (both periods)" },
-      { date: "2026-09-10", objective: "Amplify Activity — \"Turtle Crossing\" (function transformations) (4th period)" }
+      { date: "2026-09-10", objective: "Amplify Activity — \"Turtle Crossing\" (function transformations) (4th period)" },
+      { date: "2026-09-11", objective: "1-7" },
+      { date: "2026-09-11", objective: "Amplify Activity — \"What's My Transformation?\" (both periods)" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1135,6 +1137,8 @@ const SITE_DATA = {
       { date: "2026-09-09", period: "5th", label: "Notes 2.2 — Defining the Derivative of a Function and Using Derivative Notation" },
       { date: "2026-09-10", period: "3rd", label: "Finished notes 2.2 — doing homework 2.2 tonight" },
       { date: "2026-09-10", period: "5th", label: "Finished notes 2.2 — doing homework 2.2 tonight" },
+      { date: "2026-09-11", period: "3rd", label: "Notes 2.3 — Estimating Derivatives of a Function at a Point" },
+      { date: "2026-09-11", period: "5th", label: "Notes 2.3 — Estimating Derivatives of a Function at a Point" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1783,6 +1787,9 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "2.3", url: "https://www.deltamath.com/app/assignment/33766197" }
+        ],
+        tools: [
+          { label: "Desmos: Function & Derivative Grapher", url: "https://www.desmos.com/calculator/gm96qi1uw8" }
         ]
       },
       "2026-09-14": {
@@ -1799,6 +1806,9 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "2.4", url: "https://www.deltamath.com/app/assignment/33766175" }
+        ],
+        tools: [
+          { label: "Desmos: Function & Derivative Grapher", url: "https://www.desmos.com/calculator/gm96qi1uw8" }
         ]
       },
       "2026-09-15": {
@@ -1899,6 +1909,7 @@ const SITE_DATA = {
           { label: "Homework 2.3 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.3_Answer_Key.pdf" },
           { label: "Homework 2.4 (blank)", file: "files/AP_Calc_Unit2_Homework_2.4.pdf" },
           { label: "Homework 2.4 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.4_Answer_Key.pdf" },
+          { label: "Desmos: Function & Derivative Grapher (for 2.3/2.4)", file: "https://www.desmos.com/calculator/gm96qi1uw8" },
           { label: "Homework 2.5 (blank)", file: "files/AP_Calc_Unit2_Homework_2.5.pdf" },
           { label: "Homework 2.5 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.5_Answer_Key.pdf" },
           { label: "Homework 2.6 (blank)", file: "files/AP_Calc_Unit2_Homework_2.6.pdf" },

@@ -703,6 +703,12 @@ function renderApCalcDayDetail(date, period) {
     html += `<div class="miss-section"><strong>DeltaMath:</strong> <span style="color:var(--gray);font-style:italic;">No DeltaMath assignment posted yet.</span></div>`;
   }
 
+  if (d.tools && d.tools.length) {
+    html += `<div class="miss-section"><strong>Tools:</strong><br>` +
+      d.tools.map(t => `<a class="download-btn" href="${t.url}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">🧮 ${t.label}</a>`).join("") +
+      `</div>`;
+  }
+
   return html;
 }
 
