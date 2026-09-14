@@ -189,7 +189,8 @@ const SITE_DATA = {
       { date: "2026-09-10", objective: "Function Notation (both periods)" },
       { date: "2026-09-10", objective: "Amplify Activity — \"Turtle Crossing\" (function transformations) (4th period)" },
       { date: "2026-09-11", objective: "1-7" },
-      { date: "2026-09-11", objective: "Amplify Activity — \"What's My Transformation?\" (both periods)" }
+      { date: "2026-09-11", objective: "Amplify Activity — \"What's My Transformation?\" (both periods)" },
+      { date: "2026-09-14", objective: "Unit Review" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1139,6 +1140,8 @@ const SITE_DATA = {
       { date: "2026-09-10", period: "5th", label: "Finished notes 2.2 — doing homework 2.2 tonight" },
       { date: "2026-09-11", period: "3rd", label: "Notes 2.3 — Estimating Derivatives of a Function at a Point" },
       { date: "2026-09-11", period: "5th", label: "Notes 2.3 — Estimating Derivatives of a Function at a Point" },
+      { date: "2026-09-14", period: "3rd", label: "Notes 2.4 — Connecting Differentiability and Continuity" },
+      { date: "2026-09-14", period: "5th", label: "Notes 2.4 — Connecting Differentiability and Continuity" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
