@@ -124,6 +124,10 @@ const SITE_DATA = {
         { date: "2026-09-14", type: "review", label: "Unit Review" },
         { date: "2026-09-15", type: "quiz", label: "Quiz — to see where they need work" },
         { date: "2026-09-16", type: "project", label: "Parent Function Picture Project assigned — rough sketch due today" },
+        { date: "2026-09-17", type: "project", label: "Working on Parent Function Picture Project" },
+        { date: "2026-09-18", type: "project", label: "Working on Parent Function Picture Project" },
+        { date: "2026-09-21", type: "project", label: "Working on Parent Function Picture Project" },
+        { date: "2026-09-22", type: "project", label: "Working on Parent Function Picture Project" },
         { date: "2026-09-23", type: "project", label: "Parent Function Picture Project — final project due" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
@@ -158,6 +162,23 @@ const SITE_DATA = {
       ]},
       { id: "cal-unit13", name: "Unit 13: Conics", schedule: [
         { date: "2027-04-26", type: "lesson", label: "Conics — runs through May 19" }
+      ]},
+      { id: "cal-noschool", name: "No-School Days", schedule: [
+        { date: "2026-09-07", type: "no-school", label: "No school" },
+        { date: "2026-09-25", type: "no-school", label: "No students" },
+        { date: "2026-10-02", type: "no-school", label: "No school" },
+        { date: "2026-10-12", type: "no-school", label: "No school" },
+        { date: "2026-10-23", type: "no-school", label: "No school" },
+        { date: "2026-11-13", type: "no-school", label: "No school" },
+        { date: "2026-11-23", type: "no-school", label: "Thanksgiving break (Nov 23–27)" },
+        { date: "2026-12-04", type: "no-school", label: "No school" },
+        { date: "2026-12-21", type: "no-school", label: "Christmas break begins (Dec 21 – Jan 4)" },
+        { date: "2027-01-15", type: "no-school", label: "No school" },
+        { date: "2027-01-18", type: "no-school", label: "No school" },
+        { date: "2027-01-29", type: "no-school", label: "No students" },
+        { date: "2027-02-26", type: "no-school", label: "No students" },
+        { date: "2027-03-12", type: "no-school", label: "No school" },
+        { date: "2027-03-15", type: "no-school", label: "Spring break begins (Mar 15–19)" }
       ]}
     ],
 
@@ -190,7 +211,8 @@ const SITE_DATA = {
       { date: "2026-09-10", objective: "Amplify Activity — \"Turtle Crossing\" (function transformations) (4th period)" },
       { date: "2026-09-11", objective: "1-7" },
       { date: "2026-09-11", objective: "Amplify Activity — \"What's My Transformation?\" (both periods)" },
-      { date: "2026-09-14", objective: "Unit Review" }
+      { date: "2026-09-14", objective: "Unit Review" },
+      { date: "2026-09-15", objective: "Quiz" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1142,6 +1164,8 @@ const SITE_DATA = {
       { date: "2026-09-11", period: "5th", label: "Notes 2.3 — Estimating Derivatives of a Function at a Point" },
       { date: "2026-09-14", period: "3rd", label: "Notes 2.4 — Connecting Differentiability and Continuity" },
       { date: "2026-09-14", period: "5th", label: "Notes 2.4 — Connecting Differentiability and Continuity" },
+      { date: "2026-09-15", period: "3rd", label: "Finished 2.4 — Connecting Differentiability and Continuity" },
+      { date: "2026-09-15", period: "5th", label: "Finished 2.4 — Connecting Differentiability and Continuity" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1815,18 +1839,22 @@ const SITE_DATA = {
         ]
       },
       "2026-09-15": {
-        notes: { label: "Guided Notes: 2.5–2.6", file: "files/AP_Calc_Unit2_Notes_2.5-2.6_Filled_In.pdf" },
+        notes: { label: "Guided Notes: 2.3–2.4", file: "files/AP_Calc_Unit2_Notes_2.3-2.4_Filled_In.pdf" },
         homework: [
-          { label: "Homework 2.5 (blank)", file: "files/AP_Calc_Unit2_Homework_2.5.pdf" }
+          { label: "Homework 2.4 (blank)", file: "files/AP_Calc_Unit2_Homework_2.4.pdf" }
         ],
         homeworkAnswers: [
-          { label: "Homework 2.5 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.5_Answer_Key.pdf" }
+          { label: "Homework 2.4 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.4_Answer_Key.pdf" }
         ],
         videos: [
-          { title: "2.5 — Applying the Power Rule", url: "https://calculus.flippedmath.com/25-applying-the-power-rule.html" }
+          { title: "2.4 — Connecting Differentiability and Continuity", url: "https://calculus.flippedmath.com/24-connecting-differentiability-and-continuity.html" },
+          { title: "Class Notes", url: "https://youtu.be/5Ujpv5Tt56s" }
         ],
         deltamath: [
-          { label: "2.5", url: "https://www.deltamath.com/app/assignment/33766164" }
+          { label: "2.4", url: "https://www.deltamath.com/app/assignment/33766175" }
+        ],
+        tools: [
+          { label: "Desmos: Function & Derivative Grapher", url: "https://www.desmos.com/calculator/gm96qi1uw8" }
         ]
       },
       "2026-09-17": {
