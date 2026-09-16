@@ -212,7 +212,8 @@ const SITE_DATA = {
       { date: "2026-09-11", objective: "1-7" },
       { date: "2026-09-11", objective: "Amplify Activity — \"What's My Transformation?\" (both periods)" },
       { date: "2026-09-14", objective: "Unit Review" },
-      { date: "2026-09-15", objective: "Quiz" }
+      { date: "2026-09-15", objective: "Quiz" },
+      { date: "2026-09-16", objective: "Started the Parent Function Picture Project" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1166,6 +1167,8 @@ const SITE_DATA = {
       { date: "2026-09-14", period: "5th", label: "Notes 2.4 — Connecting Differentiability and Continuity" },
       { date: "2026-09-15", period: "3rd", label: "Finished 2.4 — Connecting Differentiability and Continuity" },
       { date: "2026-09-15", period: "5th", label: "Finished 2.4 — Connecting Differentiability and Continuity" },
+      { date: "2026-09-16", period: "3rd", label: "Covered 2.5 and 2.6" },
+      { date: "2026-09-16", period: "5th", label: "Covered 2.5, 2.6, and 2.7" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1856,6 +1859,48 @@ const SITE_DATA = {
         tools: [
           { label: "Desmos: Function & Derivative Grapher", url: "https://www.desmos.com/calculator/gm96qi1uw8" }
         ]
+      },
+      "2026-09-16": {
+        "3rd": {
+          notes: { label: "Guided Notes: 2.5–2.6", file: "files/AP_Calc_Unit2_Notes_2.5-2.6_Filled_In.pdf" },
+          homework: [
+            { label: "Homework 2.5 (blank)", file: "files/AP_Calc_Unit2_Homework_2.5.pdf" },
+            { label: "Homework 2.6 (blank)", file: "files/AP_Calc_Unit2_Homework_2.6.pdf" }
+          ],
+          homeworkAnswers: [
+            { label: "Homework 2.5 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.5_Answer_Key.pdf" },
+            { label: "Homework 2.6 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.6_Answer_Key.pdf" }
+          ],
+          videos: [
+            { title: "2.5 — Applying the Power Rule", url: "https://calculus.flippedmath.com/25-applying-the-power-rule.html" },
+            { title: "2.6 — Derivative Rules: Constant, Sum, Difference, and Constant Multiple", url: "https://calculus.flippedmath.com/26-derivative-rules-constant-sum-difference-and-constant-multiple.html" }
+          ],
+          deltamath: [
+            { label: "2.5", url: "https://www.deltamath.com/app/assignment/33766164" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Guided Notes: 2.5–2.6", file: "files/AP_Calc_Unit2_Notes_2.5-2.6_Filled_In.pdf" },
+          homework: [
+            { label: "Homework 2.5 (blank)", file: "files/AP_Calc_Unit2_Homework_2.5.pdf" },
+            { label: "Homework 2.6 (blank)", file: "files/AP_Calc_Unit2_Homework_2.6.pdf" },
+            { label: "Homework 2.7 (blank)", file: "files/AP_Calc_Unit2_Homework_2.7.pdf" }
+          ],
+          homeworkAnswers: [
+            { label: "Homework 2.5 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.5_Answer_Key.pdf" },
+            { label: "Homework 2.6 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.6_Answer_Key.pdf" },
+            { label: "Homework 2.7 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.7_Answer_Key.pdf" }
+          ],
+          videos: [
+            { title: "2.5 — Applying the Power Rule", url: "https://calculus.flippedmath.com/25-applying-the-power-rule.html" },
+            { title: "2.6 — Derivative Rules: Constant, Sum, Difference, and Constant Multiple", url: "https://calculus.flippedmath.com/26-derivative-rules-constant-sum-difference-and-constant-multiple.html" },
+            { title: "2.7 — Derivatives of cos(x), sin(x), e^x, and ln(x)", url: "https://calculus.flippedmath.com/27-derivatives-of-cosx-sinx-ex-and-lnx.html" }
+          ],
+          deltamath: [
+            { label: "2.5", url: "https://www.deltamath.com/app/assignment/33766164" },
+            { label: "2.7", url: "https://www.deltamath.com/app/assignment/33766155" }
+          ]
+        }
       },
       "2026-09-17": {
         notes: { label: "Guided Notes: 2.7–2.8", file: "files/AP_Calc_Unit2_Notes_2.7-2.8_Filled_In.pdf" },
