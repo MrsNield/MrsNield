@@ -674,6 +674,34 @@ const SITE_DATA = {
           { label: "Homework Answer Key — 0.7", file: "files/Precalc_Unit0_Homework_0.7_Answer_Key.pdf" },
           { label: "Notes Filled In — 0.7", file: "files/Precalc_Unit0_Notes_0.7_Filled_In.pdf" }
         ]
+      },
+      {
+        id: "unit1",
+        name: "Unit 1: Functions",
+        resources: [
+          { label: "Homework — 1.1", file: "files/Precalc_Unit1_Homework_1.1.pdf" },
+          { label: "Homework Answer Key — 1.1", file: "files/Precalc_Unit1_Homework_1.1_Answer_Key.pdf" },
+          { label: "Homework — 1.2", file: "files/Precalc_Unit1_Homework_1.2.pdf" },
+          { label: "Homework Answer Key — 1.2", file: "files/Precalc_Unit1_Homework_1.2_Answer_Key.pdf" },
+          { label: "Homework — 1.3", file: "files/Precalc_Unit1_Homework_1.3.pdf" },
+          { label: "Homework Answer Key — 1.3", file: "files/Precalc_Unit1_Homework_1.3_Answer_Key.pdf" },
+          { label: "Homework — 1.4", file: "files/Precalc_Unit1_Homework_1.4.pdf" },
+          { label: "Homework Answer Key — 1.4", file: "files/Precalc_Unit1_Homework_1.4_Answer_Key.pdf" },
+          { label: "Homework — 1.5", file: "files/Precalc_Unit1_Homework_1.5.pdf" },
+          { label: "Homework Answer Key — 1.5", file: "files/Precalc_Unit1_Homework_1.5_Answer_Key.pdf" },
+          { label: "Homework — 1.6", file: "files/Precalc_Unit1_Homework_1.6.pdf" },
+          { label: "Homework Answer Key — 1.6", file: "files/Precalc_Unit1_Homework_1.6_Answer_Key.pdf" },
+          { label: "Homework — 1.7", file: "files/Precalc_Unit1_Homework_1.7.pdf" },
+          { label: "Homework Answer Key — 1.7", file: "files/Precalc_Unit1_Homework_1.7_Answer_Key.pdf" },
+          { label: "Homework — 1.8", file: "files/Precalc_Unit1_Homework_1.8.pdf" },
+          { label: "Homework Answer Key — 1.8", file: "files/Precalc_Unit1_Homework_1.8_Answer_Key.pdf" },
+          { label: "Homework — 1.9", file: "files/Precalc_Unit1_Homework_1.9.pdf" },
+          { label: "Homework Answer Key — 1.9", file: "files/Precalc_Unit1_Homework_1.9_Answer_Key.pdf" },
+          { label: "Homework — 1.10", file: "files/Precalc_Unit1_Homework_1.10.pdf" },
+          { label: "Homework Answer Key — 1.10", file: "files/Precalc_Unit1_Homework_1.10_Answer_Key.pdf" },
+          { label: "Homework — 1.11", file: "files/Precalc_Unit1_Homework_1.11.pdf" },
+          { label: "Homework Answer Key — 1.11", file: "files/Precalc_Unit1_Homework_1.11_Answer_Key.pdf" }
+        ]
       }
     ],
 
