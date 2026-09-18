@@ -214,7 +214,8 @@ const SITE_DATA = {
       { date: "2026-09-14", objective: "Unit Review" },
       { date: "2026-09-15", objective: "Quiz" },
       { date: "2026-09-16", objective: "Started the Parent Function Picture Project" },
-      { date: "2026-09-17", objective: "Worked on the Parent Function Picture Project" }
+      { date: "2026-09-17", objective: "Worked on the Parent Function Picture Project" },
+      { date: "2026-09-18", objective: "Worked on the Parent Function Picture Project" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -679,28 +680,29 @@ const SITE_DATA = {
         id: "unit1",
         name: "Unit 1: Functions",
         resources: [
-          { label: "Homework — 1.1", file: "files/Precalc_Unit1_Homework_1.1.pdf" },
           { label: "Homework Answer Key — 1.1", file: "files/Precalc_Unit1_Homework_1.1_Answer_Key.pdf" },
-          { label: "Homework — 1.2", file: "files/Precalc_Unit1_Homework_1.2.pdf" },
+          { label: "Notes Filled In — 1.1", file: "files/Precalc_Unit1_Notes_1.1_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.2", file: "files/Precalc_Unit1_Homework_1.2_Answer_Key.pdf" },
-          { label: "Homework — 1.3", file: "files/Precalc_Unit1_Homework_1.3.pdf" },
+          { label: "Notes Filled In — 1.2", file: "files/Precalc_Unit1_Notes_1.2_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.3", file: "files/Precalc_Unit1_Homework_1.3_Answer_Key.pdf" },
-          { label: "Homework — 1.4", file: "files/Precalc_Unit1_Homework_1.4.pdf" },
+          { label: "Notes Filled In — 1.3", file: "files/Precalc_Unit1_Notes_1.3_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.4", file: "files/Precalc_Unit1_Homework_1.4_Answer_Key.pdf" },
-          { label: "Homework — 1.5", file: "files/Precalc_Unit1_Homework_1.5.pdf" },
+          { label: "Notes Filled In — 1.4", file: "files/Precalc_Unit1_Notes_1.4_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.5", file: "files/Precalc_Unit1_Homework_1.5_Answer_Key.pdf" },
-          { label: "Homework — 1.6", file: "files/Precalc_Unit1_Homework_1.6.pdf" },
+          { label: "Notes Filled In — 1.5", file: "files/Precalc_Unit1_Notes_1.5_Filled_In.pdf" },
+          { label: "Notes Filled In — 1.5 Task", file: "files/Precalc_Unit1_Notes_1.5_Task_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.6", file: "files/Precalc_Unit1_Homework_1.6_Answer_Key.pdf" },
-          { label: "Homework — 1.7", file: "files/Precalc_Unit1_Homework_1.7.pdf" },
+          { label: "Notes Filled In — 1.6", file: "files/Precalc_Unit1_Notes_1.6_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.7", file: "files/Precalc_Unit1_Homework_1.7_Answer_Key.pdf" },
-          { label: "Homework — 1.8", file: "files/Precalc_Unit1_Homework_1.8.pdf" },
+          { label: "Notes Filled In — 1.7", file: "files/Precalc_Unit1_Notes_1.7_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.8", file: "files/Precalc_Unit1_Homework_1.8_Answer_Key.pdf" },
-          { label: "Homework — 1.9", file: "files/Precalc_Unit1_Homework_1.9.pdf" },
+          { label: "Notes Filled In — 1.8", file: "files/Precalc_Unit1_Notes_1.8_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.9", file: "files/Precalc_Unit1_Homework_1.9_Answer_Key.pdf" },
-          { label: "Homework — 1.10", file: "files/Precalc_Unit1_Homework_1.10.pdf" },
+          { label: "Notes Filled In — 1.9", file: "files/Precalc_Unit1_Notes_1.9_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.10", file: "files/Precalc_Unit1_Homework_1.10_Answer_Key.pdf" },
-          { label: "Homework — 1.11", file: "files/Precalc_Unit1_Homework_1.11.pdf" },
-          { label: "Homework Answer Key — 1.11", file: "files/Precalc_Unit1_Homework_1.11_Answer_Key.pdf" }
+          { label: "Notes Filled In — 1.10", file: "files/Precalc_Unit1_Notes_1.10_Filled_In.pdf" },
+          { label: "Homework Answer Key — 1.11", file: "files/Precalc_Unit1_Homework_1.11_Answer_Key.pdf" },
+          { label: "Notes Filled In — 1.11", file: "files/Precalc_Unit1_Notes_1.11_Filled_In.pdf" }
         ]
       }
     ],
@@ -1018,37 +1020,37 @@ const SITE_DATA = {
         ]
       },
       {
-        id: "sw2", name: "2nd Six Weeks (Sep 21 – Oct 29)",
+        id: "sw2", name: "2nd Six Weeks (Sep 22 – Oct 30)",
         schedule: [
-          { date: "2026-09-21", type: "lesson", label: "2.9 — Start of 2nd six weeks" },
-          { date: "2026-09-22", type: "review", label: "Review + turn in homework" },
-          { date: "2026-09-23", type: "frq", label: "FRQ — due at the start of the period" },
-          { date: "2026-09-24", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
+          { date: "2026-09-22", type: "lesson", label: "2.9 — Start of 2nd six weeks" },
+          { date: "2026-09-23", type: "review", label: "Review + turn in homework" },
+          { date: "2026-09-24", type: "frq", label: "FRQ — due at the start of the period" },
           { date: "2026-09-25", type: "no-school", label: "No students" },
-          { date: "2026-09-28", type: "review", label: "Test review" },
-          { date: "2026-09-29", type: "lesson", label: "3.1" },
-          { date: "2026-09-30", type: "review", label: "Review" },
+          { date: "2026-09-28", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
+          { date: "2026-09-29", type: "review", label: "Test review" },
+          { date: "2026-09-30", type: "lesson", label: "3.1" },
           { date: "2026-10-01", type: "review", label: "Review" },
           { date: "2026-10-02", type: "no-school", label: "No school" },
-          { date: "2026-10-05", type: "lesson", label: "3.2" },
-          { date: "2026-10-06", type: "review", label: "Review" },
-          { date: "2026-10-07", type: "lesson", label: "3.3" },
-          { date: "2026-10-08", type: "lesson", label: "3.4" },
-          { date: "2026-10-09", type: "lesson", label: "3.5" },
+          { date: "2026-10-05", type: "review", label: "Review" },
+          { date: "2026-10-06", type: "lesson", label: "3.2" },
+          { date: "2026-10-07", type: "review", label: "Review" },
+          { date: "2026-10-08", type: "lesson", label: "3.3" },
+          { date: "2026-10-09", type: "lesson", label: "3.4" },
           { date: "2026-10-12", type: "no-school", label: "No school" },
-          { date: "2026-10-13", type: "review", label: "Review + turn in homework" },
-          { date: "2026-10-14", type: "frq", label: "FRQ — due at the start of the period" },
-          { date: "2026-10-15", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
-          { date: "2026-10-16", type: "review", label: "Review" },
-          { date: "2026-10-19", type: "lesson", label: "4.1" },
-          { date: "2026-10-20", type: "lesson", label: "4.2" },
-          { date: "2026-10-21", type: "review", label: "Review" },
-          { date: "2026-10-22", type: "lesson", label: "4.3" },
+          { date: "2026-10-13", type: "lesson", label: "3.5" },
+          { date: "2026-10-14", type: "review", label: "Review + turn in homework" },
+          { date: "2026-10-15", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-10-16", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
+          { date: "2026-10-19", type: "review", label: "Review" },
+          { date: "2026-10-20", type: "lesson", label: "4.1" },
+          { date: "2026-10-21", type: "lesson", label: "4.2" },
+          { date: "2026-10-22", type: "review", label: "Review" },
           { date: "2026-10-23", type: "no-school", label: "No school" },
-          { date: "2026-10-26", type: "review", label: "Review" },
-          { date: "2026-10-27", type: "lesson", label: "4.4" },
-          { date: "2026-10-28", type: "lesson", label: "4.5" },
-          { date: "2026-10-29", type: "lesson", label: "4.6 — End of 2nd six weeks" }
+          { date: "2026-10-26", type: "lesson", label: "4.3" },
+          { date: "2026-10-27", type: "review", label: "Review" },
+          { date: "2026-10-28", type: "lesson", label: "4.4" },
+          { date: "2026-10-29", type: "lesson", label: "4.5" },
+          { date: "2026-10-30", type: "lesson", label: "4.6 — End of 2nd six weeks" }
         ]
       },
       {
@@ -1200,6 +1202,8 @@ const SITE_DATA = {
       { date: "2026-09-16", period: "5th", label: "Covered 2.5, 2.6, and 2.7" },
       { date: "2026-09-17", period: "3rd", label: "Homework day — worked on homework for 2.1–2.7" },
       { date: "2026-09-17", period: "5th", label: "Homework day — worked on homework for 2.1–2.7" },
+      { date: "2026-09-18", period: "3rd", label: "Gimkit review game — finished covering all Unit 2 material" },
+      { date: "2026-09-18", period: "5th", label: "Gimkit review game — finished covering all Unit 2 material" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1968,7 +1972,7 @@ const SITE_DATA = {
           { label: "2.8", url: "https://www.deltamath.com/app/assignment/33766137" }
         ]
       },
-      "2026-09-21": {
+      "2026-09-22": {
         notes: { label: "Guided Notes: 2.9–2.10", file: "files/AP_Calc_Unit2_Notes_2.9-2.10_Filled_In.pdf" },
         homework: [
           { label: "Homework 2.9 (blank)", file: "files/AP_Calc_Unit2_Homework_2.9.pdf" }
