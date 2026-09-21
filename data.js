@@ -215,7 +215,8 @@ const SITE_DATA = {
       { date: "2026-09-15", objective: "Quiz" },
       { date: "2026-09-16", objective: "Started the Parent Function Picture Project" },
       { date: "2026-09-17", objective: "Worked on the Parent Function Picture Project" },
-      { date: "2026-09-18", objective: "Worked on the Parent Function Picture Project" }
+      { date: "2026-09-18", objective: "Worked on the Parent Function Picture Project" },
+      { date: "2026-09-21", objective: "Worked on the Parent Function Picture Project" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -311,6 +312,10 @@ const SITE_DATA = {
       {
         date: "2026-09-16",
         notes: { label: "Parent Function Picture Project — Rough Sketch template", file: "files/Honors_Parent_Function_Rough_Sketch.docx" }
+      },
+      {
+        date: "2026-09-16",
+        notes: { label: "Function Transformations Reference (a, b, c, d parameters)", file: "images/board/2026-09-21_function-transformations-reference.jpg" }
       }
     ],
 
@@ -1204,6 +1209,8 @@ const SITE_DATA = {
       { date: "2026-09-17", period: "5th", label: "Homework day — worked on homework for 2.1–2.7" },
       { date: "2026-09-18", period: "3rd", label: "Gimkit review game — finished covering all Unit 2 material" },
       { date: "2026-09-18", period: "5th", label: "Gimkit review game — finished covering all Unit 2 material" },
+      { date: "2026-09-21", period: "3rd", label: "Review" },
+      { date: "2026-09-21", period: "5th", label: "Review" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
