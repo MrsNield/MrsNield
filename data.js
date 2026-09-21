@@ -712,6 +712,30 @@ const SITE_DATA = {
       }
     ],
 
+    // ---- Per-lesson video links from the Math Medic teacher portal
+    // (portal.mathmedic.com/lesson-plans/course/Precalculus/unit/U/day/D/video —
+    // free to view, no login needed). Same { unit, days: [{day, videos}] }
+    // shape as AP Calc's unitVideos (reuses renderApCalcUnitVideos). ----
+    unitVideos: [
+      {
+        unit: "Unit 1: Functions",
+        days: [
+          { day: "1.1", videos: [{ title: "Lesson 1.1 — Functions and Function Notation", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/1/video" }] },
+          { day: "1.2", videos: [{ title: "Lesson 1.2 — Domain and Range", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/2/video" }] },
+          { day: "1.3", videos: [{ title: "Lesson 1.3 — Rates of Change and Graph Behavior", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/3/video" }] },
+          { day: "1.4", videos: [{ title: "Lesson 1.4 — Library of Parent Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/4/video" }] },
+          { day: "1.5", videos: [{ title: "Lesson 1.5 — Transformations of Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/5/video" }] },
+          { day: "1.5 Day 2", videos: [{ title: "Lesson 1.5 Day 2 — Transformations of Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/6/video" }] },
+          { day: "1.6", videos: [{ title: "Lesson 1.6 — Even and Odd Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/7/video" }] },
+          { day: "1.7", videos: [{ title: "Lesson 1.7 — Building Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/9/video" }] },
+          { day: "1.8", videos: [{ title: "Lesson 1.8 — Compositions of Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/10/video" }] },
+          { day: "1.9", videos: [{ title: "Lesson 1.9 — Inverse Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/11/video" }] },
+          { day: "1.10", videos: [{ title: "Lesson 1.10 — Graphs of Inverse Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/12/video" }] },
+          { day: "1.11", videos: [{ title: "Lesson 1.11 — Piecewise Functions", url: "https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/1/day/13/video" }] }
+        ]
+      }
+    ],
+
     // ---- Course calendar, planned out in advance unit by unit so students can
     // always see what happened on a day they missed without Mrs. Nield having
     // to log anything day-to-day. Add a new { id, name, schedule } block per

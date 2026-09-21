@@ -111,7 +111,9 @@ function renderMain() {
     const pPanels = document.getElementById("precalcPanels");
     if (currentPrecalcTab === "calendar") pPanels.innerHTML = renderCourseCalendar(SITE_DATA.precalc?.units || []);
     else if (currentPrecalcTab === "bellringers") pPanels.innerHTML = renderBellringers(SITE_DATA.precalc?.bellringers || []);
-    else pPanels.innerHTML = renderApCalcUnits(SITE_DATA.precalc?.unitResources || []);
+    else pPanels.innerHTML =
+      renderApCalcUnits(SITE_DATA.precalc?.unitResources || []) +
+      renderApCalcUnitVideos(SITE_DATA.precalc?.unitVideos || []);
     return;
   }
   main.innerHTML = `
