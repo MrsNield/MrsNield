@@ -212,7 +212,7 @@ function renderHonorsDayLogContent(date) {
   }
 
   if (bell) {
-    html += `<div class="miss-section"><strong>Function of the Day:</strong> ${bell.prompt}</div>`;
+    html += `<div class="miss-section"><strong>Function of the Day${bell.number ? " #" + bell.number : ""}:</strong> ${bell.prompt}</div>`;
   }
 
   if (boards.length) {
@@ -1091,7 +1091,7 @@ function renderBellringers(items) {
           <div class="bell-date">${formatDateLabel(b.date)}</div>
           <div>
             ${b.objective ? `<div class="obj-teks" style="display:inline-block;margin-bottom:6px;">${b.objective}</div><br>` : ""}
-            <div>${b.prompt || ""}</div>
+            <div><strong>Function of the Day${b.number ? " #" + b.number : ""}:</strong> ${b.prompt || ""}</div>
             ${b.image ? `<img src="${b.image}" alt="Bellringer from ${b.date}">` : ""}
           </div>
         </div>
