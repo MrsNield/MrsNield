@@ -77,7 +77,7 @@ const SITE_DATA = {
         objectives: [
           {
             id: "2-1", target: "Compose functions to model and solve problems", teks: "P.2.A",
-            status: "not-started", dates: "",
+            status: "in-progress", dates: "Started Sep 28",
             basic: "Given two functions, substitute one into the other using proper composition notation: g(f(x)) or (g ∘ f)(x).",
             intermediate: "Represent the composition of two functions numerically, tabularly, graphically, and algebraically.",
             advanced: "Solve composition of functions and check for extraneous solutions."
@@ -216,7 +216,10 @@ const SITE_DATA = {
       { date: "2026-09-16", objective: "Started the Parent Function Picture Project" },
       { date: "2026-09-17", objective: "Worked on the Parent Function Picture Project" },
       { date: "2026-09-18", objective: "Worked on the Parent Function Picture Project" },
-      { date: "2026-09-21", objective: "Worked on the Parent Function Picture Project" }
+      { date: "2026-09-21", objective: "Worked on the Parent Function Picture Project" },
+      { date: "2026-09-24", objective: "Review of all Parent Functions" },
+      { date: "2026-09-28", objective: "2-1" },
+      { date: "2026-09-28", objective: "Evaluating Functions" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1255,6 +1258,10 @@ const SITE_DATA = {
       { date: "2026-09-18", period: "5th", label: "Gimkit review game — finished covering all Unit 2 material" },
       { date: "2026-09-21", period: "3rd", label: "Review" },
       { date: "2026-09-21", period: "5th", label: "Review" },
+      { date: "2026-09-24", period: "3rd", label: "Turned in the FRQ" },
+      { date: "2026-09-24", period: "5th", label: "Turned in the FRQ" },
+      { date: "2026-09-28", period: "3rd", label: "Unit 2 Test" },
+      { date: "2026-09-28", period: "5th", label: "Unit 2 Test" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
