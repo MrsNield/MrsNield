@@ -77,7 +77,7 @@ const SITE_DATA = {
         objectives: [
           {
             id: "2-1", target: "Compose functions to model and solve problems", teks: "P.2.A",
-            status: "in-progress", dates: "Started Sep 28",
+            status: "covered", dates: "Sep 28–29",
             basic: "Given two functions, substitute one into the other using proper composition notation: g(f(x)) or (g ∘ f)(x).",
             intermediate: "Represent the composition of two functions numerically, tabularly, graphically, and algebraically.",
             advanced: "Solve composition of functions and check for extraneous solutions."
@@ -219,7 +219,8 @@ const SITE_DATA = {
       { date: "2026-09-21", objective: "Worked on the Parent Function Picture Project" },
       { date: "2026-09-24", objective: "Review of all Parent Functions" },
       { date: "2026-09-28", objective: "2-1" },
-      { date: "2026-09-28", objective: "Evaluating Functions" }
+      { date: "2026-09-28", objective: "Evaluating Functions" },
+      { date: "2026-09-29", objective: "2-1" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1262,6 +1263,8 @@ const SITE_DATA = {
       { date: "2026-09-24", period: "5th", label: "Turned in the FRQ" },
       { date: "2026-09-28", period: "3rd", label: "Unit 2 Test" },
       { date: "2026-09-28", period: "5th", label: "Unit 2 Test" },
+      { date: "2026-09-29", period: "3rd", label: "Reviewed the test" },
+      { date: "2026-09-29", period: "5th", label: "Reviewed the test" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -1437,6 +1440,53 @@ const SITE_DATA = {
             day: "Unit 2 Review",
             videos: [
               { title: "Unit 2 Review", url: "https://youtu.be/5RW5BHcRfpA" }
+            ]
+          }
+        ]
+      },
+      {
+        unit: "Unit 3: Differentiation: Composite, Implicit, and Inverse Functions",
+        days: [
+          {
+            day: "3.1",
+            videos: [
+              { title: "3.1 — The Chain Rule", url: "https://calculus.flippedmath.com/31-the-chain-rule.html" }
+            ]
+          },
+          {
+            day: "3.2",
+            videos: [
+              { title: "3.2 — Implicit Differentiation", url: "https://calculus.flippedmath.com/32-implicit-differentiation.html" }
+            ]
+          },
+          {
+            day: "3.3",
+            videos: [
+              { title: "3.3 — Differentiating Inverse Functions", url: "https://calculus.flippedmath.com/33-differentiating-inverse-functions.html" }
+            ]
+          },
+          {
+            day: "3.4",
+            videos: [
+              { title: "3.4 — Differentiating Inverse Trigonometric Functions", url: "https://calculus.flippedmath.com/34-differentiating-inverse-trigonometric-functions.html" }
+            ]
+          },
+          {
+            day: "3.5",
+            videos: [
+              { title: "3.5 — Selecting Procedures for Calculating Derivatives", url: "https://calculus.flippedmath.com/35-selecting-procedures-for-calculating-derivatives.html" }
+            ]
+          },
+          {
+            day: "3.6",
+            videos: [
+              { title: "3.6 — Calculating Higher-Order Derivatives", url: "https://calculus.flippedmath.com/36-calculating-higher-order-derivatives.html" }
+            ]
+          },
+          {
+            day: "Unit 3 Review",
+            videos: [
+              { title: "Unit 3 Review", url: "https://youtu.be/jRS-zokCBYg" }
             ]
           }
         ]
@@ -2094,6 +2144,33 @@ const SITE_DATA = {
           { label: "Homework 2.8 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.8_Answer_Key.pdf" },
           { label: "Homework 2.9 (blank)", file: "files/AP_Calc_Unit2_Homework_2.9.pdf" },
           { label: "Homework 2.9 — Answer Key", file: "files/AP_Calc_Unit2_Homework_2.9_Answer_Key.pdf" }
+        ]
+      },
+      {
+        id: "unit3",
+        name: "Unit 3: Differentiation: Composite, Implicit, and Inverse Functions",
+        resources: [
+          { label: "Notes 3.1 (blank)", file: "files/AP_Calc_Unit3_Notes_3.1.pdf" },
+          { label: "Notes 3.1 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.1_Filled_In.pdf" },
+          { label: "Homework 3.1 (blank)", file: "files/AP_Calc_Unit3_Homework_3.1.pdf" },
+          { label: "Homework 3.1 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.1_Answer_Key.pdf" },
+          { label: "Notes 3.2 (blank)", file: "files/AP_Calc_Unit3_Notes_3.2.pdf" },
+          { label: "Notes 3.2 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.2_Filled_In.pdf" },
+          { label: "Homework 3.2 (blank)", file: "files/AP_Calc_Unit3_Homework_3.2.pdf" },
+          { label: "Homework 3.2 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.2_Answer_Key.pdf" },
+          { label: "Notes 3.3 (blank)", file: "files/AP_Calc_Unit3_Notes_3.3.pdf" },
+          { label: "Notes 3.3 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.3_Filled_In.pdf" },
+          { label: "Homework 3.3 (blank)", file: "files/AP_Calc_Unit3_Homework_3.3.pdf" },
+          { label: "Homework 3.3 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.3_Answer_Key.pdf" },
+          { label: "Notes 3.4–3.6 (blank)", file: "files/AP_Calc_Unit3_Notes_3.4-3.6.pdf" },
+          { label: "Notes 3.4–3.6 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.4-3.6_Filled_In.pdf" },
+          { label: "Homework 3.4 (blank)", file: "files/AP_Calc_Unit3_Homework_3.4.pdf" },
+          { label: "Homework 3.4 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.4_Answer_Key.pdf" },
+          { label: "Homework 3.5 (blank)", file: "files/AP_Calc_Unit3_Homework_3.5.pdf" },
+          { label: "Homework 3.5 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.5_Answer_Key.pdf" },
+          { label: "Homework 3.6 (blank)", file: "files/AP_Calc_Unit3_Homework_3.6.pdf" },
+          { label: "Homework 3.6 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.6_Answer_Key.pdf" },
+          { label: "Unit 3 Review (video)", file: "https://youtu.be/jRS-zokCBYg" }
         ]
       }
     ],
