@@ -77,7 +77,7 @@ const SITE_DATA = {
         objectives: [
           {
             id: "2-1", target: "Compose functions to model and solve problems", teks: "P.2.A",
-            status: "covered", dates: "Sep 28–29",
+            status: "covered", dates: "Sep 28–30",
             basic: "Given two functions, substitute one into the other using proper composition notation: g(f(x)) or (g ∘ f)(x).",
             intermediate: "Represent the composition of two functions numerically, tabularly, graphically, and algebraically.",
             advanced: "Solve composition of functions and check for extraneous solutions."
@@ -91,7 +91,7 @@ const SITE_DATA = {
           },
           {
             id: "2-3", target: "Determine and represent inverse functions", teks: "P.2.E",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Sep 30",
             basic: "Determine the inverse of a linear function. For f(x) = ½x + 3, the inverse is f⁻¹(x) = 2x – 6.",
             intermediate: "Determine inverse functions for given trigonometric or exponential functions.",
             advanced: "Solve for an inverse function using proper notation and check for extraneous solutions."
@@ -220,7 +220,9 @@ const SITE_DATA = {
       { date: "2026-09-24", objective: "Review of all Parent Functions" },
       { date: "2026-09-28", objective: "2-1" },
       { date: "2026-09-28", objective: "Evaluating Functions" },
-      { date: "2026-09-29", objective: "2-1" }
+      { date: "2026-09-29", objective: "2-1" },
+      { date: "2026-09-30", objective: "2-1" },
+      { date: "2026-09-30", objective: "2-3" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1265,6 +1267,8 @@ const SITE_DATA = {
       { date: "2026-09-28", period: "5th", label: "Unit 2 Test" },
       { date: "2026-09-29", period: "3rd", label: "Reviewed the test" },
       { date: "2026-09-29", period: "5th", label: "Reviewed the test" },
+      { date: "2026-09-30", period: "3rd", label: "Covered the first part of 3.1 — practice the \"Practice\" section of tonight's homework" },
+      { date: "2026-09-30", period: "5th", label: "Covered the first part of 3.1 — practice the \"Practice\" section of tonight's homework" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2109,6 +2113,21 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "2.9", url: "https://www.deltamath.com/app/assignment/33766131" }
+        ]
+      },
+      "2026-09-30": {
+        notes: { label: "Notes 3.1 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.1_Filled_In.pdf" },
+        homework: [
+          { label: "Homework 3.1 (blank) — \"Practice\" section only (first part covered today)", file: "files/AP_Calc_Unit3_Homework_3.1.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 3.1 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.1_Answer_Key.pdf" }
+        ],
+        videos: [
+          { title: "3.1 — The Chain Rule", url: "https://calculus.flippedmath.com/31-the-chain-rule.html" }
+        ],
+        deltamath: [
+          { label: "3.1", url: "https://www.deltamath.com/app/assignment/33789578" }
         ]
       }
     },
