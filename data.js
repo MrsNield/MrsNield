@@ -1451,37 +1451,53 @@ const SITE_DATA = {
             day: "3.1",
             videos: [
               { title: "3.1 — The Chain Rule", url: "https://calculus.flippedmath.com/31-the-chain-rule.html" }
+            ],
+            deltamath: [
+              { label: "3.1", url: "https://www.deltamath.com/app/assignment/33789578" }
             ]
           },
           {
             day: "3.2",
             videos: [
               { title: "3.2 — Implicit Differentiation", url: "https://calculus.flippedmath.com/32-implicit-differentiation.html" }
+            ],
+            deltamath: [
+              { label: "3.2", url: "https://www.deltamath.com/app/assignment/33789592" }
             ]
           },
           {
             day: "3.3",
             videos: [
               { title: "3.3 — Differentiating Inverse Functions", url: "https://calculus.flippedmath.com/33-differentiating-inverse-functions.html" }
+            ],
+            deltamath: [
+              { label: "3.3", url: "https://www.deltamath.com/app/assignment/33789605" }
             ]
           },
           {
             day: "3.4",
             videos: [
               { title: "3.4 — Differentiating Inverse Trigonometric Functions", url: "https://calculus.flippedmath.com/34-differentiating-inverse-trigonometric-functions.html" }
+            ],
+            deltamath: [
+              { label: "3.4", url: "https://www.deltamath.com/app/assignment/33789613" }
             ]
           },
           {
             day: "3.5",
             videos: [
               { title: "3.5 — Selecting Procedures for Calculating Derivatives", url: "https://calculus.flippedmath.com/35-selecting-procedures-for-calculating-derivatives.html" }
+            ],
+            deltamath: [
+              { label: "3.5", url: "https://www.deltamath.com/app/assignment/33789625" }
             ]
           },
           {
             day: "3.6",
             videos: [
               { title: "3.6 — Calculating Higher-Order Derivatives", url: "https://calculus.flippedmath.com/36-calculating-higher-order-derivatives.html" }
-            ]
+            ],
+            note: "No DeltaMath for 3.6 — finish up 3.5 instead."
           },
           {
             day: "Unit 3 Review",

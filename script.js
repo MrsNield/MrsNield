@@ -1001,6 +1001,9 @@ function renderApCalcUnitVideos(unitVideos) {
             `<li>📐 <a href="${dm.url}" target="_blank" rel="noopener">DeltaMath — ${dm.label}</a></li>`
           ).join("") + `</ul>`;
         }
+        if (d.note) {
+          html += `<p class="rubric-note" style="margin:4px 0 10px;">${d.note}</p>`;
+        }
       });
     });
   }
