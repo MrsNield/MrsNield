@@ -222,7 +222,8 @@ const SITE_DATA = {
       { date: "2026-09-28", objective: "Evaluating Functions" },
       { date: "2026-09-29", objective: "2-1" },
       { date: "2026-09-30", objective: "2-1" },
-      { date: "2026-09-30", objective: "2-3" }
+      { date: "2026-09-30", objective: "2-3" },
+      { date: "2026-10-01", objective: "Blooket — Function Operations and Composition of Functions" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
