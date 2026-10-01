@@ -1270,6 +1270,8 @@ const SITE_DATA = {
       { date: "2026-09-29", period: "5th", label: "Reviewed the test" },
       { date: "2026-09-30", period: "3rd", label: "Covered the first part of 3.1 — practice the \"Practice\" section of tonight's homework" },
       { date: "2026-09-30", period: "5th", label: "Covered the first part of 3.1 — practice the \"Practice\" section of tonight's homework" },
+      { date: "2026-10-01", period: "3rd", label: "Finished 3.1 — Blooket and \"Deriver's License\" derivative practice quizzes" },
+      { date: "2026-10-01", period: "5th", label: "Finished 3.1 — Blooket and \"Deriver's License\" derivative practice quizzes" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2120,6 +2122,21 @@ const SITE_DATA = {
         notes: { label: "Notes 3.1 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.1_Filled_In.pdf" },
         homework: [
           { label: "Homework 3.1 (blank) — \"Practice\" section only (first part covered today)", file: "files/AP_Calc_Unit3_Homework_3.1.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 3.1 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.1_Answer_Key.pdf" }
+        ],
+        videos: [
+          { title: "3.1 — The Chain Rule", url: "https://calculus.flippedmath.com/31-the-chain-rule.html" }
+        ],
+        deltamath: [
+          { label: "3.1", url: "https://www.deltamath.com/app/assignment/33789578" }
+        ]
+      },
+      "2026-10-01": {
+        notes: { label: "Notes 3.1 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.1_Filled_In.pdf" },
+        homework: [
+          { label: "Homework 3.1 (blank)", file: "files/AP_Calc_Unit3_Homework_3.1.pdf" }
         ],
         homeworkAnswers: [
           { label: "Homework 3.1 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.1_Answer_Key.pdf" }
