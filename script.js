@@ -56,6 +56,7 @@ function renderMain() {
     const acTabs = [
       { id: "resources", label: "Resources & Practice" },
       { id: "prereq", label: "Prerequisite Skills" },
+      { id: "deriver", label: "Deriver's License" },
       { id: "calendar", label: "Calendar" }
     ];
     const acSubTabsEl = document.getElementById("apcalcSubTabs");
@@ -72,6 +73,9 @@ function renderMain() {
     if (currentApCalcTab === "calendar") {
       acPanels.innerHTML = renderApCalcCalendarTab();
       wireApCalcCalendarInteractivity();
+      wirePrereqSkillsInteractivity();
+    } else if (currentApCalcTab === "deriver") {
+      acPanels.innerHTML = renderDeriversLicense(SITE_DATA.apcalc?.deriversLicense || []);
       wirePrereqSkillsInteractivity();
     } else if (currentApCalcTab === "prereq") {
       acPanels.innerHTML =
@@ -1029,6 +1033,34 @@ function renderPrereqSkills(skills) {
           </div>
         `;
       });
+    });
+  }
+  html += `</div>`;
+  return html;
+}
+
+function renderDeriversLicense(quizzes) {
+  quizzes = quizzes || [];
+  let html = `<div class="card"><h2 class="section-title">Deriver's License</h2>
+    <p class="rubric-note">Each quiz is on DeltaMath. Open a quiz below to see what's on it, then work the practice problems and check your answers.</p>`;
+  if (!quizzes.length) {
+    html += `<div class="empty-state">No quizzes posted yet — check back soon!</div>`;
+  } else {
+    quizzes.forEach((q, qi) => {
+      html += `<details class="dl-quiz"><summary>Quiz ${q.quiz} — ${q.title}</summary>
+        <div class="miss-section"><strong>What's on the DeltaMath quiz:</strong>
+          <ul class="video-list">${(q.topics || []).map(t => `<li>${t}</li>`).join("")}</ul>
+        </div>
+        <div class="miss-section"><strong>Practice:</strong>`;
+      (q.problems || []).forEach((qa, pi) => {
+        html += `
+          <div class="qa-item">
+            <div class="qa-prompt">${pi + 1}. ${qa.prompt}</div>
+            <button class="reveal-btn" data-target="dl-ans-${qi}-${pi}">Show answer</button>
+            <div class="qa-answer" id="dl-ans-${qi}-${pi}">${qa.answer}</div>
+          </div>`;
+      });
+      html += `</div></details>`;
     });
   }
   html += `</div>`;

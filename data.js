@@ -2266,6 +2266,225 @@ const SITE_DATA = {
       }
     ],
 
+    // ---- Deriver's License: 25 DeltaMath derivative quizzes. "topics" is what
+    // appears on the real quiz; "problems" are original practice questions with
+    // reveal-answer. Add or edit problems any time. ----
+    deriversLicense: [
+      { quiz: 1, title: "Power Rule (No Radicals)",
+        topics: ["Power Rule Single Term (Non-Constant)", "(2) Derivatives of Polynomials", "(2) Power Rule Level 2 (x in Denominator)", "Power Rule Single Term (Constant)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 7x<sup>5</sup>.", answer: "f′(x) = 35x<sup>4</sup>" },
+          { prompt: "Find f′(x) if f(x) = 4x<sup>3</sup> − 6x<sup>2</sup> + 5x − 9.", answer: "f′(x) = 12x<sup>2</sup> − 12x + 5" },
+          { prompt: "Find g′(x) if g(x) = −2x<sup>4</sup> + x<sup>3</sup>/3 + 8x.", answer: "g′(x) = −8x<sup>3</sup> + x<sup>2</sup> + 8" },
+          { prompt: "Find f′(x) if f(x) = 3/x<sup>2</sup>. (Rewrite with a negative exponent first.)", answer: "f(x) = 3x<sup>−2</sup>, so f′(x) = −6x<sup>−3</sup> = −6/x<sup>3</sup>" },
+          { prompt: "Find f′(x) if f(x) = 5/(2x<sup>3</sup>).", answer: "f(x) = (5/2)x<sup>−3</sup>, so f′(x) = −(15/2)x<sup>−4</sup> = −15/(2x<sup>4</sup>)" },
+          { prompt: "Find f′(x) if f(x) = π<sup>3</sup>.", answer: "f′(x) = 0 — π<sup>3</sup> is just a constant." }
+        ] },
+      { quiz: 2, title: "Power Rule (Radicals)",
+        topics: ["(3) Power Rule Level 2 (Radical in Numerator)", "(3) Power Rule Level 2 (Radical in Denominator)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 6√x.", answer: "f(x) = 6x<sup>1/2</sup>, so f′(x) = 3x<sup>−1/2</sup> = 3/√x" },
+          { prompt: "Find f′(x) if f(x) = 4∛x.", answer: "f(x) = 4x<sup>1/3</sup>, so f′(x) = (4/3)x<sup>−2/3</sup> = 4/(3∛(x<sup>2</sup>))" },
+          { prompt: "Find f′(x) if f(x) = 5√(x<sup>3</sup>).", answer: "f(x) = 5x<sup>3/2</sup>, so f′(x) = (15/2)x<sup>1/2</sup> = (15/2)√x" },
+          { prompt: "Find f′(x) if f(x) = 2/√x.", answer: "f(x) = 2x<sup>−1/2</sup>, so f′(x) = −x<sup>−3/2</sup> = −1/(x√x)" },
+          { prompt: "Find f′(x) if f(x) = 3/∛x.", answer: "f(x) = 3x<sup>−1/3</sup>, so f′(x) = −x<sup>−4/3</sup> = −1/(x∛x)" },
+          { prompt: "Find f′(x) if f(x) = 8/√(x<sup>3</sup>).", answer: "f(x) = 8x<sup>−3/2</sup>, so f′(x) = −12x<sup>−5/2</sup> = −12/(x<sup>2</sup>√x)" }
+        ] },
+      { quiz: 3, title: "Power Rule (Mixed)",
+        topics: ["Power Rule Level 2 (Radical in Numerator)", "Power Rule Single Term (Non-Constant)", "Derivatives of Polynomials", "Power Rule Single Term (Constant)", "Power Rule Level 2 (Radical in Denominator)", "Power Rule Level 2 (x in Denominator)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 12∛x.", answer: "f′(x) = 4x<sup>−2/3</sup> = 4/∛(x<sup>2</sup>)" },
+          { prompt: "Find f′(x) if f(x) = (3/4)x<sup>8</sup>.", answer: "f′(x) = 6x<sup>7</sup>" },
+          { prompt: "Find f′(x) if f(x) = x<sup>5</sup> − 3x<sup>4</sup> + 2x<sup>2</sup> − 7.", answer: "f′(x) = 5x<sup>4</sup> − 12x<sup>3</sup> + 4x" },
+          { prompt: "Find f′(x) if f(x) = √5.", answer: "f′(x) = 0 — √5 is a constant (don't treat it like √x!)." },
+          { prompt: "Find f′(x) if f(x) = 6/∛(x<sup>2</sup>).", answer: "f(x) = 6x<sup>−2/3</sup>, so f′(x) = −4x<sup>−5/3</sup> = −4/(x∛(x<sup>2</sup>))" },
+          { prompt: "Find f′(x) if f(x) = 4/(3x<sup>4</sup>).", answer: "f(x) = (4/3)x<sup>−4</sup>, so f′(x) = −(16/3)x<sup>−5</sup> = −16/(3x<sup>5</sup>)" }
+        ] },
+      { quiz: 4, title: "Important Derivatives",
+        topics: ["(2) Basic Trig Derivatives (No Chain Rule Required)", "(2) Derivative of e<sup>x</sup> (No Chain Rule) (Sum and Difference)", "(2) Derivative of ln x (No Chain Rule) (Sum and Difference)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 5 sin x − 2 cos x.", answer: "f′(x) = 5 cos x + 2 sin x" },
+          { prompt: "Find f′(x) if f(x) = tan x + 3 sec x.", answer: "f′(x) = sec<sup>2</sup>x + 3 sec x tan x" },
+          { prompt: "Find f′(x) if f(x) = cot x − csc x.", answer: "f′(x) = −csc<sup>2</sup>x + csc x cot x" },
+          { prompt: "Find f′(x) if f(x) = 4e<sup>x</sup> − x<sup>2</sup>.", answer: "f′(x) = 4e<sup>x</sup> − 2x" },
+          { prompt: "Find f′(x) if f(x) = e<sup>x</sup> + 7x.", answer: "f′(x) = e<sup>x</sup> + 7" },
+          { prompt: "Find f′(x) if f(x) = 3 ln x + x<sup>3</sup>.", answer: "f′(x) = 3/x + 3x<sup>2</sup>" },
+          { prompt: "Find f′(x) if f(x) = 2x − 6 ln x.", answer: "f′(x) = 2 − 6/x" }
+        ] },
+      { quiz: 5, title: "Product Rule (Polynomials and Trig Functions)",
+        topics: ["Product Rule (Level 1) (No Negative Exponents)", "Product Rule (Level 1) (Negative Exponents Present)", "Product Rule (Level 2) (Form: (polynomial) · trig)", "Product Rule (Level 2) (Form: ax<sup>n</sup> · trig)", "Product Rule (Level 2) (Form: (radical) · trig)", "Product Rule (Level 2) (Form: (term + term) · trig)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = (x<sup>2</sup> + 3)(x<sup>3</sup> − 2x).", answer: "f′(x) = 2x(x<sup>3</sup> − 2x) + (x<sup>2</sup> + 3)(3x<sup>2</sup> − 2) = 5x<sup>4</sup> + 3x<sup>2</sup> − 6" },
+          { prompt: "Find f′(x) if f(x) = (x<sup>−2</sup> + 4x)(x<sup>3</sup> + 1).", answer: "f′(x) = (−2x<sup>−3</sup> + 4)(x<sup>3</sup> + 1) + (x<sup>−2</sup> + 4x)(3x<sup>2</sup>) = 16x<sup>3</sup> + 5 − 2x<sup>−3</sup>" },
+          { prompt: "Find f′(x) if f(x) = (x<sup>2</sup> − 3x + 2) sin x.", answer: "f′(x) = (2x − 3) sin x + (x<sup>2</sup> − 3x + 2) cos x" },
+          { prompt: "Find f′(x) if f(x) = 4x<sup>3</sup> cos x.", answer: "f′(x) = 12x<sup>2</sup> cos x − 4x<sup>3</sup> sin x" },
+          { prompt: "Find f′(x) if f(x) = √x tan x.", answer: "f′(x) = (1/(2√x)) tan x + √x sec<sup>2</sup>x" },
+          { prompt: "Find f′(x) if f(x) = (5x − x<sup>4</sup>) sec x.", answer: "f′(x) = (5 − 4x<sup>3</sup>) sec x + (5x − x<sup>4</sup>) sec x tan x" }
+        ] },
+      { quiz: 6, title: "Product Rule (e<sup>x</sup> and ln x)",
+        topics: ["(3) Derivative of e<sup>x</sup> (No Chain Rule) (Product)", "(3) Derivative of ln x (No Chain Rule) (Product)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = x<sup>2</sup>e<sup>x</sup>.", answer: "f′(x) = 2xe<sup>x</sup> + x<sup>2</sup>e<sup>x</sup> = e<sup>x</sup>(x<sup>2</sup> + 2x)" },
+          { prompt: "Find f′(x) if f(x) = (3x − 1)e<sup>x</sup>.", answer: "f′(x) = 3e<sup>x</sup> + (3x − 1)e<sup>x</sup> = e<sup>x</sup>(3x + 2)" },
+          { prompt: "Find f′(x) if f(x) = √x · e<sup>x</sup>.", answer: "f′(x) = e<sup>x</sup>/(2√x) + √x e<sup>x</sup>" },
+          { prompt: "Find f′(x) if f(x) = x<sup>3</sup> ln x.", answer: "f′(x) = 3x<sup>2</sup> ln x + x<sup>3</sup>(1/x) = 3x<sup>2</sup> ln x + x<sup>2</sup>" },
+          { prompt: "Find f′(x) if f(x) = (x<sup>2</sup> + 1) ln x.", answer: "f′(x) = 2x ln x + (x<sup>2</sup> + 1)/x" },
+          { prompt: "Find f′(x) if f(x) = e<sup>x</sup> ln x.", answer: "f′(x) = e<sup>x</sup> ln x + e<sup>x</sup>/x" }
+        ] },
+      { quiz: 7, title: "Quotient Rule",
+        topics: ["Quotient Rule", "Derivative of e<sup>x</sup> (No Chain Rule) (Quotient)", "Derivative of ln x (No Chain Rule) (Quotient)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = (x<sup>2</sup> + 1)/(x − 3).", answer: "f′(x) = [2x(x − 3) − (x<sup>2</sup> + 1)(1)]/(x − 3)<sup>2</sup> = (x<sup>2</sup> − 6x − 1)/(x − 3)<sup>2</sup>" },
+          { prompt: "Find f′(x) if f(x) = e<sup>x</sup>/(x<sup>2</sup> + 4).", answer: "f′(x) = [e<sup>x</sup>(x<sup>2</sup> + 4) − e<sup>x</sup>(2x)]/(x<sup>2</sup> + 4)<sup>2</sup> = e<sup>x</sup>(x<sup>2</sup> − 2x + 4)/(x<sup>2</sup> + 4)<sup>2</sup>" },
+          { prompt: "Find f′(x) if f(x) = (ln x)/x<sup>3</sup>.", answer: "f′(x) = [(1/x)x<sup>3</sup> − (ln x)(3x<sup>2</sup>)]/x<sup>6</sup> = (1 − 3 ln x)/x<sup>4</sup>" }
+        ] },
+      { quiz: 8, title: "Trig Derivatives",
+        topics: ["(6) All Trig Derivatives (Chain Rule Not Required)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 4 cos x.", answer: "f′(x) = −4 sin x" },
+          { prompt: "Find f′(x) if f(x) = tan x − x.", answer: "f′(x) = sec<sup>2</sup>x − 1" },
+          { prompt: "Find f′(x) if f(x) = 2 sec x.", answer: "f′(x) = 2 sec x tan x" },
+          { prompt: "Find f′(x) if f(x) = −5 csc x.", answer: "f′(x) = 5 csc x cot x" },
+          { prompt: "Find f′(x) if f(x) = 3 cot x.", answer: "f′(x) = −3 csc<sup>2</sup>x" },
+          { prompt: "Find f′(x) if f(x) = x<sup>2</sup> + sin x.", answer: "f′(x) = 2x + cos x" }
+        ] },
+      { quiz: 9, title: "Chain Rule Level 1",
+        topics: ["(5) Chain Rule Level 1"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = (3x + 2)<sup>5</sup>.", answer: "f′(x) = 5(3x + 2)<sup>4</sup>(3) = 15(3x + 2)<sup>4</sup>" },
+          { prompt: "Find f′(x) if f(x) = (x<sup>2</sup> − 4x)<sup>3</sup>.", answer: "f′(x) = 3(x<sup>2</sup> − 4x)<sup>2</sup>(2x − 4)" },
+          { prompt: "Find f′(x) if f(x) = √(5x − 1).", answer: "f′(x) = 5/(2√(5x − 1))" },
+          { prompt: "Find f′(x) if f(x) = (x<sup>4</sup> + 1)<sup>−2</sup>.", answer: "f′(x) = −2(x<sup>4</sup> + 1)<sup>−3</sup>(4x<sup>3</sup>) = −8x<sup>3</sup>/(x<sup>4</sup> + 1)<sup>3</sup>" },
+          { prompt: "Find f′(x) if f(x) = (7 − 2x)<sup>4</sup>.", answer: "f′(x) = 4(7 − 2x)<sup>3</sup>(−2) = −8(7 − 2x)<sup>3</sup>" }
+        ] },
+      { quiz: 10, title: "Chain Rule Level 2",
+        topics: ["Chain Rule Level 2 (Outer power in numerator)", "Chain Rule Level 2 (Outer power in denominator)", "Chain Rule Level 2 (Outer radical in numerator)", "Chain Rule Level 2 (Outer radical in denominator)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 4(x<sup>3</sup> + 2x)<sup>5</sup>.", answer: "f′(x) = 20(x<sup>3</sup> + 2x)<sup>4</sup>(3x<sup>2</sup> + 2)" },
+          { prompt: "Find f′(x) if f(x) = 6/(x<sup>2</sup> + 1)<sup>3</sup>.", answer: "f(x) = 6(x<sup>2</sup> + 1)<sup>−3</sup>, so f′(x) = −18(x<sup>2</sup> + 1)<sup>−4</sup>(2x) = −36x/(x<sup>2</sup> + 1)<sup>4</sup>" },
+          { prompt: "Find f′(x) if f(x) = 3√(x<sup>2</sup> + 5x).", answer: "f′(x) = 3(2x + 5)/(2√(x<sup>2</sup> + 5x))" },
+          { prompt: "Find f′(x) if f(x) = 10/√(4x − 1).", answer: "f(x) = 10(4x − 1)<sup>−1/2</sup>, so f′(x) = −5(4x − 1)<sup>−3/2</sup>(4) = −20/(4x − 1)<sup>3/2</sup>" }
+        ] },
+      { quiz: 11, title: "Chain Rule Level 3",
+        topics: ["(1) All Trig Derivatives (Chain Rule Not Required)", "(2) All Trig Derivatives (Multiple of x)", "(2) All Trig Derivatives (Trig Function to a Power)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = sec x.", answer: "f′(x) = sec x tan x" },
+          { prompt: "Find f′(x) if f(x) = tan(3x).", answer: "f′(x) = 3 sec<sup>2</sup>(3x)" },
+          { prompt: "Find f′(x) if f(x) = 2 cos(5x).", answer: "f′(x) = −10 sin(5x)" },
+          { prompt: "Find f′(x) if f(x) = sin<sup>3</sup>x.", answer: "f(x) = (sin x)<sup>3</sup>, so f′(x) = 3 sin<sup>2</sup>x cos x" },
+          { prompt: "Find f′(x) if f(x) = cos<sup>4</sup>x.", answer: "f′(x) = 4 cos<sup>3</sup>x (−sin x) = −4 cos<sup>3</sup>x sin x" }
+        ] },
+      { quiz: 12, title: "Chain Rule Level 4",
+        topics: ["(1) Form a·√(trig(x))", "(1) Form a·trig<sup>n</sup>(x)", "(1) Form a·trig(polynomial)", "(1) Form a·trig(b√x)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 6√(sin x).", answer: "f′(x) = 6 · cos x/(2√(sin x)) = 3 cos x/√(sin x)" },
+          { prompt: "Find f′(x) if f(x) = 5 cos<sup>3</sup>x.", answer: "f′(x) = 15 cos<sup>2</sup>x (−sin x) = −15 cos<sup>2</sup>x sin x" },
+          { prompt: "Find f′(x) if f(x) = 2 sin(x<sup>2</sup> + 3x).", answer: "f′(x) = 2(2x + 3) cos(x<sup>2</sup> + 3x)" },
+          { prompt: "Find f′(x) if f(x) = 4 tan(3√x).", answer: "f′(x) = 4 sec<sup>2</sup>(3√x) · 3/(2√x) = 6 sec<sup>2</sup>(3√x)/√x" }
+        ] },
+      { quiz: 13, title: "Chain Rule Level 5 (e<sup>x</sup> and ln x)",
+        topics: ["(3) Derivative of e<sup>(inside)</sup>", "(3) Derivative of ln(inside)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = e<sup>5x</sup>.", answer: "f′(x) = 5e<sup>5x</sup>" },
+          { prompt: "Find f′(x) if f(x) = e<sup>x<sup>2</sup> − 3x</sup>.", answer: "f′(x) = (2x − 3)e<sup>x<sup>2</sup> − 3x</sup>" },
+          { prompt: "Find f′(x) if f(x) = 4e<sup>√x</sup>.", answer: "f′(x) = 4e<sup>√x</sup> · 1/(2√x) = 2e<sup>√x</sup>/√x" },
+          { prompt: "Find f′(x) if f(x) = ln(3x + 1).", answer: "f′(x) = 3/(3x + 1)" },
+          { prompt: "Find f′(x) if f(x) = ln(x<sup>2</sup> + 4).", answer: "f′(x) = 2x/(x<sup>2</sup> + 4)" },
+          { prompt: "Find f′(x) if f(x) = 5 ln(x<sup>3</sup> − x).", answer: "f′(x) = 5(3x<sup>2</sup> − 1)/(x<sup>3</sup> − x)" }
+        ] },
+      { quiz: 14, title: "Chain Rule Level 6 (Other Bases and Logs)",
+        topics: ["(2) Derivative of a base that is not e", "(2) Derivative of log"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 3<sup>x</sup>. (Remember d/dx[a<sup>x</sup>] = a<sup>x</sup> ln a.)", answer: "f′(x) = 3<sup>x</sup> ln 3" },
+          { prompt: "Find f′(x) if f(x) = 5<sup>2x</sup>.", answer: "f′(x) = 5<sup>2x</sup>(ln 5)(2) = 2 ln 5 · 5<sup>2x</sup>" },
+          { prompt: "Find f′(x) if f(x) = log<sub>2</sub> x. (Remember d/dx[log<sub>a</sub> x] = 1/(x ln a).)", answer: "f′(x) = 1/(x ln 2)" },
+          { prompt: "Find f′(x) if f(x) = log(x<sup>2</sup> + 1). (Base 10.)", answer: "f′(x) = 2x/((x<sup>2</sup> + 1) ln 10)" }
+        ] },
+      { quiz: 15, title: "Chain Rule Level 7",
+        topics: ["(1) Form a·trig<sup>n</sup>(polynomial)", "(1) Form a·trig((polynomial)<sup>n</sup>)", "(1) Form a·trig((polynomial)<sup>n</sup>) OR a·trig<sup>n</sup>(polynomial)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 3 sin<sup>2</sup>(4x + 1).", answer: "f′(x) = 3 · 2 sin(4x + 1) · cos(4x + 1) · 4 = 24 sin(4x + 1) cos(4x + 1)" },
+          { prompt: "Find f′(x) if f(x) = 2 cos((3x − 1)<sup>4</sup>).", answer: "f′(x) = −2 sin((3x − 1)<sup>4</sup>) · 4(3x − 1)<sup>3</sup>(3) = −24(3x − 1)<sup>3</sup> sin((3x − 1)<sup>4</sup>)" },
+          { prompt: "Find f′(x) if f(x) = 5 tan((x<sup>2</sup> + 1)<sup>3</sup>).", answer: "f′(x) = 5 sec<sup>2</sup>((x<sup>2</sup> + 1)<sup>3</sup>) · 3(x<sup>2</sup> + 1)<sup>2</sup>(2x) = 30x(x<sup>2</sup> + 1)<sup>2</sup> sec<sup>2</sup>((x<sup>2</sup> + 1)<sup>3</sup>)" },
+          { prompt: "Find f′(x) if f(x) = cos<sup>3</sup>(x<sup>2</sup> − x).", answer: "f′(x) = 3 cos<sup>2</sup>(x<sup>2</sup> − x) · (−sin(x<sup>2</sup> − x)) · (2x − 1) = −3(2x − 1) cos<sup>2</sup>(x<sup>2</sup> − x) sin(x<sup>2</sup> − x)" }
+        ] },
+      { quiz: 16, title: "Chain Rule Level 8",
+        topics: ["(1) Form a·√(trig(polynomial))", "(1) Form a·trig(√(polynomial))", "(1) Form a·√(trig(polynomial)) OR a·trig(√(polynomial))"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = 4√(sin(x<sup>2</sup>)).", answer: "f′(x) = 4 · cos(x<sup>2</sup>)(2x)/(2√(sin(x<sup>2</sup>))) = 4x cos(x<sup>2</sup>)/√(sin(x<sup>2</sup>))" },
+          { prompt: "Find f′(x) if f(x) = 3 cos(√(x<sup>2</sup> + 1)).", answer: "f′(x) = −3 sin(√(x<sup>2</sup> + 1)) · x/√(x<sup>2</sup> + 1) = −3x sin(√(x<sup>2</sup> + 1))/√(x<sup>2</sup> + 1)" },
+          { prompt: "Find f′(x) if f(x) = 2√(tan(5x)).", answer: "f′(x) = 2 · 5 sec<sup>2</sup>(5x)/(2√(tan(5x))) = 5 sec<sup>2</sup>(5x)/√(tan(5x))" },
+          { prompt: "Find f′(x) if f(x) = sin(√(3x − 2)).", answer: "f′(x) = cos(√(3x − 2)) · 3/(2√(3x − 2))" }
+        ] },
+      { quiz: 17, title: "Multiple Derivatives A (No Trig)",
+        topics: ["(1) Product and Chain Rules (No Trig)", "(1) Quotient and Chain Rules (No Trig)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = x<sup>2</sup>(3x − 1)<sup>4</sup>.", answer: "f′(x) = 2x(3x − 1)<sup>4</sup> + x<sup>2</sup> · 4(3x − 1)<sup>3</sup>(3) = 2x(3x − 1)<sup>3</sup>(9x − 1)" },
+          { prompt: "Find f′(x) if f(x) = (x + 1)/(2x − 3)<sup>3</sup>.", answer: "f′(x) = [(2x − 3)<sup>3</sup> − (x + 1) · 3(2x − 3)<sup>2</sup>(2)]/(2x − 3)<sup>6</sup> = (−4x − 9)/(2x − 3)<sup>4</sup>" }
+        ] },
+      { quiz: 18, title: "Multiple Derivatives B (With Trig)",
+        topics: ["(1) Product and Chain Rules (With Trig)", "(1) Quotient and Chain Rules (With Trig)"],
+        problems: [
+          { prompt: "Find f′(x) if f(x) = x<sup>3</sup> sin(2x).", answer: "f′(x) = 3x<sup>2</sup> sin(2x) + 2x<sup>3</sup> cos(2x)" },
+          { prompt: "Find f′(x) if f(x) = cos(3x)/x<sup>2</sup>.", answer: "f′(x) = [−3 sin(3x) · x<sup>2</sup> − cos(3x) · 2x]/x<sup>4</sup> = (−3x sin(3x) − 2 cos(3x))/x<sup>3</sup>" }
+        ] },
+      { quiz: 19, title: "Derivatives from Limit Notation",
+        topics: ["(4) Find the Derivative from the Limit Definition"],
+        problems: [
+          { prompt: "The limit below is the derivative of some function f(x). Find it: lim<sub>h→0</sub> [(x + h)<sup>3</sup> − x<sup>3</sup>]/h", answer: "This is f′(x) for f(x) = x<sup>3</sup>, so the limit is 3x<sup>2</sup>." },
+          { prompt: "Evaluate by recognizing a derivative: lim<sub>h→0</sub> [√(4 + h) − 2]/h", answer: "This is f′(4) for f(x) = √x. f′(x) = 1/(2√x), so f′(4) = 1/4." },
+          { prompt: "Evaluate by recognizing a derivative: lim<sub>x→2</sub> (x<sup>4</sup> − 16)/(x − 2)", answer: "This is f′(2) for f(x) = x<sup>4</sup>. f′(x) = 4x<sup>3</sup>, so f′(2) = 32." },
+          { prompt: "Evaluate by recognizing a derivative: lim<sub>h→0</sub> [sin(π/6 + h) − sin(π/6)]/h", answer: "This is f′(π/6) for f(x) = sin x. f′(x) = cos x, so the limit is cos(π/6) = √3/2." }
+        ] },
+      { quiz: 20, title: "Implicit Differentiation A (Derivative Notation)",
+        topics: ["(2) Derivative Notation (Level 1)", "(2) Derivative Notation (Level 2)"],
+        problems: [
+          { prompt: "Find d/dx[y<sup>3</sup>]. (y is a function of x.)", answer: "3y<sup>2</sup> · dy/dx" },
+          { prompt: "Find d/dx[5y].", answer: "5 · dy/dx" },
+          { prompt: "Find d/dx[x<sup>2</sup>y].", answer: "Product rule: 2xy + x<sup>2</sup> · dy/dx" },
+          { prompt: "Find d/dx[xy<sup>2</sup>].", answer: "Product rule: y<sup>2</sup> + x · 2y · dy/dx = y<sup>2</sup> + 2xy · dy/dx" },
+          { prompt: "Find d/dx[sin y].", answer: "cos y · dy/dx" }
+        ] },
+      { quiz: 21, title: "Implicit Differentiation B",
+        topics: ["(2) Implicit Differentiation (Level 1)"],
+        problems: [
+          { prompt: "Find dy/dx if x<sup>2</sup> + y<sup>2</sup> = 25.", answer: "2x + 2y(dy/dx) = 0, so dy/dx = −x/y" },
+          { prompt: "Find dy/dx if x<sup>2</sup> + 4y<sup>2</sup> = 20.", answer: "2x + 8y(dy/dx) = 0, so dy/dx = −x/(4y)" },
+          { prompt: "Find dy/dx if y<sup>2</sup> = 6x.", answer: "2y(dy/dx) = 6, so dy/dx = 3/y" }
+        ] },
+      { quiz: 22, title: "Implicit Differentiation C",
+        topics: ["(2) Implicit Differentiation (Level 2)"],
+        problems: [
+          { prompt: "Find dy/dx if x<sup>2</sup>y + y<sup>3</sup> = 10.", answer: "2xy + x<sup>2</sup>(dy/dx) + 3y<sup>2</sup>(dy/dx) = 0, so dy/dx = −2xy/(x<sup>2</sup> + 3y<sup>2</sup>)" },
+          { prompt: "Find dy/dx if xy + y<sup>2</sup> = 5x.", answer: "y + x(dy/dx) + 2y(dy/dx) = 5, so dy/dx = (5 − y)/(x + 2y)" },
+          { prompt: "Find dy/dx if x<sup>3</sup> + y<sup>3</sup> = 6xy.", answer: "3x<sup>2</sup> + 3y<sup>2</sup>(dy/dx) = 6y + 6x(dy/dx), so dy/dx = (2y − x<sup>2</sup>)/(y<sup>2</sup> − 2x)" }
+        ] },
+      { quiz: 23, title: "Implicit Differentiation D",
+        topics: ["(1) Implicit Differentiation (Level 3)", "(1) Implicit Differentiation (Level 1)"],
+        problems: [
+          { prompt: "Find dy/dx if sin(xy) = x.", answer: "cos(xy) · (y + x(dy/dx)) = 1, so dy/dx = (1 − y cos(xy))/(x cos(xy))" },
+          { prompt: "Find dy/dx if e<sup>y</sup> = x + y.", answer: "e<sup>y</sup>(dy/dx) = 1 + dy/dx, so dy/dx(e<sup>y</sup> − 1) = 1 and dy/dx = 1/(e<sup>y</sup> − 1)" },
+          { prompt: "Find dy/dx if x<sup>2</sup> − y<sup>2</sup> = 9.", answer: "2x − 2y(dy/dx) = 0, so dy/dx = x/y" },
+          { prompt: "Find the slope of the tangent line to x<sup>2</sup> + y<sup>2</sup> = 25 at the point (3, 4).", answer: "dy/dx = −x/y, so the slope at (3, 4) is −3/4." }
+        ] },
+      { quiz: 24, title: "Derivatives of Inverse Functions",
+        topics: ["(2) Derivatives of Inverse Functions (Table)", "(2) Derivatives of Inverse Functions (Equation)"],
+        problems: [
+          { prompt: "A function f has f(1) = 2, f(2) = 5, f(3) = 7, f(4) = 10 and f′(1) = 4, f′(2) = 3, f′(3) = 6, f′(4) = 2. Find (f<sup>−1</sup>)′(5).", answer: "f<sup>−1</sup>(5) = 2, so (f<sup>−1</sup>)′(5) = 1/f′(2) = 1/3." },
+          { prompt: "Using the same table, find (f<sup>−1</sup>)′(7).", answer: "f<sup>−1</sup>(7) = 3, so (f<sup>−1</sup>)′(7) = 1/f′(3) = 1/6." },
+          { prompt: "Let f(x) = x<sup>3</sup> + x + 1. Find (f<sup>−1</sup>)′(3).", answer: "Solve f(a) = 3: a = 1. f′(x) = 3x<sup>2</sup> + 1, so f′(1) = 4 and (f<sup>−1</sup>)′(3) = 1/4." },
+          { prompt: "Let f(x) = 2x + e<sup>x</sup>. Find (f<sup>−1</sup>)′(1).", answer: "Solve f(a) = 1: a = 0. f′(x) = 2 + e<sup>x</sup>, so f′(0) = 3 and (f<sup>−1</sup>)′(1) = 1/3." }
+        ] },
+      { quiz: 25, title: "Inverse Trig Functions",
+        topics: ["(2) Derivatives of Inverse Trig Functions (Function notation, evaluate f′(a))", "(2) Derivatives of Inverse Trig Functions (Function notation, f′(x) using the chain rule)"],
+        problems: [
+          { prompt: "If f(x) = sin<sup>−1</sup>(x), find f′(1/2).", answer: "f′(x) = 1/√(1 − x<sup>2</sup>), so f′(1/2) = 1/√(3/4) = 2/√3 = 2√3/3." },
+          { prompt: "If f(x) = tan<sup>−1</sup>(x), find f′(1).", answer: "f′(x) = 1/(1 + x<sup>2</sup>), so f′(1) = 1/2." },
+          { prompt: "Find f′(x) if f(x) = sin<sup>−1</sup>(3x).", answer: "f′(x) = 3/√(1 − 9x<sup>2</sup>)" },
+          { prompt: "Find f′(x) if f(x) = tan<sup>−1</sup>(x<sup>2</sup>).", answer: "f′(x) = 2x/(1 + x<sup>4</sup>)" }
+        ] }
+    ],
+
     // ---- Prerequisite skills review — not tied to a specific unit. Add more
     // skill categories or problems any time; each renders as its own
     // reveal-answer section on the AP Calc tab. ----
