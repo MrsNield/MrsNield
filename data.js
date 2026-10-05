@@ -98,7 +98,7 @@ const SITE_DATA = {
           },
           {
             id: "2-4", target: "Decompose functions into component functions", teks: "P.2.C",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Oct 5",
             basic: "Given a composite function, identify two functions f(x) and g(x) whose composition creates it (e.g., decompose h(x) = (x + 3)² into f(x) = x² and g(x) = x + 3).",
             intermediate: "Decompose a function in more than one valid way, including recognizing it as a sequence of transformations of a parent function, not just a sequence of arithmetic operations.",
             advanced: "Decompose a function algebraically and verify the decomposition by composing the pieces back together to confirm they produce the original function."
@@ -128,7 +128,9 @@ const SITE_DATA = {
         { date: "2026-09-18", type: "project", label: "Working on Parent Function Picture Project" },
         { date: "2026-09-21", type: "project", label: "Working on Parent Function Picture Project" },
         { date: "2026-09-22", type: "project", label: "Working on Parent Function Picture Project" },
-        { date: "2026-09-23", type: "project", label: "Parent Function Picture Project — final project due" }
+        { date: "2026-09-23", type: "project", label: "Parent Function Picture Project — final project due" },
+        { date: "2026-10-06", type: "quiz", label: "Quiz — composition, inverses, and decomposing functions" },
+        { date: "2026-10-07", type: "lesson", label: "Work day" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
         { date: "2026-09-29", type: "lesson", label: "Polynomial and Power Functions, Equations, and Inequalities — runs through Oct 30" }
@@ -223,7 +225,9 @@ const SITE_DATA = {
       { date: "2026-09-29", objective: "2-1" },
       { date: "2026-09-30", objective: "2-1" },
       { date: "2026-09-30", objective: "2-3" },
-      { date: "2026-10-01", objective: "Blooket — Function Operations and Composition of Functions" }
+      { date: "2026-10-01", objective: "Blooket — Function Operations and Composition of Functions" },
+      { date: "2026-10-05", objective: "2-4" },
+      { date: "2026-10-05", objective: "Practice for tomorrow's quiz" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -818,7 +822,7 @@ const SITE_DATA = {
           { date: "2026-09-29", type: "lesson", label: "1.5 Day 2 — Transformations of Functions" },
           { date: "2026-09-30", type: "homework", label: "" },
           { date: "2026-10-01", type: "lesson", label: "1.6 — Even and Odd Functions" },
-          { date: "2026-10-05", type: "homework", label: "" },
+          { date: "2026-10-05", type: "review", label: "Quiz prep (1.1–1.6)" },
           { date: "2026-10-06", type: "quiz", label: "1.1–1.6" },
           { date: "2026-10-07", type: "lesson", label: "1.7 — Building Functions" },
           { date: "2026-10-08", type: "homework", label: "" },
@@ -1272,6 +1276,8 @@ const SITE_DATA = {
       { date: "2026-09-30", period: "5th", label: "Covered the first part of 3.1 — practice the \"Practice\" section of tonight's homework" },
       { date: "2026-10-01", period: "3rd", label: "Finished 3.1 — Blooket and \"Deriver's License\" derivative practice quizzes" },
       { date: "2026-10-01", period: "5th", label: "Finished 3.1 — Blooket and \"Deriver's License\" derivative practice quizzes" },
+      { date: "2026-10-05", period: "3rd", label: "Started the notes for 3.2 — homework 3.2 tonight" },
+      { date: "2026-10-05", period: "5th", label: "Did all the notes for 3.2 — homework 3.2 tonight" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2147,6 +2153,38 @@ const SITE_DATA = {
         deltamath: [
           { label: "3.1", url: "https://www.deltamath.com/app/assignment/33789578" }
         ]
+      },
+      "2026-10-05": {
+        "3rd": {
+          notes: { label: "Notes 3.2 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.2_Filled_In.pdf" },
+          homework: [
+            { label: "Homework 3.2 (blank)", file: "files/AP_Calc_Unit3_Homework_3.2.pdf" }
+          ],
+          homeworkAnswers: [
+            { label: "Homework 3.2 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.2_Answer_Key.pdf" }
+          ],
+          videos: [
+            { title: "3.2 — Implicit Differentiation", url: "https://calculus.flippedmath.com/32-implicit-differentiation.html" }
+          ],
+          deltamath: [
+            { label: "3.2", url: "https://www.deltamath.com/app/assignment/33789592" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Notes 3.2 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.2_Filled_In.pdf" },
+          homework: [
+            { label: "Homework 3.2 (blank)", file: "files/AP_Calc_Unit3_Homework_3.2.pdf" }
+          ],
+          homeworkAnswers: [
+            { label: "Homework 3.2 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.2_Answer_Key.pdf" }
+          ],
+          videos: [
+            { title: "3.2 — Implicit Differentiation", url: "https://calculus.flippedmath.com/32-implicit-differentiation.html" }
+          ],
+          deltamath: [
+            { label: "3.2", url: "https://www.deltamath.com/app/assignment/33789592" }
+          ]
+        }
       }
     },
 
