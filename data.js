@@ -227,7 +227,8 @@ const SITE_DATA = {
       { date: "2026-09-30", objective: "2-3" },
       { date: "2026-10-01", objective: "Blooket — Function Operations and Composition of Functions" },
       { date: "2026-10-05", objective: "2-4" },
-      { date: "2026-10-05", objective: "Practice for tomorrow's quiz" }
+      { date: "2026-10-05", objective: "Practice for tomorrow's quiz" },
+      { date: "2026-10-06", objective: "Quiz — composition, inverses, and decomposing functions" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -501,7 +502,10 @@ const SITE_DATA = {
       "1-4": "https://www.deltamath.com/app/assignment/33378269",
       "1-5": "https://www.deltamath.com/app/assignment/33378275",
       "1-6": "https://www.deltamath.com/app/assignment/33378594",
-      "1-7": "https://www.deltamath.com/app/assignment/33378609"
+      "1-7": "https://www.deltamath.com/app/assignment/33378609",
+      "2-1": "https://www.deltamath.com/app/assignment/34295345",
+      "2-3": "https://www.deltamath.com/app/assignment/34295541",
+      "2-4": "https://www.deltamath.com/app/assignment/34295593"
     },
 
     // ---- Vocabulary flashcards per objective (term + definition, for
@@ -1093,7 +1097,7 @@ const SITE_DATA = {
           { date: "2026-10-02", type: "no-school", label: "No school" },
           { date: "2026-10-05", type: "review", label: "Review" },
           { date: "2026-10-06", type: "lesson", label: "3.2" },
-          { date: "2026-10-07", type: "review", label: "Review" },
+          { date: "2026-10-07", type: "lesson", label: "Work day" },
           { date: "2026-10-08", type: "lesson", label: "3.3" },
           { date: "2026-10-09", type: "lesson", label: "3.4" },
           { date: "2026-10-12", type: "no-school", label: "No school" },
@@ -1278,6 +1282,8 @@ const SITE_DATA = {
       { date: "2026-10-01", period: "5th", label: "Finished 3.1 — Blooket and \"Deriver's License\" derivative practice quizzes" },
       { date: "2026-10-05", period: "3rd", label: "Started the notes for 3.2 — homework 3.2 tonight" },
       { date: "2026-10-05", period: "5th", label: "Did all the notes for 3.2 — homework 3.2 tonight" },
+      { date: "2026-10-06", period: "3rd", label: "Finished 3.2 and started the notes for 3.3" },
+      { date: "2026-10-06", period: "5th", label: "Finished 3.3" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2183,6 +2189,39 @@ const SITE_DATA = {
           ],
           deltamath: [
             { label: "3.2", url: "https://www.deltamath.com/app/assignment/33789592" }
+          ]
+        }
+      },
+      "2026-10-06": {
+        "3rd": {
+          notes: { label: "Notes 3.2 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.2_Filled_In.pdf" },
+          homework: [
+            { label: "Homework 3.2 (blank)", file: "files/AP_Calc_Unit3_Homework_3.2.pdf" }
+          ],
+          homeworkAnswers: [
+            { label: "Homework 3.2 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.2_Answer_Key.pdf" }
+          ],
+          videos: [
+            { title: "3.2 — Implicit Differentiation", url: "https://calculus.flippedmath.com/32-implicit-differentiation.html" },
+            { title: "3.3 — Differentiating Inverse Functions", url: "https://calculus.flippedmath.com/33-differentiating-inverse-functions.html" }
+          ],
+          deltamath: [
+            { label: "3.2", url: "https://www.deltamath.com/app/assignment/33789592" }
+          ]
+        },
+        "5th": {
+          notes: { label: "Notes 3.3 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.3_Filled_In.pdf" },
+          homework: [
+            { label: "Homework 3.3 (blank)", file: "files/AP_Calc_Unit3_Homework_3.3.pdf" }
+          ],
+          homeworkAnswers: [
+            { label: "Homework 3.3 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.3_Answer_Key.pdf" }
+          ],
+          videos: [
+            { title: "3.3 — Differentiating Inverse Functions", url: "https://calculus.flippedmath.com/33-differentiating-inverse-functions.html" }
+          ],
+          deltamath: [
+            { label: "3.3", url: "https://www.deltamath.com/app/assignment/33789605" }
           ]
         }
       }
