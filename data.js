@@ -91,7 +91,7 @@ const SITE_DATA = {
           },
           {
             id: "2-3", target: "Determine and represent inverse functions", teks: "P.2.E",
-            status: "covered", dates: "Sep 30",
+            status: "covered", dates: "Sep 30, Oct 8",
             basic: "Determine the inverse of a linear function. For f(x) = ½x + 3, the inverse is f⁻¹(x) = 2x – 6.",
             intermediate: "Determine inverse functions for given trigonometric or exponential functions.",
             advanced: "Solve for an inverse function using proper notation and check for extraneous solutions."
@@ -228,7 +228,8 @@ const SITE_DATA = {
       { date: "2026-10-01", objective: "Blooket — Function Operations and Composition of Functions" },
       { date: "2026-10-05", objective: "2-4" },
       { date: "2026-10-05", objective: "Practice for tomorrow's quiz" },
-      { date: "2026-10-06", objective: "Quiz — composition, inverses, and decomposing functions" }
+      { date: "2026-10-06", objective: "Quiz — composition, inverses, and decomposing functions" },
+      { date: "2026-10-08", objective: "2-3" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1284,6 +1285,7 @@ const SITE_DATA = {
       { date: "2026-10-05", period: "5th", label: "Did all the notes for 3.2 — homework 3.2 tonight" },
       { date: "2026-10-06", period: "3rd", label: "Finished 3.2 and started the notes for 3.3" },
       { date: "2026-10-06", period: "5th", label: "Finished 3.3" },
+      { date: "2026-10-08", label: "3.4" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2224,6 +2226,21 @@ const SITE_DATA = {
             { label: "3.3", url: "https://www.deltamath.com/app/assignment/33789605" }
           ]
         }
+      },
+      "2026-10-08": {
+        notes: { label: "Notes 3.4–3.6 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.4-3.6_Filled_In.pdf" },
+        homework: [
+          { label: "Homework 3.4 (blank)", file: "files/AP_Calc_Unit3_Homework_3.4.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 3.4 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.4_Answer_Key.pdf" }
+        ],
+        videos: [
+          { title: "3.4 — Differentiating Inverse Trigonometric Functions", url: "https://calculus.flippedmath.com/34-differentiating-inverse-trigonometric-functions.html" }
+        ],
+        deltamath: [
+          { label: "3.4", url: "https://www.deltamath.com/app/assignment/33789613" }
+        ]
       }
     },
 
