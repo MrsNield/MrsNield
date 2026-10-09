@@ -84,7 +84,7 @@ const SITE_DATA = {
           },
           {
             id: "2-2", target: "Determine whether function composition is commutative", teks: "P.2.B",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Oct 1",
             basic: "Show that g(f(x)) ≠ f(g(x)) for a given pair of functions to demonstrate composition is not commutative.",
             intermediate: "",
             advanced: ""
@@ -225,6 +225,7 @@ const SITE_DATA = {
       { date: "2026-09-29", objective: "2-1" },
       { date: "2026-09-30", objective: "2-1" },
       { date: "2026-09-30", objective: "2-3" },
+      { date: "2026-10-01", objective: "2-2" },
       { date: "2026-10-01", objective: "Blooket — Function Operations and Composition of Functions" },
       { date: "2026-10-05", objective: "2-4" },
       { date: "2026-10-05", objective: "Practice for tomorrow's quiz" },
