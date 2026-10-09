@@ -230,7 +230,8 @@ const SITE_DATA = {
       { date: "2026-10-05", objective: "2-4" },
       { date: "2026-10-05", objective: "Practice for tomorrow's quiz" },
       { date: "2026-10-06", objective: "Quiz — composition, inverses, and decomposing functions" },
-      { date: "2026-10-08", objective: "2-3" }
+      { date: "2026-10-08", objective: "2-3" },
+      { date: "2026-10-09", objective: "Practice with logs and exponents — if you missed, get the paper from the folder to complete and turn in" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1287,6 +1288,7 @@ const SITE_DATA = {
       { date: "2026-10-06", period: "3rd", label: "Finished 3.2 and started the notes for 3.3" },
       { date: "2026-10-06", period: "5th", label: "Finished 3.3" },
       { date: "2026-10-08", label: "3.4" },
+      { date: "2026-10-09", label: "3.5 and \"Deriver's License\" derivative practice quizzes" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2241,6 +2243,21 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "3.4", url: "https://www.deltamath.com/app/assignment/33789613" }
+        ]
+      },
+      "2026-10-09": {
+        notes: { label: "Notes 3.4–3.6 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.4-3.6_Filled_In.pdf" },
+        homework: [
+          { label: "Homework 3.5 (blank)", file: "files/AP_Calc_Unit3_Homework_3.5.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 3.5 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.5_Answer_Key.pdf" }
+        ],
+        videos: [
+          { title: "3.5 — Selecting Procedures for Calculating Derivatives", url: "https://calculus.flippedmath.com/35-selecting-procedures-for-calculating-derivatives.html" }
+        ],
+        deltamath: [
+          { label: "3.5", url: "https://www.deltamath.com/app/assignment/33789625" }
         ]
       }
     },
