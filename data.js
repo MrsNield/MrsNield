@@ -138,8 +138,8 @@ const SITE_DATA = {
         { date: "2026-10-06", type: "quiz", label: "Quiz — composition, inverses, and decomposing functions" },
         { date: "2026-10-07", type: "lesson", label: "Work day" },
         { date: "2026-10-13", type: "lesson", label: "DeltaMath — 2-3 Determine and represent inverse functions" },
-        { date: "2026-10-14", type: "lesson", label: "DeltaMath — Logarithms" },
-        { date: "2026-10-15", type: "quiz", label: "TSI quiz" },
+        { date: "2026-10-14", type: "quiz", label: "TSI quiz (TSI practice test)" },
+        { date: "2026-10-15", type: "lesson", label: "Finish DeltaMath — Logarithms" },
         { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
