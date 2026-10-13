@@ -93,6 +93,7 @@ function renderMain() {
   if (currentCourse === "precalc") {
     const msg = SITE_DATA.precalc?.message || "This course hasn't been planned yet — check back soon!";
     main.innerHTML = `
+      ${renderAnnouncementBanner(SITE_DATA.precalc?.announcement)}
       <div class="placeholder-card" style="margin-bottom:14px;">${msg}</div>
       <div class="sub-tabs" id="precalcSubTabs"></div>
       <div id="precalcPanels"></div>
@@ -121,6 +122,7 @@ function renderMain() {
     return;
   }
   main.innerHTML = `
+    ${renderAnnouncementBanner(SITE_DATA.honors.announcement)}
     <div class="sub-tabs" id="honorsSubTabs"></div>
     <div id="honorsPanels"></div>
   `;
