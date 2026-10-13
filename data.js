@@ -130,7 +130,11 @@ const SITE_DATA = {
         { date: "2026-09-22", type: "project", label: "Working on Parent Function Picture Project" },
         { date: "2026-09-23", type: "project", label: "Parent Function Picture Project — final project due" },
         { date: "2026-10-06", type: "quiz", label: "Quiz — composition, inverses, and decomposing functions" },
-        { date: "2026-10-07", type: "lesson", label: "Work day" }
+        { date: "2026-10-07", type: "lesson", label: "Work day" },
+        { date: "2026-10-13", type: "lesson", label: "DeltaMath — 2-3 Determine and represent inverse functions" },
+        { date: "2026-10-14", type: "lesson", label: "DeltaMath — Logarithms" },
+        { date: "2026-10-15", type: "quiz", label: "TSI quiz" },
+        { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
         { date: "2026-09-29", type: "lesson", label: "Polynomial and Power Functions, Equations, and Inequalities — runs through Oct 30" }
@@ -231,7 +235,8 @@ const SITE_DATA = {
       { date: "2026-10-05", objective: "Practice for tomorrow's quiz" },
       { date: "2026-10-06", objective: "Quiz — composition, inverses, and decomposing functions" },
       { date: "2026-10-08", objective: "2-3" },
-      { date: "2026-10-09", objective: "Practice with logs and exponents — if you missed, get the paper from the folder to complete and turn in" }
+      { date: "2026-10-09", objective: "Practice with logs and exponents — if you missed, get the paper from the folder to complete and turn in" },
+      { date: "2026-10-13", objective: "DeltaMath — 2-3 Determine and represent inverse functions" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -351,6 +356,12 @@ const SITE_DATA = {
       {
         date: "2026-09-23",
         notes: { label: "Function Transformations Reference (a, b, c, d parameters)", file: "images/board/2026-09-21_function-transformations-reference.jpg" }
+      },
+      {
+        date: "2026-10-13",
+        deltamath: [
+          { label: "2-3 Determine and represent inverse functions", url: "https://www.deltamath.com/app/assignment/34295541" }
+        ]
       }
     ],
 
