@@ -113,63 +113,49 @@ const SITE_DATA = {
       },
       {
         id: "unit3",
-        name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities",
+        name: "Unit 3: Polynomials and Factoring",
         objectives: [
           {
-            id: "3-1", target: "Analyze polynomial and power functions and their end behavior", teks: "P.2.F, P.2.J",
+            id: "3-1", target: "Factor out the greatest common factor", teks: "P.5.J",
             status: "not-started", dates: "",
-            basic: "Name the degree and leading coefficient of a polynomial and identify a power function xⁿ as even or odd.",
-            intermediate: "Describe the end behavior of a polynomial or power function from its degree and leading coefficient, using infinity (limit) notation.",
-            advanced: "Describe end behavior of transformed power functions and match a polynomial equation to its graph using degree, leading coefficient, and end behavior."
+            basic: "Factor out the greatest common factor (GCF) from a polynomial, e.g. 12x + 6 = ___( ___ ).",
+            intermediate: "",
+            advanced: ""
           },
           {
-            id: "3-2", target: "Perform operations on and factor polynomials", teks: "P.5.J",
+            id: "3-2", target: "Factor quadratic expressions", teks: "P.5.J",
             status: "not-started", dates: "",
-            basic: "Add, subtract, and multiply polynomials; factor out a greatest common factor.",
-            intermediate: "Factor polynomials completely using grouping, difference of squares, and sum and difference of cubes.",
-            advanced: "Factor polynomials in quadratic form and choose the most efficient factoring technique for a given polynomial."
+            basic: "Factor a quadratic with a leading coefficient of 1.",
+            intermediate: "Factor a quadratic with a leading coefficient greater than 1.",
+            advanced: ""
           },
           {
-            id: "3-3", target: "Solve polynomial equations", teks: "P.5.J",
+            id: "3-3", target: "Complete the square and derive the quadratic formula", teks: "P.5.J",
             status: "not-started", dates: "",
-            basic: "Solve a polynomial equation that factors, finding all real solutions.",
-            intermediate: "Solve polynomial equations by factoring and the quadratic formula, finding all real and complex solutions.",
-            advanced: "Solve polynomial equations of degree 3 or higher in mathematical and real-world problems and verify the number of solutions against the degree."
+            basic: "Understand and apply the process of completing the square for simple quadratics, rewriting a quadratic equation in the form (x – p)² = q that has the same solutions.",
+            intermediate: "Complete the square when the leading coefficient is greater than 1 and solve the resulting equation.",
+            advanced: "Derive the quadratic formula by completing the square on the general quadratic equation."
           },
           {
-            id: "3-4", target: "Divide polynomials", teks: "P.5.J",
+            id: "3-4", target: "Understand the Fundamental Theorem of Algebra and write a polynomial from its roots", teks: "P.5.J, P.2.I",
             status: "not-started", dates: "",
-            basic: "Divide a polynomial by a linear factor using long division.",
-            intermediate: "Divide polynomials using synthetic division and use the Remainder Theorem to evaluate f(c).",
-            advanced: "Choose between long and synthetic division, interpret the remainder, and write the result as quotient + remainder/divisor."
+            basic: "Identify the relationship between the roots and the factors of a polynomial. Recognize the structure of a polynomial based on its real and complex roots.",
+            intermediate: "Construct a polynomial function in standard form from its real and complex roots (the lowest-degree polynomial with real coefficients).",
+            advanced: "Analyze and explain the behavior of polynomial functions using the Fundamental Theorem of Algebra and the properties of roots."
           },
           {
-            id: "3-5", target: "Use the Factor Theorem to find zeros", teks: "P.5.J",
+            id: "3-5", target: "Factor a difference of squares", teks: "P.5.J",
             status: "not-started", dates: "",
-            basic: "Use the Factor Theorem to decide whether (x – c) is a factor of a polynomial.",
-            intermediate: "Find all zeros of a polynomial given one zero, including complex conjugate pairs.",
-            advanced: "Find all zeros of a polynomial using the Rational Root Theorem and Descartes' Rule of Signs to narrow the possibilities."
+            basic: "Recognize and factor a difference of squares correctly.",
+            intermediate: "",
+            advanced: ""
           },
           {
-            id: "3-6", target: "Graph polynomial functions", teks: "P.2.F, P.2.I",
+            id: "3-6", target: "Factor a sum and difference of cubes", teks: "P.5.J",
             status: "not-started", dates: "",
-            basic: "Identify the zeros of a polynomial in factored form and sketch a graph through them.",
-            intermediate: "Use zeros, multiplicity (cross, bounce, flatten), and end behavior to sketch a polynomial from factored form.",
-            advanced: "Sketch a polynomial from an expanded equation by factoring first, including the y-intercept and end behavior."
-          },
-          {
-            id: "3-7", target: "Analyze, write, and model with polynomial functions", teks: "P.2.I, P.2.N",
-            status: "not-started", dates: "",
-            basic: "Identify local maximums and minimums and the minimum possible degree of a polynomial from its graph.",
-            intermediate: "Write a possible polynomial function in factored form from its graph.",
-            advanced: "Use a polynomial regression model to solve a real-world problem and interpret the answer in context."
-          },
-          {
-            id: "3-8", target: "Solve polynomial inequalities", teks: "P.5.K",
-            status: "not-started", dates: "",
-            basic: "Solve a polynomial inequality using a graph and write the solution set.",
-            intermediate: "Solve a polynomial inequality using zeros and a sign chart, and write the solution in interval notation.",
-            advanced: "Solve polynomial inequalities in real-world problems and interpret the interval solution in context."
+            basic: "Recognize a sum or difference of cubes.",
+            intermediate: "Recognize and factor a sum or difference of cubes correctly.",
+            advanced: ""
           }
         ]
       }
@@ -204,16 +190,16 @@ const SITE_DATA = {
         { date: "2026-10-15", type: "lesson", label: "Finish DeltaMath — Logarithms" },
         { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" }
       ]},
-      { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
+      { id: "cal-unit3", name: "Unit 3: Polynomials and Factoring", schedule: [
         { date: "2026-10-19", type: "lesson", label: "DeltaMath work day" },
-        { date: "2026-10-20", type: "lesson", label: "3-1 — Polynomial and power functions, end behavior" },
-        { date: "2026-10-21", type: "lesson", label: "3-2 — Operations on polynomials and factoring" },
-        { date: "2026-10-22", type: "lesson", label: "3-3 — Solving polynomial equations (real and complex solutions)" },
-        { date: "2026-10-26", type: "lesson", label: "3-4 — Polynomial division (long and synthetic) and the Remainder Theorem" },
-        { date: "2026-10-27", type: "lesson", label: "3-5 — Factor Theorem and finding all zeros" },
-        { date: "2026-10-28", type: "lesson", label: "3-6 — Graphing polynomials: zeros, multiplicity, end behavior" },
-        { date: "2026-10-29", type: "lesson", label: "3-7 — Writing and modeling polynomial functions" },
-        { date: "2026-10-30", type: "lesson", label: "3-8 — Polynomial inequalities" },
+        { date: "2026-10-20", type: "lesson", label: "3-1 — Factoring out the greatest common factor" },
+        { date: "2026-10-21", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient of 1)" },
+        { date: "2026-10-22", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient greater than 1)" },
+        { date: "2026-10-26", type: "lesson", label: "3-5 — Difference of squares" },
+        { date: "2026-10-27", type: "lesson", label: "3-6 — Sum and difference of cubes" },
+        { date: "2026-10-28", type: "lesson", label: "3-3 — Completing the square" },
+        { date: "2026-10-29", type: "lesson", label: "3-3 — Completing the square (leading coefficient greater than 1) and the quadratic formula" },
+        { date: "2026-10-30", type: "lesson", label: "3-4 — The Fundamental Theorem of Algebra: roots and factors" },
         { date: "2026-11-02", type: "review", label: "Unit 3 review" },
         { date: "2026-11-03", type: "test", label: "Unit 3 test" }
       ]},
@@ -609,7 +595,13 @@ const SITE_DATA = {
       "1-7": "https://www.deltamath.com/app/assignment/33378609",
       "2-1": "https://www.deltamath.com/app/assignment/34295345",
       "2-3": "https://www.deltamath.com/app/assignment/34295541",
-      "2-4": "https://www.deltamath.com/app/assignment/34295593"
+      "2-4": "https://www.deltamath.com/app/assignment/34295593",
+      "3-1": "https://www.deltamath.com/app/assignment/34418420",
+      "3-2": "https://www.deltamath.com/app/assignment/34418447",
+      "3-3": "https://www.deltamath.com/app/assignment/34418483",
+      "3-4": "https://www.deltamath.com/app/assignment/34418517",
+      "3-5": "https://www.deltamath.com/app/assignment/34418532",
+      "3-6": "https://www.deltamath.com/app/assignment/34418537"
     },
 
     // ---- Vocabulary flashcards per objective (term + definition, for
@@ -667,6 +659,41 @@ const SITE_DATA = {
       ],
       "2-4": [
         { term: "Decomposition of a function", definition: "Breaking a function into two or more simpler functions that, when composed together, produce the original function." }
+      ],
+      "3-1": [
+        { term: "Factor", definition: "To write an expression as a product of simpler expressions, e.g. 12x + 6 = 6(2x + 1)." },
+        { term: "Greatest common factor (GCF)", definition: "The largest number and/or variable part that divides evenly into every term. Always look for it first." },
+        { term: "Distributive property (in reverse)", definition: "Factoring out a GCF undoes distributing: 6(2x + 1) = 12x + 6, so 12x + 6 = 6(2x + 1)." }
+      ],
+      "3-2": [
+        { term: "Quadratic expression", definition: "A polynomial of degree 2, written ax² + bx + c." },
+        { term: "Leading coefficient", definition: "The number a in front of the x² term." },
+        { term: "Factoring a trinomial", definition: "Writing ax² + bx + c as a product of two binomials, e.g. x² + 7x + 12 = (x + 3)(x + 4)." },
+        { term: "Zero-product property", definition: "If a product equals 0, at least one factor equals 0. This is how factoring solves equations." }
+      ],
+      "3-3": [
+        { term: "Completing the square", definition: "Adding the right number to x² + bx so it becomes a perfect square trinomial (x + b/2)²." },
+        { term: "Perfect square trinomial", definition: "A trinomial that factors as (x + p)² or (x − p)², such as x² + 6x + 9 = (x + 3)²." },
+        { term: "Quadratic formula", definition: "x = (−b ± √(b² − 4ac)) / (2a): the solutions of ax² + bx + c = 0, found by completing the square on the general equation." },
+        { term: "Complex solution", definition: "A solution containing i = √−1, which happens when the number under the square root is negative." }
+      ],
+      "3-4": [
+        { term: "Fundamental Theorem of Algebra", definition: "Every polynomial of degree n ≥ 1 has exactly n roots in the complex numbers, counting repeated roots." },
+        { term: "Root / zero", definition: "A number r where f(r) = 0. The root r gives the factor (x − r)." },
+        { term: "Complex conjugate pair", definition: "If a polynomial has real coefficients and a + bi is a root, then a − bi is also a root." },
+        { term: "Multiplicity", definition: "How many times a root repeats. In (x − 3)²(x + 1), the root 3 has multiplicity 2." },
+        { term: "Standard form", definition: "A polynomial written with terms in descending order of degree, like x³ − 8x² + 22x − 20." }
+      ],
+      "3-5": [
+        { term: "Difference of squares", definition: "A² − B² = (A − B)(A + B). Two perfect squares with a minus between them." },
+        { term: "Perfect square", definition: "A number or expression that is something squared: 1, 4, 9, 16, 25, x², 4x², 9y⁴, …" },
+        { term: "Sum of squares", definition: "A² + B² (a plus sign) does not factor over the real numbers." }
+      ],
+      "3-6": [
+        { term: "Perfect cube", definition: "A number or expression that is something cubed: 1, 8, 27, 64, 125, 216, x³, 8x³, …" },
+        { term: "Sum of cubes", definition: "A³ + B³ = (A + B)(A² − AB + B²)." },
+        { term: "Difference of cubes", definition: "A³ − B³ = (A − B)(A² + AB + B²)." },
+        { term: "SOAP", definition: "A memory trick for the signs: the binomial has the Same sign as the original, the trinomial's middle term has the Opposite sign, and the last term is Always Positive." }
       ]
     },
 
@@ -744,8 +771,65 @@ const SITE_DATA = {
         { prompt: "Using the parent graph f(x) = x³, sketch g(x) = x³ – 2 and h(x) = (x + 1)³.", answer: "g(x) = x³ – 2: shifted down 2, inflection point moves from (0,0) to (0,–2). h(x) = (x + 1)³: shifted left 1, inflection point moves to (–1, 0)." },
         { prompt: "Using the parent graph f(x) = √x, sketch g(x) = √x + 2 and h(x) = √(x – 3).", answer: "g(x) = √x + 2: starting point moves to (0, 2). h(x) = √(x – 3): starting point moves to (3, 0)." },
         { prompt: "Using the parent graph f(x) = cos(x), sketch g(x) = cos(x) – 1 and h(x) = cos(3x).", answer: "g(x) = cos(x) – 1: shifted down 1 — midline moves from y=0 to y=–1. h(x) = cos(3x): same amplitude, period shrinks to 2π/3 (repeats 3 times as fast)." },
-        { prompt: "Using the parent graph f(x) = x², sketch g(x) = (0.5x)² and h(x) = (–x)².", answer: "g(x) = (0.5x)²: horizontal stretch (graph gets wider, since 0 < |b| < 1). h(x) = (–x)²: no visible change, since squaring a negative b just gives x² again — reflections over the y-axis don't show up on symmetric (even) graphs." },
+        { prompt: "Using the parent graph f(x) = x², sketch g(x) = (0.5x)² and h(x) = (–x)².", answer: "g(x) = (0.5x)²: horizontal stretch (graph gets wider, since0 < |b| < 1). h(x) = (–x)²: no visible change, since squaring a negative b just gives x² again — reflections over the y-axis don't show up on symmetric (even) graphs." },
       ],
+      "3-1": [
+        { prompt: "Factor out the GCF: 12x + 6.", answer: "6(2x + 1)." },
+        { prompt: "Factor out the GCF: 15x² − 25x.", answer: "5x(3x − 5)." },
+        { prompt: "Factor out the GCF: 8x³ − 12x² + 6x.", answer: "2x(4x² − 6x + 3). The quadratic in the parentheses does not factor further." },
+        { prompt: "Factor out the GCF, including the negative: −6x² − 18x.", answer: "−6x(x + 3)." },
+        { prompt: "Factor out the GCF: 4x²y³ + 10xy².", answer: "2xy²(2xy + 5)." },
+        { prompt: "Factor out the common binomial: 3(x + 2) + x(x + 2).", answer: "(x + 2)(3 + x), which is the same as (x + 2)(x + 3)." },
+        { prompt: "Solve by factoring out the GCF: 3x² = 12x.", answer: "3x² − 12x = 0, so 3x(x − 4) = 0 and x = 0 or x = 4. (Dividing both sides by x would lose x = 0.)" }
+      ],
+      "3-2": [
+        { prompt: "Factor: x² + 7x + 12.", answer: "(x + 3)(x + 4)." },
+        { prompt: "Factor: x² − 5x − 14.", answer: "(x − 7)(x + 2)." },
+        { prompt: "Factor: x² − 9x + 20.", answer: "(x − 4)(x − 5)." },
+        { prompt: "Factor: 2x² + 7x + 3.", answer: "(2x + 1)(x + 3). Check: 2x² + 6x + x + 3." },
+        { prompt: "Factor: 6x² − 19x + 8.", answer: "(3x − 8)(2x − 1). Check: 6x² − 3x − 16x + 8." },
+        { prompt: "Factor completely: 3x² − 12x − 15. (Look for a GCF first.)", answer: "3(x² − 4x − 5) = 3(x − 5)(x + 1)." },
+        { prompt: "Solve by factoring: x² + 7x + 10 = 0.", answer: "(x + 5)(x + 2) = 0, so x = −5 or x = −2." },
+        { prompt: "Solve by factoring: 2x² − 7x − 4 = 0.", answer: "(2x + 1)(x − 4) = 0, so x = −½ or x = 4." }
+      ],
+      "3-3": [
+        { prompt: "Solve by completing the square: x² + 6x = 7.", answer: "Add 9 to both sides: x² + 6x + 9 = 16, so (x + 3)² = 16, x + 3 = ±4, and x = 1 or x = −7." },
+        { prompt: "Solve by completing the square: x² − 8x + 5 = 0.", answer: "x² − 8x = −5. Add 16: (x − 4)² = 11, so x = 4 ± √11." },
+        { prompt: "Solve by completing the square: x² + 5x − 2 = 0.", answer: "x² + 5x = 2. Add 25/4: (x + 5/2)² = 33/4, so x = (−5 ± √33)/2." },
+        { prompt: "Solve by completing the square: 2x² + 12x + 7 = 0. (Divide by the leading coefficient first.)", answer: "x² + 6x = −7/2. Add 9: (x + 3)² = 11/2, so x = −3 ± √22/2." },
+        { prompt: "Solve by completing the square: x² + 4x + 13 = 0.", answer: "x² + 4x = −13. Add 4: (x + 2)² = −9, so x = −2 ± 3i (two complex solutions)." },
+        { prompt: "Rewrite x² − 10x + 3 = 0 in the form (x − p)² = q.", answer: "x² − 10x = −3. Add 25: (x − 5)² = 22." },
+        { prompt: "Complete the square on ax² + bx + c = 0 to get the quadratic formula. Write the steps.", answer: "Divide by a: x² + (b/a)x = −c/a. Add (b/2a)² to both sides: (x + b/2a)² = (b² − 4ac)/(4a²). Take square roots: x + b/2a = ±√(b² − 4ac)/(2a). So x = (−b ± √(b² − 4ac))/(2a)." }
+      ],
+      "3-4": [
+        { prompt: "How many roots, counting repeats and complex roots, does f(x) = x⁵ − 3x² + 1 have?", answer: "5, by the Fundamental Theorem of Algebra (degree 5)." },
+        { prompt: "A polynomial with real coefficients has the roots 2 and 3 + i. Name another root. What is the lowest possible degree?", answer: "Another root is 3 − i (complex roots come in conjugate pairs). The lowest degree is 3." },
+        { prompt: "Write the lowest-degree polynomial with real coefficients and roots 2, 3 + i, and 3 − i, in standard form.", answer: "(x − 2)(x² − 6x + 10) = x³ − 8x² + 22x − 20." },
+        { prompt: "Write the lowest-degree real polynomial with roots −1 and 2i, in standard form.", answer: "The roots are −1, 2i, and −2i: (x + 1)(x² + 4) = x³ + x² + 4x + 4." },
+        { prompt: "Write the lowest-degree polynomial with roots −3, 1 + √2, and 1 − √2, in standard form.", answer: "(x + 3)(x² − 2x − 1) = x³ + x² − 7x − 3." },
+        { prompt: "The roots of x³ − 4x² + x + 6 are −1, 2, and 3. Write it in factored form.", answer: "(x + 1)(x − 2)(x − 3). Check: (x + 1)(x² − 5x + 6) = x³ − 4x² + x + 6." },
+        { prompt: "Why can a cubic with real coefficients never have three nonreal roots?", answer: "Nonreal roots come in conjugate pairs, so the number of nonreal roots is even. A cubic has 3 roots in all, so at least one root is real (that is also why every odd-degree graph crosses the x-axis)." }
+      ],
+      "3-5": [
+        { prompt: "Factor: x² − 25.", answer: "(x − 5)(x + 5)." },
+        { prompt: "Factor: 4x² − 9.", answer: "(2x − 3)(2x + 3)." },
+        { prompt: "Factor: 49x² − 1.", answer: "(7x − 1)(7x + 1)." },
+        { prompt: "Factor completely: 3x² − 75. (GCF first.)", answer: "3(x² − 25) = 3(x − 5)(x + 5)." },
+        { prompt: "Factor completely: x⁴ − 16.", answer: "(x² − 4)(x² + 4) = (x − 2)(x + 2)(x² + 4). The factor x² + 4 cannot be factored further over the real numbers." },
+        { prompt: "Factor: 16x² − 81y².", answer: "(4x − 9y)(4x + 9y)." },
+        { prompt: "Can x² + 25 be factored as a difference of squares? Explain.", answer: "No. It is a sum of squares (plus sign), which does not factor over the real numbers." },
+        { prompt: "Solve: 9x² − 16 = 0.", answer: "(3x − 4)(3x + 4) = 0, so x = 4/3 or x = −4/3." }
+      ],
+      "3-6": [
+        { prompt: "List the first six perfect cubes.", answer: "1, 8, 27, 64, 125, 216." },
+        { prompt: "Factor: x³ − 8.", answer: "(x − 2)(x² + 2x + 4)." },
+        { prompt: "Factor: x³ + 27.", answer: "(x + 3)(x² − 3x + 9)." },
+        { prompt: "Factor: 8x³ − 1.", answer: "(2x − 1)(4x² + 2x + 1)." },
+        { prompt: "Factor: 27x³ + 64.", answer: "(3x + 4)(9x² − 12x + 16)." },
+        { prompt: "Factor completely: 2x³ − 250. (GCF first.)", answer: "2(x³ − 125) = 2(x − 5)(x² + 5x + 25)." },
+        { prompt: "Is x³ + 9 a sum of cubes? Explain.", answer: "No, because 9 is not a perfect cube, so the sum-of-cubes pattern does not apply." },
+        { prompt: "Solve x³ + 8 = 0. Find all real and complex solutions.", answer: "(x + 2)(x² − 2x + 4) = 0. x = −2, and by the quadratic formula x = (2 ± √(4 − 16))/2 = 1 ± i√3." }
+      ]
     },
 
     // ---- Video links per objective. Pulled from flippedmath.com's traditional
@@ -790,27 +874,25 @@ const SITE_DATA = {
         { title: "Operations with Functions (flippedmath 4.3)", url: "https://precalculus.flippedmath.com/43-operations-with-functions.html" }
       ],
       "3-1": [
-        { title: "Limits to Infinity / End Behavior (flippedmath 2.4)", url: "https://precalculus.flippedmath.com/24-limits-to-infinity.html" },
-        { title: "Polynomial Graphs (flippedmath 5.3)", url: "https://precalculus.flippedmath.com/53-polynomial-graphs.html" }
+        { title: "Basic Factoring (flippedmath 1.3)", url: "https://precalculus.flippedmath.com/13-basic-factoring.html" }
       ],
       "3-2": [
-        { title: "Operations on Polynomials (flippedmath 5.1)", url: "https://precalculus.flippedmath.com/51-operations-on-polynomials.html" }
+        { title: "Basic Factoring (flippedmath 1.3)", url: "https://precalculus.flippedmath.com/13-basic-factoring.html" },
+        { title: "Solving Quadratics: Factoring (flippedmath Algebra 2, 5.1)", url: "https://algebra2.flippedmath.com/51-solving-quadratics-factoring.html" }
       ],
       "3-3": [
-        { title: "Operations on Polynomials (flippedmath 5.1)", url: "https://precalculus.flippedmath.com/51-operations-on-polynomials.html" }
+        { title: "Solving Quadratics: Completing the Square (flippedmath Algebra 2, 5.4)", url: "https://algebra2.flippedmath.com/54-solving-quadratics-completing-the-square.html" }
       ],
       "3-4": [
+        { title: "Factors and Zeros (flippedmath Algebra 2, 5.2)", url: "https://algebra2.flippedmath.com/52-factors-and-zeros.html" },
+        { title: "Operations on Polynomials: finding all real and complex solutions (flippedmath 5.1)", url: "https://precalculus.flippedmath.com/51-operations-on-polynomials.html" },
         { title: "Polynomial Division and Factor Theorem (flippedmath 5.2)", url: "https://precalculus.flippedmath.com/52-polynomial-divison-and-factor-theorem.html" }
       ],
       "3-5": [
-        { title: "Polynomial Division and Factor Theorem (flippedmath 5.2)", url: "https://precalculus.flippedmath.com/52-polynomial-divison-and-factor-theorem.html" }
+        { title: "Operations on Polynomials: factoring (flippedmath 5.1, closest match)", url: "https://precalculus.flippedmath.com/51-operations-on-polynomials.html" }
       ],
       "3-6": [
-        { title: "Polynomial Graphs (flippedmath 5.3)", url: "https://precalculus.flippedmath.com/53-polynomial-graphs.html" }
-      ],
-      "3-7": [
-        { title: "Polynomial Graphs (flippedmath 5.3)", url: "https://precalculus.flippedmath.com/53-polynomial-graphs.html" },
-        { title: "Unit 5 Review: Polynomials (flippedmath)", url: "https://precalculus.flippedmath.com/unit-5-review.html" }
+        { title: "Operations on Polynomials: factoring (flippedmath 5.1, closest match)", url: "https://precalculus.flippedmath.com/51-operations-on-polynomials.html" }
       ]
     }
   },
