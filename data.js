@@ -110,6 +110,68 @@ const SITE_DATA = {
             advanced: "Decompose a function algebraically and verify the decomposition by composing the pieces back together to confirm they produce the original function."
           }
         ]
+      },
+      {
+        id: "unit3",
+        name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities",
+        objectives: [
+          {
+            id: "3-1", target: "Analyze polynomial and power functions and their end behavior", teks: "P.2.F, P.2.J",
+            status: "not-started", dates: "",
+            basic: "Name the degree and leading coefficient of a polynomial and identify a power function xⁿ as even or odd.",
+            intermediate: "Describe the end behavior of a polynomial or power function from its degree and leading coefficient, using infinity (limit) notation.",
+            advanced: "Describe end behavior of transformed power functions and match a polynomial equation to its graph using degree, leading coefficient, and end behavior."
+          },
+          {
+            id: "3-2", target: "Perform operations on and factor polynomials", teks: "P.5.J",
+            status: "not-started", dates: "",
+            basic: "Add, subtract, and multiply polynomials; factor out a greatest common factor.",
+            intermediate: "Factor polynomials completely using grouping, difference of squares, and sum and difference of cubes.",
+            advanced: "Factor polynomials in quadratic form and choose the most efficient factoring technique for a given polynomial."
+          },
+          {
+            id: "3-3", target: "Solve polynomial equations", teks: "P.5.J",
+            status: "not-started", dates: "",
+            basic: "Solve a polynomial equation that factors, finding all real solutions.",
+            intermediate: "Solve polynomial equations by factoring and the quadratic formula, finding all real and complex solutions.",
+            advanced: "Solve polynomial equations of degree 3 or higher in mathematical and real-world problems and verify the number of solutions against the degree."
+          },
+          {
+            id: "3-4", target: "Divide polynomials", teks: "P.5.J",
+            status: "not-started", dates: "",
+            basic: "Divide a polynomial by a linear factor using long division.",
+            intermediate: "Divide polynomials using synthetic division and use the Remainder Theorem to evaluate f(c).",
+            advanced: "Choose between long and synthetic division, interpret the remainder, and write the result as quotient + remainder/divisor."
+          },
+          {
+            id: "3-5", target: "Use the Factor Theorem to find zeros", teks: "P.5.J",
+            status: "not-started", dates: "",
+            basic: "Use the Factor Theorem to decide whether (x – c) is a factor of a polynomial.",
+            intermediate: "Find all zeros of a polynomial given one zero, including complex conjugate pairs.",
+            advanced: "Find all zeros of a polynomial using the Rational Root Theorem and Descartes' Rule of Signs to narrow the possibilities."
+          },
+          {
+            id: "3-6", target: "Graph polynomial functions", teks: "P.2.F, P.2.I",
+            status: "not-started", dates: "",
+            basic: "Identify the zeros of a polynomial in factored form and sketch a graph through them.",
+            intermediate: "Use zeros, multiplicity (cross, bounce, flatten), and end behavior to sketch a polynomial from factored form.",
+            advanced: "Sketch a polynomial from an expanded equation by factoring first, including the y-intercept and end behavior."
+          },
+          {
+            id: "3-7", target: "Analyze, write, and model with polynomial functions", teks: "P.2.I, P.2.N",
+            status: "not-started", dates: "",
+            basic: "Identify local maximums and minimums and the minimum possible degree of a polynomial from its graph.",
+            intermediate: "Write a possible polynomial function in factored form from its graph.",
+            advanced: "Use a polynomial regression model to solve a real-world problem and interpret the answer in context."
+          },
+          {
+            id: "3-8", target: "Solve polynomial inequalities", teks: "P.5.K",
+            status: "not-started", dates: "",
+            basic: "Solve a polynomial inequality using a graph and write the solution set.",
+            intermediate: "Solve a polynomial inequality using zeros and a sign chart, and write the solution in interval notation.",
+            advanced: "Solve polynomial inequalities in real-world problems and interpret the interval solution in context."
+          }
+        ]
       }
     ],
 
@@ -143,10 +205,19 @@ const SITE_DATA = {
         { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-09-29", type: "lesson", label: "Polynomial and Power Functions, Equations, and Inequalities — runs through Oct 30" }
+        { date: "2026-10-19", type: "lesson", label: "3-1 — Polynomial and power functions, end behavior" },
+        { date: "2026-10-20", type: "lesson", label: "3-2 — Operations on polynomials and factoring" },
+        { date: "2026-10-21", type: "lesson", label: "3-3 — Solving polynomial equations (real and complex solutions)" },
+        { date: "2026-10-22", type: "lesson", label: "3-4 — Polynomial division (long and synthetic) and the Remainder Theorem" },
+        { date: "2026-10-26", type: "lesson", label: "3-5 — Factor Theorem and finding all zeros" },
+        { date: "2026-10-27", type: "lesson", label: "3-6 — Graphing polynomials: zeros, multiplicity, end behavior" },
+        { date: "2026-10-28", type: "lesson", label: "3-7 — Writing and modeling polynomial functions" },
+        { date: "2026-10-29", type: "lesson", label: "3-8 — Polynomial inequalities" },
+        { date: "2026-10-30", type: "review", label: "Unit 3 review" },
+        { date: "2026-11-02", type: "test", label: "Unit 3 test" }
       ]},
       { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-02", type: "lesson", label: "Rational Functions, Equations, and Inequalities — runs through Nov 6 (start date approximate — TEKS RS doc didn't print it clearly, double check)" }
+        { date: "2026-11-03", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test, runs through about Nov 6–10 (approximate)" }
       ]},
       { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
         { date: "2026-11-11", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — runs through Dec 3" }
@@ -704,6 +775,29 @@ const SITE_DATA = {
       ],
       "2-4": [
         { title: "Operations with Functions (flippedmath 4.3)", url: "https://precalculus.flippedmath.com/43-operations-with-functions.html" }
+      ],
+      "3-1": [
+        { title: "Limits to Infinity / End Behavior (flippedmath 2.4)", url: "https://precalculus.flippedmath.com/24-limits-to-infinity.html" },
+        { title: "Polynomial Graphs (flippedmath 5.3)", url: "https://precalculus.flippedmath.com/53-polynomial-graphs.html" }
+      ],
+      "3-2": [
+        { title: "Operations on Polynomials (flippedmath 5.1)", url: "https://precalculus.flippedmath.com/51-operations-on-polynomials.html" }
+      ],
+      "3-3": [
+        { title: "Operations on Polynomials (flippedmath 5.1)", url: "https://precalculus.flippedmath.com/51-operations-on-polynomials.html" }
+      ],
+      "3-4": [
+        { title: "Polynomial Division and Factor Theorem (flippedmath 5.2)", url: "https://precalculus.flippedmath.com/52-polynomial-divison-and-factor-theorem.html" }
+      ],
+      "3-5": [
+        { title: "Polynomial Division and Factor Theorem (flippedmath 5.2)", url: "https://precalculus.flippedmath.com/52-polynomial-divison-and-factor-theorem.html" }
+      ],
+      "3-6": [
+        { title: "Polynomial Graphs (flippedmath 5.3)", url: "https://precalculus.flippedmath.com/53-polynomial-graphs.html" }
+      ],
+      "3-7": [
+        { title: "Polynomial Graphs (flippedmath 5.3)", url: "https://precalculus.flippedmath.com/53-polynomial-graphs.html" },
+        { title: "Unit 5 Review: Polynomials (flippedmath)", url: "https://precalculus.flippedmath.com/unit-5-review.html" }
       ]
     }
   },
