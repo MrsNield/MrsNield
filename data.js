@@ -440,6 +440,18 @@ const SITE_DATA = {
         deltamath: [
           { label: "2-3 Determine and represent inverse functions", url: "https://www.deltamath.com/app/assignment/34295541" }
         ]
+      },
+      {
+        date: "2026-10-15",
+        deltamath: [
+          { label: "Logarithms", url: "https://www.deltamath.com/app/assignment/34365241" }
+        ]
+      },
+      {
+        date: "2026-10-19",
+        deltamath: [
+          { label: "Logarithms", url: "https://www.deltamath.com/app/assignment/34365241" }
+        ]
       }
     ],
 

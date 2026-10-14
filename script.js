@@ -360,6 +360,15 @@ function renderHonorsCalDetail(dateStr, planned) {
   let html = `<h3 class="day-heading" style="margin-top:0;">${formatDateLabel(dateStr)}</h3>`;
 
   if (isLogged) {
+    // A day with only posted extras (e.g. a DeltaMath link) and nothing logged
+    // yet still shows its plan, so the link doesn't hide what's scheduled.
+    const hasActivity = (SITE_DATA.honors.dailyLog || []).some(e => e.date === dateStr) ||
+      (SITE_DATA.honors.boardWork || []).some(b => b.date === dateStr);
+    const plan = planned[dateStr];
+    if (!hasActivity && plan) {
+      const typeLabel = CALENDAR_TYPE_LABELS[plan.type] || plan.type;
+      html += `<div class="miss-section"><strong>Planned:</strong> <span class="cal-badge cal-${plan.type}">${typeLabel}</span> ${plan.label || ""}</div>`;
+    }
     html += renderHonorsDayLogContent(dateStr);
   } else {
     const plan = planned[dateStr];
