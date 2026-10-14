@@ -300,7 +300,8 @@ const SITE_DATA = {
       { date: "2026-10-06", objective: "Quiz — composition, inverses, and decomposing functions" },
       { date: "2026-10-08", objective: "2-3" },
       { date: "2026-10-09", objective: "Practice with logs and exponents — if you missed, get the paper from the folder to complete and turn in" },
-      { date: "2026-10-13", objective: "DeltaMath — 2-3 Determine and represent inverse functions" }
+      { date: "2026-10-13", objective: "DeltaMath — 2-3 Determine and represent inverse functions" },
+      { date: "2026-10-14", objective: "TSI practice test and DeltaMath" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -425,6 +426,12 @@ const SITE_DATA = {
         date: "2026-10-13",
         deltamath: [
           { label: "2-3 Determine and represent inverse functions", url: "https://www.deltamath.com/app/assignment/34295541" }
+        ]
+      },
+      {
+        date: "2026-10-14",
+        deltamath: [
+          { label: "Logarithms", url: "https://www.deltamath.com/app/assignment/34365241" }
         ]
       },
       {
@@ -1555,6 +1562,7 @@ const SITE_DATA = {
       { date: "2026-10-06", period: "5th", label: "Finished 3.3" },
       { date: "2026-10-08", label: "3.4" },
       { date: "2026-10-09", label: "3.5 and \"Deriver's License\" derivative practice quizzes" },
+      { date: "2026-10-14", label: "Unit 3 review — turned in homework" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
