@@ -438,6 +438,60 @@ const SITE_DATA = {
         deltamath: [
           { label: "Logarithms", url: "https://www.deltamath.com/app/assignment/34365241" }
         ]
+      },
+      // ---- Unit 3 (Polynomials and Factoring): the day's worksheet for absent students, plus that objective's DeltaMath ----
+      {
+        date: "2026-10-20",
+        notes: { label: "Worksheet — 3-1 Greatest Common Factor", file: "files/Honors_Unit3_3-1_Greatest_Common_Factor_Worksheet.pdf" },
+        deltamath: [{ label: "3-1 Factor out the greatest common factor", url: "https://www.deltamath.com/app/assignment/34418420" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-1) has a video, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-10-21",
+        notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_1_Worksheet.pdf" },
+        deltamath: [{ label: "3-2 Factor quadratic expressions", url: "https://www.deltamath.com/app/assignment/34418447" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-10-22",
+        notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient greater than 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_Greater_Than_1_Worksheet.pdf" },
+        deltamath: [{ label: "3-2 Factor quadratic expressions", url: "https://www.deltamath.com/app/assignment/34418447" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-10-26",
+        notes: { label: "Worksheet — 3-5 Difference of Squares", file: "files/Honors_Unit3_3-5_Difference_of_Squares_Worksheet.pdf" },
+        deltamath: [{ label: "3-5 Factor a difference of squares", url: "https://www.deltamath.com/app/assignment/34418532" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-5) has vocabulary and practice problems with answers."
+      },
+      {
+        date: "2026-10-27",
+        notes: { label: "Worksheet — 3-6 Sum and Difference of Cubes", file: "files/Honors_Unit3_3-6_Sum_and_Difference_of_Cubes_Worksheet.pdf" },
+        deltamath: [{ label: "3-6 Factor a sum and difference of cubes", url: "https://www.deltamath.com/app/assignment/34418537" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-6) has vocabulary and practice problems with answers."
+      },
+      {
+        date: "2026-10-28",
+        notes: { label: "Worksheet — 3-3 Completing the Square", file: "files/Honors_Unit3_3-3_Completing_the_Square_Worksheet.pdf" },
+        deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-10-29",
+        notes: { label: "Worksheet — 3-3 Completing the Square and the Quadratic Formula", file: "files/Honors_Unit3_3-3_Completing_the_Square_and_Quadratic_Formula_Worksheet.pdf" },
+        deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-10-30",
+        notes: { label: "Worksheet — 3-4 The Fundamental Theorem of Algebra", file: "files/Honors_Unit3_3-4_Fundamental_Theorem_of_Algebra_Worksheet.pdf" },
+        deltamath: [{ label: "3-4 Fundamental Theorem of Algebra", url: "https://www.deltamath.com/app/assignment/34418517" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-4) has videos, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-11-02",
+        notes: { label: "Unit 3 Review Packet", file: "files/Honors_Unit3_Review_Packet.pdf" },
+        instructions: "Absent? Print the review packet and complete it before the Unit 3 test."
       }
     ],
 
