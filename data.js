@@ -205,19 +205,20 @@ const SITE_DATA = {
         { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomial and Power Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-10-19", type: "lesson", label: "3-1 — Polynomial and power functions, end behavior" },
-        { date: "2026-10-20", type: "lesson", label: "3-2 — Operations on polynomials and factoring" },
-        { date: "2026-10-21", type: "lesson", label: "3-3 — Solving polynomial equations (real and complex solutions)" },
-        { date: "2026-10-22", type: "lesson", label: "3-4 — Polynomial division (long and synthetic) and the Remainder Theorem" },
-        { date: "2026-10-26", type: "lesson", label: "3-5 — Factor Theorem and finding all zeros" },
-        { date: "2026-10-27", type: "lesson", label: "3-6 — Graphing polynomials: zeros, multiplicity, end behavior" },
-        { date: "2026-10-28", type: "lesson", label: "3-7 — Writing and modeling polynomial functions" },
-        { date: "2026-10-29", type: "lesson", label: "3-8 — Polynomial inequalities" },
-        { date: "2026-10-30", type: "review", label: "Unit 3 review" },
-        { date: "2026-11-02", type: "test", label: "Unit 3 test" }
+        { date: "2026-10-19", type: "lesson", label: "DeltaMath work day" },
+        { date: "2026-10-20", type: "lesson", label: "3-1 — Polynomial and power functions, end behavior" },
+        { date: "2026-10-21", type: "lesson", label: "3-2 — Operations on polynomials and factoring" },
+        { date: "2026-10-22", type: "lesson", label: "3-3 — Solving polynomial equations (real and complex solutions)" },
+        { date: "2026-10-26", type: "lesson", label: "3-4 — Polynomial division (long and synthetic) and the Remainder Theorem" },
+        { date: "2026-10-27", type: "lesson", label: "3-5 — Factor Theorem and finding all zeros" },
+        { date: "2026-10-28", type: "lesson", label: "3-6 — Graphing polynomials: zeros, multiplicity, end behavior" },
+        { date: "2026-10-29", type: "lesson", label: "3-7 — Writing and modeling polynomial functions" },
+        { date: "2026-10-30", type: "lesson", label: "3-8 — Polynomial inequalities" },
+        { date: "2026-11-02", type: "review", label: "Unit 3 review" },
+        { date: "2026-11-03", type: "test", label: "Unit 3 test" }
       ]},
       { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-03", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test, runs through about Nov 6–10 (approximate)" }
+        { date: "2026-11-04", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test, runs through about Nov 6–10 (approximate)" }
       ]},
       { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
         { date: "2026-11-11", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — runs through Dec 3" }
