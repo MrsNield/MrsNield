@@ -1562,6 +1562,7 @@ const SITE_DATA = {
       { date: "2026-10-06", period: "5th", label: "Finished 3.3" },
       { date: "2026-10-08", label: "3.4" },
       { date: "2026-10-09", label: "3.5 and \"Deriver's License\" derivative practice quizzes" },
+      { date: "2026-10-13", label: "3.6" },
       { date: "2026-10-14", label: "Unit 3 review — turned in homework" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
@@ -2532,6 +2533,21 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "3.5", url: "https://www.deltamath.com/app/assignment/33789625" }
+        ]
+      },
+      "2026-10-13": {
+        notes: { label: "Notes 3.4–3.6 — Filled In", file: "files/AP_Calc_Unit3_Notes_3.4-3.6_Filled_In.pdf" },
+        homework: [
+          { label: "Homework 3.6 (blank)", file: "files/AP_Calc_Unit3_Homework_3.6.pdf" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 3.6 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.6_Answer_Key.pdf" }
+        ],
+        videos: [
+          { title: "3.6 — Calculating Higher-Order Derivatives", url: "https://calculus.flippedmath.com/36-calculating-higher-order-derivatives.html" }
+        ],
+        deltamath: [
+          { label: "3.5 — finish this one (there is no DeltaMath for 3.6)", url: "https://www.deltamath.com/app/assignment/33789625" }
         ]
       }
     },
