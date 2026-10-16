@@ -301,7 +301,8 @@ const SITE_DATA = {
       { date: "2026-10-08", objective: "2-3" },
       { date: "2026-10-09", objective: "Practice with logs and exponents — if you missed, get the paper from the folder to complete and turn in" },
       { date: "2026-10-13", objective: "DeltaMath — 2-3 Determine and represent inverse functions" },
-      { date: "2026-10-14", objective: "TSI practice test and DeltaMath" }
+      { date: "2026-10-14", objective: "TSI practice test and DeltaMath" },
+      { date: "2026-10-15", objective: "DeltaMath — 2-3 Determine and represent inverse functions and Logarithms" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -437,6 +438,7 @@ const SITE_DATA = {
       {
         date: "2026-10-15",
         deltamath: [
+          { label: "2-3 Determine and represent inverse functions", url: "https://www.deltamath.com/app/assignment/34295541" },
           { label: "Logarithms", url: "https://www.deltamath.com/app/assignment/34365241" }
         ]
       },
@@ -1564,6 +1566,7 @@ const SITE_DATA = {
       { date: "2026-10-09", label: "3.5 and \"Deriver's License\" derivative practice quizzes" },
       { date: "2026-10-13", label: "3.6" },
       { date: "2026-10-14", label: "Unit 3 review — turned in homework" },
+      { date: "2026-10-15", label: "Did the FRQs" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2544,10 +2547,26 @@ const SITE_DATA = {
           { label: "Homework 3.6 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.6_Answer_Key.pdf" }
         ],
         videos: [
-          { title: "3.6 — Calculating Higher-Order Derivatives", url: "https://calculus.flippedmath.com/36-calculating-higher-order-derivatives.html" }
+          { title: "3.6 — Calculating Higher-Order Derivatives", url: "https://calculus.flippedmath.com/36-calculating-higher-order-derivatives.html" },
+          { title: "Unit 3 Review", url: "https://youtu.be/jRS-zokCBYg" }
         ],
         deltamath: [
           { label: "3.5 — finish this one (there is no DeltaMath for 3.6)", url: "https://www.deltamath.com/app/assignment/33789625" }
+        ]
+      },
+      "2026-10-14": {
+        videos: [
+          { title: "Unit 3 Review", url: "https://youtu.be/jRS-zokCBYg" }
+        ]
+      },
+      "2026-10-15": {
+        videos: [
+          { title: "Unit 3 Review", url: "https://youtu.be/jRS-zokCBYg" }
+        ]
+      },
+      "2026-10-16": {
+        videos: [
+          { title: "Unit 3 Review", url: "https://youtu.be/jRS-zokCBYg" }
         ]
       }
     },
