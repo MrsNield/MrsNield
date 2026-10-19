@@ -1386,29 +1386,29 @@ const SITE_DATA = {
           { date: "2026-10-19", type: "review", label: "Review" },
           { date: "2026-10-20", type: "lesson", label: "4.1" },
           { date: "2026-10-21", type: "lesson", label: "4.2" },
-          { date: "2026-10-22", type: "review", label: "Review" },
+          { date: "2026-10-22", type: "lesson", label: "4.1 and 4.2 practice" },
           { date: "2026-10-23", type: "no-school", label: "No school" },
           { date: "2026-10-26", type: "lesson", label: "4.3" },
-          { date: "2026-10-27", type: "review", label: "Review" },
+          { date: "2026-10-27", type: "review", label: "Review the unit so far" },
           { date: "2026-10-28", type: "lesson", label: "4.4" },
           { date: "2026-10-29", type: "lesson", label: "4.5" },
-          { date: "2026-10-30", type: "lesson", label: "4.6 — End of 2nd six weeks" }
+          { date: "2026-10-30", type: "note", label: "End of 2nd six weeks" }
         ]
       },
       {
         id: "sw3", name: "3rd Six Weeks (Nov 2 – Dec 18, incl. Final Exam)",
         schedule: [
-          { date: "2026-11-02", type: "lesson", label: "4.7 — Start of 3rd six weeks" },
-          { date: "2026-11-03", type: "review", label: "Review + turn in homework" },
-          { date: "2026-11-04", type: "frq", label: "FRQ — due at the start of the period" },
-          { date: "2026-11-05", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
-          { date: "2026-11-06", type: "review", label: "Review" },
-          { date: "2026-11-09", type: "lesson", label: "5.1" },
-          { date: "2026-11-10", type: "lesson", label: "5.2" },
-          { date: "2026-11-11", type: "lesson", label: "5.3" },
-          { date: "2026-11-12", type: "lesson", label: "5.4" },
+          { date: "2026-11-02", type: "lesson", label: "4.6 — Start of 3rd six weeks" },
+          { date: "2026-11-03", type: "lesson", label: "4.7" },
+          { date: "2026-11-04", type: "review", label: "Review the unit + turn in homework" },
+          { date: "2026-11-05", type: "frq", label: "FRQ day — FRQs are due at the start of the period" },
+          { date: "2026-11-06", type: "test", label: "Test — turn in your multiple choice questions at the start of the period" },
+          { date: "2026-11-09", type: "review", label: "Review" },
+          { date: "2026-11-10", type: "lesson", label: "5.1" },
+          { date: "2026-11-11", type: "lesson", label: "5.2" },
+          { date: "2026-11-12", type: "lesson", label: "5.3" },
           { date: "2026-11-13", type: "no-school", label: "No school" },
-          { date: "2026-11-16", type: "review", label: "Review" },
+          { date: "2026-11-16", type: "lesson", label: "5.4" },
           { date: "2026-11-17", type: "lesson", label: "5.5" },
           { date: "2026-11-18", type: "lesson", label: "5.6" },
           { date: "2026-11-19", type: "lesson", label: "5.7" },
@@ -1805,6 +1805,80 @@ const SITE_DATA = {
             day: "Unit 3 Review",
             videos: [
               { title: "Unit 3 Review", url: "https://youtu.be/jRS-zokCBYg" }
+            ]
+          }
+        ]
+      },
+      {
+        unit: "Unit 4: Contextual Applications of Differentiation",
+        days: [
+          {
+            day: "4.1",
+            videos: [
+              { title: "4.1 — Interpreting the Meaning of the Derivative in Context", url: "https://calculus.flippedmath.com/41-interpreting-the-meaning-of-the-derivative-in-context.html" }
+            ],
+            deltamath: [
+              { label: "4.1", url: "https://www.deltamath.com/" }
+            ]
+          },
+          {
+            day: "4.2",
+            videos: [
+              { title: "4.2 — Straight-Line Motion: Connecting Position, Velocity, and Acceleration", url: "https://calculus.flippedmath.com/42-straight-line-motion-connecting-position-velocity-and-acceleration.html" }
+            ],
+            deltamath: [
+              { label: "4.2", url: "https://www.deltamath.com/" }
+            ]
+          },
+          {
+            day: "4.3",
+            videos: [
+              { title: "4.3 — Rates of Change in Applied Contexts Other Than Motion", url: "https://calculus.flippedmath.com/43-rates-of-change-in-applied-contexts-other-than-motion.html" }
+            ],
+            deltamath: [
+              { label: "4.3", url: "https://www.deltamath.com/" }
+            ]
+          },
+          {
+            day: "4.4",
+            videos: [
+              { title: "4.4 — Introduction to Related Rates", url: "https://calculus.flippedmath.com/44-introduction-to-related-rates.html" }
+            ],
+            deltamath: [
+              { label: "4.4", url: "https://www.deltamath.com/" }
+            ]
+          },
+          {
+            day: "4.5",
+            videos: [
+              { title: "4.5 — Solving Related Rates Problems", url: "https://calculus.flippedmath.com/45-solving-related-rates-problems.html" }
+            ],
+            deltamath: [
+              { label: "4.5", url: "https://www.deltamath.com/" }
+            ]
+          },
+          {
+            day: "4.6",
+            videos: [
+              { title: "4.6 — Approximating Values of a Function Using Local Linearity and Linearization", url: "https://youtu.be/d8rgqS7D910" }
+            ],
+            deltamath: [
+              { label: "4.6", url: "https://www.deltamath.com/" }
+            ]
+          },
+          {
+            day: "4.7",
+            videos: [
+              { title: "4.7 — Using L'Hospital's Rule for Determining Limits of Indeterminate Forms", url: "https://youtu.be/e0BBsMXadoQ" }
+            ],
+            deltamath: [
+              { label: "4.7", url: "https://www.deltamath.com/" }
+            ]
+          },
+          {
+            day: "Unit 4 Review",
+            videos: [
+              { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
             ]
           }
         ]
@@ -2568,6 +2642,156 @@ const SITE_DATA = {
         videos: [
           { title: "Unit 3 Review", url: "https://youtu.be/jRS-zokCBYg" }
         ]
+      },
+      // ---- Unit 4 (Contextual Applications of Differentiation): links go to pages of the combined
+      // Note/Homework packet and Answers PDFs (#page=N). DeltaMath links go to the DeltaMath home page. ----
+      "2026-10-20": {
+        notes: { label: "Notes 4.1 (packet pp. 1–4)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=1" },
+        homework: [
+          { label: "Homework 4.1 (packet p. 5)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=5" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.1 — Answers (p. 1)", file: "files/AP_Calc_Unit4_Answers.pdf#page=1" }
+        ],
+        videos: [
+          { title: "4.1 — Interpreting the Meaning of the Derivative in Context", url: "https://calculus.flippedmath.com/41-interpreting-the-meaning-of-the-derivative-in-context.html" }
+        ],
+        deltamath: [
+          { label: "4.1 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-10-21": {
+        notes: { label: "Notes 4.2 (packet pp. 6–10)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=6" },
+        homework: [
+          { label: "Homework 4.2 (packet pp. 11–13)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=11" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.2 — Answers (pp. 2–4)", file: "files/AP_Calc_Unit4_Answers.pdf#page=2" }
+        ],
+        videos: [
+          { title: "4.2 — Straight-Line Motion: Connecting Position, Velocity, and Acceleration", url: "https://calculus.flippedmath.com/42-straight-line-motion-connecting-position-velocity-and-acceleration.html" }
+        ],
+        deltamath: [
+          { label: "4.2 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-10-22": {
+        notes: { label: "Notes 4.1 (packet pp. 1–4)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=1" },
+        homework: [
+          { label: "Homework 4.1 (packet p. 5)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=5" },
+          { label: "Homework 4.2 (packet pp. 11–13)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=11" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.1 — Answers (p. 1)", file: "files/AP_Calc_Unit4_Answers.pdf#page=1" },
+          { label: "Homework 4.2 — Answers (pp. 2–4)", file: "files/AP_Calc_Unit4_Answers.pdf#page=2" }
+        ],
+        videos: [
+          { title: "4.1 — Interpreting the Meaning of the Derivative in Context", url: "https://calculus.flippedmath.com/41-interpreting-the-meaning-of-the-derivative-in-context.html" },
+          { title: "4.2 — Straight-Line Motion: Connecting Position, Velocity, and Acceleration", url: "https://calculus.flippedmath.com/42-straight-line-motion-connecting-position-velocity-and-acceleration.html" }
+        ],
+        deltamath: [
+          { label: "4.1 and 4.2 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-10-26": {
+        notes: { label: "Notes 4.3 (packet pp. 14–16)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=14" },
+        homework: [
+          { label: "Homework 4.3 (packet pp. 17–19)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=17" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.3 — Answers (pp. 5–7)", file: "files/AP_Calc_Unit4_Answers.pdf#page=5" }
+        ],
+        videos: [
+          { title: "4.3 — Rates of Change in Applied Contexts Other Than Motion", url: "https://calculus.flippedmath.com/43-rates-of-change-in-applied-contexts-other-than-motion.html" }
+        ],
+        deltamath: [
+          { label: "4.3 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-10-27": {
+        videos: [
+          { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
+        ]
+      },
+      "2026-10-28": {
+        notes: { label: "Notes 4.4 (packet pp. 20–23)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=20" },
+        homework: [
+          { label: "Homework 4.4 (packet pp. 24–25)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=24" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.4 — Answers (pp. 8–9)", file: "files/AP_Calc_Unit4_Answers.pdf#page=8" }
+        ],
+        videos: [
+          { title: "4.4 — Introduction to Related Rates", url: "https://calculus.flippedmath.com/44-introduction-to-related-rates.html" }
+        ],
+        deltamath: [
+          { label: "4.4 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-10-29": {
+        notes: { label: "Notes 4.5 (packet p. 26)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=26" },
+        homework: [
+          { label: "Homework 4.5 (packet pp. 27–29)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=27" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.5 — Answers (pp. 10–12)", file: "files/AP_Calc_Unit4_Answers.pdf#page=10" }
+        ],
+        videos: [
+          { title: "4.5 — Solving Related Rates Problems", url: "https://calculus.flippedmath.com/45-solving-related-rates-problems.html" }
+        ],
+        deltamath: [
+          { label: "4.5 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-11-02": {
+        notes: { label: "Notes 4.6 (packet pp. 30–33)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=30" },
+        homework: [
+          { label: "Homework 4.6 (packet pp. 34–36)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=34" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.6 — Answers (pp. 13–15)", file: "files/AP_Calc_Unit4_Answers.pdf#page=13" }
+        ],
+        videos: [
+          { title: "4.6 — Approximating Values of a Function Using Local Linearity and Linearization", url: "https://youtu.be/d8rgqS7D910" }
+        ],
+        deltamath: [
+          { label: "4.6 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-11-03": {
+        notes: { label: "Notes 4.7 (packet pp. 37–41)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=37" },
+        homework: [
+          { label: "Homework 4.7 (packet pp. 42–43)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=42" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.7 — Answers (pp. 16–17)", file: "files/AP_Calc_Unit4_Answers.pdf#page=16" }
+        ],
+        videos: [
+          { title: "4.7 — Using L'Hospital's Rule for Determining Limits of Indeterminate Forms", url: "https://youtu.be/e0BBsMXadoQ" }
+        ],
+        deltamath: [
+          { label: "4.7 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-11-04": {
+        videos: [
+          { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
+        ]
+      },
+      "2026-11-05": {
+        videos: [
+          { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
+        ]
+      },
+      "2026-11-06": {
+        videos: [
+          { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
+        ]
+      },
+      "2026-11-09": {
+        videos: [
+          { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
+        ]
       }
     },
 
@@ -2645,6 +2869,36 @@ const SITE_DATA = {
           { label: "Homework 3.6 (blank)", file: "files/AP_Calc_Unit3_Homework_3.6.pdf" },
           { label: "Homework 3.6 — Answer Key", file: "files/AP_Calc_Unit3_Homework_3.6_Answer_Key.pdf" },
           { label: "Unit 3 Review (video)", file: "https://youtu.be/jRS-zokCBYg" }
+        ]
+      },
+      {
+        id: "unit4",
+        name: "Unit 4: Contextual Applications of Differentiation",
+        resources: [
+          { label: "Note Packet and Homework Packet — all of Unit 4", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf" },
+          { label: "Answers — all of Unit 4 homework", file: "files/AP_Calc_Unit4_Answers.pdf" },
+          { label: "Notes 4.1 (packet pp. 1–4)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=1" },
+          { label: "Homework 4.1 (packet p. 5)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=5" },
+          { label: "Homework 4.1 — Answers (p. 1)", file: "files/AP_Calc_Unit4_Answers.pdf#page=1" },
+          { label: "Notes 4.2 (packet pp. 6–10)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=6" },
+          { label: "Homework 4.2 (packet pp. 11–13)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=11" },
+          { label: "Homework 4.2 — Answers (pp. 2–4)", file: "files/AP_Calc_Unit4_Answers.pdf#page=2" },
+          { label: "Notes 4.3 (packet pp. 14–16)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=14" },
+          { label: "Homework 4.3 (packet pp. 17–19)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=17" },
+          { label: "Homework 4.3 — Answers (pp. 5–7)", file: "files/AP_Calc_Unit4_Answers.pdf#page=5" },
+          { label: "Notes 4.4 (packet pp. 20–23)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=20" },
+          { label: "Homework 4.4 (packet pp. 24–25)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=24" },
+          { label: "Homework 4.4 — Answers (pp. 8–9)", file: "files/AP_Calc_Unit4_Answers.pdf#page=8" },
+          { label: "Notes 4.5 (packet p. 26)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=26" },
+          { label: "Homework 4.5 (packet pp. 27–29)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=27" },
+          { label: "Homework 4.5 — Answers (pp. 10–12)", file: "files/AP_Calc_Unit4_Answers.pdf#page=10" },
+          { label: "Notes 4.6 (packet pp. 30–33)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=30" },
+          { label: "Homework 4.6 (packet pp. 34–36)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=34" },
+          { label: "Homework 4.6 — Answers (pp. 13–15)", file: "files/AP_Calc_Unit4_Answers.pdf#page=13" },
+          { label: "Notes 4.7 (packet pp. 37–41)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=37" },
+          { label: "Homework 4.7 (packet pp. 42–43)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=42" },
+          { label: "Homework 4.7 — Answers (pp. 16–17)", file: "files/AP_Calc_Unit4_Answers.pdf#page=16" },
+          { label: "Unit 4 Review (video)", file: "https://youtu.be/xkxe-7c1teY" }
         ]
       }
     ],
