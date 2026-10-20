@@ -720,6 +720,12 @@ function renderApCalcDayDetail(date, period) {
     html += `<div class="miss-section"><strong>DeltaMath:</strong> <span style="color:var(--gray);font-style:italic;">No DeltaMath assignment posted yet.</span></div>`;
   }
 
+  if (d.assignments && d.assignments.length) {
+    html += `<div class="miss-section"><strong>Assignment:</strong><br>` +
+      d.assignments.map(a => `<a class="download-btn" href="${a.file}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">⬇ ${a.label}</a>`).join("") +
+      `</div>`;
+  }
+
   if (d.tools && d.tools.length) {
     html += `<div class="miss-section"><strong>Tools:</strong><br>` +
       d.tools.map(t => `<a class="download-btn" href="${t.url}" target="_blank" rel="noopener" style="margin-top:6px;margin-right:8px;">🧮 ${t.label}</a>`).join("") +

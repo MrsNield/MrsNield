@@ -309,7 +309,8 @@ const SITE_DATA = {
       { date: "2026-10-16", objective: "Quiz — composition of functions" },
       { date: "2026-10-16", objective: "DeltaMath due: 2-3 Determine and represent inverse functions and Logarithms" },
       { date: "2026-10-19", objective: "DeltaMath work day" },
-      { date: "2026-10-20", objective: "2-3" }
+      { date: "2026-10-20", objective: "2-3" },
+      { date: "2026-10-20", objective: "Blue Paper assigned — video comparison on inverse functions (due Thursday 10/22 at the start of class)" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -364,7 +365,11 @@ const SITE_DATA = {
       { date: "2026-09-03", caption: "Continuity & End Behavior notes (2nd period)", image: "images/board/2026-09-03_continuity-endbehavior4_2nd.jpg" },
       { date: "2026-09-03", caption: "Continuity & End Behavior notes (4th period)", image: "images/board/2026-09-03_continuity-endbehavior1_4th.jpg" },
       { date: "2026-09-03", caption: "Continuity & End Behavior notes (4th period)", image: "images/board/2026-09-03_continuity-endbehavior2_4th.jpg" },
-      { date: "2026-09-03", caption: "Continuity & End Behavior notes (4th period)", image: "images/board/2026-09-03_continuity-endbehavior3_4th.jpg" }
+      { date: "2026-09-03", caption: "Continuity & End Behavior notes (4th period)", image: "images/board/2026-09-03_continuity-endbehavior3_4th.jpg" },
+      { date: "2026-10-20", caption: "Inverse functions — f⁻¹ of (x + 2)² and 2^(x − 3), with domains and \"things to remember\" (2nd period)", image: "images/board/2026-10-20_inverse-functions-1.jpg" },
+      { date: "2026-10-20", caption: "Inverse functions — notes on square roots, cube roots, and logs (2nd period)", image: "images/board/2026-10-20_inverse-functions-2.jpg" },
+      { date: "2026-10-20", caption: "Inverse functions — exponential and log examples with domains (2nd period)", image: "images/board/2026-10-20_inverse-functions-3.jpg" },
+      { date: "2026-10-20", caption: "Inverse functions — Examples 2 and 3 with logarithms (2nd period)", image: "images/board/2026-10-20_inverse-functions-4.jpg" }
     ],
 
     // ---- Downloadable notes/DeltaMath attached to a specific day (separate
@@ -1343,8 +1348,8 @@ const SITE_DATA = {
     // Short-lived notice shown at the top of the AP Calc page — disappears
     // on its own once "showUntil" passes, so no need to remember to remove it.
     announcement: {
-      text: "No homework tonight! Instead, watch the videos for <a href=\"https://calculus.flippedmath.com/21-defining-average-and-instantaneous-rate-of-change-at-a-point.html\" target=\"_blank\" rel=\"noopener\">2.1</a> and <a href=\"https://calculus.flippedmath.com/22-defining-the-derivative-of-a-function-and-using-derivative-notation.html\" target=\"_blank\" rel=\"noopener\">2.2</a> — and watch the <a href=\"https://youtu.be/lTx1vapl5D4\" target=\"_blank\" rel=\"noopener\">Class Notes video</a> if you needed help with the algebra parts.",
-      showUntil: "2026-09-09"
+      text: "Blue Paper — Video Comparison: Straight-Line Motion (4.2) is due Thursday, Oct 22, at the start of class. <a href=\"files/AP_Calc_Video_Comparison_Straight_Line_Motion_Blue_Paper.docx\" target=\"_blank\" rel=\"noopener\">Click here to download the Blue Paper</a>",
+      showUntil: "2026-10-22"
     },
 
     // ---- Day-by-day course calendar, same idea as the Precalc tab: add a new
@@ -1416,7 +1421,7 @@ const SITE_DATA = {
           { date: "2026-10-19", type: "review", label: "Review" },
           { date: "2026-10-20", type: "lesson", label: "4.1" },
           { date: "2026-10-21", type: "lesson", label: "4.2" },
-          { date: "2026-10-22", type: "lesson", label: "4.1 and 4.2 practice" },
+          { date: "2026-10-22", type: "lesson", label: "4.1 and 4.2 practice — Blue Paper (video comparison) due at the start of class" },
           { date: "2026-10-23", type: "no-school", label: "No school" },
           { date: "2026-10-26", type: "lesson", label: "4.3" },
           { date: "2026-10-27", type: "review", label: "Review the unit so far" },
@@ -1597,6 +1602,7 @@ const SITE_DATA = {
       { date: "2026-10-13", label: "3.6" },
       { date: "2026-10-14", label: "Unit 3 review — turned in homework" },
       { date: "2026-10-15", label: "Did the FRQs" },
+      { date: "2026-10-20", label: "4.1 — Blue Paper assigned: video comparison on straight-line motion (due Thursday 10/22)" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2676,6 +2682,9 @@ const SITE_DATA = {
       // ---- Unit 4 (Contextual Applications of Differentiation): links go to pages of the combined
       // Note/Homework packet and Answers PDFs (#page=N). DeltaMath links go to the DeltaMath home page. ----
       "2026-10-20": {
+        assignments: [
+          { label: "Blue Paper — Video Comparison: Straight-Line Motion (4.2) — due Thursday 10/22 at the start of class", file: "files/AP_Calc_Video_Comparison_Straight_Line_Motion_Blue_Paper.docx" }
+        ],
         notes: { label: "Notes 4.1 (packet pp. 1–4)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=1" },
         homework: [
           { label: "Homework 4.1 (packet p. 5)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=5" }
@@ -2691,6 +2700,9 @@ const SITE_DATA = {
         ]
       },
       "2026-10-21": {
+        assignments: [
+          { label: "Blue Paper — Video Comparison: Straight-Line Motion (4.2) — due tomorrow (Thursday 10/22) at the start of class", file: "files/AP_Calc_Video_Comparison_Straight_Line_Motion_Blue_Paper.docx" }
+        ],
         notes: { label: "Notes 4.2 (packet pp. 6–10)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=6" },
         homework: [
           { label: "Homework 4.2 (packet pp. 11–13)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=11" }
@@ -2706,6 +2718,9 @@ const SITE_DATA = {
         ]
       },
       "2026-10-22": {
+        assignments: [
+          { label: "Blue Paper — Video Comparison: Straight-Line Motion (4.2) — due today at the start of class", file: "files/AP_Calc_Video_Comparison_Straight_Line_Motion_Blue_Paper.docx" }
+        ],
         notes: { label: "Notes 4.1 (packet pp. 1–4)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=1" },
         homework: [
           { label: "Homework 4.1 (packet p. 5)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=5" },
