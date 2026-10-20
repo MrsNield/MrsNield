@@ -17,8 +17,8 @@ const SITE_DATA = {
   honors: {
     // Short-lived notice at the top of the Honors page (see apcalc.announcement).
     announcement: {
-      text: "TSI Practice Test — we're taking it in class tomorrow (Wed 10/14). <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdJ2OTg0XUQa5w1zWP3JkQd0D8IOk3DscYOUe71MK48WgW_6A/viewform?usp=header\" target=\"_blank\" rel=\"noopener\">Click here to open the TSI Practice Test</a>",
-      showUntil: "2026-10-14"
+      text: "Blue Paper — Video Comparison: Inverse Functions is due Thursday, Oct 22, at the start of class. <a href=\"files/Honors_Video_Comparison_Inverse_Functions_Blue_Paper.docx\" target=\"_blank\" rel=\"noopener\">Click here to download the Blue Paper</a>",
+      showUntil: "2026-10-22"
     },
 
     units: [
@@ -97,7 +97,7 @@ const SITE_DATA = {
           },
           {
             id: "2-3", target: "Determine and represent inverse functions", teks: "P.2.E",
-            status: "covered", dates: "Sep 30, Oct 8",
+            status: "covered", dates: "Sep 30, Oct 8, Oct 20",
             basic: "Determine the inverse of a linear function. For f(x) = ½x + 3, the inverse is f⁻¹(x) = 2x – 6.",
             intermediate: "Determine inverse functions for given trigonometric or exponential functions.",
             advanced: "Solve for an inverse function using proper notation and check for extraneous solutions."
@@ -188,23 +188,26 @@ const SITE_DATA = {
         { date: "2026-10-13", type: "lesson", label: "DeltaMath — 2-3 Determine and represent inverse functions" },
         { date: "2026-10-14", type: "quiz", label: "TSI quiz (TSI practice test)" },
         { date: "2026-10-15", type: "lesson", label: "Finish DeltaMath — Logarithms" },
-        { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" }
+        { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" },
+        { date: "2026-10-20", type: "lesson", label: "Inverse functions (Blue Paper assigned: video comparison)" },
+        { date: "2026-10-21", type: "lesson", label: "Inverse functions" },
+        { date: "2026-10-22", type: "lesson", label: "Inverse functions — Blue Paper (video comparison) due at the start of class" }
       ]},
       { id: "cal-unit3", name: "Unit 3: Polynomials and Factoring", schedule: [
         { date: "2026-10-19", type: "lesson", label: "DeltaMath work day" },
-        { date: "2026-10-20", type: "lesson", label: "3-1 — Factoring out the greatest common factor" },
-        { date: "2026-10-21", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient of 1)" },
-        { date: "2026-10-22", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient greater than 1)" },
-        { date: "2026-10-26", type: "lesson", label: "3-5 — Difference of squares" },
-        { date: "2026-10-27", type: "lesson", label: "3-6 — Sum and difference of cubes" },
-        { date: "2026-10-28", type: "lesson", label: "3-3 — Completing the square" },
-        { date: "2026-10-29", type: "lesson", label: "3-3 — Completing the square (leading coefficient greater than 1) and the quadratic formula" },
-        { date: "2026-10-30", type: "lesson", label: "3-4 — The Fundamental Theorem of Algebra: roots and factors" },
-        { date: "2026-11-02", type: "review", label: "Unit 3 review" },
-        { date: "2026-11-03", type: "test", label: "Unit 3 test" }
+        { date: "2026-10-26", type: "lesson", label: "3-1 — Factoring out the greatest common factor" },
+        { date: "2026-10-27", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient of 1)" },
+        { date: "2026-10-28", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient greater than 1)" },
+        { date: "2026-10-29", type: "lesson", label: "3-5 — Difference of squares" },
+        { date: "2026-10-30", type: "lesson", label: "3-6 — Sum and difference of cubes" },
+        { date: "2026-11-02", type: "lesson", label: "3-3 — Completing the square" },
+        { date: "2026-11-03", type: "lesson", label: "3-3 — Completing the square (leading coefficient greater than 1) and the quadratic formula" },
+        { date: "2026-11-04", type: "lesson", label: "3-4 — The Fundamental Theorem of Algebra: roots and factors" },
+        { date: "2026-11-05", type: "review", label: "Unit 3 review" },
+        { date: "2026-11-06", type: "test", label: "Unit 3 test" }
       ]},
       { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-04", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test, runs through about Nov 6–10 (approximate)" }
+        { date: "2026-11-09", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test (approximate)" }
       ]},
       { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
         { date: "2026-11-11", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — runs through Dec 3" }
@@ -302,7 +305,8 @@ const SITE_DATA = {
       { date: "2026-10-09", objective: "Practice with logs and exponents — if you missed, get the paper from the folder to complete and turn in" },
       { date: "2026-10-13", objective: "DeltaMath — 2-3 Determine and represent inverse functions" },
       { date: "2026-10-14", objective: "TSI practice test and DeltaMath" },
-      { date: "2026-10-15", objective: "DeltaMath — 2-3 Determine and represent inverse functions and Logarithms" }
+      { date: "2026-10-15", objective: "DeltaMath — 2-3 Determine and represent inverse functions and Logarithms" },
+      { date: "2026-10-20", objective: "2-3" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -448,57 +452,73 @@ const SITE_DATA = {
           { label: "Logarithms", url: "https://www.deltamath.com/app/assignment/34365241" }
         ]
       },
-      // ---- Unit 3 (Polynomials and Factoring): the day's worksheet for absent students, plus that objective's DeltaMath ----
+      // ---- Inverse functions (2-3) week: the Blue Paper video comparison, due Thu 10/22 at the start of class ----
       {
         date: "2026-10-20",
+        notes: { label: "Blue Paper — Video Comparison: Inverse Functions (due Thursday 10/22 at the start of class)", file: "files/Honors_Video_Comparison_Inverse_Functions_Blue_Paper.docx" },
+        instructions: "Blue Paper assigned today: find two different videos about inverse functions, then compare and contrast them. It is due at the start of class on Thursday, October 22."
+      },
+      {
+        date: "2026-10-21",
+        notes: { label: "Blue Paper — Video Comparison: Inverse Functions (due Thursday 10/22 at the start of class)", file: "files/Honors_Video_Comparison_Inverse_Functions_Blue_Paper.docx" },
+        instructions: "Reminder: the Blue Paper is due at the start of class on Thursday, October 22."
+      },
+      {
+        date: "2026-10-22",
+        notes: { label: "Blue Paper — Video Comparison: Inverse Functions (due today at the start of class)", file: "files/Honors_Video_Comparison_Inverse_Functions_Blue_Paper.docx" },
+        instructions: "The Blue Paper is due at the start of class today."
+      },
+      // ---- Unit 3 (Polynomials and Factoring): the day's worksheet for absent students, plus that objective's DeltaMath ----
+      {
+        date: "2026-10-26",
         notes: { label: "Worksheet — 3-1 Greatest Common Factor", file: "files/Honors_Unit3_3-1_Greatest_Common_Factor_Worksheet.pdf" },
         deltamath: [{ label: "3-1 Factor out the greatest common factor", url: "https://www.deltamath.com/app/assignment/34418420" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-1) has a video, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-10-21",
+        date: "2026-10-27",
         notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_1_Worksheet.pdf" },
         deltamath: [{ label: "3-2 Factor quadratic expressions", url: "https://www.deltamath.com/app/assignment/34418447" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-10-22",
+        date: "2026-10-28",
         notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient greater than 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_Greater_Than_1_Worksheet.pdf" },
         deltamath: [{ label: "3-2 Factor quadratic expressions", url: "https://www.deltamath.com/app/assignment/34418447" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-10-26",
+        date: "2026-10-29",
         notes: { label: "Worksheet — 3-5 Difference of Squares", file: "files/Honors_Unit3_3-5_Difference_of_Squares_Worksheet.pdf" },
         deltamath: [{ label: "3-5 Factor a difference of squares", url: "https://www.deltamath.com/app/assignment/34418532" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-5) has vocabulary and practice problems with answers."
       },
       {
-        date: "2026-10-27",
+        date: "2026-10-30",
         notes: { label: "Worksheet — 3-6 Sum and Difference of Cubes", file: "files/Honors_Unit3_3-6_Sum_and_Difference_of_Cubes_Worksheet.pdf" },
         deltamath: [{ label: "3-6 Factor a sum and difference of cubes", url: "https://www.deltamath.com/app/assignment/34418537" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-6) has vocabulary and practice problems with answers."
       },
       {
-        date: "2026-10-28",
+        date: "2026-11-02",
         notes: { label: "Worksheet — 3-3 Completing the Square", file: "files/Honors_Unit3_3-3_Completing_the_Square_Worksheet.pdf" },
         deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-10-29",
+        date: "2026-11-03",
         notes: { label: "Worksheet — 3-3 Completing the Square and the Quadratic Formula", file: "files/Honors_Unit3_3-3_Completing_the_Square_and_Quadratic_Formula_Worksheet.pdf" },
         deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-10-30",
+        date: "2026-11-04",
         notes: { label: "Worksheet — 3-4 The Fundamental Theorem of Algebra", file: "files/Honors_Unit3_3-4_Fundamental_Theorem_of_Algebra_Worksheet.pdf" },
         deltamath: [{ label: "3-4 Fundamental Theorem of Algebra", url: "https://www.deltamath.com/app/assignment/34418517" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-4) has videos, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-11-02",
+        date: "2026-11-05",
         notes: { label: "Unit 3 Review Packet", file: "files/Honors_Unit3_Review_Packet.pdf" },
         instructions: "Absent? Print the review packet and complete it before the Unit 3 test."
       }
