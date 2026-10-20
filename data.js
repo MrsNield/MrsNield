@@ -188,7 +188,7 @@ const SITE_DATA = {
         { date: "2026-10-13", type: "lesson", label: "DeltaMath — 2-3 Determine and represent inverse functions" },
         { date: "2026-10-14", type: "quiz", label: "TSI quiz (TSI practice test)" },
         { date: "2026-10-15", type: "lesson", label: "Finish DeltaMath — Logarithms" },
-        { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions" },
+        { date: "2026-10-16", type: "quiz", label: "Quiz — composition of functions. DeltaMath 2-3 and Logarithms due" },
         { date: "2026-10-20", type: "lesson", label: "Inverse functions (Blue Paper assigned: video comparison)" },
         { date: "2026-10-21", type: "lesson", label: "Inverse functions" },
         { date: "2026-10-22", type: "lesson", label: "Inverse functions — Blue Paper (video comparison) due at the start of class" }
@@ -307,6 +307,7 @@ const SITE_DATA = {
       { date: "2026-10-14", objective: "TSI practice test and DeltaMath" },
       { date: "2026-10-15", objective: "DeltaMath — 2-3 Determine and represent inverse functions and Logarithms" },
       { date: "2026-10-16", objective: "Quiz — composition of functions" },
+      { date: "2026-10-16", objective: "DeltaMath due: 2-3 Determine and represent inverse functions and Logarithms" },
       { date: "2026-10-19", objective: "DeltaMath work day" },
       { date: "2026-10-20", objective: "2-3" }
     ],
@@ -446,6 +447,13 @@ const SITE_DATA = {
         deltamath: [
           { label: "2-3 Determine and represent inverse functions", url: "https://www.deltamath.com/app/assignment/34295541" },
           { label: "Logarithms", url: "https://www.deltamath.com/app/assignment/34365241" }
+        ]
+      },
+      {
+        date: "2026-10-16",
+        deltamath: [
+          { label: "2-3 Determine and represent inverse functions (due today)", url: "https://www.deltamath.com/app/assignment/34295541" },
+          { label: "Logarithms (due today)", url: "https://www.deltamath.com/app/assignment/34365241" }
         ]
       },
       {
