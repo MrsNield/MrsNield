@@ -306,6 +306,8 @@ const SITE_DATA = {
       { date: "2026-10-13", objective: "DeltaMath — 2-3 Determine and represent inverse functions" },
       { date: "2026-10-14", objective: "TSI practice test and DeltaMath" },
       { date: "2026-10-15", objective: "DeltaMath — 2-3 Determine and represent inverse functions and Logarithms" },
+      { date: "2026-10-16", objective: "Quiz — composition of functions" },
+      { date: "2026-10-19", objective: "DeltaMath work day" },
       { date: "2026-10-20", objective: "2-3" }
     ],
 
