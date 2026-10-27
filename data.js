@@ -17,8 +17,8 @@ const SITE_DATA = {
   honors: {
     // Short-lived notice at the top of the Honors page (see apcalc.announcement).
     announcement: {
-      text: "Blue Paper — Video Comparison: Inverse Functions is due Thursday, Oct 22, at the start of class. <a href=\"files/Honors_Video_Comparison_Inverse_Functions_Blue_Paper.docx\" target=\"_blank\" rel=\"noopener\">Click here to download the Blue Paper</a>",
-      showUntil: "2026-10-22"
+      text: "Multiplicity paper — page 2 is due Thursday, Oct 29. <a href=\"files/Honors_Multiplicity_Activity.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Click here for the page 2 answers</a>",
+      showUntil: "2026-10-29"
     },
 
     units: [
@@ -117,7 +117,7 @@ const SITE_DATA = {
         objectives: [
           {
             id: "3-1", target: "Factor out the greatest common factor", teks: "P.5.J",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Oct 27",
             basic: "Factor out the greatest common factor (GCF) from a polynomial, e.g. 12x + 6 = ___( ___ ).",
             intermediate: "",
             advanced: ""
@@ -198,7 +198,7 @@ const SITE_DATA = {
         { date: "2026-10-26", type: "lesson", label: "Multiplicity paper in class (zeros, linear factors, and multiplicity)" },
         { date: "2026-10-27", type: "lesson", label: "3-1 — Factoring out the greatest common factor" },
         { date: "2026-10-28", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient of 1)" },
-        { date: "2026-10-29", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient greater than 1)" },
+        { date: "2026-10-29", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient greater than 1). Multiplicity paper, page 2, is due" },
         { date: "2026-10-30", type: "lesson", label: "3-5 — Difference of squares" },
         { date: "2026-11-02", type: "lesson", label: "3-6 — Sum and difference of cubes" },
         { date: "2026-11-03", type: "lesson", label: "3-3 — Completing the square" },
@@ -314,7 +314,9 @@ const SITE_DATA = {
       { date: "2026-10-20", objective: "Blue Paper assigned — video comparison on inverse functions (due Thursday 10/22 at the start of class)" },
       { date: "2026-10-21", objective: "2-3" },
       { date: "2026-10-22", objective: "2-3" },
-      { date: "2026-10-22", objective: "Blue Paper — video comparison on inverse functions — due at the start of class" }
+      { date: "2026-10-22", objective: "Blue Paper — video comparison on inverse functions — due at the start of class" },
+      { date: "2026-10-26", objective: "Multiplicity paper — zeros, linear factors, and multiplicity (page 2 is due Thursday 10/29)" },
+      { date: "2026-10-27", objective: "3-1" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -490,8 +492,17 @@ const SITE_DATA = {
       // ---- Unit 3 (Polynomials and Factoring): the day's worksheet for absent students, plus that objective's DeltaMath ----
       {
         date: "2026-10-26",
-        notes: { label: "Notes — Zeros, Linear Factors, and Multiplicity (filled in)", file: "files/Honors_Multiplicity_Activity.pdf" },
-        instructions: "In class: the Multiplicity paper on zeros, linear factors, and multiplicity. This copy is filled in, so you can check your work or catch up if you were absent."
+        notes: { label: "Page 2 ANSWERS — Homework 4: Zeros and Multiplicity (due Thursday 10/29)", file: "files/Honors_Multiplicity_Activity.pdf#page=4" },
+        instructions: "Page 2 of the Multiplicity paper is due Thursday, October 29. The button above opens the answers for page 2 so you can check your work."
+      },
+      {
+        date: "2026-10-26",
+        notes: { label: "Page 1 answers — Homework 4: Zeros and Multiplicity", file: "files/Honors_Multiplicity_Activity.pdf#page=3" }
+      },
+      {
+        date: "2026-10-26",
+        notes: { label: "Notes — Zeros, Linear Factors, and Multiplicity (filled in)", file: "files/Honors_Multiplicity_Activity.pdf#page=1" },
+        instructions: "Done in class on Monday. This copy is filled in, so you can check your work or catch up if you were absent."
       },
       {
         date: "2026-10-27",
@@ -504,6 +515,11 @@ const SITE_DATA = {
         notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_1_Worksheet.pdf" },
         deltamath: [{ label: "3-2 Factor quadratic expressions", url: "https://www.deltamath.com/app/assignment/34418447" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-10-29",
+        notes: { label: "Page 2 ANSWERS — Homework 4: Zeros and Multiplicity (due today)", file: "files/Honors_Multiplicity_Activity.pdf#page=4" },
+        instructions: "Page 2 of the Multiplicity paper is due today."
       },
       {
         date: "2026-10-29",
@@ -1616,6 +1632,8 @@ const SITE_DATA = {
       { date: "2026-10-20", label: "4.1 — Blue Paper assigned: video comparison on straight-line motion (due Thursday 10/22)" },
       { date: "2026-10-21", label: "4.2" },
       { date: "2026-10-22", label: "4.1 and 4.2 practice — Blue Paper turned in" },
+      { date: "2026-10-26", label: "4.3" },
+      { date: "2026-10-27", label: "4.4" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2767,8 +2785,19 @@ const SITE_DATA = {
         ]
       },
       "2026-10-27": {
+        notes: { label: "Notes 4.4 (packet pp. 20–23)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=20" },
+        homework: [
+          { label: "Homework 4.4 (packet pp. 24–25)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=24" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.4 — Answers (pp. 8–9)", file: "files/AP_Calc_Unit4_Answers.pdf#page=8" }
+        ],
         videos: [
+          { title: "4.4 — Introduction to Related Rates", url: "https://calculus.flippedmath.com/44-introduction-to-related-rates.html" },
           { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
+        ],
+        deltamath: [
+          { label: "4.4 — go to DeltaMath", url: "https://www.deltamath.com/" }
         ]
       },
       "2026-10-28": {
