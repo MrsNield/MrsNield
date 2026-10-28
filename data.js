@@ -1023,8 +1023,7 @@ const SITE_DATA = {
   precalc: {
     // Short-lived notice at the top of the Precalculus page (see apcalc.announcement).
     announcement: {
-      text: "TSI Practice Test — we're taking it in class tomorrow (Wed 10/14). <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdJ2OTg0XUQa5w1zWP3JkQd0D8IOk3DscYOUe71MK48WgW_6A/viewform?usp=header\" target=\"_blank\" rel=\"noopener\">Click here to open the TSI Practice Test</a>",
-      showUntil: "2026-10-14"
+      text: "TSI Practice Test — <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdJ2OTg0XUQa5w1zWP3JkQd0D8IOk3DscYOUe71MK48WgW_6A/viewform?usp=header\" target=\"_blank\" rel=\"noopener\">Click here to open the TSI Practice Test</a>"
     },
 
     message: "This class follows the Math Medic Precalculus curriculum. Check the Course Calendar below to see what's been covered (and what's coming up) — if you missed a day, just find the date.",
