@@ -1633,6 +1633,7 @@ const SITE_DATA = {
       { date: "2026-10-22", label: "4.1 and 4.2 practice — Blue Paper turned in" },
       { date: "2026-10-26", label: "4.3" },
       { date: "2026-10-27", label: "4.4" },
+      { date: "2026-10-29", label: "4.5" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
