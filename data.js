@@ -512,9 +512,19 @@ const SITE_DATA = {
       },
       {
         date: "2026-10-28",
+        notes: { label: "Notes — Sum and Difference of Cubes and Factoring by Grouping (completed, with practice and answers)", file: "files/Honors_Notes_Sum_Difference_of_Cubes_and_Factoring_by_Grouping.pdf" },
+        instructions: "Missed class? Read these completed notes, then try the Check Your Understanding problems and compare with the answers."
+      },
+      {
+        date: "2026-10-28",
         notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_1_Worksheet.pdf" },
         deltamath: [{ label: "3-2 Factor quadratic expressions", url: "https://www.deltamath.com/app/assignment/34418447" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-10-29",
+        notes: { label: "Notes — Sum and Difference of Cubes and Factoring by Grouping (completed, with practice and answers)", file: "files/Honors_Notes_Sum_Difference_of_Cubes_and_Factoring_by_Grouping.pdf" },
+        instructions: "Missed class? Read these completed notes, then try the Check Your Understanding problems and compare with the answers."
       },
       {
         date: "2026-10-29",
