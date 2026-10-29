@@ -124,7 +124,7 @@ const SITE_DATA = {
           },
           {
             id: "3-2", target: "Factor quadratic expressions", teks: "P.5.J",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Oct 29",
             basic: "Factor a quadratic with a leading coefficient of 1.",
             intermediate: "Factor a quadratic with a leading coefficient greater than 1.",
             advanced: ""
@@ -145,14 +145,14 @@ const SITE_DATA = {
           },
           {
             id: "3-5", target: "Factor a difference of squares", teks: "P.5.J",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Oct 28",
             basic: "Recognize and factor a difference of squares correctly.",
             intermediate: "",
             advanced: ""
           },
           {
             id: "3-6", target: "Factor a sum and difference of cubes", teks: "P.5.J",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Oct 28",
             basic: "Recognize a sum or difference of cubes.",
             intermediate: "Recognize and factor a sum or difference of cubes correctly.",
             advanced: ""
@@ -197,8 +197,8 @@ const SITE_DATA = {
         { date: "2026-10-19", type: "lesson", label: "DeltaMath work day" },
         { date: "2026-10-26", type: "lesson", label: "Multiplicity paper in class (zeros, linear factors, and multiplicity)" },
         { date: "2026-10-27", type: "lesson", label: "3-1 — Factoring out the greatest common factor" },
-        { date: "2026-10-28", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient of 1)" },
-        { date: "2026-10-29", type: "lesson", label: "3-2 — Factoring quadratics (leading coefficient greater than 1). Multiplicity paper, page 2, is due" },
+        { date: "2026-10-28", type: "lesson", label: "3-5 — Difference of squares, and 3-6 — Sum and difference of cubes" },
+        { date: "2026-10-29", type: "lesson", label: "3-2 — Factoring quadratics. Multiplicity paper, page 2, is due" },
         { date: "2026-10-30", type: "lesson", label: "3-5 — Difference of squares" },
         { date: "2026-11-02", type: "lesson", label: "3-6 — Sum and difference of cubes" },
         { date: "2026-11-03", type: "lesson", label: "3-3 — Completing the square" },
@@ -316,7 +316,10 @@ const SITE_DATA = {
       { date: "2026-10-22", objective: "2-3" },
       { date: "2026-10-22", objective: "Blue Paper — video comparison on inverse functions — due at the start of class" },
       { date: "2026-10-26", objective: "Multiplicity paper — zeros, linear factors, and multiplicity (page 2 is due Thursday 10/29)" },
-      { date: "2026-10-27", objective: "3-1" }
+      { date: "2026-10-27", objective: "3-1" },
+      { date: "2026-10-28", objective: "3-5" },
+      { date: "2026-10-28", objective: "3-6" },
+      { date: "2026-10-29", objective: "3-2" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -517,14 +520,24 @@ const SITE_DATA = {
       },
       {
         date: "2026-10-28",
-        notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_1_Worksheet.pdf" },
-        deltamath: [{ label: "3-2 Factor quadratic expressions", url: "https://www.deltamath.com/app/assignment/34418447" }],
-        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
+        notes: { label: "Worksheet — 3-5 Difference of Squares", file: "files/Honors_Unit3_3-5_Difference_of_Squares_Worksheet.pdf" },
+        deltamath: [{ label: "3-5 Factor a difference of squares", url: "https://www.deltamath.com/app/assignment/34418532" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-5) has vocabulary and practice problems with answers."
+      },
+      {
+        date: "2026-10-28",
+        notes: { label: "Worksheet — 3-6 Sum and Difference of Cubes", file: "files/Honors_Unit3_3-6_Sum_and_Difference_of_Cubes_Worksheet.pdf" },
+        deltamath: [{ label: "3-6 Factor a sum and difference of cubes", url: "https://www.deltamath.com/app/assignment/34418537" }],
+        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-6) has vocabulary and practice problems with answers."
       },
       {
         date: "2026-10-29",
         notes: { label: "Notes — Sum and Difference of Cubes and Factoring by Grouping (completed, with practice and answers)", file: "files/Honors_Notes_Sum_Difference_of_Cubes_and_Factoring_by_Grouping.pdf" },
         instructions: "Missed class? Read these completed notes, then try the Check Your Understanding problems and compare with the answers."
+      },
+      {
+        date: "2026-10-29",
+        notes: { label: "Worksheet — 3-2 Factoring Quadratics (leading coefficient 1)", file: "files/Honors_Unit3_3-2_Factoring_Quadratics_Leading_Coefficient_1_Worksheet.pdf" }
       },
       {
         date: "2026-10-29",
