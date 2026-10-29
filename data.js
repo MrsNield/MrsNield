@@ -1458,9 +1458,9 @@ const SITE_DATA = {
           { date: "2026-10-22", type: "lesson", label: "4.1 and 4.2 practice — Blue Paper (video comparison) due at the start of class" },
           { date: "2026-10-23", type: "no-school", label: "No school" },
           { date: "2026-10-26", type: "lesson", label: "4.3" },
-          { date: "2026-10-27", type: "review", label: "Review the unit so far" },
-          { date: "2026-10-28", type: "lesson", label: "4.4" },
-          { date: "2026-10-29", type: "lesson", label: "4.5" },
+          { date: "2026-10-27", type: "lesson", label: "4.4" },
+          { date: "2026-10-28", type: "lesson", label: "4.5" },
+          { date: "2026-10-29", type: "lesson", label: "4.6" },
           { date: "2026-10-30", type: "note", label: "End of 2nd six weeks" }
         ]
       },
@@ -1643,7 +1643,8 @@ const SITE_DATA = {
       { date: "2026-10-22", label: "4.1 and 4.2 practice — Blue Paper turned in" },
       { date: "2026-10-26", label: "4.3" },
       { date: "2026-10-27", label: "4.4" },
-      { date: "2026-10-29", label: "4.5" },
+      { date: "2026-10-28", label: "4.5" },
+      { date: "2026-10-29", label: "4.6" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
@@ -2811,21 +2812,6 @@ const SITE_DATA = {
         ]
       },
       "2026-10-28": {
-        notes: { label: "Notes 4.4 (packet pp. 20–23)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=20" },
-        homework: [
-          { label: "Homework 4.4 (packet pp. 24–25)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=24" }
-        ],
-        homeworkAnswers: [
-          { label: "Homework 4.4 — Answers (pp. 8–9)", file: "files/AP_Calc_Unit4_Answers.pdf#page=8" }
-        ],
-        videos: [
-          { title: "4.4 — Introduction to Related Rates", url: "https://calculus.flippedmath.com/44-introduction-to-related-rates.html" }
-        ],
-        deltamath: [
-          { label: "4.4 — go to DeltaMath", url: "https://www.deltamath.com/" }
-        ]
-      },
-      "2026-10-29": {
         notes: { label: "Notes 4.5 (packet p. 26)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=26" },
         homework: [
           { label: "Homework 4.5 (packet pp. 27–29)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=27" }
@@ -2838,6 +2824,21 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "4.5 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-10-29": {
+        notes: { label: "Notes 4.6 (packet pp. 30–33)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=30" },
+        homework: [
+          { label: "Homework 4.6 (packet pp. 34–36)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=34" }
+        ],
+        homeworkAnswers: [
+          { label: "Homework 4.6 — Answers (pp. 13–15)", file: "files/AP_Calc_Unit4_Answers.pdf#page=13" }
+        ],
+        videos: [
+          { title: "4.6 — Approximating Values of a Function Using Local Linearity and Linearization", url: "https://youtu.be/d8rgqS7D910" }
+        ],
+        deltamath: [
+          { label: "4.6 — go to DeltaMath", url: "https://www.deltamath.com/" }
         ]
       },
       "2026-11-02": {
