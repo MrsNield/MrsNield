@@ -17,8 +17,8 @@ const SITE_DATA = {
   honors: {
     // Short-lived notice at the top of the Honors page (see apcalc.announcement).
     announcement: {
-      text: "Multiplicity paper — page 2 is due Thursday, Oct 29. <a href=\"files/Honors_Multiplicity_Activity.pdf#page=4\" target=\"_blank\" rel=\"noopener\">Click here for the page 2 answers</a>",
-      showUntil: "2026-10-29"
+      text: "Band students: if you are out for State (Tuesday 11/3 through Thursday 11/5), complete the Function of the Day for each day you miss. They are on the Bellringers tab.",
+      showUntil: "2026-11-06"
     },
 
     units: [
@@ -199,16 +199,16 @@ const SITE_DATA = {
         { date: "2026-10-27", type: "lesson", label: "3-1 — Factoring out the greatest common factor" },
         { date: "2026-10-28", type: "lesson", label: "3-5 — Difference of squares, and 3-6 — Sum and difference of cubes" },
         { date: "2026-10-29", type: "lesson", label: "3-2 — Factoring quadratics. Multiplicity paper, page 2, is due" },
-        { date: "2026-10-30", type: "lesson", label: "3-5 — Difference of squares" },
-        { date: "2026-11-02", type: "lesson", label: "3-6 — Sum and difference of cubes" },
-        { date: "2026-11-03", type: "lesson", label: "3-3 — Completing the square" },
-        { date: "2026-11-04", type: "lesson", label: "3-3 — Completing the square (leading coefficient greater than 1) and the quadratic formula" },
-        { date: "2026-11-05", type: "lesson", label: "3-4 — The Fundamental Theorem of Algebra: roots and factors" },
-        { date: "2026-11-06", type: "review", label: "Unit 3 review" },
-        { date: "2026-11-09", type: "test", label: "Unit 3 test" }
+        { date: "2026-11-02", type: "lesson", label: "3-4 — The Fundamental Theorem of Algebra: roots and factors" },
+        { date: "2026-11-03", type: "lesson", label: "Factoring practice in class (band is out for state: band students complete the Functions of the Day they miss)" },
+        { date: "2026-11-04", type: "lesson", label: "Factoring practice in class (band is out for state: band students complete the Functions of the Day they miss)" },
+        { date: "2026-11-05", type: "lesson", label: "Factoring practice in class (band is out for state: band students complete the Functions of the Day they miss)" },
+        { date: "2026-11-06", type: "lesson", label: "3-3 — Completing the square" },
+        { date: "2026-11-09", type: "review", label: "Unit 3 review" },
+        { date: "2026-11-10", type: "test", label: "Unit 3 test" }
       ]},
       { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-10", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test (approximate)" }
+        { date: "2026-11-11", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test (approximate)" }
       ]},
       { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
         { date: "2026-11-11", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — runs through Dec 3" }
@@ -243,6 +243,7 @@ const SITE_DATA = {
         { date: "2026-10-02", type: "no-school", label: "No school" },
         { date: "2026-10-12", type: "no-school", label: "No school" },
         { date: "2026-10-23", type: "no-school", label: "No school" },
+        { date: "2026-10-30", type: "no-school", label: "No school" },
         { date: "2026-11-13", type: "no-school", label: "No school" },
         { date: "2026-11-23", type: "no-school", label: "Thanksgiving break (Nov 23–27)" },
         { date: "2026-12-04", type: "no-school", label: "No school" },
@@ -551,37 +552,25 @@ const SITE_DATA = {
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-10-30",
-        notes: { label: "Worksheet — 3-5 Difference of Squares", file: "files/Honors_Unit3_3-5_Difference_of_Squares_Worksheet.pdf" },
-        deltamath: [{ label: "3-5 Factor a difference of squares", url: "https://www.deltamath.com/app/assignment/34418532" }],
-        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-5) has vocabulary and practice problems with answers."
-      },
-      {
-        date: "2026-11-02",
-        notes: { label: "Worksheet — 3-6 Sum and Difference of Cubes", file: "files/Honors_Unit3_3-6_Sum_and_Difference_of_Cubes_Worksheet.pdf" },
-        deltamath: [{ label: "3-6 Factor a sum and difference of cubes", url: "https://www.deltamath.com/app/assignment/34418537" }],
-        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-6) has vocabulary and practice problems with answers."
-      },
-      {
-        date: "2026-11-03",
+        date: "2026-11-06",
         notes: { label: "Worksheet — 3-3 Completing the Square", file: "files/Honors_Unit3_3-3_Completing_the_Square_Worksheet.pdf" },
         deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-11-04",
+        date: "2026-11-06",
         notes: { label: "Worksheet — 3-3 Completing the Square and the Quadratic Formula", file: "files/Honors_Unit3_3-3_Completing_the_Square_and_Quadratic_Formula_Worksheet.pdf" },
         deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-11-05",
+        date: "2026-11-02",
         notes: { label: "Worksheet — 3-4 The Fundamental Theorem of Algebra", file: "files/Honors_Unit3_3-4_Fundamental_Theorem_of_Algebra_Worksheet.pdf" },
         deltamath: [{ label: "3-4 Fundamental Theorem of Algebra", url: "https://www.deltamath.com/app/assignment/34418517" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-4) has videos, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-11-06",
+        date: "2026-11-09",
         notes: { label: "Unit 3 Review Packet", file: "files/Honors_Unit3_Review_Packet.pdf" },
         instructions: "Absent? Print the review packet and complete it before the Unit 3 test."
       }
@@ -1474,41 +1463,41 @@ const SITE_DATA = {
           { date: "2026-10-27", type: "lesson", label: "4.4" },
           { date: "2026-10-28", type: "lesson", label: "4.5" },
           { date: "2026-10-29", type: "lesson", label: "4.6" },
-          { date: "2026-10-30", type: "note", label: "End of 2nd six weeks" }
+          { date: "2026-10-30", type: "no-school", label: "No school (end of 2nd six weeks)" }
         ]
       },
       {
         id: "sw3", name: "3rd Six Weeks (Nov 2 – Dec 18, incl. Final Exam)",
         schedule: [
-          { date: "2026-11-02", type: "lesson", label: "4.6 — Start of 3rd six weeks" },
-          { date: "2026-11-03", type: "lesson", label: "4.7" },
-          { date: "2026-11-04", type: "review", label: "Review the unit + turn in homework" },
-          { date: "2026-11-05", type: "frq", label: "FRQ day — FRQs are due at the start of the period" },
-          { date: "2026-11-06", type: "test", label: "Test — turn in your multiple choice questions at the start of the period" },
-          { date: "2026-11-09", type: "review", label: "Review" },
-          { date: "2026-11-10", type: "lesson", label: "5.1" },
-          { date: "2026-11-11", type: "lesson", label: "5.2" },
-          { date: "2026-11-12", type: "lesson", label: "5.3" },
+          { date: "2026-11-02", type: "lesson", label: "4.7 — Start of 3rd six weeks" },
+          { date: "2026-11-03", type: "review", label: "Unit 4 review and Deriver's License test practice (band is out for state)" },
+          { date: "2026-11-04", type: "review", label: "Unit 4 review and Deriver's License test practice (band is out for state)" },
+          { date: "2026-11-05", type: "review", label: "Unit 4 review and Deriver's License test practice (band is out for state)" },
+          { date: "2026-11-06", type: "review", label: "Review the unit + turn in homework" },
+          { date: "2026-11-09", type: "frq", label: "FRQ day — FRQs are due at the start of the period" },
+          { date: "2026-11-10", type: "test", label: "Test — turn in your multiple choice questions at the start of the period" },
+          { date: "2026-11-11", type: "review", label: "Review" },
+          { date: "2026-11-12", type: "lesson", label: "5.1" },
           { date: "2026-11-13", type: "no-school", label: "No school" },
-          { date: "2026-11-16", type: "lesson", label: "5.4" },
-          { date: "2026-11-17", type: "lesson", label: "5.5" },
-          { date: "2026-11-18", type: "lesson", label: "5.6" },
-          { date: "2026-11-19", type: "lesson", label: "5.7" },
-          { date: "2026-11-20", type: "review", label: "Review" },
+          { date: "2026-11-16", type: "lesson", label: "5.2" },
+          { date: "2026-11-17", type: "lesson", label: "5.3" },
+          { date: "2026-11-18", type: "lesson", label: "5.4" },
+          { date: "2026-11-19", type: "review", label: "Review" },
+          { date: "2026-11-20", type: "lesson", label: "5.5" },
           { date: "2026-11-23", type: "no-school", label: "Thanksgiving break (Nov 23–27)" },
-          { date: "2026-11-30", type: "review", label: "Review" },
-          { date: "2026-12-01", type: "lesson", label: "5.8" },
+          { date: "2026-11-30", type: "lesson", label: "5.6" },
+          { date: "2026-12-01", type: "lesson", label: "5.7" },
           { date: "2026-12-02", type: "review", label: "Review" },
-          { date: "2026-12-03", type: "lesson", label: "5.9" },
+          { date: "2026-12-03", type: "review", label: "Review" },
           { date: "2026-12-04", type: "no-school", label: "No school" },
-          { date: "2026-12-07", type: "review", label: "Review + turn in homework" },
-          { date: "2026-12-08", type: "frq", label: "FRQ — due at the start of the period" },
-          { date: "2026-12-09", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
-          { date: "2026-12-10", type: "review", label: "Review" },
-          { date: "2026-12-11", type: "lesson", label: "6.1" },
-          { date: "2026-12-14", type: "lesson", label: "6.2" },
-          { date: "2026-12-15", type: "lesson", label: "6.3" },
-          { date: "2026-12-16", type: "lesson", label: "6.4" },
+          { date: "2026-12-07", type: "lesson", label: "5.8" },
+          { date: "2026-12-08", type: "review", label: "Review" },
+          { date: "2026-12-09", type: "lesson", label: "5.9" },
+          { date: "2026-12-10", type: "review", label: "Review + turn in homework" },
+          { date: "2026-12-11", type: "frq", label: "FRQ — due at the start of the period" },
+          { date: "2026-12-14", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
+          { date: "2026-12-15", type: "review", label: "Review" },
+          { date: "2026-12-16", type: "lesson", label: "6.1" },
           { date: "2026-12-17", type: "final", label: "End of 3rd six weeks / Final exam" },
           { date: "2026-12-18", type: "final", label: "Final exam" },
           { date: "2026-12-21", type: "no-school", label: "Christmas break begins (Dec 21 – Jan 4)" }
@@ -1517,9 +1506,9 @@ const SITE_DATA = {
       {
         id: "sw4", name: "4th Six Weeks (Jan 5 – Feb 11)",
         schedule: [
-          { date: "2027-01-05", type: "review", label: "First day back / Review (please confirm — assumes Jan 5–7 are review, 6.5 starts Jan 8)" },
-          { date: "2027-01-06", type: "review", label: "Review" },
-          { date: "2027-01-07", type: "review", label: "Review" },
+          { date: "2027-01-05", type: "lesson", label: "6.2 — First day back" },
+          { date: "2027-01-06", type: "lesson", label: "6.3" },
+          { date: "2027-01-07", type: "lesson", label: "6.4" },
           { date: "2027-01-08", type: "lesson", label: "6.5" },
           { date: "2027-01-11", type: "lesson", label: "6.6" },
           { date: "2027-01-12", type: "lesson", label: "6.7" },
@@ -2855,21 +2844,6 @@ const SITE_DATA = {
         ]
       },
       "2026-11-02": {
-        notes: { label: "Notes 4.6 (packet pp. 30–33)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=30" },
-        homework: [
-          { label: "Homework 4.6 (packet pp. 34–36)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=34" }
-        ],
-        homeworkAnswers: [
-          { label: "Homework 4.6 — Answers (pp. 13–15)", file: "files/AP_Calc_Unit4_Answers.pdf#page=13" }
-        ],
-        videos: [
-          { title: "4.6 — Approximating Values of a Function Using Local Linearity and Linearization", url: "https://youtu.be/d8rgqS7D910" }
-        ],
-        deltamath: [
-          { label: "4.6 — go to DeltaMath", url: "https://www.deltamath.com/" }
-        ]
-      },
-      "2026-11-03": {
         notes: { label: "Notes 4.7 (packet pp. 37–41)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=37" },
         homework: [
           { label: "Homework 4.7 (packet pp. 42–43)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=42" }
@@ -2882,6 +2856,11 @@ const SITE_DATA = {
         ],
         deltamath: [
           { label: "4.7 — go to DeltaMath", url: "https://www.deltamath.com/" }
+        ]
+      },
+      "2026-11-03": {
+        videos: [
+          { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
         ]
       },
       "2026-11-04": {
@@ -2900,6 +2879,11 @@ const SITE_DATA = {
         ]
       },
       "2026-11-09": {
+        videos: [
+          { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
+        ]
+      },
+      "2026-11-10": {
         videos: [
           { title: "Unit 4 Review", url: "https://youtu.be/xkxe-7c1teY" }
         ]
