@@ -208,10 +208,10 @@ const SITE_DATA = {
         { date: "2026-11-10", type: "test", label: "Unit 3 test" }
       ]},
       { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-11", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test (approximate)" }
+        { date: "2026-11-11", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test, runs about a week (approximate)" }
       ]},
       { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
-        { date: "2026-11-11", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — runs through Dec 3" }
+        { date: "2026-11-19", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — starts about Nov 19, runs into early December (approximate)" }
       ]},
       { id: "cal-unit6", name: "Unit 6: Sequences, Series, and Binomial Expansion", schedule: [
         { date: "2026-12-07", type: "lesson", label: "Sequences, Series, and Binomial Expansion — runs through Dec 18" }
