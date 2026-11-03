@@ -131,7 +131,7 @@ const SITE_DATA = {
           },
           {
             id: "3-3", target: "Complete the square and derive the quadratic formula", teks: "P.5.J",
-            status: "not-started", dates: "",
+            status: "in-progress", dates: "Nov 2",
             basic: "Understand and apply the process of completing the square for simple quadratics, rewriting a quadratic equation in the form (x – p)² = q that has the same solutions.",
             intermediate: "Complete the square when the leading coefficient is greater than 1 and solve the resulting equation.",
             advanced: "Derive the quadratic formula by completing the square on the general quadratic equation."
@@ -320,7 +320,8 @@ const SITE_DATA = {
       { date: "2026-10-27", objective: "3-1" },
       { date: "2026-10-28", objective: "3-5" },
       { date: "2026-10-28", objective: "3-6" },
-      { date: "2026-10-29", objective: "3-2" }
+      { date: "2026-10-29", objective: "3-2" },
+      { date: "2026-11-02", objective: "3-3" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -562,6 +563,12 @@ const SITE_DATA = {
         notes: { label: "Worksheet — 3-3 Completing the Square and the Quadratic Formula", file: "files/Honors_Unit3_3-3_Completing_the_Square_and_Quadratic_Formula_Worksheet.pdf" },
         deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-11-02",
+        notes: { label: "Worksheet — 3-3 Completing the Square", file: "files/Honors_Unit3_3-3_Completing_the_Square_Worksheet.pdf" },
+        deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
+        instructions: "Absent? Print the completing the square handout and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
       },
       {
         date: "2026-11-02",
@@ -1091,7 +1098,8 @@ const SITE_DATA = {
           { label: "Homework Answer Key — 1.10", file: "files/Precalc_Unit1_Homework_1.10_Answer_Key.pdf" },
           { label: "Notes Filled In — 1.10", file: "files/Precalc_Unit1_Notes_1.10_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.11", file: "files/Precalc_Unit1_Homework_1.11_Answer_Key.pdf" },
-          { label: "Notes Filled In — 1.11", file: "files/Precalc_Unit1_Notes_1.11_Filled_In.pdf" }
+          { label: "Notes Filled In — 1.11", file: "files/Precalc_Unit1_Notes_1.11_Filled_In.pdf" },
+          { label: "Answer Key — Piecewise Functions Notes and Homework 8", file: "files/Precalc_Piecewise_Functions_Answer_Key.pdf" }
         ]
       }
     ],
@@ -1198,7 +1206,7 @@ const SITE_DATA = {
         schedule: [
           { date: "2026-10-28", type: "lesson", label: "2.1 — Connecting Quadratics" },
           { date: "2026-10-29", type: "homework", label: "" },
-          { date: "2026-11-02", type: "lesson", label: "2.2 — Completing the Square" },
+          { date: "2026-11-02", type: "lesson", label: "Piecewise Functions paper (started in class). Check your answers with the Answer Key on the Unit Resources tab" },
           { date: "2026-11-03", type: "homework", label: "" },
           { date: "2026-11-04", type: "lesson", label: "2.3 — Polynomials in the Short Run" },
           { date: "2026-11-05", type: "homework", label: "" },
@@ -1646,6 +1654,7 @@ const SITE_DATA = {
       { date: "2026-10-27", label: "4.4" },
       { date: "2026-10-28", label: "4.5" },
       { date: "2026-10-29", label: "4.6" },
+      { date: "2026-11-02", label: "4.7" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
