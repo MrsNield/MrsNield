@@ -1098,8 +1098,15 @@ const SITE_DATA = {
           { label: "Homework Answer Key — 1.10", file: "files/Precalc_Unit1_Homework_1.10_Answer_Key.pdf" },
           { label: "Notes Filled In — 1.10", file: "files/Precalc_Unit1_Notes_1.10_Filled_In.pdf" },
           { label: "Homework Answer Key — 1.11", file: "files/Precalc_Unit1_Homework_1.11_Answer_Key.pdf" },
-          { label: "Notes Filled In — 1.11", file: "files/Precalc_Unit1_Notes_1.11_Filled_In.pdf" },
-          { label: "Answer Key — Piecewise Functions Notes and Homework 8", file: "files/Precalc_Piecewise_Functions_Answer_Key.pdf" }
+          { label: "Notes Filled In — 1.11", file: "files/Precalc_Unit1_Notes_1.11_Filled_In.pdf" }
+        ]
+      },
+      {
+        id: "unit-piecewise",
+        name: "Piecewise Functions Unit 2",
+        resources: [
+          { label: "Filled In — Piecewise Functions Notes and Homework 8", file: "files/Precalc_Piecewise_Functions_Notes_and_Homework_8_Filled_In.pdf" },
+          { label: "Answer Key (answers only) — Piecewise Functions Notes and Homework 8", file: "files/Precalc_Piecewise_Functions_Answer_Key.pdf" }
         ]
       }
     ],
@@ -1205,12 +1212,24 @@ const SITE_DATA = {
         name: "Unit 2: Polynomial and Rational Functions",
         schedule: [
           { date: "2026-10-28", type: "lesson", label: "2.1 — Connecting Quadratics" },
-          { date: "2026-10-29", type: "homework", label: "" },
-          { date: "2026-11-02", type: "lesson", label: "Piecewise Functions paper (started in class). Check your answers with the Answer Key on the Unit Resources tab" },
-          { date: "2026-11-03", type: "homework", label: "" },
-          { date: "2026-11-04", type: "lesson", label: "2.3 — Polynomials in the Short Run" },
-          { date: "2026-11-05", type: "homework", label: "" },
-          { date: "2026-11-06", type: "lesson", label: "2.4 — Polynomials in the Long Run" },
+          { date: "2026-10-29", type: "homework", label: "" }
+        ]
+      },
+      {
+        id: "unit-piecewise",
+        name: "Piecewise Functions Unit 2",
+        schedule: [
+          { date: "2026-11-02", type: "lesson", label: "Piecewise Functions paper (started in class). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
+          { date: "2026-11-03", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
+          { date: "2026-11-04", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
+          { date: "2026-11-05", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
+          { date: "2026-11-06", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" }
+        ]
+      },
+      {
+        id: "unit2b",
+        name: "Unit 2: Polynomial and Rational Functions (continued)",
+        schedule: [
           { date: "2026-11-09", type: "homework", label: "" },
           { date: "2026-11-10", type: "quiz", label: "2.1–2.4" },
           { date: "2026-11-11", type: "lesson", label: "2.5 — Factor and Remainder Theorem" },
