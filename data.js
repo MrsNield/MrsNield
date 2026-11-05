@@ -321,7 +321,8 @@ const SITE_DATA = {
       { date: "2026-10-28", objective: "3-5" },
       { date: "2026-10-28", objective: "3-6" },
       { date: "2026-10-29", objective: "3-2" },
-      { date: "2026-11-02", objective: "3-3" }
+      { date: "2026-11-02", objective: "3-3" },
+      { date: "2026-11-04", objective: "Practice simplifying radicals" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -1108,6 +1109,13 @@ const SITE_DATA = {
           { label: "Filled In — Piecewise Functions Notes and Homework 8", file: "files/Precalc_Piecewise_Functions_Notes_and_Homework_8_Filled_In.pdf" },
           { label: "Answer Key (answers only) — Piecewise Functions Notes and Homework 8", file: "files/Precalc_Piecewise_Functions_Answer_Key.pdf" }
         ]
+      },
+      {
+        id: "find-the-mistake",
+        name: "Find the Mistake Warm-Ups",
+        resources: [
+          { label: "Find the Mistake Warm-Ups (PowerPoint, questions only)", file: "files/Precalc_Find_the_Mistake_Warm-Ups_Questions_Only.pptx" }
+        ]
       }
     ],
 
@@ -1221,7 +1229,7 @@ const SITE_DATA = {
         schedule: [
           { date: "2026-11-02", type: "lesson", label: "Piecewise Functions paper (started in class). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
           { date: "2026-11-03", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
-          { date: "2026-11-04", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
+          { date: "2026-11-04", type: "lesson", label: "Practice: vertex form and standard form of quadratics" },
           { date: "2026-11-05", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" },
           { date: "2026-11-06", type: "lesson", label: "Piecewise Functions paper (continued). Check your answers with the filled-in paper and Answer Key on the Unit Resources tab" }
         ]
@@ -1674,6 +1682,7 @@ const SITE_DATA = {
       { date: "2026-10-28", label: "4.5" },
       { date: "2026-10-29", label: "4.6" },
       { date: "2026-11-02", label: "4.7" },
+      { date: "2026-11-04", label: "Deriver's License practice" },
       { date: "2026-08-31", period: "3rd", label: "Unit 1 review" },
       { date: "2026-08-31", period: "5th", label: "Unit 1 review" }
     ],
