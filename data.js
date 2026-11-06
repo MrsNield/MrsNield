@@ -203,15 +203,18 @@ const SITE_DATA = {
         { date: "2026-11-03", type: "lesson", label: "Factoring practice in class (band is out for state: band students complete the Functions of the Day they miss)" },
         { date: "2026-11-04", type: "lesson", label: "Factoring practice in class (band is out for state: band students complete the Functions of the Day they miss)" },
         { date: "2026-11-05", type: "lesson", label: "Factoring practice in class (band is out for state: band students complete the Functions of the Day they miss)" },
-        { date: "2026-11-06", type: "lesson", label: "3-3 — Completing the square" },
-        { date: "2026-11-09", type: "review", label: "Unit 3 review" },
-        { date: "2026-11-10", type: "test", label: "Unit 3 test" }
+        { date: "2026-11-06", type: "lesson", label: "Factoring practice — all of the factoring methods except completing the square" },
+        { date: "2026-11-09", type: "lesson", label: "Factoring practice" },
+        { date: "2026-11-10", type: "quiz", label: "Factoring quiz" },
+        { date: "2026-11-11", type: "lesson", label: "3-3 — Completing the square practice. A DeltaMath on completing the square is assigned; it is due Monday 11/16" },
+        { date: "2026-11-12", type: "lesson", label: "3-3 — Completing the square practice. The DeltaMath is due Monday 11/16" },
+        { date: "2026-11-16", type: "homework", label: "DeltaMath on completing the square is due" }
       ]},
       { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-11", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test, runs about a week (approximate)" }
+        { date: "2026-11-17", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test (date to be set), runs about a week (approximate)" }
       ]},
       { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
-        { date: "2026-11-19", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — starts about Nov 19, runs into early December (approximate)" }
+        { date: "2026-11-30", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — starts about Nov 30, after Thanksgiving break, runs into early December (approximate)" }
       ]},
       { id: "cal-unit6", name: "Unit 6: Sequences, Series, and Binomial Expansion", schedule: [
         { date: "2026-12-07", type: "lesson", label: "Sequences, Series, and Binomial Expansion — runs through Dec 18" }
@@ -322,7 +325,8 @@ const SITE_DATA = {
       { date: "2026-10-28", objective: "3-6" },
       { date: "2026-10-29", objective: "3-2" },
       { date: "2026-11-02", objective: "3-3" },
-      { date: "2026-11-04", objective: "Practice simplifying radicals" }
+      { date: "2026-11-04", objective: "Practice simplifying radicals" },
+      { date: "2026-11-06", objective: "Factoring practice — all of the factoring methods except completing the square" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -554,16 +558,21 @@ const SITE_DATA = {
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-2) has videos, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-11-06",
+        date: "2026-11-11",
         notes: { label: "Worksheet — 3-3 Completing the Square", file: "files/Honors_Unit3_3-3_Completing_the_Square_Worksheet.pdf" },
-        deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
-        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
+        deltamath: [{ label: "3-3 Complete the square (due Monday 11/16)", url: "https://www.deltamath.com/app/assignment/34418483" }],
+        instructions: "Absent? Print the worksheet and complete it. The DeltaMath is due Monday 11/16. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
       },
       {
-        date: "2026-11-06",
+        date: "2026-11-12",
         notes: { label: "Worksheet — 3-3 Completing the Square and the Quadratic Formula", file: "files/Honors_Unit3_3-3_Completing_the_Square_and_Quadratic_Formula_Worksheet.pdf" },
+        deltamath: [{ label: "3-3 Complete the square (due Monday 11/16)", url: "https://www.deltamath.com/app/assignment/34418483" }],
+        instructions: "Absent? Print the worksheet and complete it. The DeltaMath is due Monday 11/16. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
+      },
+      {
+        date: "2026-11-16",
         deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
-        instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-3) has a video, vocabulary, and practice problems with answers."
+        instructions: "The DeltaMath on completing the square is due today."
       },
       {
         date: "2026-11-02",
@@ -576,11 +585,6 @@ const SITE_DATA = {
         notes: { label: "Worksheet — 3-4 The Fundamental Theorem of Algebra", file: "files/Honors_Unit3_3-4_Fundamental_Theorem_of_Algebra_Worksheet.pdf" },
         deltamath: [{ label: "3-4 Fundamental Theorem of Algebra", url: "https://www.deltamath.com/app/assignment/34418517" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-4) has videos, vocabulary, and practice problems with answers."
-      },
-      {
-        date: "2026-11-09",
-        notes: { label: "Unit 3 Review Packet", file: "files/Honors_Unit3_Review_Packet.pdf" },
-        instructions: "Absent? Print the review packet and complete it before the Unit 3 test."
       }
     ],
 
