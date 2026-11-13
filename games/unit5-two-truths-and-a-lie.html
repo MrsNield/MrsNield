@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}</style>
+</head>
+<body>
+<title>Unit 5 Two Truths and a Lie</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+:root {
+  --bg: #edf2f4; --grid: rgba(22, 60, 80, 0.07); --surface: #ffffff; --ink: #15232d; --muted: #566a76;
+  --line: #c6d3da; --accent: #0b7480; --accent-ink: #ffffff; --accent-soft: #d5eef0;
+  --ok: #1d8049; --ok-soft: #dcf2e4; --bad: #bb3a2c; --bad-soft: #fbe2de; --opt: #f4f8f9;
+  --shadow: 0 1px 2px rgba(15, 35, 45, 0.12), 0 2px 8px rgba(15, 35, 45, 0.06);
+  --font-ui: "Lexend", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --font-math: "Cambria Math", Cambria, "STIX Two Math", "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e171c; --grid: rgba(140, 190, 210, 0.06); --surface: #16232b; --ink: #e2ebf0; --muted: #93a6b2;
+    --line: #2b3d48; --accent: #4cc2cc; --accent-ink: #062a2e; --accent-soft: #123b40; --ok: #55cc8a; --ok-soft: #133826;
+    --bad: #ff8172; --bad-soft: #45211c; --opt: #111c22; --shadow: 0 1px 2px rgba(0, 0, 0, 0.5); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e171c; --grid: rgba(140, 190, 210, 0.06); --surface: #16232b; --ink: #e2ebf0; --muted: #93a6b2;
+  --line: #2b3d48; --accent: #4cc2cc; --accent-ink: #062a2e; --accent-soft: #123b40; --ok: #55cc8a; --ok-soft: #133826;
+  --bad: #ff8172; --bad-soft: #45211c; --opt: #111c22; --shadow: 0 1px 2px rgba(0, 0, 0, 0.5); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--bg);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px; color: var(--ink); font-family: var(--font-ui); font-size: 15px; line-height: 1.45;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 10px;
+}
+.top-inner { max-width: 1300px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.brand { display: flex; flex-direction: column; min-width: 0; margin-right: auto; }
+.brand h1 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+.brand p { margin: 0; color: var(--muted); font-size: 13px; }
+.stats { display: flex; gap: 16px; font-variant-numeric: tabular-nums; }
+.stat { display: flex; flex-direction: column; }
+.stat b { font-family: var(--font-mono); font-size: 18px; line-height: 1.1; }
+.stat span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.actions { display: flex; gap: 8px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 8px 14px; font-weight: 600; font-size: 14px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.warn { border-color: var(--bad); color: var(--bad); }
+
+.wrap { max-width: 1300px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 14px 40px; }
+.how { margin: 0 0 12px; color: var(--muted); font-size: 14px; max-width: 75ch; }
+.notice { margin: 0 0 14px; padding: 10px 14px; border-radius: 10px; font-size: 14px; background: var(--surface); border: 1px solid var(--line); }
+.notice.win { background: var(--ok-soft); border-color: var(--ok); font-weight: 600; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; align-items: start; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; box-shadow: var(--shadow); min-width: 0; }
+.q.ok { border-color: var(--ok); box-shadow: 0 0 0 2px var(--ok-soft); }
+.q.bad { border-color: var(--bad); box-shadow: 0 0 0 2px var(--bad-soft); }
+.qhead { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+.num { flex: none; font-family: var(--font-mono); font-weight: 700; font-size: 13px; background: var(--accent-soft); color: var(--ink); border-radius: 6px; padding: 2px 7px; margin-top: 2px; }
+.given { font-weight: 600; font-size: 15.5px; min-width: 0; }
+.given small { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.opts { display: flex; flex-direction: column; gap: 7px; }
+.opt {
+  display: flex; gap: 10px; align-items: flex-start; text-align: left; width: 100%; padding: 9px 11px; border-radius: 10px;
+  border: 1.5px solid var(--line); background: var(--opt); cursor: pointer; font-size: 14.5px; position: relative;
+}
+.opt:hover { border-color: var(--accent); }
+.opt .let { flex: none; font-weight: 700; width: 1.4em; }
+.opt .txt { min-width: 0; flex: 1; }
+.opt[aria-pressed="true"] { border-color: var(--bad); background: var(--bad-soft); }
+.opt[aria-pressed="true"] .txt { text-decoration: line-through; text-decoration-color: var(--bad); text-decoration-thickness: 2px; }
+.stamp { display: none; flex: none; align-self: center; font-family: var(--font-mono); font-weight: 700; font-size: 11px; letter-spacing: 0.08em; color: #fff; background: var(--bad); border-radius: 4px; padding: 1px 6px; }
+.opt[aria-pressed="true"] .stamp { display: inline-block; }
+.q.ok .opt[aria-pressed="true"] .stamp { background: var(--ok); }
+.result { margin-top: 10px; font-size: 13.5px; border-radius: 8px; padding: 8px 10px; }
+.q.ok .result { background: var(--ok-soft); }
+.q.bad .result { background: var(--bad-soft); }
+.result b { display: block; }
+
+/* math */
+.m { font-family: var(--font-math); font-size: 1.08em; white-space: nowrap; }
+.m i { font-style: italic; padding-right: 0.1em; }
+.lim, .frac, .int, .il { display: inline-flex; flex-direction: column; vertical-align: middle; align-items: center; line-height: 1.1; }
+.lim > span { font-size: 0.68em; }
+.frac > span:first-child { border-bottom: 1px solid currentColor; padding: 0 2px; }
+.frac > span { font-size: 0.86em; padding: 0 2px; }
+.int { flex-direction: row; }
+.int .il { font-size: 0.62em; margin-left: -1px; margin-right: 2px; }
+.int .sym { font-size: 1.35em; }
+
+@media (max-width: 899px) { .top { position: static; } }
+@media (max-width: 420px) { .grid { grid-template-columns: minmax(0, 1fr); } .m { white-space: normal; } }
+</style>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1>Two Truths and a Lie</h1>
+      <p>Unit 5 · Analytical Applications of Differentiation</p>
+    </div>
+    <div class="stats" aria-live="polite">
+      <div class="stat"><b id="answered">0/13</b><span>Answered</span></div>
+      <div class="stat"><b id="correct">–</b><span>Correct</span></div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="check" type="button">Check my answers</button>
+      <button class="btn" id="reset" type="button">Start over</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="how">Each card gives you a fact about a function. Two of the statements under it <strong>must be true</strong>. One is a <strong>lie</strong>: it is false, or it doesn't have to be true. Tap the lie on every card, then press <strong>Check my answers</strong>. When you get a card right, you'll see why the lie is false.</p>
+  <div id="notice" class="notice" hidden></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<script>
+const f = "<i>f</i>", x = "<i>x</i>", a = "<i>a</i>", b = "<i>b</i>", c = "<i>c</i>", y = "<i>y</i>";
+const fx = f + "(" + x + ")", fp = f + "′", fpp = f + "″";
+const M = s => '<span class="m">' + s + "</span>";
+const lim = sub => '<span class="lim">lim<span>' + sub + "</span></span>";
+const frac = (n, d) => '<span class="frac"><span>' + n + "</span><span>" + d + "</span></span>";
+const integ = '<span class="int"><span class="sym">∫</span><span class="il"><span>' + b + "</span><span>" + a + "</span></span></span>" + fx + " <i>dx</i>";
+
+// lie = index (0 = a, 1 = b, 2 = c)
+const CARDS = [
+  { given: "If " + M(fp + "(" + x + ")") + " is continuous and increasing",
+    opts: [M(fx) + " is positive", M(fx) + " has no relative maximum", M(fpp + "(" + x + ") ≥ 0")], lie: 0,
+    why: M(fp) + " increasing tells you about the <em>slope</em> of " + M(f) + ", not its height. " + M(f + "(" + x + ") = " + x + "² − 5") + " has an increasing derivative, but it is negative near " + M(x + " = 0") + "." },
+  { given: M(lim(x + "→3") + " " + frac(f + "(" + x + ") − " + f + "(3)", x + " − 3") + " = 2"),
+    opts: [M(fx) + " is differentiable at " + M(x + " = 2"), M(fp + "(3) = 2"), M(lim(x + "→3") + " " + fx + " = " + f + "(3)")], lie: 0,
+    why: "This limit is the definition of " + M(fp + "(3)") + ". It tells you nothing about what happens at " + M(x + " = 2") + "." },
+  { given: M(fx) + " is continuous and strictly increasing",
+    opts: [M(fx) + " has no critical points", M(fp + "(" + x + ") ≥ 0"), "If " + M(b + " > " + a) + ", then " + M(f + "(" + b + ") > " + f + "(" + a + ")")], lie: 0,
+    why: M(f + "(" + x + ") = " + x + "³") + " is strictly increasing, but " + M(fp + "(0) = 0") + ", so " + M(x + " = 0") + " is a critical point." },
+  { given: "IVT applies to " + M(fx),
+    opts: [M(fx) + " is continuous", M(fx) + " is differentiable", "If " + M(f + "(2) = 4") + " and " + M(f + "(5) = −1") + ", then " + M(f + "(" + c + ") = 0") + " for some " + M("2 < " + c + " < 5")], lie: 1,
+    why: "The IVT only needs " + M(f) + " to be continuous on a closed interval. Differentiability is what the MVT needs, not the IVT." },
+  { given: "MVT applies to " + M(fx) + " on " + M("[" + a + ", " + b + "]"),
+    opts: ["For any secant line of " + M(fx) + ", there is a parallel tangent line", M(fx) + " must be continuous on " + M("[" + a + ", " + b + "]"),
+           M(fpp + "(" + c + ") = " + frac(fp + "(" + b + ") − " + fp + "(" + a + ")", b + " − " + a)) + " for some " + M(a + " < " + c + " < " + b)], lie: 2,
+    why: "The MVT gives " + M(fp + "(" + c + ") = " + frac(f + "(" + b + ") − " + f + "(" + a + ")", b + " − " + a)) + ". Statement c is the MVT applied to " + M(fp) + ", which would need " + M(fp) + " to be differentiable, and we don't know that." },
+  { given: M(fx) + " is continuous and strictly decreasing",
+    opts: ["A left Riemann sum for " + M(integ) + " will underestimate its value", "On any interval " + M("[" + a + ", " + b + "]") + ", the absolute max of " + M(fx) + " occurs at " + M(x + " = " + a), M(fp + "(" + x + ") ≤ 0")], lie: 0,
+    why: "When " + M(f) + " is decreasing, the left endpoint is the tallest point of each subinterval, so a left Riemann sum <em>overestimates</em>." },
+  { given: M(fp + "(" + x + ") < 0") + " and " + M(fx) + " is continuous",
+    opts: [M(fx) + " is decreasing", "The tangent line approximation will always underestimate function values", "A right Riemann sum for " + M(integ) + " will underestimate its value"], lie: 1,
+    why: "Whether a tangent line under- or overestimates depends on concavity (the sign of " + M(fpp) + "), not on " + M(fp) + "." },
+  { given: M(lim(x + "→4") + " " + fx + " ≠ " + f + "(4)"),
+    opts: ["There is a point discontinuity at " + M(x + " = 4"), M(fx) + " is not differentiable at " + M(x + " = 4"), M(fx) + " cannot have a minimum or maximum value at " + M(x + " = 4")], lie: 2,
+    why: "The point " + M("(4, " + f + "(4))") + " can sit above or below the rest of the graph. If the graph has a hole at " + M("(4, 1)") + " but " + M(f + "(4) = 10") + ", then " + M(f + "(4)") + " is the maximum." },
+  { given: M(fpp + "(" + x + ") > 0") + " and " + M(fx) + " is continuous",
+    opts: ["The tangent line approximation will always underestimate function values", "A trapezoidal sum for " + M(integ) + " will overestimate its value", M(fx) + " must have a relative minimum"], lie: 2,
+    why: M(f + "(" + x + ") = <i>e</i><sup><i>x</i></sup>") + " is concave up everywhere but never has a relative minimum." },
+  { given: M(lim(x + "→4") + " " + fx + " = ∞"),
+    opts: [M(lim(x + "→4") + " " + fx) + " does not exist", "There is a vertical asymptote in the graph of " + M(fx) + " at " + M(x + " = 4"), M(fx) + " has a maximum value at " + M(x + " = 4")], lie: 2,
+    why: "Near " + M(x + " = 4") + " the function grows without bound, so there is no largest value." },
+  { given: M(fpp + "(" + c + ") = 0"),
+    opts: [M(fx) + " has a point of inflection at " + M(x + " = " + c), "If " + M(fpp + "(" + x + ")") + " changes sign at " + M(x + " = " + c) + ", then " + M(f) + " has a point of inflection there", M(fp + "(" + x + ")") + " has a critical point at " + M(x + " = " + c)], lie: 0,
+    why: M(f + "(" + x + ") = " + x + "⁴") + " has " + M(fpp + "(0) = 0") + ", but it is concave up on both sides of 0, so there is no point of inflection." },
+  { given: M(fx) + " is continuous and has a relative minimum at " + M(x + " = " + c) + ", where " + M(c + " ∈ (" + a + ", " + b + ")"),
+    opts: [M(fpp + "(" + c + ") > 0"), M(fp + "(" + c + ") = 0") + " or " + M(fp + "(" + c + ")") + " does not exist", M(fp + "(" + x + ")") + " changes sign from negative to positive at " + M(x + " = " + c)], lie: 0,
+    why: M(f + "(" + x + ") = " + x + "⁴") + " has a relative minimum at " + M(x + " = 0") + ", but " + M(fpp + "(0) = 0") + ". And " + M(f + "(" + x + ") = |" + x + "|") + " has one where " + M(fpp) + " doesn't exist." },
+  { given: M(lim(x + "→∞") + " " + fx + " = 4"),
+    opts: [M(fx) + " has a horizontal asymptote at " + M(y + " = 4"), M(fx + " ≠ 4"), "For very large values of " + M(x) + ", " + M(fx) + " is close to 4"], lie: 1,
+    why: "A graph can cross its horizontal asymptote. " + M(f + "(" + x + ") = 4 + " + frac("sin " + x, x)) + " equals 4 at " + M(x + " = π") + "." }
+];
+const N = CARDS.length;
+const STORE_KEY = "unit5-ttl-v1";
+let state = null;
+
+function fresh() { return { pick: {}, marks: {}, checked: false }; }
+function load() { try { const s = JSON.parse(localStorage.getItem(STORE_KEY) || "null"); if (s && s.pick) return s; } catch (e) {} return null; }
+function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {} }
+
+function render() {
+  let html = "";
+  CARDS.forEach((q, i) => {
+    const mark = state.marks[i];
+    html += '<section class="q' + (mark ? " " + mark : "") + '" aria-labelledby="g' + i + '">' +
+      '<div class="qhead"><span class="num">' + (i + 1) + '</span><div class="given" id="g' + i + '"><small>Given</small>' + q.given + "</div></div>" +
+      '<div class="opts" role="group" aria-label="Pick the lie for card ' + (i + 1) + '">';
+    q.opts.forEach((o, j) => {
+      html += '<button class="opt" type="button" data-q="' + i + '" data-o="' + j + '" aria-pressed="' + (state.pick[i] === j) + '">' +
+        '<span class="let">' + "abc"[j] + ')</span><span class="txt">' + o + '</span><span class="stamp">LIE</span></button>';
+    });
+    html += "</div>";
+    if (mark === "ok") html += '<div class="result"><b>✓ Right, that\'s the lie.</b>' + q.why + "</div>";
+    if (mark === "bad") html += '<div class="result"><b>✗ Not quite.</b>That statement has to be true. Look for one that could fail.</div>';
+    html += "</section>";
+  });
+  document.getElementById("grid").innerHTML = html;
+  document.getElementById("answered").textContent = Object.keys(state.pick).length + "/" + N;
+  const okN = Object.values(state.marks).filter(m => m === "ok").length;
+  document.getElementById("correct").textContent = state.checked || okN ? okN + "/" + N : "–";
+}
+
+function showNotice(text, kind) {
+  const n = document.getElementById("notice");
+  if (!text) { n.hidden = true; return; }
+  n.className = "notice" + (kind ? " " + kind : ""); n.textContent = text; n.hidden = false;
+}
+
+document.addEventListener("click", e => {
+  const o = e.target.closest(".opt");
+  if (!o) return;
+  const i = +o.dataset.q, j = +o.dataset.o;
+  if (state.pick[i] === j) delete state.pick[i]; else state.pick[i] = j;
+  delete state.marks[i];
+  if (state.checked) { state.checked = false; showNotice(""); }
+  save(); render();
+  const again = document.querySelector('.opt[data-q="' + i + '"][data-o="' + j + '"]');
+  if (again) again.focus();
+});
+
+document.getElementById("check").addEventListener("click", () => {
+  let ok = 0;
+  state.marks = {};
+  CARDS.forEach((q, i) => {
+    if (state.pick[i] === undefined) return;
+    state.marks[i] = state.pick[i] === q.lie ? "ok" : "bad";
+    if (state.marks[i] === "ok") ok++;
+  });
+  state.checked = true;
+  const blank = N - Object.keys(state.pick).length;
+  if (ok === N) showNotice("You found all 13 lies. Nice work!", "win");
+  else showNotice(ok + " of " + N + " correct." + (blank ? " " + blank + " cards still need an answer." : "") + " Fix the red cards and check again.");
+  save(); render();
+});
+
+let resetArmed = false;
+document.getElementById("reset").addEventListener("click", e => {
+  const btn = e.currentTarget;
+  if (!resetArmed) {
+    resetArmed = true; btn.textContent = "Tap again to clear"; btn.classList.add("warn");
+    setTimeout(() => { resetArmed = false; btn.textContent = "Start over"; btn.classList.remove("warn"); }, 3000);
+    return;
+  }
+  resetArmed = false; btn.textContent = "Start over"; btn.classList.remove("warn");
+  state = fresh(); showNotice(""); save(); render();
+});
+
+function boot(data) {
+  state = (data && data.pick) ? data : (load() || fresh());
+  if (state.checked) {
+    const okN = Object.values(state.marks).filter(m => m === "ok").length;
+    if (okN === N) showNotice("You found all 13 lies. Nice work!", "win");
+  }
+  render();
+}
+if (window.claude && window.claude.hot && window.claude.hot.snapshot) { try { window.claude.hot.snapshot(() => state); } catch (e) {} }
+if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(boot);
+else boot((window.claude && window.claude.hot && window.claude.hot.data) || {});
+</script>
+
+</body>
+</html>

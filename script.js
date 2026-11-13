@@ -57,6 +57,7 @@ function renderMain() {
       { id: "resources", label: "Resources & Practice" },
       { id: "prereq", label: "Prerequisite Skills" },
       { id: "deriver", label: "Deriver's License" },
+      { id: "games", label: "Games" },
       { id: "calendar", label: "Calendar" }
     ];
     const acSubTabsEl = document.getElementById("apcalcSubTabs");
@@ -74,6 +75,8 @@ function renderMain() {
       acPanels.innerHTML = renderApCalcCalendarTab();
       wireApCalcCalendarInteractivity();
       wirePrereqSkillsInteractivity();
+    } else if (currentApCalcTab === "games") {
+      acPanels.innerHTML = renderApCalcGames(SITE_DATA.apcalc?.games || []);
     } else if (currentApCalcTab === "deriver") {
       acPanels.innerHTML = renderDeriversLicense(SITE_DATA.apcalc?.deriversLicense || []);
       wirePrereqSkillsInteractivity();
@@ -1025,6 +1028,26 @@ function renderApCalcUnitVideos(unitVideos) {
         if (d.note) {
           html += `<p class="rubric-note" style="margin:4px 0 10px;">${d.note}</p>`;
         }
+      });
+    });
+  }
+  html += `</div>`;
+  return html;
+}
+
+function renderApCalcGames(games) {
+  games = games || [];
+  let html = `<div class="card"><h2 class="section-title">Games</h2>
+    <p class="rubric-note">Practice games for review. Each one opens in a new tab.</p>`;
+  if (!games.length) {
+    html += `<div class="empty-state">No games posted yet — check back soon!</div>`;
+  } else {
+    games.forEach((unit, ui) => {
+      html += `<h3 style="color:var(--navy);margin-top:${ui === 0 ? 0 : 20}px;">${unit.unit}</h3>`;
+      (unit.items || []).forEach(g => {
+        html += `<div class="topic-label">🎮 ${g.title}</div>`;
+        if (g.description) html += `<p class="rubric-note" style="margin:2px 0 6px;">${g.description}</p>`;
+        html += `<ul class="video-list"><li><a href="${g.file}" target="_blank" rel="noopener">Play ${g.title}</a></li></ul>`;
       });
     });
   }

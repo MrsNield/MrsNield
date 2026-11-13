@@ -3038,6 +3038,18 @@ const SITE_DATA = {
       }
     ],
 
+    // ---- Games tab: interactive practice games. Each is a standalone HTML
+    // page in games/ that opens in a new tab. To add a game, copy its .html
+    // into games/ and add an entry here. ----
+    games: [
+      { unit: "Unit 5: Analytical Applications of Differentiation", items: [
+        { title: "Matching Game", file: "games/unit5-matching-game.html",
+          description: "Match 12 graphs of f to the graph of f′, the description of f, and the description of f′. Drag a card onto a spot, or tap a card and then tap the spot." },
+        { title: "Two Truths and a Lie", file: "games/unit5-two-truths-and-a-lie.html",
+          description: "Each card gives a fact about a function. Two of the three statements must be true. Find the lie on all 13 cards." }
+      ] }
+    ],
+
     // ---- Deriver's License: 25 DeltaMath derivative quizzes. "topics" is what
     // appears on the real quiz; "problems" are original practice questions with
     // reveal-answer. Add or edit problems any time. ----
