@@ -208,10 +208,11 @@ const SITE_DATA = {
         { date: "2026-11-10", type: "quiz", label: "Factoring quiz" },
         { date: "2026-11-11", type: "lesson", label: "3-3 — Completing the square practice. A DeltaMath on completing the square is assigned; it is due Monday 11/16" },
         { date: "2026-11-12", type: "lesson", label: "3-3 — Completing the square practice. The DeltaMath is due Monday 11/16" },
-        { date: "2026-11-16", type: "homework", label: "DeltaMath on completing the square is due" }
+        { date: "2026-11-16", type: "homework", label: "DeltaMath on completing the square is due" },
+        { date: "2026-11-17", type: "quiz", label: "Factoring and completing the square (the same factoring quiz as before, plus completing the square). Extra credit: 10 points for deriving the quadratic formula from the standard form of a quadratic, with all work shown" }
       ]},
       { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-17", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 test (date to be set), runs about a week (approximate)" }
+        { date: "2026-11-18", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 quiz, runs about a week (approximate)" }
       ]},
       { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
         { date: "2026-11-30", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — starts about Nov 30, after Thanksgiving break, runs into early December (approximate)" }
@@ -573,6 +574,10 @@ const SITE_DATA = {
         date: "2026-11-16",
         deltamath: [{ label: "3-3 Complete the square", url: "https://www.deltamath.com/app/assignment/34418483" }],
         instructions: "The DeltaMath on completing the square is due today."
+      },
+      {
+        date: "2026-11-17",
+        instructions: "Quiz today: the same factoring quiz as before, plus completing the square. Extra credit (10 points): derive the quadratic formula from the standard form of a quadratic, ax² + bx + c = 0, with all work shown."
       },
       {
         date: "2026-11-02",
