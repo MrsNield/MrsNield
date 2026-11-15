@@ -402,6 +402,8 @@ const SITE_DATA = {
       { date: "2026-11-02", objective: "3-3" },
       { date: "2026-11-04", objective: "Practice simplifying radicals" },
       { date: "2026-11-06", objective: "Factoring practice — all of the factoring methods except completing the square" },
+      { date: "2026-11-09", objective: "Factoring practice" },
+      { date: "2026-11-10", objective: "Factoring quiz" },
       { date: "2026-11-11", objective: "3-3" },
       { date: "2026-11-12", objective: "3-3" }
     ],
@@ -1752,6 +1754,8 @@ const SITE_DATA = {
           { date: "2027-05-06", type: "review", label: "Review" },
           { date: "2027-05-07", type: "no-school", label: "Bad weather make-up day (only if needed)" },
           { date: "2027-05-10", type: "note", label: "AP Calculus AB Exam — 8 a.m. in the school library. 3rd and 5th period students are in the library for periods 1–5, so there is no class" },
+          { date: "2027-05-11", type: "note", label: "In class: we will watch Calculus the Musical" },
+          { date: "2027-05-12", type: "note", label: "In class: we will watch Calculus the Musical" },
           { date: "2027-05-14", type: "no-school", label: "Bad weather make-up day (only if needed)" },
           { date: "2027-05-20", type: "note", label: "Last day of school" }
         ]
