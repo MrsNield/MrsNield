@@ -463,6 +463,13 @@ const SITE_DATA = {
       { date: "2026-10-20", caption: "Inverse functions — Examples 2 and 3 with logarithms (2nd period)", image: "images/board/2026-10-20_inverse-functions-4.jpg" }
     ],
 
+    // ---- Honors Lesson Videos tab (spring): the Math Medic units Honors is
+    // doing. The lessons and links come from the shared list in precalc.lessonVideos
+    // below, so there is only one list to maintain. Add a unit number here to show
+    // it on the Honors tab, or remove one to hide it. Calendar days whose plan
+    // starts with a lesson number (like "4.1") get a video link too. ----
+    lessonVideoUnits: [4, 5, 8, 9],
+
     // ---- Downloadable notes/DeltaMath attached to a specific day (separate
     // from the per-objective Practice & Videos tab, for when a whole day's
     // notes packet should show up directly on "What Did I Miss?"). ----

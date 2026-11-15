@@ -137,6 +137,7 @@ function renderMain() {
     { id: "rubric", label: "Standards Rubric" },
     { id: "board", label: "Board Work" },
     { id: "practice", label: "Practice & Videos" },
+    { id: "lessonvideos", label: "Lesson Videos" },
     { id: "bellringers", label: "Bellringers" }
   ];
   const subTabsEl = document.getElementById("honorsSubTabs");
@@ -156,6 +157,13 @@ function renderMain() {
   else if (currentHonorsTab === "rubric") panels.innerHTML = renderRubric();
   else if (currentHonorsTab === "board") panels.innerHTML = renderBoardWork();
   else if (currentHonorsTab === "practice") panels.innerHTML = renderPractice();
+  else if (currentHonorsTab === "lessonvideos") {
+    const honorsUnits = SITE_DATA.honors.lessonVideoUnits || [];
+    panels.innerHTML = renderPrecalcLessonVideos(
+      (SITE_DATA.precalc?.lessonVideos || []).filter(u => honorsUnits.includes(u.unit)),
+      "Missed a lesson, or want to see it again? Each link opens that lesson on Math Medic in a new tab, where you'll find the lesson video. You will be asked for the class password. Ask Mrs. Nield if you don't have it. You can also find each video on its day in the Calendar tab."
+    );
+  }
   else if (currentHonorsTab === "bellringers") panels.innerHTML = renderBellringers(SITE_DATA.honors.bellringers);
 
   if (currentHonorsTab === "calendar") wireHonorsCalendarInteractivity();
@@ -375,11 +383,13 @@ function renderHonorsCalDetail(dateStr, planned) {
       html += `<div class="miss-section"><strong>Planned:</strong> <span class="cal-badge cal-${plan.type}">${typeLabel}</span> ${plan.label || ""}</div>`;
     }
     html += renderHonorsDayLogContent(dateStr);
+    html += renderHonorsPlannedVideoLink(plan);
   } else {
     const plan = planned[dateStr];
     if (plan) {
       const typeLabel = CALENDAR_TYPE_LABELS[plan.type] || plan.type;
       html += `<div class="miss-section"><strong>Planned:</strong> <span class="cal-badge cal-${plan.type}">${typeLabel}</span> ${plan.label || ""}</div>
+        ${renderHonorsPlannedVideoLink(plan)}
         <p class="rubric-note">This is the plan as of right now — it may shift if pacing changes.</p>`;
     } else {
       html += `<div class="empty-state">Nothing scheduled for this day.</div>`;
@@ -1039,17 +1049,47 @@ function renderApCalcUnitVideos(unitVideos) {
 
 // Links to Math Medic lesson pages (each page has that lesson's video, which
 // students open with the class password). Links only, nothing hosted here.
-function renderPrecalcLessonVideos(units) {
+// The one shared list lives in SITE_DATA.precalc.lessonVideos.
+function mathMedicLessonUrl(unit, day) {
+  return `https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/${unit}/day/${day}`;
+}
+
+// Finds the Math Medic lesson a calendar label points to (the label has to
+// start with the lesson number, like "4.1 — Right Triangle Trig"). Pass the
+// list of units to look in, or null to look in all of them.
+function findMathMedicLessonForLabel(label, unitNumbers) {
+  const m = String(label || "").match(/^(\d+\.\d+)(?!\d)/);
+  if (!m) return null;
+  for (const u of (SITE_DATA.precalc?.lessonVideos || [])) {
+    if (unitNumbers && !unitNumbers.includes(u.unit)) continue;
+    const hit = (u.lessons || []).find(l => l[1] === m[1]);
+    if (hit) return { url: mathMedicLessonUrl(u.unit, hit[0]), num: hit[1], title: hit[2] };
+  }
+  return null;
+}
+
+// Video link for a planned Honors lesson day, or "" if there isn't one.
+function renderHonorsPlannedVideoLink(plan) {
+  if (!plan || plan.type !== "lesson") return "";
+  const lesson = findMathMedicLessonForLabel(plan.label, SITE_DATA.honors.lessonVideoUnits || []);
+  if (!lesson) return "";
+  return `<div class="miss-section"><strong>Lesson video:</strong><br>
+    <a class="download-btn" href="${lesson.url}" target="_blank" rel="noopener" style="margin-top:6px;">▶ ${lesson.num} — ${lesson.title}</a>
+    <span class="rubric-note" style="margin-left:6px;">Opens on Math Medic. Ask Mrs. Nield for the class password.</span>
+  </div>`;
+}
+
+function renderPrecalcLessonVideos(units, introText) {
   units = units || [];
   let html = `<div class="card"><h2 class="section-title">Lesson Videos</h2>
-    <p class="rubric-note">Missed a lesson, or want to see it again? Each link opens that lesson on Math Medic in a new tab, where you'll find the lesson video. You will be asked for the class password. Ask Mrs. Nield if you don't have it.</p>`;
+    <p class="rubric-note">${introText || "Missed a lesson, or want to see it again? Each link opens that lesson on Math Medic in a new tab, where you'll find the lesson video. You will be asked for the class password. Ask Mrs. Nield if you don't have it."}</p>`;
   if (!units.length) {
     html += `<div class="empty-state">No lesson videos posted yet — check back soon!</div>`;
   } else {
     units.forEach((u, ui) => {
       html += `<h3 style="color:var(--navy);margin-top:${ui === 0 ? 0 : 20}px;">${u.name}</h3><ul class="video-list">`;
       (u.lessons || []).forEach(([day, num, title]) => {
-        const url = `https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/${u.unit}/day/${day}`;
+        const url = mathMedicLessonUrl(u.unit, day);
         html += `<li><a href="${url}" target="_blank" rel="noopener">${num} — ${title}</a></li>`;
       });
       html += `</ul>`;
