@@ -137,7 +137,7 @@ function renderMain() {
     { id: "rubric", label: "Standards Rubric" },
     { id: "board", label: "Board Work" },
     { id: "practice", label: "Practice & Videos" },
-    { id: "lessonvideos", label: "Lesson Videos" },
+    { id: "lessonvideos", label: "Math Medic Videos" },
     { id: "bellringers", label: "Bellringers" }
   ];
   const subTabsEl = document.getElementById("honorsSubTabs");
@@ -161,7 +161,8 @@ function renderMain() {
     const honorsUnits = SITE_DATA.honors.lessonVideoUnits || [];
     panels.innerHTML = renderPrecalcLessonVideos(
       (SITE_DATA.precalc?.lessonVideos || []).filter(u => honorsUnits.includes(u.unit)),
-      "Missed a lesson, or want to see it again? Each link opens that lesson on Math Medic in a new tab, where you'll find the lesson video. You will be asked for the class password. Ask Mrs. Nield if you don't have it. You can also find each video on its day in the Calendar tab."
+      "Missed a lesson, or want to see it again? Each link opens that lesson on Math Medic in a new tab, where you'll find the lesson video. You will be asked for the class password. Ask Mrs. Nield if you don't have it. You can also find each video on its day in the Calendar tab.",
+      "Math Medic Videos"
     );
   }
   else if (currentHonorsTab === "bellringers") panels.innerHTML = renderBellringers(SITE_DATA.honors.bellringers);
@@ -1073,15 +1074,15 @@ function renderHonorsPlannedVideoLink(plan) {
   if (!plan || plan.type !== "lesson") return "";
   const lesson = findMathMedicLessonForLabel(plan.label, SITE_DATA.honors.lessonVideoUnits || []);
   if (!lesson) return "";
-  return `<div class="miss-section"><strong>Lesson video:</strong><br>
+  return `<div class="miss-section"><strong>Math Medic video:</strong><br>
     <a class="download-btn" href="${lesson.url}" target="_blank" rel="noopener" style="margin-top:6px;">▶ ${lesson.num} — ${lesson.title}</a>
     <span class="rubric-note" style="margin-left:6px;">Opens on Math Medic. Ask Mrs. Nield for the class password.</span>
   </div>`;
 }
 
-function renderPrecalcLessonVideos(units, introText) {
+function renderPrecalcLessonVideos(units, introText, title) {
   units = units || [];
-  let html = `<div class="card"><h2 class="section-title">Lesson Videos</h2>
+  let html = `<div class="card"><h2 class="section-title">${title || "Lesson Videos"}</h2>
     <p class="rubric-note">${introText || "Missed a lesson, or want to see it again? Each link opens that lesson on Math Medic in a new tab, where you'll find the lesson video. You will be asked for the class password. Ask Mrs. Nield if you don't have it."}</p>`;
   if (!units.length) {
     html += `<div class="empty-state">No lesson videos posted yet — check back soon!</div>`;

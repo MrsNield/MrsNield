@@ -158,6 +158,122 @@ const SITE_DATA = {
             advanced: ""
           }
         ]
+      },
+      {
+        id: "unit4",
+        name: "Unit 4: Rational Functions",
+        objectives: [
+          {
+            id: "4-1", target: "Graph rational functions and describe their features", teks: "P.2.F, P.2.I, P.2.K",
+            status: "not-started", dates: "",
+            basic: "Understand the structure and components of rational functions and identify key features from equations.",
+            intermediate: "Analyze and sketch the graph of a rational function using features such as asymptotes and end behavior.",
+            advanced: "Graph and interpret more complex rational functions with transformations, including using technology and comparing structure."
+          },
+          {
+            id: "4-2", target: "Identify holes", teks: "P.2.L",
+            status: "not-started", dates: "",
+            basic: "Given the equation of a rational function (instead of looking at its graph), identify the holes.",
+            intermediate: "",
+            advanced: ""
+          },
+          {
+            id: "4-3", target: "Identify asymptotes", teks: "P.2.K",
+            status: "not-started", dates: "",
+            basic: "Given the equation of a rational function (instead of looking at its graph), identify the asymptotes.",
+            intermediate: "",
+            advanced: ""
+          },
+          {
+            id: "4-4", target: "Identify intercepts", teks: "P.2.I",
+            status: "not-started", dates: "",
+            basic: "Given the equation of a rational function (instead of looking at its graph), identify the intercepts.",
+            intermediate: "",
+            advanced: ""
+          },
+          {
+            id: "4-5", target: "Identify the domain", teks: "P.2.I",
+            status: "not-started", dates: "",
+            basic: "Given the equation of a rational function (instead of looking at its graph), identify the domain.",
+            intermediate: "",
+            advanced: ""
+          }
+        ]
+      },
+      {
+        id: "unit5",
+        name: "Unit 5: Exponential and Logarithmic Functions",
+        objectives: [
+          {
+            id: "5-1", target: "Convert between logarithm bases and prove simple laws of logarithms", teks: "P.5.G",
+            status: "not-started", dates: "",
+            basic: "Understand the definition of logarithms and evaluate basic expressions.",
+            intermediate: "Apply the change of base formula and use the laws of logarithms for simplification.",
+            advanced: "Prove logarithmic identities and apply the log laws to solve more abstract problems."
+          },
+          {
+            id: "5-2", target: "Use the laws of logarithms to simplify, approximate, and solve", teks: "P.5.G, P.5.H",
+            status: "not-started", dates: "",
+            basic: "Understand the definition of logarithms and evaluate basic logarithmic expressions.",
+            intermediate: "Apply the laws of logarithms to simplify expressions and solve equations with a single logarithmic term.",
+            advanced: "Solve more complex logarithmic equations, including those that require combining and condensing logarithms and using exponential form."
+          },
+          {
+            id: "5-3", target: "Graph and solve real-world problems modeled by exponential and logarithmic functions", teks: "P.2.N, P.5.H, P.5.I",
+            status: "not-started", dates: "",
+            basic: "Recognize, evaluate, and identify characteristics of exponential and logarithmic functions from equations and graphs.",
+            intermediate: "Graph and solve basic and applied exponential and logarithmic equations, and identify and interpret real-world contexts.",
+            advanced: "Analyze and interpret complex real-world exponential and logarithmic models, paying attention to reasonableness and context."
+          },
+          {
+            id: "5-4", target: "Use technology to model bivariate data with a function", teks: "P.2.N",
+            status: "not-started", dates: "",
+            basic: "Understand what a bivariate data set is and how to enter it into technology (e.g., a graphing calculator or Desmos). Begin identifying which types of functions might model the data.",
+            intermediate: "Use regression tools to find the quadratic, exponential, logarithmic, or power model that best fits the data, and interpret its key features.",
+            advanced: "Use the best-fit function to make predictions, analyze the limitations of the model, and justify conclusions in a real-world context."
+          }
+        ]
+      },
+      {
+        id: "unit6",
+        name: "Unit 6: Sequences, Series, and Binomial Expansion",
+        objectives: [
+          {
+            id: "6-1", target: "Represent arithmetic and geometric sequences with recursive formulas", teks: "P.5.B",
+            status: "not-started", dates: "",
+            basic: "Tell whether a sequence is arithmetic or geometric and find the next terms.",
+            intermediate: "Write a recursive formula for an arithmetic or geometric sequence and use it to list terms.",
+            advanced: "Write recursive and explicit formulas for a sequence from a real-world situation, and move between the two forms."
+          },
+          {
+            id: "6-2", target: "Find the nth term and nth partial sum of an arithmetic series", teks: "P.5.C",
+            status: "not-started", dates: "",
+            basic: "Find the nth term of an arithmetic sequence using the formula.",
+            intermediate: "Find the nth partial sum of an arithmetic series.",
+            advanced: "Solve real-world problems with arithmetic series, including finding n or the first term from given information."
+          },
+          {
+            id: "6-3", target: "Find the nth term, nth partial sum, and infinite sum of a geometric series", teks: "P.5.E",
+            status: "not-started", dates: "",
+            basic: "Find the nth term of a geometric sequence using the formula.",
+            intermediate: "Find the nth partial sum of a geometric series and decide whether an infinite geometric series has a sum.",
+            advanced: "Calculate the sum of an infinite geometric series when it exists and solve real-world problems with it."
+          },
+          {
+            id: "6-4", target: "Read and write series in sigma notation", teks: "P.5.A, P.5.D",
+            status: "not-started", dates: "",
+            basic: "Evaluate a finite sum written in sigma notation by expanding it.",
+            intermediate: "Evaluate arithmetic and geometric series written in sigma notation using the series formulas, and write a given series in sigma notation.",
+            advanced: "Write a series in sigma notation from a pattern given in words, and evaluate it when a sum exists."
+          },
+          {
+            id: "6-5", target: "Expand binomials with the Binomial Theorem", teks: "P.5.F",
+            status: "not-started", dates: "",
+            basic: "Use Pascal's Triangle to expand (a + b)ⁿ for small n.",
+            intermediate: "Use the Binomial Theorem to expand (a + b)ⁿ for a positive integer n.",
+            advanced: "Expand binomials with coefficients, like (2x − 3)⁵, and find a specific term without expanding the whole thing."
+          }
+        ]
       }
     ],
 
