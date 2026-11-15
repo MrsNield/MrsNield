@@ -224,13 +224,6 @@ const SITE_DATA = {
             basic: "Recognize, evaluate, and identify characteristics of exponential and logarithmic functions from equations and graphs.",
             intermediate: "Graph and solve basic and applied exponential and logarithmic equations, and identify and interpret real-world contexts.",
             advanced: "Analyze and interpret complex real-world exponential and logarithmic models, paying attention to reasonableness and context."
-          },
-          {
-            id: "5-4", target: "Use technology to model bivariate data with a function", teks: "P.2.N",
-            status: "not-started", dates: "",
-            basic: "Understand what a bivariate data set is and how to enter it into technology (e.g., a graphing calculator or Desmos). Begin identifying which types of functions might model the data.",
-            intermediate: "Use regression tools to find the quadratic, exponential, logarithmic, or power model that best fits the data, and interpret its key features.",
-            advanced: "Use the best-fit function to make predictions, analyze the limitations of the model, and justify conclusions in a real-world context."
           }
         ]
       },
@@ -327,14 +320,30 @@ const SITE_DATA = {
         { date: "2026-11-16", type: "homework", label: "DeltaMath on completing the square is due" },
         { date: "2026-11-17", type: "quiz", label: "Factoring and completing the square (the same factoring quiz as before, plus completing the square). Extra credit: 10 points for deriving the quadratic formula from the standard form of a quadratic, with all work shown" }
       ]},
-      { id: "cal-unit4", name: "Unit 4: Rational Functions, Equations, and Inequalities", schedule: [
-        { date: "2026-11-18", type: "lesson", label: "Rational Functions, Equations, and Inequalities — starts after the Unit 3 quiz, runs about a week (approximate)" }
+      { id: "cal-unit4", name: "Unit 4: Rational Functions", schedule: [
+        { date: "2026-11-18", type: "lesson", label: "4-2, 4-3 — Holes and vertical asymptotes from the equation (factor, cancel, see what is left)" },
+        { date: "2026-11-19", type: "lesson", label: "4-3, 4-4, 4-5 — Horizontal and slant asymptotes, intercepts, and domain from the equation" },
+        { date: "2026-11-20", type: "lesson", label: "4-1 — Put it all together: graph a rational function and describe its features. DeltaMath assigned" },
+        { date: "2026-11-30", type: "review", label: "Unit 4 review" },
+        { date: "2026-12-01", type: "test", label: "Unit 4 test" }
       ]},
-      { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions and Equations", schedule: [
-        { date: "2026-11-30", type: "lesson", label: "Exponential and Logarithmic Functions and Equations — starts about Nov 30, after Thanksgiving break, runs into early December (approximate)" }
+      { id: "cal-unit5", name: "Unit 5: Exponential and Logarithmic Functions", schedule: [
+        { date: "2026-12-02", type: "lesson", label: "5-1 — Logarithms as inverses of exponentials, converting between forms, change of base" },
+        { date: "2026-12-03", type: "lesson", label: "5-2 — Laws of logarithms: expanding and condensing" },
+        { date: "2026-12-07", type: "lesson", label: "5-2, 5-3 — Solving logarithmic and exponential equations, growth and decay applications" },
+        { date: "2026-12-08", type: "review", label: "Unit 5 review" },
+        { date: "2026-12-09", type: "test", label: "Unit 5 test" }
       ]},
       { id: "cal-unit6", name: "Unit 6: Sequences, Series, and Binomial Expansion", schedule: [
-        { date: "2026-12-07", type: "lesson", label: "Sequences, Series, and Binomial Expansion — runs through Dec 18" }
+        { date: "2026-12-10", type: "lesson", label: "6-1, 6-2 — Recursive formulas, arithmetic sequences and sums" },
+        { date: "2026-12-11", type: "lesson", label: "6-3 — Geometric sequences and sums, including infinite sums" },
+        { date: "2026-12-14", type: "lesson", label: "6-4, 6-5 — Sigma notation and the Binomial Theorem, with a short review at the end of class" },
+        { date: "2026-12-15", type: "test", label: "Unit 6 test" }
+      ]},
+      { id: "cal-sem1-finals", name: "Semester 1 Review and Finals", schedule: [
+        { date: "2026-12-16", type: "review", label: "Semester 1 review (all units)" },
+        { date: "2026-12-17", type: "final", label: "Semester 1 final exam" },
+        { date: "2026-12-18", type: "final", label: "Semester 1 final exam" }
       ]},
       { id: "cal-mm4", name: "Trigonometric Functions (Math Medic Unit 4)", schedule: [
         { date: "2027-01-05", type: "lesson", label: "4.1 — Right Triangle Trig" },
