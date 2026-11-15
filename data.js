@@ -220,26 +220,88 @@ const SITE_DATA = {
       { id: "cal-unit6", name: "Unit 6: Sequences, Series, and Binomial Expansion", schedule: [
         { date: "2026-12-07", type: "lesson", label: "Sequences, Series, and Binomial Expansion — runs through Dec 18" }
       ]},
-      { id: "cal-unit7", name: "Unit 7: Problem Solving with Trigonometric Ratios", schedule: [
-        { date: "2027-01-06", type: "lesson", label: "Problem Solving with Trigonometric Ratios — runs through Jan 21" }
+      { id: "cal-mm4", name: "Trigonometric Functions (Math Medic Unit 4)", schedule: [
+        { date: "2027-01-05", type: "lesson", label: "4.1 — Right Triangle Trig" },
+        { date: "2027-01-06", type: "lesson", label: "4.2 — Inverse Trig Ratios" },
+        { date: "2027-01-07", type: "lesson", label: "4.3 — Radians and Degrees" },
+        { date: "2027-01-08", type: "lesson", label: "4.4 — Unit Circle (Part 1)" },
+        { date: "2027-01-11", type: "lesson", label: "4.5 — Unit Circle (Part 2)" },
+        { date: "2027-01-12", type: "lesson", label: "4.6 — Other Trig Functions" },
+        { date: "2027-01-13", type: "review", label: "4.1–4.6" },
+        { date: "2027-01-14", type: "quiz", label: "4.1–4.6" },
+        { date: "2027-01-19", type: "lesson", label: "4.7 — Graphing Sine and Cosine" },
+        { date: "2027-01-20", type: "lesson", label: "4.8 — Transformations of Sine and Cosine Graphs" },
+        { date: "2027-01-21", type: "lesson", label: "4.9 — Graphing Secant and Cosecant" },
+        { date: "2027-01-22", type: "lesson", label: "4.10 — Graphing Tangent and Cotangent" },
+        { date: "2027-01-25", type: "quiz", label: "4.7–4.10" },
+        { date: "2027-01-26", type: "lesson", label: "4.11 — Inverse Trig Functions" },
+        { date: "2027-01-27", type: "lesson", label: "4.12 — Trigonometric Modeling" },
+        { date: "2027-01-28", type: "lesson", label: "4.13 — Trigonometric Identities" },
+        { date: "2027-02-01", type: "review", label: "Unit 4, day 1" },
+        { date: "2027-02-02", type: "review", label: "Unit 4, day 2" },
+        { date: "2027-02-03", type: "test", label: "Unit 4 — Trigonometric Functions" }
       ]},
-      { id: "cal-unit8", name: "Unit 8: Trigonometric Functions", schedule: [
-        { date: "2027-01-25", type: "lesson", label: "Trigonometric Functions — runs through Feb 17" }
+      { id: "cal-mm5", name: "Applications of Trigonometry (Math Medic Unit 5)", schedule: [
+        { date: "2027-02-04", type: "lesson", label: "5.1 — Law of Sines" },
+        { date: "2027-02-05", type: "lesson", label: "5.2 — The Ambiguous Case (SSA)" },
+        { date: "2027-02-08", type: "lesson", label: "5.3 — Law of Cosines" },
+        { date: "2027-02-09", type: "lesson", label: "5.4 — Area and Applications of the Laws" },
+        { date: "2027-02-10", type: "lesson", label: "5.5 — Vectors" },
+        { date: "2027-02-11", type: "review", label: "5.1–5.5" },
+        { date: "2027-02-16", type: "quiz", label: "5.1–5.5" },
+        { date: "2027-02-17", type: "lesson", label: "5.6 — Polar Coordinates" },
+        { date: "2027-02-18", type: "lesson", label: "5.7 — Equations in Polar and Cartesian Form" },
+        { date: "2027-02-19", type: "lesson", label: "5.8 — Polar Graphs, Part 1" },
+        { date: "2027-02-22", type: "lesson", label: "5.9 — Polar Graphs, Part 2" },
+        { date: "2027-02-23", type: "review", label: "5.6–5.9" },
+        { date: "2027-02-24", type: "quiz", label: "5.6–5.9" },
+        { date: "2027-02-25", type: "review", label: "Review day (ACT testing on campus)" },
+        { date: "2027-03-01", type: "lesson", label: "5.10 — Parametric Equations" },
+        { date: "2027-03-02", type: "lesson", label: "5.11 — Parametric Equations (With Trig)" },
+        { date: "2027-03-03", type: "review", label: "Unit 5" },
+        { date: "2027-03-04", type: "test", label: "Unit 5 — Applications of Trigonometry" }
       ]},
-      { id: "cal-unit9", name: "Unit 9: Trigonometric Equations and Identities", schedule: [
-        { date: "2027-02-22", type: "lesson", label: "Trigonometric Equations and Identities — runs through Mar 8" }
+      { id: "cal-mm8", name: "Limits (Math Medic Unit 8)", schedule: [
+        { date: "2027-03-05", type: "lesson", label: "8.1 — What is a Limit?" },
+        { date: "2027-03-08", type: "lesson", label: "8.2 — Evaluating Limits Graphically" },
+        { date: "2027-03-09", type: "lesson", label: "8.3 — Evaluating Limits with Direct Substitution" },
+        { date: "2027-03-10", type: "lesson", label: "8.4 — Evaluating Limits Analytically" },
+        { date: "2027-03-11", type: "note", label: "Pi Day" },
+        { date: "2027-03-22", type: "lesson", label: "8.4, Day 2 — Evaluating Limits Analytically" },
+        { date: "2027-03-23", type: "review", label: "8.1–8.4" },
+        { date: "2027-03-24", type: "quiz", label: "8.1–8.4" },
+        { date: "2027-03-25", type: "lesson", label: "8.5 — Continuity" },
+        { date: "2027-03-29", type: "lesson", label: "8.5, Day 2 — Continuity (Part 2)" },
+        { date: "2027-03-30", type: "lesson", label: "8.6 — Intermediate Value Theorem" },
+        { date: "2027-03-31", type: "lesson", label: "8.6, Day 2 — Intermediate Value Theorem (Part 2)" },
+        { date: "2027-04-01", type: "review", label: "8.5–8.6" },
+        { date: "2027-04-05", type: "quiz", label: "8.5–8.6" },
+        { date: "2027-04-06", type: "lesson", label: "8.7 — Limits at Infinity" },
+        { date: "2027-04-07", type: "review", label: "Unit 8" },
+        { date: "2027-04-08", type: "test", label: "Unit 8 — Limits" }
       ]},
-      { id: "cal-unit10", name: "Unit 10: Vectors", schedule: [
-        { date: "2027-03-10", type: "lesson", label: "Vectors — runs through Mar 30" }
-      ]},
-      { id: "cal-unit11", name: "Unit 11: Parametric Equations", schedule: [
-        { date: "2027-04-01", type: "lesson", label: "Parametric Equations — runs through Apr 13" }
-      ]},
-      { id: "cal-unit12", name: "Unit 12: Polar Equations", schedule: [
-        { date: "2027-04-15", type: "lesson", label: "Polar Equations — runs through Apr 22" }
-      ]},
-      { id: "cal-unit13", name: "Unit 13: Conics", schedule: [
-        { date: "2027-04-26", type: "lesson", label: "Conics — runs through May 19" }
+      { id: "cal-mm9", name: "Derivatives (Math Medic Unit 9)", schedule: [
+        { date: "2027-04-12", type: "lesson", label: "Unit 9 intro — Introduction to Derivatives" },
+        { date: "2027-04-13", type: "lesson", label: "9.1 — Average versus Instantaneous Rates of Change" },
+        { date: "2027-04-14", type: "lesson", label: "9.2 — Calculating Instantaneous Rate of Change" },
+        { date: "2027-04-15", type: "lesson", label: "9.2, Day 2 — Calculating Instantaneous Rate of Change" },
+        { date: "2027-04-16", type: "lesson", label: "9.3 — The Derivative Function" },
+        { date: "2027-04-19", type: "lesson", label: "9.3, Day 2 — The Derivative Function" },
+        { date: "2027-04-20", type: "review", label: "9.1–9.3" },
+        { date: "2027-04-21", type: "quiz", label: "9.1–9.3" },
+        { date: "2027-04-22", type: "lesson", label: "9.4 — Derivative Shortcuts" },
+        { date: "2027-04-23", type: "lesson", label: "9.5 — Differentiability" },
+        { date: "2027-04-26", type: "lesson", label: "9.6 — Connecting f and f′" },
+        { date: "2027-04-27", type: "lesson", label: "9.6, Day 2 — Connecting f and f′" },
+        { date: "2027-04-28", type: "review", label: "9.4–9.6" },
+        { date: "2027-04-29", type: "quiz", label: "9.4–9.6" },
+        { date: "2027-04-30", type: "lesson", label: "9.7 — Derivatives of Sine and Cosine" },
+        { date: "2027-05-03", type: "lesson", label: "9.8 — Product Rule" },
+        { date: "2027-05-04", type: "lesson", label: "9.9 — Quotient Rule" },
+        { date: "2027-05-05", type: "review", label: "9.7–9.9" },
+        { date: "2027-05-06", type: "quiz", label: "9.7–9.9" },
+        { date: "2027-05-10", type: "review", label: "Unit 9" },
+        { date: "2027-05-11", type: "test", label: "Unit 9 — Derivatives" }
       ]},
       { id: "cal-noschool", name: "No-School Days", schedule: [
         { date: "2026-09-07", type: "no-school", label: "No school" },
@@ -256,8 +318,20 @@ const SITE_DATA = {
         { date: "2027-01-18", type: "no-school", label: "No school" },
         { date: "2027-01-29", type: "no-school", label: "No students" },
         { date: "2027-02-26", type: "no-school", label: "No students" },
-        { date: "2027-03-12", type: "no-school", label: "No school" },
-        { date: "2027-03-15", type: "no-school", label: "Spring break begins (Mar 15–19)" }
+        { date: "2027-02-12", type: "no-school", label: "No students" },
+        { date: "2027-02-15", type: "no-school", label: "No students" },
+        { date: "2027-03-12", type: "no-school", label: "Spring break begins (Mar 12–19)" },
+        { date: "2027-03-15", type: "no-school", label: "Spring break" },
+        { date: "2027-03-16", type: "no-school", label: "Spring break" },
+        { date: "2027-03-17", type: "no-school", label: "Spring break" },
+        { date: "2027-03-18", type: "no-school", label: "Spring break" },
+        { date: "2027-03-19", type: "no-school", label: "Spring break" },
+        { date: "2027-03-26", type: "no-school", label: "No school" },
+        { date: "2027-04-02", type: "no-school", label: "No students (teacher work day)" },
+        { date: "2027-04-09", type: "no-school", label: "No school" },
+        { date: "2027-05-07", type: "no-school", label: "Bad weather make-up day (only if needed)" },
+        { date: "2027-05-14", type: "no-school", label: "Bad weather make-up day (only if needed)" },
+        { date: "2027-05-20", type: "note", label: "Last day of school" }
       ]}
     ],
 
@@ -1057,6 +1131,25 @@ const SITE_DATA = {
 
     message: "This class follows the Math Medic Precalculus curriculum. Check the Course Calendar below to see what's been covered (and what's coming up) — if you missed a day, just find the date.",
 
+    // ---- Lesson Videos tab: links to the Math Medic lesson pages (each page has
+    // that lesson's video, which students open with the class password). Links
+    // only: nothing is copied or hosted here. Each lesson is [day, number, title],
+    // where "day" is the day number in Math Medic's unit (used to build the URL
+    // https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/<unit>/day/<day>).
+    // Only lessons that have their own video are listed. Delete a unit to hide it. ----
+    lessonVideos: [
+      { unit: 0, name: "Unit 0: Prerequisites", lessons: [[1,"0.1","The Cartesian Plane"],[2,"0.2","Equations of Circles"],[3,"0.3","Solving Equations in Multiple Representations"],[4,"0.4","Reasoning with Formulas"],[6,"0.5","Linear Relationships"],[7,"0.6","Reasoning with Slope"],[8,"0.7","Set Notation"]] },
+      { unit: 1, name: "Unit 1: Functions", lessons: [[1,"1.1","Functions and Function Notation"],[2,"1.2","Domain and Range"],[3,"1.3","Rates of Change and Graph Behavior"],[4,"1.4","Library of Parent Functions"],[5,"1.5","Transformations of Functions"],[7,"1.6","Even and Odd Functions"],[9,"1.7","Building Functions"],[10,"1.8","Compositions of Functions"],[11,"1.9","Inverse Functions"],[12,"1.10","Graphs of Inverse Functions"],[13,"1.11","Piecewise Functions"]] },
+      { unit: 2, name: "Unit 2: Polynomial and Rational Functions", lessons: [[1,"2.1","Connecting Quadratics"],[2,"2.2","Completing the Square"],[3,"2.3","Polynomials in the Short Run"],[4,"2.4","Polynomials in the Long Run"],[7,"2.5","Factor and Remainder Theorem"],[9,"2.6","Complex Zeros"],[10,"2.7","Connecting Zeros Across Multiple Representations"],[11,"2.8","Intro to Rational Functions"],[12,"2.9","Graphing Rational Functions"]] },
+      { unit: 3, name: "Unit 3: Exponential and Logarithmic Functions", lessons: [[1,"3.1","Exponential Functions"],[2,"3.2","Graphs of Exponential Functions"],[3,"3.3","Compound Interest and an Introduction to \"e\""],[6,"3.4","Logarithmic Functions"],[7,"3.5","Graphs of Logarithmic Functions"],[8,"3.6","Logarithm Properties"],[9,"3.7","Solving Exponential and Logarithmic Equations"],[11,"3.8","Exponential and Logarithmic Modeling"]] },
+      { unit: 4, name: "Unit 4: Trigonometric Functions", lessons: [[1,"4.1","Right Triangle Trig"],[2,"4.2","Inverse Trig Ratios"],[3,"4.3","Radians and Degrees"],[4,"4.4","Unit Circle (Part 1)"],[5,"4.5","Unit Circle (Part 2)"],[6,"4.6","Other Trig Functions"],[9,"4.7","Graphing Sine and Cosine"],[10,"4.8","Transformations of Sine and Cosine Graphs"],[11,"4.9","Graphing Secant and Cosecant"],[12,"4.10","Graphing Tangent and Cotangent"],[14,"4.11","Inverse Trig Functions"],[15,"4.12","Trigonometric Modeling"],[16,"4.13","Trigonometric Identities"]] },
+      { unit: 5, name: "Unit 5: Applications of Trigonometry", lessons: [[1,"5.1","Law of Sines"],[2,"5.2","The Ambiguous Case (SSA)"],[3,"5.3","Law of Cosines"],[4,"5.4","Area and Applications of Laws"],[5,"5.5","Vectors"],[8,"5.6","Polar Coordinates"],[9,"5.7","Equations in Polar and Cartesian Form"],[10,"5.8","Polar Graphs Part 1"],[11,"5.9","Polar Graphs Part 2"],[14,"5.10","Parametric Equations"],[15,"5.11","Parametric Equations (With Trig)"]] },
+      { unit: 6, name: "Unit 6: Systems of Equations", lessons: [[1,"6.1","What is a Solution?"],[3,"6.3","Solving Systems with Elimination"],[6,"6.4","Solving Systems in 3 Variables"],[8,"6.5","Partial Fractions"]] },
+      { unit: 7, name: "Unit 7: Sequences and Series", lessons: [[2,"7.1","Using Sequences and Series to Describe Patterns"],[3,"7.2","Arithmetic Sequences and Series"],[6,"7.3","Geometric Sequences and Finite Series"],[7,"7.4","Infinite Geometric Sequences and Series"],[8,"7.5","Proof by Induction"]] },
+      { unit: 8, name: "Unit 8: Limits", lessons: [[1,"8.1","What is a Limit?"],[3,"8.3","Evaluating Limits with Direct Substitution"],[4,"8.4","Evaluating Limits Analytically"],[8,"8.5","Continuity"],[10,"8.6","Intermediate Value Theorem"],[14,"8.7","Limits at Infinity"]] },
+      { unit: 9, name: "Unit 9: Derivatives", lessons: [[2,"9.1","Average versus Instantaneous Rates of Change"],[3,"9.2","Calculating Instantaneous Rate of Change"],[5,"9.3","The Derivative Function"],[9,"9.4","Derivative Shortcuts"],[10,"9.5","Differentiability"],[11,"9.6","Connecting f and f′"],[15,"9.7","Derivatives of Sine and Cosine"],[16,"9.8","Product Rule"],[17,"9.9","Quotient Rule"]] }
+    ],
+
     // ---- Downloadable catch-up resources per unit: homework answer keys and
     // filled-in guided notes, for students who missed a lesson. Same
     // { id, name, resources: [{label, file}] } shape as AP Calc's Unit
@@ -1590,17 +1683,17 @@ const SITE_DATA = {
           { date: "2027-02-22", type: "frq", label: "FRQ — due at the start of the period" },
           { date: "2027-02-23", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2027-02-24", type: "review", label: "Test review" },
-          { date: "2027-02-25", type: "lesson", label: "7.1" },
+          { date: "2027-02-25", type: "review", label: "Review day (ACT testing on campus)" },
           { date: "2027-02-26", type: "no-school", label: "No students" },
-          { date: "2027-03-01", type: "lesson", label: "7.2" },
-          { date: "2027-03-02", type: "review", label: "Review" },
+          { date: "2027-03-01", type: "lesson", label: "7.1" },
+          { date: "2027-03-02", type: "lesson", label: "7.2" },
           { date: "2027-03-03", type: "lesson", label: "7.3" },
           { date: "2027-03-04", type: "lesson", label: "7.4" },
           { date: "2027-03-05", type: "lesson", label: "7.5" },
           { date: "2027-03-08", type: "review", label: "Review + turn in homework" },
           { date: "2027-03-09", type: "frq", label: "FRQ — due at the start of the period" },
           { date: "2027-03-10", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
-          { date: "2027-03-11", type: "review", label: "Test review" },
+          { date: "2027-03-11", type: "note", label: "Pi Day" },
           { date: "2027-03-12", type: "no-school", label: "Spring break begins (Mar 12–19)" },
           { date: "2027-03-15", type: "no-school", label: "Spring break" },
           { date: "2027-03-16", type: "no-school", label: "Spring break" },

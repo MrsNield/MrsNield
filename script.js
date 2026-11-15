@@ -103,6 +103,7 @@ function renderMain() {
     `;
     const pTabs = [
       { id: "resources", label: "Unit Resources" },
+      { id: "videos", label: "Lesson Videos" },
       { id: "calendar", label: "Course Calendar" },
       { id: "bellringers", label: "Bellringers" }
     ];
@@ -119,6 +120,7 @@ function renderMain() {
     const pPanels = document.getElementById("precalcPanels");
     if (currentPrecalcTab === "calendar") pPanels.innerHTML = renderCourseCalendar(SITE_DATA.precalc?.units || []);
     else if (currentPrecalcTab === "bellringers") pPanels.innerHTML = renderBellringers(SITE_DATA.precalc?.bellringers || []);
+    else if (currentPrecalcTab === "videos") pPanels.innerHTML = renderPrecalcLessonVideos(SITE_DATA.precalc?.lessonVideos || []);
     else pPanels.innerHTML =
       renderApCalcUnits(SITE_DATA.precalc?.unitResources || []) +
       renderApCalcUnitVideos(SITE_DATA.precalc?.unitVideos || []);
@@ -1029,6 +1031,28 @@ function renderApCalcUnitVideos(unitVideos) {
           html += `<p class="rubric-note" style="margin:4px 0 10px;">${d.note}</p>`;
         }
       });
+    });
+  }
+  html += `</div>`;
+  return html;
+}
+
+// Links to Math Medic lesson pages (each page has that lesson's video, which
+// students open with the class password). Links only, nothing hosted here.
+function renderPrecalcLessonVideos(units) {
+  units = units || [];
+  let html = `<div class="card"><h2 class="section-title">Lesson Videos</h2>
+    <p class="rubric-note">Missed a lesson, or want to see it again? Each link opens that lesson on Math Medic in a new tab, where you'll find the lesson video. You will be asked for the class password. Ask Mrs. Nield if you don't have it.</p>`;
+  if (!units.length) {
+    html += `<div class="empty-state">No lesson videos posted yet — check back soon!</div>`;
+  } else {
+    units.forEach((u, ui) => {
+      html += `<h3 style="color:var(--navy);margin-top:${ui === 0 ? 0 : 20}px;">${u.name}</h3><ul class="video-list">`;
+      (u.lessons || []).forEach(([day, num, title]) => {
+        const url = `https://portal.mathmedic.com/lesson-plans/course/Precalculus/unit/${u.unit}/day/${day}`;
+        html += `<li><a href="${url}" target="_blank" rel="noopener">${num} — ${title}</a></li>`;
+      });
+      html += `</ul>`;
     });
   }
   html += `</div>`;
