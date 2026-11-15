@@ -131,14 +131,14 @@ const SITE_DATA = {
           },
           {
             id: "3-3", target: "Complete the square and derive the quadratic formula", teks: "P.5.J",
-            status: "in-progress", dates: "Nov 2",
+            status: "covered", dates: "Nov 2, 11–12, 16",
             basic: "Understand and apply the process of completing the square for simple quadratics, rewriting a quadratic equation in the form (x – p)² = q that has the same solutions.",
             intermediate: "Complete the square when the leading coefficient is greater than 1 and solve the resulting equation.",
             advanced: "Derive the quadratic formula by completing the square on the general quadratic equation."
           },
           {
             id: "3-4", target: "Understand the Fundamental Theorem of Algebra and write a polynomial from its roots", teks: "P.5.J, P.2.I",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Oct 26",
             basic: "Identify the relationship between the roots and the factors of a polynomial. Recognize the structure of a polynomial based on its real and complex roots.",
             intermediate: "Construct a polynomial function in standard form from its real and complex roots (the lowest-degree polynomial with real coefficients).",
             advanced: "Analyze and explain the behavior of polynomial functions using the Fundamental Theorem of Algebra and the properties of roots."
@@ -401,7 +401,9 @@ const SITE_DATA = {
       { date: "2026-10-29", objective: "3-2" },
       { date: "2026-11-02", objective: "3-3" },
       { date: "2026-11-04", objective: "Practice simplifying radicals" },
-      { date: "2026-11-06", objective: "Factoring practice — all of the factoring methods except completing the square" }
+      { date: "2026-11-06", objective: "Factoring practice — all of the factoring methods except completing the square" },
+      { date: "2026-11-11", objective: "3-3" },
+      { date: "2026-11-12", objective: "3-3" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
