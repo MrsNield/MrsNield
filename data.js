@@ -1438,10 +1438,9 @@ const SITE_DATA = {
     // Lesson numbers here (1.1, 2.9, 6.12, ...) are the textbook/homework lesson
     // numbers used for day-to-day pacing — NOT the AP CED topic numbers (1.1-1.16
     // etc.) used in the Unit Resources / Guided Notes / DeltaMath crosswalk below.
-    // Two rows are still flagged from the draft review and need Mrs. Nield's
-    // confirmation: Sep 14 (test date conflict resolved by moving the 2.4 review
-    // here) and Jan 5 (assumed first 3 days back from break are review, 6.5 starts
-    // Jan 8). Update the label text once confirmed.
+    // One row was flagged from the draft review: Sep 14 (test date conflict
+    // resolved by moving the 2.4 review here). Jan 5 is now confirmed: 6.1 is the
+    // first day back.
     courseCalendar: [
       {
         id: "sw1", name: "1st Six Weeks (Aug 13 – Sep 18)",
@@ -1525,22 +1524,22 @@ const SITE_DATA = {
           { date: "2026-11-16", type: "lesson", label: "5.2" },
           { date: "2026-11-17", type: "lesson", label: "5.3" },
           { date: "2026-11-18", type: "lesson", label: "5.4" },
-          { date: "2026-11-19", type: "review", label: "Review" },
-          { date: "2026-11-20", type: "lesson", label: "5.5" },
+          { date: "2026-11-19", type: "lesson", label: "5.5" },
+          { date: "2026-11-20", type: "lesson", label: "5.6" },
           { date: "2026-11-23", type: "no-school", label: "Thanksgiving break (Nov 23–27)" },
-          { date: "2026-11-30", type: "lesson", label: "5.6" },
-          { date: "2026-12-01", type: "lesson", label: "5.7" },
-          { date: "2026-12-02", type: "review", label: "Review" },
-          { date: "2026-12-03", type: "review", label: "Review" },
+          { date: "2026-11-30", type: "review", label: "Review + spin the homework wheel" },
+          { date: "2026-12-01", type: "quiz", label: "Mid-unit quiz" },
+          { date: "2026-12-02", type: "lesson", label: "5.7" },
+          { date: "2026-12-03", type: "lesson", label: "5.8" },
           { date: "2026-12-04", type: "no-school", label: "No school" },
-          { date: "2026-12-07", type: "lesson", label: "5.8" },
-          { date: "2026-12-08", type: "review", label: "Review" },
-          { date: "2026-12-09", type: "lesson", label: "5.9" },
-          { date: "2026-12-10", type: "review", label: "Review + turn in homework" },
-          { date: "2026-12-11", type: "frq", label: "FRQ — due at the start of the period" },
-          { date: "2026-12-14", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
-          { date: "2026-12-15", type: "review", label: "Review" },
-          { date: "2026-12-16", type: "lesson", label: "6.1" },
+          { date: "2026-12-07", type: "lesson", label: "5.9" },
+          { date: "2026-12-08", type: "lesson", label: "5.10" },
+          { date: "2026-12-09", type: "lesson", label: "5.11" },
+          { date: "2026-12-10", type: "lesson", label: "5.12" },
+          { date: "2026-12-11", type: "review", label: "Review + the second half of the unit is due" },
+          { date: "2026-12-14", type: "frq", label: "FRQ day — FRQs are due at the start of the period" },
+          { date: "2026-12-15", type: "test", label: "Test — turn in your multiple choice questions at the start of the period" },
+          { date: "2026-12-16", type: "review", label: "Review" },
           { date: "2026-12-17", type: "final", label: "End of 3rd six weeks / Final exam" },
           { date: "2026-12-18", type: "final", label: "Final exam" },
           { date: "2026-12-21", type: "no-school", label: "Christmas break begins (Dec 21 – Jan 4)" }
@@ -1549,17 +1548,17 @@ const SITE_DATA = {
       {
         id: "sw4", name: "4th Six Weeks (Jan 5 – Feb 11)",
         schedule: [
-          { date: "2027-01-05", type: "lesson", label: "6.2 — First day back" },
-          { date: "2027-01-06", type: "lesson", label: "6.3" },
-          { date: "2027-01-07", type: "lesson", label: "6.4" },
-          { date: "2027-01-08", type: "lesson", label: "6.5" },
-          { date: "2027-01-11", type: "lesson", label: "6.6" },
-          { date: "2027-01-12", type: "lesson", label: "6.7" },
-          { date: "2027-01-13", type: "lesson", label: "6.8" },
-          { date: "2027-01-14", type: "lesson", label: "6.9" },
+          { date: "2027-01-05", type: "lesson", label: "6.1 — First day back" },
+          { date: "2027-01-06", type: "lesson", label: "6.2" },
+          { date: "2027-01-07", type: "lesson", label: "6.3" },
+          { date: "2027-01-08", type: "lesson", label: "6.4" },
+          { date: "2027-01-11", type: "lesson", label: "6.5" },
+          { date: "2027-01-12", type: "lesson", label: "6.6" },
+          { date: "2027-01-13", type: "lesson", label: "6.7" },
+          { date: "2027-01-14", type: "lesson", label: "6.8" },
           { date: "2027-01-15", type: "no-school", label: "No school" },
           { date: "2027-01-18", type: "no-school", label: "No school" },
-          { date: "2027-01-19", type: "review", label: "Review" },
+          { date: "2027-01-19", type: "lesson", label: "6.9" },
           { date: "2027-01-20", type: "lesson", label: "6.10" },
           { date: "2027-01-21", type: "review", label: "Review" },
           { date: "2027-01-22", type: "lesson", label: "6.11" },
