@@ -233,13 +233,13 @@ const SITE_DATA = {
         { date: "2027-01-20", type: "lesson", label: "4.8 — Transformations of Sine and Cosine Graphs" },
         { date: "2027-01-21", type: "lesson", label: "4.9 — Graphing Secant and Cosecant" },
         { date: "2027-01-22", type: "lesson", label: "4.10 — Graphing Tangent and Cotangent" },
-        { date: "2027-01-25", type: "quiz", label: "4.7–4.10" },
-        { date: "2027-01-26", type: "lesson", label: "4.11 — Inverse Trig Functions" },
-        { date: "2027-01-27", type: "lesson", label: "4.12 — Trigonometric Modeling" },
-        { date: "2027-01-28", type: "lesson", label: "4.13 — Trigonometric Identities" },
-        { date: "2027-02-01", type: "review", label: "Unit 4, day 1" },
-        { date: "2027-02-02", type: "review", label: "Unit 4, day 2" },
-        { date: "2027-02-03", type: "test", label: "Unit 4 — Trigonometric Functions" }
+        { date: "2027-01-25", type: "lesson", label: "4.11 — Inverse Trig Functions" },
+        { date: "2027-01-26", type: "lesson", label: "4.12 — Trigonometric Modeling" },
+        { date: "2027-01-27", type: "lesson", label: "4.13 — Trigonometric Identities" },
+        { date: "2027-01-28", type: "review", label: "Unit 4, day 1" },
+        { date: "2027-02-01", type: "review", label: "Unit 4, day 2" },
+        { date: "2027-02-02", type: "test", label: "Unit 4 — Day 1" },
+        { date: "2027-02-03", type: "test", label: "Unit 4 — Day 2" }
       ]},
       { id: "cal-mm5", name: "Applications of Trigonometry (Math Medic Unit 5)", schedule: [
         { date: "2027-02-04", type: "lesson", label: "5.1 — Law of Sines" },
@@ -254,12 +254,12 @@ const SITE_DATA = {
         { date: "2027-02-19", type: "lesson", label: "5.8 — Polar Graphs, Part 1" },
         { date: "2027-02-22", type: "lesson", label: "5.9 — Polar Graphs, Part 2" },
         { date: "2027-02-23", type: "review", label: "5.6–5.9" },
-        { date: "2027-02-24", type: "quiz", label: "5.6–5.9" },
+        { date: "2027-02-24", type: "lesson", label: "5.10 — Parametric Equations" },
         { date: "2027-02-25", type: "review", label: "Review day (ACT testing on campus)" },
-        { date: "2027-03-01", type: "lesson", label: "5.10 — Parametric Equations" },
-        { date: "2027-03-02", type: "lesson", label: "5.11 — Parametric Equations (With Trig)" },
-        { date: "2027-03-03", type: "review", label: "Unit 5" },
-        { date: "2027-03-04", type: "test", label: "Unit 5 — Applications of Trigonometry" }
+        { date: "2027-03-01", type: "lesson", label: "5.11 — Parametric Equations (With Trig)" },
+        { date: "2027-03-02", type: "review", label: "Unit 5" },
+        { date: "2027-03-03", type: "test", label: "Unit 5 — Day 1" },
+        { date: "2027-03-04", type: "test", label: "Unit 5 — Day 2" }
       ]},
       { id: "cal-mm8", name: "Limits (Math Medic Unit 8)", schedule: [
         { date: "2027-03-05", type: "lesson", label: "8.1 — What is a Limit?" },
@@ -275,10 +275,10 @@ const SITE_DATA = {
         { date: "2027-03-30", type: "lesson", label: "8.6 — Intermediate Value Theorem" },
         { date: "2027-03-31", type: "lesson", label: "8.6, Day 2 — Intermediate Value Theorem (Part 2)" },
         { date: "2027-04-01", type: "review", label: "8.5–8.6" },
-        { date: "2027-04-05", type: "quiz", label: "8.5–8.6" },
-        { date: "2027-04-06", type: "lesson", label: "8.7 — Limits at Infinity" },
-        { date: "2027-04-07", type: "review", label: "Unit 8" },
-        { date: "2027-04-08", type: "test", label: "Unit 8 — Limits" }
+        { date: "2027-04-05", type: "lesson", label: "8.7 — Limits at Infinity" },
+        { date: "2027-04-06", type: "review", label: "Unit 8" },
+        { date: "2027-04-07", type: "test", label: "Unit 8 — Day 1" },
+        { date: "2027-04-08", type: "test", label: "Unit 8 — Day 2" }
       ]},
       { id: "cal-mm9", name: "Derivatives (Math Medic Unit 9)", schedule: [
         { date: "2027-04-12", type: "lesson", label: "Unit 9 intro — Introduction to Derivatives" },
@@ -299,9 +299,9 @@ const SITE_DATA = {
         { date: "2027-05-03", type: "lesson", label: "9.8 — Product Rule" },
         { date: "2027-05-04", type: "lesson", label: "9.9 — Quotient Rule" },
         { date: "2027-05-05", type: "review", label: "9.7–9.9" },
-        { date: "2027-05-06", type: "quiz", label: "9.7–9.9" },
-        { date: "2027-05-10", type: "review", label: "Unit 9" },
-        { date: "2027-05-11", type: "test", label: "Unit 9 — Derivatives" }
+        { date: "2027-05-06", type: "review", label: "Unit 9" },
+        { date: "2027-05-10", type: "test", label: "Unit 9 — Day 1" },
+        { date: "2027-05-11", type: "test", label: "Unit 9 — Day 2" }
       ]},
       { id: "cal-noschool", name: "No-School Days", schedule: [
         { date: "2026-09-07", type: "no-school", label: "No school" },
