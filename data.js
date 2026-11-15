@@ -1575,11 +1575,13 @@ const SITE_DATA = {
           { date: "2027-02-08", type: "lesson", label: "8.4" },
           { date: "2027-02-09", type: "lesson", label: "8.5" },
           { date: "2027-02-10", type: "review", label: "Review" },
-          { date: "2027-02-11", type: "lesson", label: "8.6 — End of 4th six weeks" }
+          { date: "2027-02-11", type: "lesson", label: "8.6 — End of 4th six weeks" },
+          { date: "2027-02-12", type: "no-school", label: "No students" },
+          { date: "2027-02-15", type: "no-school", label: "No students" }
         ]
       },
       {
-        id: "sw5", name: "5th Six Weeks, in progress (Feb 16 – Mar 19)",
+        id: "sw5", name: "5th Six Weeks (Feb 16 – Apr 1)",
         schedule: [
           { date: "2027-02-16", type: "review", label: "Review — Start of 5th six weeks" },
           { date: "2027-02-17", type: "lesson", label: "8.7" },
@@ -1599,8 +1601,57 @@ const SITE_DATA = {
           { date: "2027-03-09", type: "frq", label: "FRQ — due at the start of the period" },
           { date: "2027-03-10", type: "test", label: "Test — turn in your study guide and multiple choice questions at the start of the period" },
           { date: "2027-03-11", type: "review", label: "Test review" },
-          { date: "2027-03-12", type: "no-school", label: "No school" },
-          { date: "2027-03-15", type: "no-school", label: "Spring break begins (Mar 15–19)" }
+          { date: "2027-03-12", type: "no-school", label: "Spring break begins (Mar 12–19)" },
+          { date: "2027-03-15", type: "no-school", label: "Spring break" },
+          { date: "2027-03-16", type: "no-school", label: "Spring break" },
+          { date: "2027-03-17", type: "no-school", label: "Spring break" },
+          { date: "2027-03-18", type: "no-school", label: "Spring break" },
+          { date: "2027-03-19", type: "no-school", label: "Spring break" },
+          // Content ends with Unit 7. Every class day from here to the AP exam is
+          // "Review" until Mrs. Nield fills in the daily plan closer to the time.
+          { date: "2027-03-22", type: "review", label: "Review" },
+          { date: "2027-03-23", type: "review", label: "Review" },
+          { date: "2027-03-24", type: "note", label: "AP Calculus practice exam — 8 a.m. in the school library. 3rd and 5th period students are in the library for periods 1–5, so there is no class" },
+          { date: "2027-03-25", type: "review", label: "Review" },
+          { date: "2027-03-26", type: "no-school", label: "No school" },
+          { date: "2027-03-29", type: "review", label: "Review" },
+          { date: "2027-03-30", type: "review", label: "Review" },
+          { date: "2027-03-31", type: "review", label: "Review" },
+          { date: "2027-04-01", type: "review", label: "Review — End of 5th six weeks" }
+        ]
+      },
+      {
+        id: "sw6", name: "6th Six Weeks (Apr 5 – May 20)",
+        schedule: [
+          { date: "2027-04-02", type: "no-school", label: "No students (teacher work day)" },
+          { date: "2027-04-05", type: "review", label: "Review — Start of 6th six weeks" },
+          { date: "2027-04-06", type: "review", label: "Review" },
+          { date: "2027-04-07", type: "review", label: "Review" },
+          { date: "2027-04-08", type: "review", label: "Review" },
+          { date: "2027-04-09", type: "no-school", label: "No school" },
+          { date: "2027-04-12", type: "review", label: "Review" },
+          { date: "2027-04-13", type: "review", label: "Review" },
+          { date: "2027-04-14", type: "review", label: "Review" },
+          { date: "2027-04-15", type: "review", label: "Review" },
+          { date: "2027-04-16", type: "review", label: "Review" },
+          { date: "2027-04-19", type: "review", label: "Review" },
+          { date: "2027-04-20", type: "review", label: "Review" },
+          { date: "2027-04-21", type: "review", label: "Review" },
+          { date: "2027-04-22", type: "review", label: "Review" },
+          { date: "2027-04-23", type: "review", label: "Review" },
+          { date: "2027-04-26", type: "note", label: "AP Calculus practice exam — 8 a.m. in the school library. 3rd and 5th period students are in the library for periods 1–5, so there is no class" },
+          { date: "2027-04-27", type: "review", label: "Review" },
+          { date: "2027-04-28", type: "review", label: "Review" },
+          { date: "2027-04-29", type: "review", label: "Review" },
+          { date: "2027-04-30", type: "review", label: "Review" },
+          { date: "2027-05-03", type: "review", label: "Review" },
+          { date: "2027-05-04", type: "review", label: "Review" },
+          { date: "2027-05-05", type: "review", label: "Review" },
+          { date: "2027-05-06", type: "review", label: "Review" },
+          { date: "2027-05-07", type: "no-school", label: "Bad weather make-up day (only if needed)" },
+          { date: "2027-05-10", type: "note", label: "AP Calculus AB Exam — 8 a.m. in the school library. 3rd and 5th period students are in the library for periods 1–5, so there is no class" },
+          { date: "2027-05-14", type: "no-school", label: "Bad weather make-up day (only if needed)" },
+          { date: "2027-05-20", type: "note", label: "Last day of school" }
         ]
       }
     ],
