@@ -172,28 +172,28 @@ const SITE_DATA = {
           },
           {
             id: "4-2", target: "Identify holes", teks: "P.2.L",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Nov 18",
             basic: "Given the equation of a rational function (instead of looking at its graph), identify the holes.",
             intermediate: "",
             advanced: ""
           },
           {
             id: "4-3", target: "Identify asymptotes", teks: "P.2.K",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Nov 18–19",
             basic: "Given the equation of a rational function (instead of looking at its graph), identify the asymptotes.",
             intermediate: "",
             advanced: ""
           },
           {
             id: "4-4", target: "Identify intercepts", teks: "P.2.I",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Nov 19",
             basic: "Given the equation of a rational function (instead of looking at its graph), identify the intercepts.",
             intermediate: "",
             advanced: ""
           },
           {
             id: "4-5", target: "Identify the domain", teks: "P.2.I",
-            status: "not-started", dates: "",
+            status: "covered", dates: "Nov 19",
             basic: "Given the equation of a rational function (instead of looking at its graph), identify the domain.",
             intermediate: "",
             advanced: ""
@@ -530,7 +530,12 @@ const SITE_DATA = {
       { date: "2026-11-09", objective: "Factoring practice" },
       { date: "2026-11-10", objective: "Factoring quiz" },
       { date: "2026-11-11", objective: "3-3" },
-      { date: "2026-11-12", objective: "3-3" }
+      { date: "2026-11-12", objective: "3-3" },
+      { date: "2026-11-18", objective: "4-2" },
+      { date: "2026-11-18", objective: "4-3" },
+      { date: "2026-11-19", objective: "4-3" },
+      { date: "2026-11-19", objective: "4-4" },
+      { date: "2026-11-19", objective: "4-5" }
     ],
 
     // ---- Board work photos. Add entries in any order — the site groups them
@@ -2087,6 +2092,18 @@ const SITE_DATA = {
             deltamath: [
               { label: "1.4 Limits at Infinity", url: "https://www.deltamath.com/app/assignment/33425151" }
             ]
+          },
+          {
+            day: "Mid-Unit 1 Review",
+            videos: [
+              { title: "Mid-Unit 1 Review", url: "https://calculus.flippedmath.com/mid-unit-1-review.html" }
+            ]
+          },
+          {
+            day: "Unit 1 Review",
+            videos: [
+              { title: "Unit 1 Review", url: "https://youtu.be/d7jI8OXhSVw" }
+            ]
           }
         ]
       },
@@ -2312,9 +2329,522 @@ const SITE_DATA = {
         unit: "Unit 5: Analytical Applications of Differentiation",
         days: [
           {
+            day: "5.1",
+            videos: [
+              { title: "5.1 — Using the Mean Value Theorem", url: "https://calculus.flippedmath.com/51-using-the-mean-value-theorem.html" }
+            ]
+          },
+          {
+            day: "5.2",
+            videos: [
+              { title: "5.2 — Extreme Value Theorem, Global Versus Local Extrema, and Critical Points", url: "https://calculus.flippedmath.com/52-extreme-value-theorem-global-versus-local-extrema-and-critical-points.html" }
+            ]
+          },
+          {
+            day: "5.3",
+            videos: [
+              { title: "5.3 — Determining Intervals on Which a Function is Increasing or Decreasing", url: "https://calculus.flippedmath.com/53-determining-intervals-on-which-a-function-is-increasing-or-decreasing.html" }
+            ]
+          },
+          {
+            day: "5.4",
+            videos: [
+              { title: "5.4 — Using the First Derivative Test to Determine Relative Local Extrema", url: "https://calculus.flippedmath.com/54-using-the-first-derivative-test-to-determine-relative-local-extrema.html" }
+            ]
+          },
+          {
+            day: "5.5",
+            videos: [
+              { title: "5.5 — Using the Candidates Test to Determine Absolute (Global) Extrema", url: "https://calculus.flippedmath.com/55-using-the-candidates-test-to-determine-absolute-global-extrema.html" }
+            ]
+          },
+          {
+            day: "5.6",
+            videos: [
+              { title: "5.6 — Determining Concavity of Functions over Their Domains", url: "https://calculus.flippedmath.com/56-determining-concavity-of-functions-over-their-domains.html" }
+            ]
+          },
+          {
+            day: "5.7",
+            videos: [
+              { title: "5.7 — Using the Second Derivative Test to Determine Extrema", url: "https://calculus.flippedmath.com/57-using-the-second-derivative-test-to-determine-extrema.html" }
+            ]
+          },
+          {
+            day: "Mid-Unit 5 Review",
+            videos: [
+              { title: "Mid-Unit 5 Review", url: "https://calculus.flippedmath.com/mid-unit-5-review.html" }
+            ]
+          },
+          {
+            day: "5.8",
+            videos: [
+              { title: "5.8 — Sketching Graphs of Functions and Their Derivatives", url: "https://calculus.flippedmath.com/58-sketching-graphs-of-functions-and-their-derivatives.html" }
+            ]
+          },
+          {
+            day: "5.9",
+            videos: [
+              { title: "5.9 — Connecting a Function, Its First Derivative, and Its Second Derivative", url: "https://calculus.flippedmath.com/59-connecting-a-function-its-first-derivative-and-its-second-derivative.html" }
+            ]
+          },
+          {
+            day: "5.10",
+            videos: [
+              { title: "5.10 — Introduction to Optimization Problems", url: "https://calculus.flippedmath.com/510-introduction-to-optimization-problems.html" }
+            ]
+          },
+          {
+            day: "5.11",
+            videos: [
+              { title: "5.11 — Solving Optimization Problems", url: "https://calculus.flippedmath.com/511-solving-optimization-problems.html" }
+            ]
+          },
+          {
+            day: "5.12",
+            videos: [
+              { title: "5.12 — Exploring Behaviors of Implicit Relations", url: "https://calculus.flippedmath.com/512-exploring-behaviors-of-implicit-relations.html" }
+            ]
+          },
+          {
             day: "Unit 5 Review",
             videos: [
               { title: "Unit 5 Review", url: "https://youtu.be/a84Tdv1V5dE" }
+            ]
+          }
+        ]
+      },
+      {
+        unit: "Unit 6: Integration and Accumulation of Change",
+        days: [
+          {
+            day: "6.1",
+            videos: [
+              { title: "6.1 — Exploring Accumulation of Change", url: "https://calculus.flippedmath.com/61-exploring-accumulation-of-change.html" }
+            ]
+          },
+          {
+            day: "6.2",
+            videos: [
+              { title: "6.2 — Approximating Areas with Riemann Sums", url: "https://calculus.flippedmath.com/62-approximating-areas-with-riemann-sums.html" }
+            ]
+          },
+          {
+            day: "6.3",
+            videos: [
+              { title: "6.3 — Riemann Sums, Summation Notation, and Definite Integral Notation", url: "https://calculus.flippedmath.com/63-riemann-sums-summation-notation-and-definite-integral-notation.html" }
+            ]
+          },
+          {
+            day: "6.4",
+            videos: [
+              { title: "6.4 — The Fundamental Theorem of Calculus and Accumulation Functions", url: "https://calculus.flippedmath.com/64-the-fundamental-theorem-of-calculus-and-accumulation-functions.html" }
+            ]
+          },
+          {
+            day: "6.5",
+            videos: [
+              { title: "6.5 — Interpreting the Behavior of Accumulation Functions Involving Area", url: "https://calculus.flippedmath.com/65-interpreting-the-behavior-of-accumulation-functions-involving-area.html" }
+            ]
+          },
+          {
+            day: "Mid-Unit 6 Review",
+            videos: [
+              { title: "Mid-Unit 6 Review", url: "https://calculus.flippedmath.com/mid-unit-6-review.html" }
+            ]
+          },
+          {
+            day: "6.6",
+            videos: [
+              { title: "6.6 — Applying Properties of Definite Integrals", url: "https://calculus.flippedmath.com/66-applying-properties-of-definite-integrals.html" }
+            ]
+          },
+          {
+            day: "6.7",
+            videos: [
+              { title: "6.7 — The Fundamental Theorem of Calculus and Definite Integrals", url: "https://calculus.flippedmath.com/67-the-fundamental-theorem-of-calculus-and-definite-integrals.html" }
+            ]
+          },
+          {
+            day: "6.8",
+            videos: [
+              { title: "6.8 — Finding Antiderivatives and Indefinite Integrals: Basic Rules and Notation", url: "https://calculus.flippedmath.com/68-finding-antiderivatives-and-indefinite-integrals-basic-rules-and-notation.html" }
+            ]
+          },
+          {
+            day: "6.9",
+            videos: [
+              { title: "6.9 — Integrating Using Substitution", url: "https://calculus.flippedmath.com/69-integrating-using-substitution.html" }
+            ]
+          },
+          {
+            day: "6.10",
+            videos: [
+              { title: "6.10 — Integrating Functions Using Long Division and Completing the Square", url: "https://calculus.flippedmath.com/610-integrating-functions-using-long-division-and-completing-the-square.html" }
+            ]
+          },
+          {
+            day: "6.11",
+            videos: [
+              { title: "6.11 — Integrating Using Integration by Parts", url: "https://calculus.flippedmath.com/611-integration-by-parts.html" }
+            ]
+          },
+          {
+            day: "6.12",
+            videos: [
+              { title: "6.12 — Integrating Using Linear Partial Fractions", url: "https://calculus.flippedmath.com/612-integrating-using-linear-partial-fractions.html" }
+            ]
+          },
+          {
+            day: "6.13",
+            videos: [
+              { title: "6.13 — Evaluating Improper Integrals", url: "https://calculus.flippedmath.com/613-evaluating-improper-integrals.html" }
+            ]
+          },
+          {
+            day: "6.14",
+            videos: [
+              { title: "6.14 — Selecting Techniques for Antidifferentiation", url: "https://calculus.flippedmath.com/614-selecting-techniques-for-antidifferentiation.html" }
+            ]
+          },
+          {
+            day: "Unit 6 Review",
+            videos: [
+              { title: "Unit 6 Review", url: "https://calculus.flippedmath.com/end-of-unit-6-review.html" }
+            ]
+          }
+        ]
+      },
+      {
+        unit: "Unit 7: Differential Equations",
+        days: [
+          {
+            day: "7.1",
+            videos: [
+              { title: "7.1 — Modeling Situations with Differential Equations", url: "https://calculus.flippedmath.com/71-modeling-situations-with-differential-equations.html" }
+            ]
+          },
+          {
+            day: "7.2",
+            videos: [
+              { title: "7.2 — Verifying Solutions for Differential Equations", url: "https://calculus.flippedmath.com/72-verifying-solutions-for-differential-equations.html" }
+            ]
+          },
+          {
+            day: "7.3",
+            videos: [
+              { title: "7.3 — Sketching Slope Fields", url: "https://calculus.flippedmath.com/73-sketching-slope-fields.html" }
+            ]
+          },
+          {
+            day: "7.4",
+            videos: [
+              { title: "7.4 — Reasoning Using Slope Fields", url: "https://calculus.flippedmath.com/74-reasoning-using-slope-fields.html" }
+            ]
+          },
+          {
+            day: "7.5",
+            videos: [
+              { title: "7.5 — Euler's Method", url: "https://calculus.flippedmath.com/75-approximating-solutions-using-eulerrsquos-method.html" }
+            ]
+          },
+          {
+            day: "7.6",
+            videos: [
+              { title: "7.6 — General Solutions Using Separation of Variables", url: "https://calculus.flippedmath.com/76-general-solutions-using-separation-of-variables.html" }
+            ]
+          },
+          {
+            day: "7.7",
+            videos: [
+              { title: "7.7 — Particular Solutions Using Initial Conditions and Separation of Variables", url: "https://calculus.flippedmath.com/77-particular-solutions-using-initial-conditions-and-separation-of-variables.html" }
+            ]
+          },
+          {
+            day: "7.8",
+            videos: [
+              { title: "7.8 — Exponential Models with Differential Equations", url: "https://calculus.flippedmath.com/78-exponential-models-with-differential-equations.html" }
+            ]
+          },
+          {
+            day: "7.9",
+            videos: [
+              { title: "7.9 — Logistic Models with Differential Equations", url: "https://calculus.flippedmath.com/79-logistic-models-with-differential-equations.html" }
+            ]
+          },
+          {
+            day: "Unit 7 Review",
+            videos: [
+              { title: "Unit 7 Review", url: "https://calculus.flippedmath.com/unit-7-review.html" }
+            ]
+          }
+        ]
+      },
+      {
+        unit: "Unit 8: Applications of Integration",
+        days: [
+          {
+            day: "8.1",
+            videos: [
+              { title: "8.1 — Average Value of a Function on an Interval", url: "https://calculus.flippedmath.com/81-average-value-of-a-function-on-an-interval.html" }
+            ]
+          },
+          {
+            day: "8.2",
+            videos: [
+              { title: "8.2 — Position, Velocity, and Acceleration Using Integrals", url: "https://calculus.flippedmath.com/82-connecting-position-velocity-and-acceleration-of-functions-using-integrals.html" }
+            ]
+          },
+          {
+            day: "8.3",
+            videos: [
+              { title: "8.3 — Using Accumulation Functions and Definite Integrals in Applied Contexts", url: "https://calculus.flippedmath.com/83-using-accumulation-functions-and-definite-integrals-in-applied-contexts.html" }
+            ]
+          },
+          {
+            day: "8.4",
+            videos: [
+              { title: "8.4 — Area Between Curves (with respect to x)", url: "https://calculus.flippedmath.com/84-finding-the-area-between-curves-expressed-as-functions-of-x.html" }
+            ]
+          },
+          {
+            day: "8.5",
+            videos: [
+              { title: "8.5 — Area Between Curves (with respect to y)", url: "https://calculus.flippedmath.com/85-finding-area-between-curves-expressed-as-functions-of-y.html" }
+            ]
+          },
+          {
+            day: "8.6",
+            videos: [
+              { title: "8.6 — Area Between Curves - More than Two Intersections", url: "https://calculus.flippedmath.com/86-finding-the-area-between-curves-that-intersect-at-more-than-two-points.html" }
+            ]
+          },
+          {
+            day: "Mid-Unit 8 Review",
+            videos: [
+              { title: "Mid-Unit 8 Review", url: "https://calculus.flippedmath.com/mid-unit-8-review.html" }
+            ]
+          },
+          {
+            day: "8.7",
+            videos: [
+              { title: "8.7 — Cross Sections: Squares and Rectangles", url: "https://calculus.flippedmath.com/87-volumes-with-cross-sections-squares-and-rectangles.html" }
+            ]
+          },
+          {
+            day: "8.8",
+            videos: [
+              { title: "8.8 — Cross Sections: Triangles and Semicircles", url: "https://calculus.flippedmath.com/88-volumes-with-cross-sections-triangles-and-semicircles.html" }
+            ]
+          },
+          {
+            day: "8.9",
+            videos: [
+              { title: "8.9 — Disc Method: Revolving Around the x- or y-Axis", url: "https://calculus.flippedmath.com/89-volume-with-disc-method-revolving-around-the-x--or-y-axis.html" }
+            ]
+          },
+          {
+            day: "8.10",
+            videos: [
+              { title: "8.10 — Disc Method: Revolving Around Other Axes", url: "https://calculus.flippedmath.com/810-volume-with-disc-method-revolving-around-other-axes.html" }
+            ]
+          },
+          {
+            day: "8.11",
+            videos: [
+              { title: "8.11 — Washer Method: Revolving Around the x- or y-Axis", url: "https://calculus.flippedmath.com/811-volume-with-washer-method-revolving-around-the-x--or-y-axis.html" }
+            ]
+          },
+          {
+            day: "8.12",
+            videos: [
+              { title: "8.12 — Washer Method: Revolving Around Other Axes", url: "https://calculus.flippedmath.com/812-volume-with-washer-method-revolving-around-other-axes.html" }
+            ]
+          },
+          {
+            day: "8.13",
+            videos: [
+              { title: "8.13 — The Arc Length of a Smooth, Planar Curve and Distance Traveled", url: "https://calculus.flippedmath.com/813-the-arc-length-of-a-smooth-planar-curve-and-distance-traveled.html" }
+            ]
+          },
+          {
+            day: "Unit 8 Review",
+            videos: [
+              { title: "Unit 8 Review", url: "https://calculus.flippedmath.com/end-of-unit-8-review.html" }
+            ]
+          }
+        ]
+      },
+      {
+        unit: "Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions (AP Calculus BC)",
+        days: [
+          {
+            day: "9.1",
+            videos: [
+              { title: "9.1 — Defining and Differentiating Parametric Equations", url: "https://calculus.flippedmath.com/91-defining-and-differentiating-parametric-equations.html" }
+            ],
+            note: "AP Calculus BC topics — these units are not on the AB exam."
+          },
+          {
+            day: "9.2",
+            videos: [
+              { title: "9.2 — Second Derivatives of Parametric Equations", url: "https://calculus.flippedmath.com/92-second-derivatives-of-parametric-equations.html" }
+            ]
+          },
+          {
+            day: "9.3",
+            videos: [
+              { title: "9.3 — Arc Lengths of Curves (Parametric Equations)", url: "https://calculus.flippedmath.com/93-finding-arc-lengths-of-curves-given-by-parametric-equations.html" }
+            ]
+          },
+          {
+            day: "9.4",
+            videos: [
+              { title: "9.4 — Defining and Differentiating Vector-Valued Functions", url: "https://calculus.flippedmath.com/94-defining-and-differentiating-vector-valued-functions.html" }
+            ]
+          },
+          {
+            day: "9.5",
+            videos: [
+              { title: "9.5 — Integrating Vector-Valued Functions", url: "https://calculus.flippedmath.com/95-integrating-vector-valued-functions.html" }
+            ]
+          },
+          {
+            day: "9.6",
+            videos: [
+              { title: "9.6 — Solving Motion Problems Using Parametric and Vector-Valued Functions", url: "https://calculus.flippedmath.com/96-solving-motion-problems-using-parametric-and-vector-valued-functions.html" }
+            ]
+          },
+          {
+            day: "9.7",
+            videos: [
+              { title: "9.7 — Defining Polar Coordinates and Differentiating in Polar Form", url: "https://calculus.flippedmath.com/97-defining-polar-coordinates-and-differentiating-in-polar-form.html" }
+            ]
+          },
+          {
+            day: "9.8",
+            videos: [
+              { title: "9.8 — Find the Area of a Polar Region or the Area Bounded by a Single Polar Curve", url: "https://calculus.flippedmath.com/98-find-the-area-of-a-polar-region-or-the-area-bounded-by-a-single-polar-curve.html" }
+            ]
+          },
+          {
+            day: "9.9",
+            videos: [
+              { title: "9.9 — Finding the Area of the Region Bounded by Two Polar Curves", url: "https://calculus.flippedmath.com/99-finding-the-area-of-the-region-bounded-by-two-polar-curves.html" }
+            ]
+          },
+          {
+            day: "Unit 9 Review",
+            videos: [
+              { title: "Unit 9 Review", url: "https://calculus.flippedmath.com/unit-9-review.html" }
+            ]
+          }
+        ]
+      },
+      {
+        unit: "Unit 10: Infinite Sequences and Series (AP Calculus BC)",
+        days: [
+          {
+            day: "10.1",
+            videos: [
+              { title: "10.1 — Defining Convergent and Divergent Infinite Series", url: "https://calculus.flippedmath.com/101-defining-convergent-and-divergent-infinite-series.html" }
+            ],
+            note: "AP Calculus BC topics — these units are not on the AB exam."
+          },
+          {
+            day: "10.2",
+            videos: [
+              { title: "10.2 — Working with Geometric Series", url: "https://calculus.flippedmath.com/102-working-with-geometric-series.html" }
+            ]
+          },
+          {
+            day: "10.3",
+            videos: [
+              { title: "10.3 — The nth Term Test for Divergence", url: "https://calculus.flippedmath.com/103-the-nth-term-test-for-divergence.html" }
+            ]
+          },
+          {
+            day: "10.4",
+            videos: [
+              { title: "10.4 — Integral Test for Convergence", url: "https://calculus.flippedmath.com/104-integral-test-for-convergence.html" }
+            ]
+          },
+          {
+            day: "10.5",
+            videos: [
+              { title: "10.5 — Harmonic Series and p-Series", url: "https://calculus.flippedmath.com/105-harmonic-series-and-p-series.html" }
+            ]
+          },
+          {
+            day: "10.6",
+            videos: [
+              { title: "10.6 — Comparison Tests for Convergence", url: "https://calculus.flippedmath.com/106-comparison-tests-for-convergence.html" }
+            ]
+          },
+          {
+            day: "10.7",
+            videos: [
+              { title: "10.7 — Alternating Series Test for Convergence", url: "https://calculus.flippedmath.com/107-alternating-series-test-for-convergence.html" }
+            ]
+          },
+          {
+            day: "10.8",
+            videos: [
+              { title: "10.8 — Ratio Test for Convergence", url: "https://calculus.flippedmath.com/108-ratio-test-for-convergence.html" }
+            ]
+          },
+          {
+            day: "10.9",
+            videos: [
+              { title: "10.9 — Determining Absolute or Conditional Convergence", url: "https://calculus.flippedmath.com/109-determining-absolute-or-conditional-convergence.html" }
+            ]
+          },
+          {
+            day: "Mid-Unit 10 Review",
+            videos: [
+              { title: "Mid-Unit 10 Review", url: "https://calculus.flippedmath.com/mid-unit-10-review.html" }
+            ]
+          },
+          {
+            day: "10.10",
+            videos: [
+              { title: "10.10 — Alternating Series Error Bound", url: "https://calculus.flippedmath.com/1010-alternating-series-error-bound.html" }
+            ]
+          },
+          {
+            day: "10.11",
+            videos: [
+              { title: "10.11 — Finding Taylor Polynomial Approximations of Functions", url: "https://calculus.flippedmath.com/1011-finding-taylor-polynomial-approximations-of-functions.html" }
+            ]
+          },
+          {
+            day: "10.12",
+            videos: [
+              { title: "10.12 — Lagrange Error Bound", url: "https://calculus.flippedmath.com/1012-lagrange-error-bound.html" }
+            ]
+          },
+          {
+            day: "10.13",
+            videos: [
+              { title: "10.13 — Radius and Interval of Convergence of Power Series", url: "https://calculus.flippedmath.com/1013-radius-and-interval-of-convergence-of-power-series.html" }
+            ]
+          },
+          {
+            day: "10.14",
+            videos: [
+              { title: "10.14 — Finding Taylor or Maclaurin Series for a Function", url: "https://calculus.flippedmath.com/1014-finding-taylor-or-maclaurin-series-for-a-function.html" }
+            ]
+          },
+          {
+            day: "10.15",
+            videos: [
+              { title: "10.15 — Representing Functions as a Power Series", url: "https://calculus.flippedmath.com/1015-representing-functions-as-a-power-series.html" }
+            ]
+          },
+          {
+            day: "Unit 10 Review",
+            videos: [
+              { title: "Unit 10 Review", url: "https://calculus.flippedmath.com/end-of-unit-10-review.html" }
             ]
           }
         ]
