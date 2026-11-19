@@ -800,6 +800,25 @@ const SITE_DATA = {
         notes: { label: "Worksheet — 3-4 The Fundamental Theorem of Algebra", file: "files/Honors_Unit3_3-4_Fundamental_Theorem_of_Algebra_Worksheet.pdf" },
         deltamath: [{ label: "3-4 Fundamental Theorem of Algebra", url: "https://www.deltamath.com/app/assignment/34418517" }],
         instructions: "Absent? Print the worksheet and complete it. The Practice & Videos tab (objective 3-4) has videos, vocabulary, and practice problems with answers."
+      },
+      // ---- Unit 4 (Rational Functions) handouts and answer keys ----
+      {
+        date: "2026-11-18",
+        notes: { label: "Handout 4A — Holes and Vertical Asymptotes", file: "files/Honors_Unit4_Handout_4A_Holes_and_Vertical_Asymptotes.pdf" },
+        instructions: "Absent? Print the handout and complete it, then check your work with the answer key below."
+      },
+      {
+        date: "2026-11-18",
+        notes: { label: "Handout 4A — Answer Key", file: "files/Honors_Unit4_Handout_4A_Answer_Key.pdf" }
+      },
+      {
+        date: "2026-11-19",
+        notes: { label: "Handout 4B — Asymptotes, Intercepts, and Domain", file: "files/Honors_Unit4_Handout_4B_Asymptotes_Intercepts_Domain.pdf" },
+        instructions: "Absent? Print the handout and complete it, then check your work with the answer key below."
+      },
+      {
+        date: "2026-11-19",
+        notes: { label: "Handout 4B — Answer Key", file: "files/Honors_Unit4_Handout_4B_Answer_Key.pdf" }
       }
     ],
 
@@ -2288,6 +2307,17 @@ const SITE_DATA = {
             ]
           }
         ]
+      },
+      {
+        unit: "Unit 5: Analytical Applications of Differentiation",
+        days: [
+          {
+            day: "Unit 5 Review",
+            videos: [
+              { title: "Unit 5 Review", url: "https://youtu.be/a84Tdv1V5dE" }
+            ]
+          }
+        ]
       }
     ],
 
@@ -3320,6 +3350,41 @@ const SITE_DATA = {
           { label: "Homework 4.7 (packet pp. 42–43)", file: "files/AP_Calc_Unit4_Note_and_Homework_Packet.pdf#page=42" },
           { label: "Homework 4.7 — Answers (pp. 16–17)", file: "files/AP_Calc_Unit4_Answers.pdf#page=16" },
           { label: "Unit 4 Review (video)", file: "https://youtu.be/xkxe-7c1teY" }
+        ]
+      },
+      {
+        id: "unit5",
+        name: "Unit 5: Analytical Applications of Differentiation",
+        resources: [
+          { label: "Notes and Solutions — 5.2–5.6", file: "files/AP_Calc_Unit5_Notes_and_Solutions_5.2-5.6.pdf" },
+          { label: "Notes and Solutions — 5.7–5.12", file: "files/AP_Calc_Unit5_Notes_and_Solutions_5.7-5.12.pdf" },
+          { label: "Packet 5.1", file: "files/AP_Calc_Unit5_Packet_5.1.pdf" },
+          { label: "Packet 5.1 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.1_Solutions.pdf" },
+          { label: "Packet 5.2", file: "files/AP_Calc_Unit5_Packet_5.2.pdf" },
+          { label: "Packet 5.2 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.2_Solutions.pdf" },
+          { label: "Packet 5.3", file: "files/AP_Calc_Unit5_Packet_5.3.pdf" },
+          { label: "Packet 5.3 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.3_Solutions.pdf" },
+          { label: "Packet 5.4", file: "files/AP_Calc_Unit5_Packet_5.4.pdf" },
+          { label: "Packet 5.4 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.4_Solutions.pdf" },
+          { label: "Packet 5.5", file: "files/AP_Calc_Unit5_Packet_5.5.pdf" },
+          { label: "Packet 5.5 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.5_Solutions.pdf" },
+          { label: "Packet 5.6", file: "files/AP_Calc_Unit5_Packet_5.6.pdf" },
+          { label: "Packet 5.6 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.6_Solutions.pdf" },
+          { label: "Mid-Unit 5 Review", file: "files/AP_Calc_Unit5_Mid-Unit_Review.pdf" },
+          { label: "Mid-Unit 5 Review — Solutions", file: "files/AP_Calc_Unit5_Mid-Unit_Review_Solutions.pdf" },
+          { label: "Packet 5.7", file: "files/AP_Calc_Unit5_Packet_5.7.pdf" },
+          { label: "Packet 5.7 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.7_Solutions.pdf" },
+          { label: "Packet 5.8", file: "files/AP_Calc_Unit5_Packet_5.8.pdf" },
+          { label: "Packet 5.8 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.8_Solutions.pdf" },
+          { label: "Packet 5.9", file: "files/AP_Calc_Unit5_Packet_5.9.pdf" },
+          { label: "Packet 5.9 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.9_Solutions.pdf" },
+          { label: "Packet 5.10", file: "files/AP_Calc_Unit5_Packet_5.10.pdf" },
+          { label: "Packet 5.10 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.10_Solutions.pdf" },
+          { label: "Packet 5.11", file: "files/AP_Calc_Unit5_Packet_5.11.pdf" },
+          { label: "Packet 5.11 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.11_Solutions.pdf" },
+          { label: "Packet 5.12", file: "files/AP_Calc_Unit5_Packet_5.12.pdf" },
+          { label: "Packet 5.12 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.12_Solutions.pdf" },
+          { label: "Unit 5 Review (video)", file: "https://youtu.be/a84Tdv1V5dE" }
         ]
       }
     ],
