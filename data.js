@@ -2377,6 +2377,13 @@ const SITE_DATA = {
             ]
           },
           {
+            day: "Unit 5 Quiz",
+            videos: [
+              { title: "Unit 5 Quiz — Video 1", url: "https://youtu.be/LekPE8m9wF8" },
+              { title: "Unit 5 Quiz — Video 2", url: "https://youtu.be/qtdF_J0Tkdg" }
+            ]
+          },
+          {
             day: "5.8",
             videos: [
               { title: "5.8 — Sketching Graphs of Functions and Their Derivatives", url: "https://calculus.flippedmath.com/58-sketching-graphs-of-functions-and-their-derivatives.html" }
@@ -3902,6 +3909,8 @@ const SITE_DATA = {
           { label: "Packet 5.6 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.6_Solutions.pdf" },
           { label: "Mid-Unit 5 Review", file: "files/AP_Calc_Unit5_Mid-Unit_Review.pdf" },
           { label: "Mid-Unit 5 Review — Solutions", file: "files/AP_Calc_Unit5_Mid-Unit_Review_Solutions.pdf" },
+          { label: "Unit 5 Quiz (video 1)", file: "https://youtu.be/LekPE8m9wF8" },
+          { label: "Unit 5 Quiz (video 2)", file: "https://youtu.be/qtdF_J0Tkdg" },
           { label: "Packet 5.7", file: "files/AP_Calc_Unit5_Packet_5.7.pdf" },
           { label: "Packet 5.7 — Solutions", file: "files/AP_Calc_Unit5_Packet_5.7_Solutions.pdf" },
           { label: "Packet 5.8", file: "files/AP_Calc_Unit5_Packet_5.8.pdf" },
